@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "boss_checklist",
+  "version": "${version}",
+  "name": "Boss Checklist",
+  "description": "Adds a convenient list of bosses to the game with brief information about them.",
+  "authors": [
+    "Yori3o"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC BY-NC 4.0",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.yori3o.boss_checklist.fabric.BossChecklistFabric"
+    ],
+    "client": [
+      "com.yori3o.boss_checklist.fabric.client.BossChecklistFabricClient"
+    ]
+  },
+  "mixins": [
+    "boss_checklist.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.2",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "architectury": ">=13.0.8",
+    "fabric-api": ">=0.102.0"
+  },
+  "suggests": {
+    "another-mod": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "clientSideOnly": false, 
+      "needsClient": true
+    }
+  }
+}

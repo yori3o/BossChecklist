@@ -1,0 +1,442 @@
+[
+    {
+      "id": "wither",
+      "mod_id": "minecraft",
+      "drops": ["minecraft:nether_star", "endrem:wither_eye"],
+      "scale": 15,
+      "y_offset": 10,
+      "position": 11
+    },
+    {
+      "id": "ender_dragon",
+      "mod_id": "minecraft",
+      "drops": ["minecraft:dragon_egg", "irons_spellbooks:arcane_essence", "irons_spellbooks:dragonskin"],
+      "scale": 7,
+      "y_offset": 0,
+      "position": 17
+    },
+    {
+      "id": "endstone_golem",
+      "mod_id": "unusualend",
+      "drops": ["unusualend:golem_orb", "unusualend:ancient_shard", "unusualend:music_disc_endstone_golem_theme#50"],
+      "scale": 16,
+      "y_offset": 7,
+      "position": 18
+    },
+    {
+      "id": "ancient_remnant",
+      "mod_id": "cataclysm",
+      "drops": ["cataclysm:ancient_metal_block", "cataclysm:remnant_skull", "cataclysm:sandstorm_in_a_bottle", "cataclysm:music_disc_ancient_remnant#10", "cataclysm_spellbooks:desert_spell_book#50"],
+      "scale": 8,
+      "y_offset": 0,
+      "position": 38
+    },
+    {
+      "id": "netherite_monstrosity",
+      "mod_id": "cataclysm",
+      "drops": ["cataclysm:infernal_forge", "cataclysm:monstrous_horn", "cataclysm:lava_power_cell", "cataclysm:music_disc_netherite_monstrosity#10", "lendersdelight:netherite_monstrosity_meat"],
+      "scale": 11,
+      "y_offset": 27,
+      "position": 28
+    },
+    {
+      "id": "the_harbinger",
+      "mod_id": "cataclysm",
+      "drops": ["cataclysm:witherite_block", "cataclysm:music_disc_the_harbinger#10"],
+      "scale": 12,
+      "y_offset": 0,
+      "position": 37
+    },
+    {
+      "id": "the_leviathan",
+      "mod_id": "cataclysm",
+      "drops": ["cataclysm:abyssal_egg", "cataclysm:tidal_claws", "cataclysm:music_disc_the_leviathan#10", "lendersdelight:leviathan", "cataclysm_spellbooks:leviathans_blessing#30"],
+      "scale": 6,
+      "y_offset": -20,
+      "position": 39
+    },
+    {
+      "id": "scylla",
+      "mod_id": "cataclysm",
+      "drops": ["cataclysm:lacrima", "cataclysm:essence_of_the_storm", "cataclysm:music_disc_scylla#10", "lendersdelight:scylla_snake"],
+      "scale": 15,
+      "y_offset": 6,
+      "position": 41
+    },
+    {
+      "id": "maledictus",
+      "mod_id": "cataclysm",
+      "drops": ["cataclysm:cursium_ingot", "cataclysm:music_disc_maledictus#10", "lendersdelight:maledictus_heart"],
+      "scale": 12,
+      "y_offset": 0,
+      "position": 42
+    },
+    {
+      "id": "ender_guardian",
+      "mod_id": "cataclysm",
+      "drops": ["cataclysm:gauntlet_of_guard", "cataclysm:music_disc_ender_guardian#10", "lendersdelight:ender_guardian_crystal"],
+      "scale": 15,
+      "y_offset": 16,
+      "position": 32
+    },
+    {
+      "id": "ignis",
+      "mod_id": "cataclysm",
+      "drops": ["cataclysm:ignitium_ingot", "cataclysm:music_disc_ignis#10", "lendersdelight:ignis"],
+      "scale": 15,
+      "y_offset": 10,
+      "position": 43
+    },
+    {
+      "id": "void_blossom",
+      "mod_id": "bosses_of_mass_destruction",
+      "drops": ["bosses_of_mass_destruction:crystal_fruit", "bosses_of_mass_destruction:void_thorn"],
+      "scale": 0,
+      "y_offset": 0,
+      "position": 2
+    },
+    {
+      "id": "obsidilith",
+      "mod_id": "bosses_of_mass_destruction",
+      "drops": ["bosses_of_mass_destruction:obsidian_heart", "minecraft:obsidian", "minecraft:purpur_block"],
+      "scale": 0,
+      "y_offset": 0,
+      "position": 19
+    },
+    {
+      "id": "gauntlet",
+      "mod_id": "bosses_of_mass_destruction",
+      "drops": ["bosses_of_mass_destruction:blazing_eye", "minecraft:ancient_debris"],
+      "scale": 0,
+      "y_offset": 0,
+      "position": 12
+    },
+    {
+      "id": "lich",
+      "mod_id": "bosses_of_mass_destruction",
+      "drops": ["bosses_of_mass_destruction:ancient_anima", "minecraft:bone", "minecraft:diamond", "minecraft:enchanted_book", "minecraft:enchanted_book", "minecraft:enchanted_book", "minecraft:enchanted_book", "minecraft:enchanted_book"],
+      "scale": 16,
+      "y_offset": 6,
+      "position": 3
+    },
+    {
+      "id": "dead_king",
+      "mod_id": "irons_spellbooks",
+      "drops": ["irons_spellbooks:necronomicon_spell_book#50", "irons_spellbooks:blood_staff#50", "irons_spellbooks:legendary_ink#76", "irons_spellbooks:epic_ink#76", "irons_spellbooks:rare_ink#58", "irons_spellbooks:arcane_essence", "irons_spellbooks:blank_rune#75", "irons_spellbooks:scroll"],
+      "scale": 13,
+      "y_offset": 7,
+      "position": 13
+    },
+    {
+      "id": "fire_boss",
+      "mod_id": "irons_spellbooks",
+      "drops": ["irons_spellbooks:arcane_essence", "irons_spellbooks:cinder_essence", "irons_spellbooks:divine_soulshard", "irons_spellbooks:decrepit_scythe#50", "irons_spellbooks:betrayer_signet#50"],
+      "scale": 13,
+      "y_offset": 0,
+      "position": 40
+    },
+    {
+      "id": "sandworm",
+      "mod_id": "block_factorys_bosses",
+      "drops": ["block_factorys_bosses:sandworm_dart"],
+      "scale": 0,
+      "y_offset": 0,
+      "position": 1 
+    },
+    {
+      "id": "yeti",
+      "mod_id": "block_factorys_bosses",
+      "drops": ["block_factorys_bosses:frozen_fist"],
+      "scale": 0,
+      "y_offset": 0,
+      "position": 4
+    },
+    {
+      "id": "underworld_knight",
+      "mod_id": "block_factorys_bosses",
+      "drops": ["block_factorys_bosses:knight_sword"],
+      "scale": 0,
+      "y_offset": 0,
+      "position": 20
+    },
+    {
+      "id": "infernal_dragon",
+      "mod_id": "block_factorys_bosses",
+      "drops": ["block_factorys_bosses:dragon_skull", "block_factorys_bosses:dragon_bone"],
+      "scale": 0,
+      "y_offset": 0,
+      "position": 31
+    },
+    {
+      "id": "concierge",
+      "mod_id": "minecells",
+      "drops": ["minecells:monster_cell", "minecells:boss_stem_cell", "minecraft:diamond", "minecraft:emerald", "minecraft:gold_ingot"],
+      "scale": 15,
+      "y_offset": 0,
+      "position": 14
+    },
+    {
+      "id": "conjunctivius",
+      "mod_id": "minecells",
+      "drops": ["minecells:monster_cell", "minecells:boss_stem_cell", "minecraft:diamond", "minecraft:emerald", "minecraft:gold_ingot", "minecells:guts", "minecells:monsters_eye", "minecells:sewer_calamari"],
+      "scale": 10,
+      "y_offset": 0,
+      "position": 15
+    },
+    {
+      "id": "captain_cornelia",
+      "mod_id": "aquamirae",
+      "drops": ["aquamirae:frozen_key", "aquamirae:oxygen_tank", "aquamirae:three_bolt_helmet", "minecraft:filled_map"],
+      "scale": 21,
+      "y_offset": 7,
+      "position": 16
+    },
+    {
+      "id": "lord_pumpkinhead",
+      "mod_id": "born_in_chaos_v1",
+      "drops": ["born_in_chaos_v1:soulbane", "born_in_chaos_v1:pumpkinhandgun", "born_in_chaos_v1:lord_pumpkinheads_lamp#50", "born_in_chaos_v1:pumpkin_bullet", "born_in_chaos_v1:bagof_candy", "born_in_chaos_v1:magical_holiday_candy", "born_in_chaos_v1:smoldering_infernal_ember", "born_in_chaos_v1:lord_pumpkinheads_hat_helmet"],
+      "scale": 19,
+      "y_offset": 15,
+      "position": 21
+    },
+    {
+      "id": "malkuth",
+      "mod_id": "fdbosses",
+      "drops": ["fdbosses:fire_and_ice_core", "fdbosses:malkuth_trophy"],
+      "scale": 15,
+      "y_offset": 0,
+      "position": 30
+    },
+    {
+      "id": "chesed",
+      "mod_id": "fdbosses",
+      "drops": ["fdbosses:lightning_core", "fdbosses:chesed_trophy"],
+      "scale": 15,
+      "y_offset": 0,
+      "position": 29
+    },
+    {
+      "id": "frostmaw",
+      "mod_id": "mowziesmobs",
+      "drops": ["mowziesmobs:ice_crystal", "mowziesmobs:music_disc_petiole"],
+      "scale": 11,
+      "y_offset": 0,
+      "position": 7
+    },
+    {
+      "id": "umvuthi",
+      "mod_id": "mowziesmobs",
+      "drops": ["mowziesmobs:sol_visage", "minecraft:feather#50"],
+      "scale": 15,
+      "y_offset": 13,
+      "position": 6
+    },
+    {
+      "id": "ferrous_wroughtnaut",
+      "mod_id": "mowziesmobs",
+      "drops": ["mowziesmobs:wrought_axe", "mowziesmobs:wrought_helmet"],
+      "scale": 15,
+      "y_offset": 13,
+      "position": 5
+    },
+    {
+      "id": "sculptor",
+      "mod_id": "mowziesmobs",
+      "drops": ["mowziesmobs:earthrend_gauntlet", "mowziesmobs:sculptor_staff#20", "mowziesmobs:geomancer_beads#20", "mowziesmobs:geomancer_robe#20", "mowziesmobs:geomancer_belt#20", "mowziesmobs:geomancer_sandals#20"],
+      "scale": 18,
+      "y_offset": 0,
+      "position": 8
+    },
+    {
+      "id": "draugr_boss",
+      "mod_id": "soulsweapons",
+      "drops": ["soulsweapons:draugr"],
+      "scale": 15,
+      "y_offset": 0,
+      "position": 9
+    },
+    {
+      "id": "night_shade",
+      "mod_id": "soulsweapons",
+      "drops": ["soulsweapons:lord_soul_dark", "soulsweapons:essence_of_eventide"],
+      "scale": 15,
+      "y_offset": 0,
+      "position": 10
+    },
+    {
+      "id": "returning_knight",
+      "mod_id": "soulsweapons",
+      "drops": ["soulsweapons:lord_soul_rose", "soulsweapons:soul_ingot", "soulsweapons:nightfall", "soulsweapons:arkenstone"],
+      "scale": 11,
+      "y_offset": 52,
+      "position": 22
+    },
+    {
+      "id": "accursed_lord_boss",
+      "mod_id": "soulsweapons",
+      "drops": ["soulsweapons:lord_soul_red", "soulsweapons:darkin_blade", "soulsweapons:withered_demon_heart"],
+      "scale": 10,
+      "y_offset": 19,
+      "position": 23
+    },
+    {
+      "id": "day_stalker",
+      "mod_id": "soulsweapons",
+      "drops": ["soulsweapons:lord_soul_day_stalker", "soulsweapons:dawnbreaker"],
+      "scale": 11,
+      "y_offset": 9,
+      "position": 24
+    },
+    {
+      "id": "night_prowler",
+      "mod_id": "soulsweapons",
+      "drops": ["soulsweapons:lord_soul_night_prowler", "soulsweapons:soul_reaper", "soulsweapons:forlorn_scythe"],
+      "scale": 11,
+      "y_offset": 9,
+      "position": 25
+    },
+    {
+      "id": "chaos_monarch",
+      "mod_id": "soulsweapons",
+      "drops": ["soulsweapons:lord_soul_void", "minecraft:netherite_upgrade_smithing_template", "soulsweapons:chaos_crown", "soulsweapons:chaos_robes","soulsweapons:withered_wabbajack", "soulsweapons:blood_vial_recipe_page"],
+      "scale": 11,
+      "y_offset": 20,
+      "position": 26
+    },
+    {
+      "id": "moonknight",
+      "mod_id": "soulsweapons",
+      "drops": ["soulsweapons:lord_soul_white", "soulsweapons:essence_of_luminescence", "soulsweapons:moonstone", "soulsweapons:moonlight_greatsword"],
+      "scale": 11,
+      "y_offset": 52,
+      "position": 27
+    },
+    {
+      "id": "corpse_warlock",
+      "mod_id": "eeeabsmobs",
+      "drops": ["eeeabsmobs:heart_of_pagan", "eeeabsmobs:soul_summoning_necklace"],
+      "scale": 19,
+      "y_offset": 0,
+      "position": 4
+    },
+    {
+      "id": "nameless_guardian",
+      "mod_id": "eeeabsmobs",
+      "drops": ["eeeabsmobs:guardian_core", "eeeabsmobs:guardian_axe", "eeeabsmobs:guardians_music_disc#50"],
+      "scale": 13,
+      "y_offset": 15,
+      "position": 36
+    },
+    {
+      "id": "ah_puch",
+      "mod_id": "call_of_yucutan",
+      "drops": ["call_of_yucutan:fragment_of_death", "call_of_yucutan:elder_bone"],
+      "scale": 13,
+      "y_offset": 0,
+      "position": 34
+    },
+    {
+      "id": "kukulkan",
+      "mod_id": "call_of_yucutan",
+      "drops": ["call_of_yucutan:fragment_of_rebirth", "call_of_yucutan:ancient_gold_ingot"],
+      "scale": 11,
+      "y_offset": 0,
+      "position": 35
+    },
+    {
+      "id": "void_worm",
+      "mod_id": "alexsmobs",
+      "drops": ["alexsmobs:void_worm_eye", "alexsmobs:void_worm_mandible"],
+      "scale": 0,
+      "y_offset": 0,
+      "position": 33
+    },
+    {
+      "id": "luxtructosaurus",
+      "mod_id": "alexscaves",
+      "drops": ["alexscaves:tectonic_shard", "traveloptics:gauntlet_of_extinction#45"],
+      "scale": 5,
+      "y_offset": 5,
+      "position": 50
+    },
+    {
+      "id": "wither_storm",
+      "mod_id": "witherstormmod",
+      "drops": ["witherstormmod:withered_nether_star"],
+      "scale": 17,
+      "y_offset": 10,
+      "position": 50
+    },
+    {
+      "id": "withered_symbiont",
+      "mod_id": "witherstormmod",
+      "drops": ["witherstormmod:command_block_book"],
+      "scale": 11,
+      "y_offset": 8,
+      "position": 50
+    },
+    {
+      "id": "chaos_spawner",
+      "mod_id": "dungeonnowloading",
+      "drops": ["minecraft:diamond", "dungeonnowloading:great_experience_bottle", "dungeonnowloading:spawner_fragment", "dungeonnowloading:chaotic_hexahedron", "dungeonnowloading:spawner_frame#50", "dungeonnowloading:spawner_blade#25"],
+      "scale": 12,
+      "y_offset": 0,
+      "position": 50
+    },
+    {
+      "id": "fairkeeper_boros",
+      "mod_id": "dungeonnowloading",
+      "drops": ["minecraft:diamond", "dungeonnowloading:great_experience_bottle", "dungeonnowloading:combustion_cell", "dungeonnowloading:music_disc_clash_of_duality_boros", "dungeonnowloading:redstone_suppressor"],
+      "scale": 11,
+      "y_offset": 0,
+      "position": 50
+    },
+    {
+      "id": "fairkeeper_ouros",
+      "mod_id": "dungeonnowloading",
+      "drops": ["minecraft:diamond", "dungeonnowloading:great_experience_bottle", "dungeonnowloading:catalyzed_redstone", "dungeonnowloading:music_disc_clash_of_duality_ouros", "dungeonnowloading:redstone_chip"],
+      "scale": 11,
+      "y_offset": 0,
+      "position": 50
+    },
+    {
+      "id": "slider",
+      "mod_id": "aether",
+      "drops": ["aether:carved_stone", "aether:bronze_dungeon_key"],
+      "scale": 20,
+      "y_offset": 0,
+      "position": 51
+    },
+    {
+      "id": "valkyrie_queen",
+      "mod_id": "aether",
+      "drops": ["aether:silver_dungeon_key", "minecraft:golden_sword"],
+      "scale": 23,
+      "y_offset": 0,
+      "position": 52
+    },
+    {
+      "id": "sun_spirit",
+      "mod_id": "aether",
+      "drops": ["aether:gold_dungeon_key", "aether:sun_altar"],
+      "scale": 16,
+      "y_offset": 5,
+      "position": 53
+    },
+    {
+      "id": "aerwhale_king",
+      "mod_id": "lost_aether_content",
+      "drops": ["lost_aether_content:platinum_key", "aether:blue_aercloud"],
+      "scale": 5,
+      "y_offset": 0,
+      "position": 54
+    },
+    {
+      "id": "eots_controller",
+      "mod_id": "deep_aether",
+      "drops": ["deep_aether:brass_dungeon_key", "deep_aether:floaty_scarf", "aether:aercloud"],
+      "scale": 20,
+      "y_offset": 10,
+      "position": 55
+    }
+]

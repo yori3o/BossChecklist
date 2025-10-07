@@ -1,0 +1,203 @@
+{
+"key.boss_checklist.open_checklist": "Open Checklist",
+"category.boss_checklist": "Boss Checklist",
+"gui.boss_checklist.drop": "Drop",
+"gui.boss_checklist.no_drop": "No drop",
+"gui.boss_checklist.spawn_info": "Spawn",
+"gui.boss_checklist.health": "Health: §c",
+"gui.boss_checklist.armor": "Armor: §9",
+"gui.boss_checklist.defeated": "Boss defeated in world.",
+"gui.boss_checklist.not_defeated": "Boss not yet defeated in world.",
+"gui.boss_checklist.server_warning": "Make sure the mod is also installed on the server, otherwise this checkbox will not change.",
+"gui.boss_checklist.killer_name": "Killer: ",
+
+"gui.boss_checklist.info_frostmaw": "The music disc only drops if the boss is killed during a snowfall and you take the Ice Crystal from his hands.",
+"gui.boss_checklist.info_sculptor": "To obtain the Gauntlet, you must pass his test.",
+"gui.boss_checklist.info_chesed": "It is recommended to study a more detailed description in the arena.",
+"gui.boss_checklist.info_malkuth": "It is recommended to study a more detailed description in the arena.",
+"gui.boss_checklist.info_fairkeeper_boros": "The drop depends on which boss you killed last.",
+"gui.boss_checklist.info_fairkeeper_ouros": "The drop depends on which boss you killed last.",
+
+"boss_checklist.mod.minecraft": "Minecraft",
+"boss_checklist.mod.bosses_of_mass_destruction": "Bosses of Mass Destruction",
+"boss_checklist.mod.cataclysm": "L'Ender's Cataclysm",
+"boss_checklist.mod.irons_spellbooks": "Iron's Spells 'n Spellbooks",
+"boss_checklist.mod.unusualend": "Unusual End",
+"boss_checklist.mod.block_factorys_bosses": "Bosses'Rise",
+"boss_checklist.mod.minecells": "Mine Cells",
+"boss_checklist.mod.aquamirae": "Aquamirae",
+"boss_checklist.mod.born_in_chaos_v1": "Born in Chaos",
+"boss_checklist.mod.fdbosses": "Qliphoth Awakening",
+"boss_checklist.mod.mowziesmobs": "Mowzies Mobs",
+"boss_checklist.mod.soulsweapons": "Marium's Soulslike Weaponry",
+"boss_checklist.mod.eeeabsmobs": "EEEAB's Mobs", 
+"boss_checklist.mod.call_of_yucutan": "Call of Yucutan",
+"boss_checklist.mod.alexsmobs": "Alex's Mobs",
+"boss_checklist.mod.alexscaves": "Alex's Caves",
+"boss_checklist.mod.witherstormmod": "Cracker's Wither Storm Mod", 
+"boss_checklist.mod.dungeonnowloading": "Dungeon Now Loading 2%",
+"boss_checklist.mod.aether": "The Aether",
+"boss_checklist.mod.deep_aether": "Deep Aether",
+"boss_checklist.mod.lost_aether_content": "Aether: Lost Content Addon",
+
+
+
+
+"boss_checklist.boss.wither": "Wither",
+"boss_checklist.boss.ender_dragon": "Ender Dragon",
+
+"boss_checklist.boss.dead_king": "Dead King",
+"boss_checklist.boss.fire_boss": "Echo of Tyros, First Flamebearer",
+
+"boss_checklist.boss.endstone_golem": "Endstone Golem",
+
+"boss_checklist.boss.captain_cornelia": "Ghost of Captain Cornelia",
+
+"boss_checklist.boss.lord_pumpkinhead": "Lord Pumpkinhead",
+
+"boss_checklist.boss.concierge": "Concierge",
+"boss_checklist.boss.conjunctivius": "Conjunctivius",
+
+"boss_checklist.boss.infernal_dragon": "Infernal Dragon",
+"boss_checklist.boss.underworld_knight": "Underworld Knight",
+"boss_checklist.boss.yeti": "Yeti",
+"boss_checklist.boss.sandworm": "Sandworm",
+
+"boss_checklist.boss.obsidilith": "Obsidilith",
+"boss_checklist.boss.gauntlet": "Nether Gauntlet",
+"boss_checklist.boss.lich": "Night Lich",
+"boss_checklist.boss.void_blossom": "Void Blossom",
+
+"boss_checklist.boss.ancient_remnant": "Ancient Revenant",
+"boss_checklist.boss.netherite_monstrosity": "Netherite Monstrosity",
+"boss_checklist.boss.the_harbinger": "The Harbinger",
+"boss_checklist.boss.the_leviathan": "The Leviathan",
+"boss_checklist.boss.scylla": "Scylla",
+"boss_checklist.boss.maledictus": "Maledictus",
+"boss_checklist.boss.ender_guardian": "Ender Guardian",
+"boss_checklist.boss.ignis": "Ignis",
+
+"boss_checklist.boss.malkuth": "Malkuth",
+"boss_checklist.boss.chesed": "Chesed",
+
+"boss_checklist.boss.sculptor": "Tongbi, the Sculptor",
+"boss_checklist.boss.ferrous_wroughtnaut": "Ferrous Wroughtnaut",
+"boss_checklist.boss.umvuthi": "Umvuthi, the Sunbird",
+"boss_checklist.boss.frostmaw": "Frostmaw",
+
+"boss_checklist.boss.draugr_boss": "The Old Champion's Remains",
+"boss_checklist.boss.night_shade": "The Frenzied Shade",
+"boss_checklist.boss.returning_knight": "The Returning Knight",
+"boss_checklist.boss.accursed_lord_boss": "The Decaying King",
+"boss_checklist.boss.day_stalker": "Day Stalker",
+"boss_checklist.boss.night_prowler": "Night Prowler",
+"boss_checklist.boss.chaos_monarch": "The Monarch of Chaos",
+"boss_checklist.boss.moonknight": "The Fallen Icon",
+
+"boss_checklist.boss.corpse_warlock": "Corpse Warlock",
+"boss_checklist.boss.nameless_guardian": "Nameless Guardian",
+
+"boss_checklist.boss.ah_puch": "Ah Puch",
+"boss_checklist.boss.kukulkan": "Kukulkan",
+
+"boss_checklist.boss.void_worm": "Void Worm",
+
+"boss_checklist.boss.luxtructosaurus": "Luxtructosaurus",
+
+"boss_checklist.boss.wither_storm": "Wither Storm",
+"boss_checklist.boss.withered_symbiont": "Withered Symbiont",
+
+"boss_checklist.boss.chaos_spawner": "Chaos Spawner",
+
+"boss_checklist.boss.fairkeeper_boros": "Fairkeeper Boros",
+"boss_checklist.boss.fairkeeper_ouros": "Fairkeeper Ouros",
+
+"boss_checklist.boss.slider": "Slider",
+"boss_checklist.boss.valkyrie_queen": "Valkyrie Queen",
+"boss_checklist.boss.sun_spirit": "Sun Spirit",
+
+"boss_checklist.boss.eots_controller": "Chiesnalascstead",
+
+"boss_checklist.boss.aerwhale_king": "Aerwhale King",
+
+
+
+
+"boss_checklist.summon.wither": "Crafted with §14 Soul Sand§r§0 and §13 Wither Skulls§r§0.",
+"boss_checklist.summon.ender_dragon": "Spawns on the central island of The End.",
+
+"boss_checklist.summon.dead_king": "Find it in the Catacombs, where the Wayward Compass points.",
+"boss_checklist.summon.fire_boss": "Use the Cinderous Soulcaller in the Citadel found via the Ancient Map in the Nether.",
+
+"boss_checklist.summon.endstone_golem": "Place §1Dragon's Breath§r§0 on the Golem Altar at the top of the tower in The End.",
+
+"boss_checklist.summon.captain_cornelia": "Can be summoned using the Shell Horn, which can be found on the Ship.",
+
+"boss_checklist.summon.lord_pumpkinhead": "Right-click on the Infernal Evil Pumpkin using Transmuting Elixir.",
+
+"boss_checklist.summon.concierge": "Complete all Mine Cells challenges and fight the boss in the Black Bridge dimension.",
+"boss_checklist.summon.conjunctivius": "Get the Vine Rune in the Promenade of The Condemned, then return to the Prison and find a place to use the Rune. (I couldn't replicate this in-game, so I copied it from the wiki.)",
+
+"boss_checklist.summon.infernal_dragon": "Find the tall tower in the Overworld with the boss at the top.",
+"boss_checklist.summon.underworld_knight": "Find the boss arena in the Nether.",
+"boss_checklist.summon.yeti": "Encounter a bone-strewn icy peak in a snowy plain.",
+"boss_checklist.summon.sandworm": "Look for suspicious ruins with bones in the desert.",
+
+"boss_checklist.summon.obsidilith": "Insert §1Eye of Ender§r into the Obsidian Altar atop the giant floating structure in the End.",
+"boss_checklist.summon.gauntlet": "Find the boss arena in the Nether lava pools.",
+"boss_checklist.summon.lich": "Find the Lich's Tower using a Soul Star, a low chance drop from undead. Summoning the boss requires §14 Soul Stars§r.",
+"boss_checklist.summon.void_blossom": "Find him deep in the caves by planting a Void lily that will point in the direction of the boss.",
+
+"boss_checklist.summon.ancient_remnant": "Find the sleeping boss in the Cursed Pyramid using the Eye of Desert and use the §1Necklace of the desert§r§0 obtained from suspicious sand.",
+"boss_checklist.summon.netherite_monstrosity": "Follow the Eye of Monstrous to the Soul blacksmith in the Nether.",
+"boss_checklist.summon.the_harbinger": "Find the Ancient factory using the Eye of Mech and use the §1Nether Star§r§0 to awaken the boss.",
+"boss_checklist.summon.the_leviathan": "Place the §1Abyssal Offering§r§0 at the Deep Altar in the Sunken City, which the Eye of Abyss will show you the way to.",
+"boss_checklist.summon.scylla": "Click the anchor at the top of the Acropolis, which can be found with the Eye of Storm in the Overworld.",
+"boss_checklist.summon.maledictus": "Click the Cursed Tombstone behind the Door of Seal, opened with the §1Strange Key§r§0, in the Frosted Prison, which the Eye of Curse will show you the way to.",
+"boss_checklist.summon.ender_guardian": "Follow the Eye of Void to the Shattered Citadel in the End.",
+"boss_checklist.summon.ignis": "Find the Burnung Arena with the Eye of Flame, defeat the Flame Revenants, and right-click the Fire Altar with the §1Burning Ash§r.",
+
+"boss_checklist.summon.malkuth": "Find the boss arena using the Eye of Malkuth. Study his description (in the arena) carefully before the fight.",
+"boss_checklist.summon.chesed": "Find the boss arena using the Eye of Chesed. Study his description (in the arena) carefully before the fight.",
+
+"boss_checklist.summon.sculptor": "Appears in the center of the Monastery.",
+"boss_checklist.summon.ferrous_wroughtnaut": "Find him in the Wrought Chamber underground.",
+"boss_checklist.summon.umvuthi": "Located in Umvutana Grove.",
+"boss_checklist.summon.frostmaw": "Spawns in snowy biomes such as Snowy Plains or Ice Peaks.",
+
+"boss_checklist.summon.draugr_boss": "Spawning in the Old Champion's Graves.",
+"boss_checklist.summon.night_shade": "Аppears after killing The Old Champion's Remains.",
+"boss_checklist.summon.returning_knight": "Use the Lost Soul on the Old Moon Altar.",
+"boss_checklist.summon.accursed_lord_boss": "Find the Decaying Kingdom in the Nether.",
+"boss_checklist.summon.day_stalker": "Use Chaos Orb during the day.",
+"boss_checklist.summon.night_prowler": "Use Chaos Orb during the night.",
+"boss_checklist.summon.chaos_monarch": "Use the Shard of Uncertainty (dropped by the Wither) on the Blackstone Pedestal.",
+"boss_checklist.summon.moonknight": "Use the Essence of Eventide on the Old Moon Altar.",
+
+"boss_checklist.summon.corpse_warlock": "Find him at the Blood Altar in the Nether.",
+"boss_checklist.summon.nameless_guardian": "Find a deep underground structure and descend to its very bottom, passing several tests.",
+
+"boss_checklist.summon.ah_puch": "Break the Ah Puch Idol in the Death Crypt.",
+"boss_checklist.summon.kukulkan": "Break the Kukulkan Idol in the Overgrown Temple.",
+
+"boss_checklist.summon.void_worm": "Throw the Mysterious Worm into the void of the End.",
+
+"boss_checklist.summon.luxtructosaurus": "Throw the Ominous Catalyst onto an active Volcanic Core.",
+
+"boss_checklist.summon.wither_storm": "Complete the wither form in the ruined structure in the center of the world.",
+"boss_checklist.summon.withered_symbiont": "Appears during phase 4 of the Wither Storm.",
+
+"boss_checklist.summon.chaos_spawner": "Use the Skull of Chaos to awaken the sealed boss in the deep dungeon.",
+
+"boss_checklist.summon.fairkeeper_boros": "Use the Redstone Idol in the center of the deep jungle dungeon. (Summoned along with Fairkeeper Ouros)",
+"boss_checklist.summon.fairkeeper_ouros": "Use the Redstone Idol in the center of the deep jungle dungeon. (Summoned along with Fairkeeper Boros)",
+
+"boss_checklist.summon.slider": "Located in the Bronze Dungeon.",
+"boss_checklist.summon.valkyrie_queen": "Located in the Silver Dungeon.",
+"boss_checklist.summon.sun_spirit": "Located in the Gold Dungeon.",
+
+"boss_checklist.summon.eots_controller": "Located in the Brass Dungeon.",
+
+"boss_checklist.summon.aerwhale_king": "Click on the Songstone at the top of the Platinum Dungeon."
+
+}

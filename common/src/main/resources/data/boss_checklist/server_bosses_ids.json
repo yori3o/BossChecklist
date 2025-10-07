@@ -1,0 +1,222 @@
+[
+    {
+      "id": "wither",
+      "mod_id": "minecraft"
+    },
+    {
+      "id": "ender_dragon",
+      "mod_id": "minecraft"
+    },
+    {
+      "id": "void_blossom",
+      "mod_id": "bosses_of_mass_destruction"
+    },
+    {
+      "id": "obsidilith",
+      "mod_id": "bosses_of_mass_destruction"
+    },
+    {
+      "id": "gauntlet",
+      "mod_id": "bosses_of_mass_destruction"
+    },
+    {
+      "id": "lich",
+      "mod_id": "bosses_of_mass_destruction"
+    },
+    {
+      "id": "ignis",
+      "mod_id": "cataclysm"
+    },
+    {
+      "id": "ancient_remnant",
+      "mod_id": "cataclysm"
+    },
+    {
+      "id": "netherite_monstrosity",
+      "mod_id": "cataclysm"
+    },
+    {
+      "id": "the_harbinger",
+      "mod_id": "cataclysm"
+    },
+    {
+      "id": "the_leviathan",
+      "mod_id": "cataclysm"
+    },
+    {
+      "id": "scylla",
+      "mod_id": "cataclysm"
+    },
+    {
+      "id": "maledictus",
+      "mod_id": "cataclysm"
+    },
+    {
+      "id": "ender_guardian",
+      "mod_id": "cataclysm"
+    },
+    {
+      "id": "dead_king",
+      "mod_id": "irons_spellbooks"
+    },
+    {
+      "id": "fire_boss",
+      "mod_id": "irons_spellbooks"
+    },
+    {
+      "id": "endstone_golem",
+      "mod_id": "unusualend"
+    },
+    {
+      "id": "sandworm",
+      "mod_id": "block_factorys_bosses"
+    },
+    {
+      "id": "yeti",
+      "mod_id": "block_factorys_bosses"
+    },
+    {
+      "id": "underworld_knight",
+      "mod_id": "block_factorys_bosses"
+    },
+    {
+      "id": "infernal_dragon",
+      "mod_id": "block_factorys_bosses"
+    },
+    {
+      "id": "concierge",
+      "mod_id": "minecells"
+    },
+    {
+      "id": "conjunctivius",
+      "mod_id": "minecells"
+    },
+    {
+      "id": "captain_cornelia",
+      "mod_id": "aquamirae"
+    },
+    {
+      "id": "lord_pumpkinhead",
+      "mod_id": "born_in_chaos_v1"
+    },
+    {
+      "id": "malkuth",
+      "mod_id": "fdbosses"
+    },
+    {
+      "id": "chesed",
+      "mod_id": "fdbosses"
+    },
+    {
+      "id": "frostmaw",
+      "mod_id": "mowziesmobs"
+    },
+    {
+      "id": "umvuthi",
+      "mod_id": "mowziesmobs"
+    },
+    {
+      "id": "ferrous_wroughtnaut",
+      "mod_id": "mowziesmobs"
+    },
+    {
+      "id": "sculptor",
+      "mod_id": "mowziesmobs"
+    },
+    {
+      "id": "draugr_boss",
+      "mod_id": "soulsweapons"
+    },
+    {
+      "id": "night_shade",
+      "mod_id": "soulsweapons"
+    },
+    {
+      "id": "returning_knight",
+      "mod_id": "soulsweapons"
+    },
+    {
+      "id": "accursed_lord_boss",
+      "mod_id": "soulsweapons"
+    },
+    {
+      "id": "day_stalker",
+      "mod_id": "soulsweapons"
+    },
+    {
+      "id": "night_prowler",
+      "mod_id": "soulsweapons"
+    },
+    {
+      "id": "chaos_monarch",
+      "mod_id": "soulsweapons"
+    },
+    {
+      "id": "moonknight",
+      "mod_id": "soulsweapons"
+    },
+    {
+      "id": "corpse_warlock",
+      "mod_id": "eeeabsmobs"
+    },
+    {
+      "id": "nameless_guardian",
+      "mod_id": "eeeabsmobs"
+    },
+    {
+      "id": "ah_puch",
+      "mod_id": "call_of_yucutan"
+    },
+    {
+      "id": "kukulkan",
+      "mod_id": "call_of_yucutan"
+    },
+    {
+      "id": "void_worm",
+      "mod_id": "alexsmobs"
+    },
+    {
+      "id": "luxtructosaurus",
+      "mod_id": "alexscaves"
+    },
+    {
+      "id": "wither_storm",
+      "mod_id": "witherstormmod"
+    },
+    {
+      "id": "withered_symbiont",
+      "mod_id": "witherstormmod"
+    },
+    {
+      "id": "chaos_spawner",
+      "mod_id": "dungeonnowloading"
+    },
+    {
+      "id": "fairkeeper_boros",
+      "mod_id": "dungeonnowloading"
+    },
+    {
+      "id": "fairkeeper_ouros",
+      "mod_id": "dungeonnowloading"
+    },
+    {
+      "id": "slider",
+      "mod_id": "aether"
+    },
+    {
+      "id": "valkyrie_queen",
+      "mod_id": "aether"
+    },
+    {
+      "id": "sun_spirit",
+      "mod_id": "aether"
+    },
+    {
+      "id": "aerwhale_king",
+      "mod_id": "lost_aether_content"
+    },
+    {
+      "id": "eots_controller",
+      "mod_id": "deep_aether"
+    }
+]
