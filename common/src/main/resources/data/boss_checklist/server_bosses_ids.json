@@ -1,0 +1,245 @@
+[
+	{
+		"id": "minecraft:wither"
+	},
+	{
+		"id": "minecraft:ender_dragon"
+	},
+	{
+		"id": "bosses_of_mass_destruction:void_blossom"
+	},
+	{
+		"id": "bosses_of_mass_destruction:lich"
+	},
+	{
+		"id": "bosses_of_mass_destruction:obsidilith"
+	},
+	{
+		"id": "bosses_of_mass_destruction:gauntlet"
+	},
+	{
+		"id": "cataclysm:ignis"
+	},
+	{
+		"id": "cataclysm:ancient_remnant"
+	},
+	{
+		"id": "cataclysm:netherite_monstrosity"
+	},
+	{
+		"id": "cataclysm:the_harbinger"
+	},
+	{
+		"id": "cataclysm:the_leviathan"
+	},
+	{
+		"id": "cataclysm:scylla"
+	},
+	{
+		"id": "cataclysm:maledictus"
+	},
+	{
+		"id": "cataclysm:ender_guardian"
+	},
+	{
+		"id": "irons_spellbooks:dead_king"
+	},
+	{
+		"id": "irons_spellbooks:fire_boss"
+	},
+	{
+		"id": "unusualend:endstone_golem"
+	},
+	{
+		"id": "block_factorys_bosses:sandworm"
+	},
+	{
+		"id": "block_factorys_bosses:yeti"
+	},
+	{
+		"id": "block_factorys_bosses:underworld_knight"
+	},
+	{
+		"id": "block_factorys_bosses:infernal_dragon"
+	},
+	{
+		"id": "minecells:concierge"
+	},
+	{
+		"id": "minecells:conjunctivius"
+	},
+	{
+		"id": "aquamirae:captain_cornelia"
+	},
+	{
+		"id": "born_in_chaos_v1:lord_pumpkinhead"
+	},
+	{
+		"id": "fdbosses:malkuth"
+	},
+	{
+		"id": "fdbosses:chesed"
+	},
+	{
+		"id": "mowziesmobs:frostmaw"
+	},
+	{
+		"id": "mowziesmobs:umvuthi"
+	},
+	{
+		"id": "mowziesmobs:ferrous_wroughtnaut"
+	},
+	{
+		"id": "mowziesmobs:sculptor"
+	},
+	{
+		"id": "soulsweapons:draugr_boss"
+	},
+	{
+		"id": "soulsweapons:night_shade"
+	},
+	{
+		"id": "soulsweapons:returning_knight"
+	},
+	{
+		"id": "soulsweapons:accursed_lord_boss"
+	},
+	{
+		"id": "soulsweapons:day_stalker"
+	},
+	{
+		"id": "soulsweapons:night_prowler"
+	},
+	{
+		"id": "soulsweapons:chaos_monarch"
+	},
+	{
+		"id": "soulsweapons:moonknight"
+	},
+	{
+		"id": "eeeabsmobs:corpse_warlock"
+	},
+	{
+		"id": "eeeabsmobs:nameless_guardian"
+	},
+	{
+		"id": "call_of_yucutan:ah_puch"
+	},
+	{
+		"id": "call_of_yucutan:kukulkan"
+	},
+	{
+		"id": "alexsmobs:void_worm"
+	},
+	{
+		"id": "alexscaves:luxtructosaurus"
+	},
+	{
+		"id": "witherstormmod:wither_storm"
+	},
+	{
+		"id": "witherstormmod:withered_symbiont"
+	},
+	{
+		"id": "dungeonnowloading:chaos_spawner"
+	},
+	{
+		"id": "dungeonnowloading:fairkeeper_boros"
+	},
+	{
+		"id": "dungeonnowloading:fairkeeper_ouros"
+	},
+	{
+		"id": "aether:slider"
+	},
+	{
+		"id": "aether:valkyrie_queen"
+	},
+	{
+		"id": "aether:sun_spirit"
+	},
+	{
+		"id": "lost_aether_content:aerwhale_king"
+	},
+	{
+		"id": "deep_aether:eots_controller"
+	},
+	{
+		"id": "terramity:gob"
+	},
+	{
+		"id": "terramity:super_sniffer"
+	},
+	{
+		"id": "terramity:trial_guardian"
+	},
+	{
+		"id": "terramity:virtue"
+	},
+	{
+		"id": "terramity:gundalf"
+	},
+	{
+		"id": "terramity:ultra_sniffer"
+	},
+	{
+		"id": "hs_bosses:sand_warrior"
+	},
+	{
+		"id": "wraithon:wraithon"
+	},
+	{
+		"id": "goety:apostle"
+	},
+	{
+		"id": "goety:vizier"
+	},
+	{
+		"id": "adventurez:blackstone_golem"
+	},
+	{
+		"id": "adventurez:the_eye"
+	},
+	{
+		"id": "adventurez:void_shadow"
+	},
+	{
+		"id": "twilightforest:naga"
+	},
+	{
+		"id": "twilightforest:lich"
+	},
+	{
+		"id": "twilightforest:minoshroom"
+	},
+	{
+		"id": "twilightforest:hydra"
+	},
+	{
+		"id": "twilightforest:ur_ghast"
+	},
+	{
+		"id": "twilightforest:yeti_alpha"
+	},
+	{
+		"id": "twilightforest:snow_queen"
+	},
+	{
+		"id": "callfromthedepth_:agonysoul"
+	},
+	{
+		"id": "callfromthedepth_:injured_ancient_guard"
+	},
+	{
+		"id": "callfromthedepth_:deepdarkestspawn"
+	},
+	{
+		"id": "ars_nouveau:wilden_boss"
+	},
+	{
+		"id": "traveloptics:the_nightwarden"
+	},
+	{
+		"id": "darkdoppelganger:dark_doppelganger"
+	}
+]
