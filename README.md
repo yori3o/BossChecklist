@@ -2,7 +2,7 @@ Boss Checklist is a mod that adds a menu to the game, accessible by pressing P, 
 
 This mod is primarily client-side, but can be installed on the server to automatically mark defeated bosses.
 
-The boss list can be edited via assets/bosses.json for the client and data/server_bosses_ids.json for the server.
+The wiki describes how to add/change a boss.
 
 *   **You can write suggestions in issues with the [suggestion] appended regarding translations and adding new bosses.**
 
