@@ -4,7 +4,7 @@ This mod is primarily client-side, but can be installed on the server to automat
 
 The boss list can be edited via assets/bosses.json for the client and data/server_bosses_ids.json for the server.
 
-- You can write suggestions in pull requests or issues with the [suggestion] appended regarding translations and adding new bosses.
+*   **You can write suggestions in issues with the [suggestion] appended regarding translations and adding new bosses.**
 
 [CurseForge link](https://www.curseforge.com/minecraft/mc-mods/boss-checklist)
 
