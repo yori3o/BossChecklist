@@ -1,4 +1,4 @@
-Boss Checklist is a mod that adds a menu to the game, accessible by pressing P, containing all the bosses from all the mods in your modpack. For each boss, you can view their model/image, drops, spawn conditions, whether they were killed in the world and by whom, as well as some additional information like health.
+Boss Checklist is a mod that adds a menu to the game, accessible by pressing [, containing all the bosses from all the mods in your modpack. For each boss, you can view their model/image, drops, spawn conditions, whether they were killed in the world and by whom, as well as some additional information like health.
 
 This mod is primarily client-side, but can be installed on the server to automatically mark defeated bosses.
 
