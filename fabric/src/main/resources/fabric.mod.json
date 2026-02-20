@@ -8,11 +8,11 @@
     "Yori3o"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/boss-checklist",
+    "homepage": "https://modrinth.com/mod/boss-checklist",
     "sources": "https://github.com/yori3o/BossChecklist",
     "issues": "https://github.com/yori3o/BossChecklist/issues"
   },
-  "license": "Apache 2.0",
+  "license": "MIT Licence",
   "icon": "logo.png",
   "environment": "*",
   "entrypoints": {
@@ -20,27 +20,20 @@
       "com.yori3o.boss_checklist.fabric.BossChecklistFabric"
     ],
     "client": [
-      "com.yori3o.boss_checklist.fabric.client.BossChecklistFabricClient"
+      "com.yori3o.boss_checklist.fabric.BossChecklistFabricClient"
     ]
   },
   "mixins": [
     "boss_checklist.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.17.2",
-    "minecraft": "~1.21.1",
+    "fabricloader": ">=0.17.0",
+    "minecraft": "1.21.1",
     "java": ">=21",
-    "architectury": ">=13.0.8",
-    "fabric-api": ">=0.102.0"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "fabric-api": ">=0.110.0"
   },
   "custom": {
     "modmenu": {
-      "clientSideOnly": false, 
-      "needsClient": true,
-
       "links": {
         "modmenu.curseforge":"https://www.curseforge.com/minecraft/mc-mods/boss-checklist",
         "modmenu.modrinth":"https://modrinth.com/mod/boss-checklist"

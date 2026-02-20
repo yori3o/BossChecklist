@@ -1,39 +1,62 @@
 package com.yori3o.boss_checklist.fabric;
 
-/*import com.yori3o.boss_checklist.config.ServerConfig;*/
-import com.yori3o.boss_checklist.BossChecklist;
-import com.yori3o.boss_checklist.server.BossDefeated;
 
-import net.fabricmc.loader.api.FabricLoader;
+import com.yori3o.boss_checklist.common.event.EventHandler;
+import com.yori3o.boss_checklist.common.server.data.ServerBossIdsLoader;
+import com.yori3o.boss_checklist.common.BossChecklist;
+
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.world.damagesource.DamageSource;
+
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.player.Player;
+import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
+
 
 
 public class BossChecklistFabric implements ModInitializer {
 
-    private static final BossDefeated BossDefeatedClass = new BossDefeated();
-
     @Override
     public void onInitialize() {
-        BossChecklist BossChecklist2 = new BossChecklist();
+        (new BossChecklist()).init();
 
-        BossChecklist2.init();
-
-        /*if (FabricLoader.getInstance().isModLoaded("yet_another_config_lib_v3")) {
-            BossChecklist.saveBossKiller = ServerConfig.saveBossKiller; }*/
+        EventHandler.whenRegisterPayloads();
 
         ServerLivingEntityEvents.AFTER_DEATH.register((LivingEntity entity, DamageSource source) -> {
-            String killerName = "";
-
-            if (source.getEntity() instanceof Player player) {
-                killerName = player.getName().getString();
-            }
-
-            BossDefeatedClass.EntityKilled(entity, killerName);
+            EventHandler.whenEntityDeath(entity, source);
         });
+
+        ServerLivingEntityEvents.ALLOW_DAMAGE.register((LivingEntity entity, DamageSource source, float amount) -> {
+            EventHandler.whenEntityAllowDamage(entity, source, amount);
+            return true; 
+        });
+
+        ServerPlayerEvents.JOIN.register((player) -> {
+            EventHandler.whenPlayerJoinToServer(player);
+        });
+
+        ServerLifecycleEvents.SERVER_STARTED.register((minecraftServer) -> {
+            EventHandler.whenServerStarted(minecraftServer);
+        });
+        
+        ResourceManagerHelper.get(PackType.SERVER_DATA)
+            .registerReloadListener(new SimpleSynchronousResourceReloadListener() {
+                @Override
+                public ResourceLocation getFabricId() {
+                    return ResourceLocation.fromNamespaceAndPath("boss_checklist", "server_resources_reloader");
+                }
+
+                @Override
+                public void onResourceManagerReload(ResourceManager resourceManager) {
+                    ServerBossIdsLoader.load(resourceManager);
+                }
+            });
     }
 
 }

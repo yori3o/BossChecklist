@@ -8,28 +8,64 @@
   "gui.boss_checklist.armor": "Броня: §9",
   "gui.boss_checklist.defeated": "Босс побеждён в мире.",
   "gui.boss_checklist.not_defeated": "Босс ещё не побеждён в мире.",
+  "gui.boss_checklist.miniboss_defeated": "Минибосс побеждён в мире.",
+  "gui.boss_checklist.miniboss_not_defeated": "Минибосс ещё не побеждён в мире.",
   "gui.boss_checklist.server_warning": "Убедитесь, что на сервере также установлен мод, иначе данная галочка не изменится.",
   "gui.boss_checklist.killer_name": "Убийца: ",
   "gui.boss_checklist.wiki_link_info": "Нажмите, чтобы перейти на вики.",
+  "gui.boss_checklist.last_battle": "Последняя битва:",
+  "gui.boss_checklist.duration": "Длительность: ",
+  "gui.boss_checklist.top_players": "Топ-3 по урону: ",
+  "gui.boss_checklist.boss_version": "Версия, из которой добавлен босс: ",
+  "gui.boss_checklist.mod_version": "Версия установленного мода: ",
+  "gui.boss_checklist.no_bosses_loaded": "Нет ни одного босса! Возможно, ресурсы сломаны или пусты.",
+  "gui.boss_checklist.no_bosses_finded_when_search": "Ничего не нашлось.",
+  "gui.boss_checklist.search": "Поиск...",
 
   "gui.boss_checklist.settings": "Настройки",
   "gui.boss_checklist.settings.progression_mode": "Режим прогрессии",
   "gui.boss_checklist.settings.progression_mode_desc": "Скрывает всю информацию о непобежденном боссе, кроме способа призыва.",
-  "gui.boss_checklist.settings.save_boss_killer": "Сохранять убийцу босса?",
+  "gui.boss_checklist.settings.progression_mode_plus": "Режим прогрессии+",
+  "gui.boss_checklist.settings.progression_mode_plus_desc": "Дополнение к предыдущему, скрывающее способ призыва и мод.",
+  "gui.boss_checklist.settings.save_boss_killer": "Сохранять убийцу босса",
   "gui.boss_checklist.settings.save_boss_killer_desc": "Запоминать того, кто нанёс последний удар?",
+  "gui.boss_checklist.settings.search_bar_enabled": "Строка поиска",
+  "gui.boss_checklist.settings.search_bar_enabled_desc": "Сверху будет поиск, с помощью которого можно искать по названию и айди.",
+  "gui.boss_checklist.settings.button_enabled": "Включить кнопку",
+  "gui.boss_checklist.settings.button_enabled_desc": "В меню паузы будет кнопка, открывающая чеклист.",
+  "gui.boss_checklist.settings.enable_statistics": "Включить статистику",
+  "gui.boss_checklist.settings.enable_statistics_desc": "Запоминать время последней битвы и лучших игроков по урону?",
+  "gui.boss_checklist.settings.enable_async": "Многопоточность",
+  "gui.boss_checklist.settings.enable_async_desc": "Серверная логика будет происходить асинхронно.",
 
   "command.boss_checklist.invalid_boss_id": "Неверный айди босса: ",
-  "command.boss_checklist.boss_marked_successfully": "Босс \"%\" помечен как % в мире.",
+  "command.boss_checklist.boss_marked_successfully_true": "Босс \"%s\" помечен как побеждённый в этом мире.",
+  "command.boss_checklist.boss_marked_successfully_false": "Босс \"%s\" помечен как ещё не побеждённый в этом мире.",
+
+  "modmenu.descriptionTranslation.boss_checklist": "Добавляет удобный список всех боссов из вашей сборки.",
+  "fml.menu.mods.info.description.boss_checklist": "Добавляет удобный список всех боссов из вашей сборки.",
+
+  
 
   "gui.boss_checklist.info_mowziesmobs_frostmaw": "Пластинка выпадает, только если босс убит во время снегопада и вы забрали Ледяной кристалл из его рук.",
   "gui.boss_checklist.info_mowziesmobs_sculptor": "Чтобы получить Перчатку, нужно пройти его испытание.",
   "gui.boss_checklist.info_fdbosses_chesed": "Более подробное описание рекомендуется изучить на арене.",
   "gui.boss_checklist.info_fdbosses_malkuth": "Более подробное описание рекомендуется изучить на арене.",
+  "gui.boss_checklist.info_fdbosses_geburah": "Более подробное описание рекомендуется изучить на арене.",
   "gui.boss_checklist.info_dungeonnowloading_fairkeeper_boros": "Дроп зависит от того, какого босса вы убили последнего.",
   "gui.boss_checklist.info_dungeonnowloading_fairkeeper_ouros": "Дроп зависит от того, какого босса вы убили последнего.",
   "gui.boss_checklist.info_terramity_gundalf": "Имеет три фазы в виде трёх разных боссов.",
   "gui.boss_checklist.info_hs_bosses_sand_warrior": "Может быть, §3Тотем Бессмертия§f можно найти в этой же башне..?",
   "gui.boss_checklist.info_adventurez_void_shadow": "Для появления портала нужен мод VoidZ.",
+  "gui.boss_checklist.info_terra_entity_king_slime": "Дроп указан для режима Эксперт.",
+  "gui.boss_checklist.info_terra_entity_eye_of_cthulhu": "Дроп указан для режима Эксперт и обоих зол.",
+  "gui.boss_checklist.info_terra_entity_eater_of_worlds": "Дроп указан для режима Эксперт.",
+  "gui.boss_checklist.info_terra_entity_brain_of_cthulhu": "Дроп указан для режима Эксперт.",
+  "gui.boss_checklist.info_terra_entity_queen_bee": "Дроп указан для режима Эксперт.",
+  "gui.boss_checklist.info_terra_entity_skeletron": "Дроп указан для режима Эксперт.",
+  "gui.boss_checklist.info_armageddon_mod_the_discord": "Это три босса, которые появляются друг за другом.",
+  "gui.boss_checklist.info_twilightforest_knight_phantom": "Их будет шестеро, и нужно победить каждого.",
+  "gui.boss_checklist.info_goety_apostle": "Часть дропа выпадает только при призыве в Незере.",
 
   "boss_checklist.mod.minecraft": "Minecraft",
   "boss_checklist.mod.bosses_of_mass_destruction": "Bosses of Mass Destruction",
@@ -62,19 +98,50 @@
   "boss_checklist.mod.ars_nouveau": "Ars Nouveau",
   "boss_checklist.mod.traveloptics": "T.O Magic 'n Extras",
   "boss_checklist.mod.darkdoppelganger": "Dark Doppelganger",
+  "boss_checklist.mod.terra_entity": "Confluence: Otherworld",
+  "boss_checklist.mod.legendary_monsters": "Legendary Monsters",
+  "boss_checklist.mod.illagerinvasion": "Illager Invasion",
+  "boss_checklist.mod.graveyard": "The Graveyard",
+  "boss_checklist.mod.mofus_better_end_": "Mofu's Broken Constellation",
+  "boss_checklist.mod.dungeons_and_combat": "Dungeons And Combat",
+  "boss_checklist.mod.rediscovered": "Rediscovered",
+  "boss_checklist.mod.witherreincarnated": "Wither: Reincarnated",
+  "boss_checklist.mod.endertrigon": "Ender Trigon",
+  "boss_checklist.mod.deeperdarker": "Deeper and Darker",
+  "boss_checklist.mod.armageddon_mod": "Armageddon",
+  "boss_checklist.mod.illageandspillage": "Illage and Spillage",
+  "boss_checklist.mod.blue_skies": "Blue Skies",
+  "boss_checklist.mod.remnant_bosses": "Remnant Bosses",
+  "boss_checklist.mod.ancient_elements": "Ancient Elements",
+  "boss_checklist.mod.conjurer_illager": "The Conjurer",
+  "boss_checklist.mod.sleepy_hollows": "Sleepy Hollows",
+  "boss_checklist.mod.galosphere": "Galosphere",
+  "boss_checklist.mod.knightquest": "Knight Quest",
+  "boss_checklist.mod.companions": "Companions!",
+  "boss_checklist.mod.wetlands": "Beneath the Wetlands",
+  "boss_checklist.mod.monsterexpansion": "Monster Expansion",
+  "boss_checklist.mod.mutantmonsters": "Mutant Monsters",
+  "boss_checklist.mod.arthropocolypse": "Arthropocolypse",
+  "boss_checklist.mod.frostiful": "Frostiful",
+  "boss_checklist.mod.mutantmore": "Mutant More",
+  "boss_checklist.mod.friendsandfoes": "Friends&Foes",
+  "boss_checklist.mod.mythsandlegends": "Myths & Legends",
 
 
 
 
   "boss_checklist.boss.minecraft_wither": "Иссушитель",
   "boss_checklist.boss.minecraft_ender_dragon": "Эндер-дракон",
+  "boss_checklist.boss.minecraft_elder_guardian": "Древний Страж",
+  "boss_checklist.boss.minecraft_warden": "Хранитель",
 
   "boss_checklist.boss.irons_spellbooks_dead_king": "Мёртвый Король",
-  "boss_checklist.boss.irons_spellbooks_fire_boss": "Echo of Tyros, First Flamebearer",
+  "boss_checklist.boss.irons_spellbooks_fire_boss": "Эхо Тайроса, Первого Пламеносца",
 
   "boss_checklist.boss.unusualend_endstone_golem": "Эндерняковый Голем",
 
   "boss_checklist.boss.aquamirae_captain_cornelia": "Призрак Капитана Корнелии",
+  "boss_checklist.boss.aquamirae_eel": "Угорь",
 
   "boss_checklist.boss.born_in_chaos_v1_lord_pumpkinhead": "Лорд Тыквоголовый",
 
@@ -87,7 +154,7 @@
   "boss_checklist.boss.block_factorys_bosses_sandworm": "Пустынный Червь",
 
   "boss_checklist.boss.bosses_of_mass_destruction_obsidilith": "Обсидилит",
-  "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Длань Незера",
+  "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Перчатка Незера",
   "boss_checklist.boss.bosses_of_mass_destruction_lich": "Ночной Лич",
   "boss_checklist.boss.bosses_of_mass_destruction_void_blossom": "Пустотный Цветок",
 
@@ -102,6 +169,7 @@
 
   "boss_checklist.boss.fdbosses_malkuth": "Малхут",
   "boss_checklist.boss.fdbosses_chesed": "Хесед",
+  "boss_checklist.boss.fdbosses_geburah": "Гебура",
 
   "boss_checklist.boss.mowziesmobs_sculptor": "Тонгби, скульптор",
   "boss_checklist.boss.mowziesmobs_ferrous_wroughtnaut": "Железокованный",
@@ -124,6 +192,7 @@
   "boss_checklist.boss.call_of_yucutan_kukulkan": "Кукулькан, Бог Бытия",
 
   "boss_checklist.boss.alexsmobs_void_worm": "Червь Пустоты",
+  "boss_checklist.boss.alexsmobs_warped_mosco": "Искажённый Комар",
 
   "boss_checklist.boss.alexscaves_luxtructosaurus": "Люкструктозавр",
 
@@ -153,8 +222,18 @@
 
   "boss_checklist.boss.wraithon_wraithon": "The Wraithon",
 
-  "boss_checklist.boss.goety_apostle": "Марго Сил",
+  "boss_checklist.boss.goety_apostle": "Апостол",
   "boss_checklist.boss.goety_vizier": "Визирь",
+  "boss_checklist.boss.goety_ender_keeper": "Эндер-привратник",
+  "boss_checklist.boss.goety_hostile_redstone_monstrosity": "Редстоуновое Чудовище", 
+  "boss_checklist.boss.goety_brood_mother": "Паучья Королева",
+  "boss_checklist.boss.goety_hostile_redstone_golem": "Редстоуновый Голем",
+  "boss_checklist.boss.goety_wither_necromancer": "Визер-некромант",
+  "boss_checklist.boss.goety_minister": "Министр",
+  "boss_checklist.boss.goety_wight": "Умертвие",
+  "boss_checklist.boss.goety_skull_lord": "Властелин Черепов",
+  "boss_checklist.boss.goety_endersent": "Эндер-предвестник",
+  "boss_checklist.boss.goety_crone": "Карга",
 
   "boss_checklist.boss.adventurez_blackstone_golem": "Чернитовый Голем",
   "boss_checklist.boss.adventurez_the_eye": "Око",
@@ -164,8 +243,10 @@
   "boss_checklist.boss.twilightforest_lich": "Лич",
   "boss_checklist.boss.twilightforest_minoshroom": "Гриботавр",
   "boss_checklist.boss.twilightforest_hydra": "Гидра",
+  "boss_checklist.boss.twilightforest_knight_phantom": "Рыцари Фантомы",
   "boss_checklist.boss.twilightforest_ur_ghast": "Древний Гаст",
   "boss_checklist.boss.twilightforest_yeti_alpha": "Альфа Йети",
+  "boss_checklist.boss.twilightforest_alpha_yeti": "Альфа Йети",
   "boss_checklist.boss.twilightforest_snow_queen": "Снежная Королева",
 
   "boss_checklist.boss.callfromthedepth__agonysoul": "Агония Страдающей Души",
@@ -178,19 +259,120 @@
 
   "boss_checklist.boss.darkdoppelganger_dark_doppelganger": "Dark Doppelganger",
 
+  "boss_checklist.boss.terra_entity_king_slime": "Король Слизней",
+  "boss_checklist.boss.terra_entity_eye_of_cthulhu": "Глаз Ктулху",
+  "boss_checklist.boss.terra_entity_eater_of_worlds": "Пожиратель Миров",
+  "boss_checklist.boss.terra_entity_brain_of_cthulhu": "Мозг Ктулху",
+  "boss_checklist.boss.terra_entity_queen_bee": "Королева Пчёл",
+  "boss_checklist.boss.terra_entity_skeletron": "Скелетрон",
+
+  "boss_checklist.boss.legendary_monsters_cloud_golem": "Cumulonimbus",
+  "boss_checklist.boss.legendary_monsters_lava_eater": "Lava Eater",
+  "boss_checklist.boss.legendary_monsters_frostbitten_golem": "Frostbitten Golem",
+  "boss_checklist.boss.legendary_monsters_shulker_mimic": "Shulker Mimic",
+  "boss_checklist.boss.legendary_monsters_dune_sentinel": "Dune Sentinel",
+  "boss_checklist.boss.legendary_monsters_ancient_guardian": "Ancient Guardian",
+  "boss_checklist.boss.legendary_monsters_overgrown_colossus": "Overgrown Colossus",
+  "boss_checklist.boss.legendary_monsters_withered_abomination": "Withered Abomination",
+  "boss_checklist.boss.legendary_monsters_skeletosaurus": "Skeletosaurus",
+  "boss_checklist.boss.legendary_monsters_endersent": "Endersent",
+  "boss_checklist.boss.legendary_monsters_posessed_paladin": "Posessed Paladin",
+
+  "boss_checklist.boss.illagerinvasion_invoker": "Вызыватель",
+
+  "boss_checklist.boss.graveyard_lich": "Испорченный Чемпион",
+
+  "boss_checklist.boss.mofus_better_end__endermite_queen": "Королева Эндермитов",
+  "boss_checklist.boss.mofus_better_end__eye_guardian": "Ангел-хранитель глаз",
+  "boss_checklist.boss.mofus_better_end__forgotten_litch": "Забытый Литч",
+  "boss_checklist.boss.mofus_better_end__reborn_litch": "Возрожденный Лич",
+
+  "boss_checklist.boss.dungeons_and_combat_kamath": "Kamath",
+  "boss_checklist.boss.dungeons_and_combat_sunleia": "Sunleia",
+
+  "boss_checklist.boss.rediscovered_red_dragon": "Красный Дракон",
+
+  "boss_checklist.boss.deeperdarker_stalker": "Подражатель",
+
+  "boss_checklist.boss.armageddon_mod_the_iron_colossus": "The Iron Colossus",
+  "boss_checklist.boss.armageddon_mod_the_gobelin_lord": "The Goblin Lord",
+  "boss_checklist.boss.armageddon_mod_arion_tyrantofthe_emerald_wrath_ravager": "Arion, Tyrant of the Emerald Wrath",
+  "boss_checklist.boss.armageddon_mod_eldoraththe_ancient_builder": "Eldorath, the Ancient Builder",
+  "boss_checklist.boss.armageddon_mod_zoranththe_forgotten_one": "Zoranth, the Forgotten One",
+  "boss_checklist.boss.armageddon_mod_elvenite_paladin": "The Elvenite Paladin",
+  "boss_checklist.boss.armageddon_mod_vaedricthe_fallen_wanderer": "Vaedric, the Fallen Wanderer",
+  "boss_checklist.boss.armageddon_mod_bringer_of_doom": "The Bringer of Doom",
+  "boss_checklist.boss.armageddon_mod_the_discord": "The Calamities",
+  "boss_checklist.boss.armageddon_mod_sanghor_lord_of_blood": "Sanghor, Lord of Blood",
+  "boss_checklist.boss.armageddon_mod_zoranth_newborn_of_the_zenith": "Zoranth, Newborn of the Zenith",
+  "boss_checklist.boss.armageddon_mod_nyxaris_the_veil_of_oblivion": "Nyxaris, the Veil of Oblivion",
+
+  "boss_checklist.boss.illageandspillage_magispeller": "Магоклинатель",
+  "boss_checklist.boss.illageandspillage_spiritcaller": "Духоклинатель",
+  "boss_checklist.boss.illageandspillage_freakager": "Чужатик",
+
+  "boss_checklist.boss.blue_skies_summoner": "Заклинатель",
+  "boss_checklist.boss.blue_skies_alchemist": "Алхимик",
+  "boss_checklist.boss.blue_skies_starlit_crusher": "Крушитель Старлит",
+  "boss_checklist.boss.blue_skies_arachnarch": "Арахна",
+
+  "boss_checklist.boss.remnant_bosses_ossukage": "Remnant: Ossukage",
+
+  "boss_checklist.boss.ancient_elements_ancient_elemental": "Ancient Elemental",
+
+  "boss_checklist.boss.conjurer_illager_conjurer": "Фокусник",
+
+  "boss_checklist.boss.sleepy_hollows_horseman": "Horseman",
+
+  "boss_checklist.boss.galosphere_berserker": "Berserker",
+
+  "boss_checklist.boss.knightquest_netherman": "Недермен",
+
+  "boss_checklist.boss.companions_sacred_pontiff": "Sacred Pontiff",
+
+  "boss_checklist.boss.wetlands_elder_gear_golem": "Древний Механический Голем",
+
+  "boss_checklist.boss.monsterexpansion_rhyza": "Rhyza",
+  "boss_checklist.boss.monsterexpansion_skrythe": "Skrythe",
+  "boss_checklist.boss.monsterexpansion_leivekilth": "Leivekilth",
+
+  "boss_checklist.boss.mutantmonsters_mutant_zombie": "Мутант Зомби",
+  "boss_checklist.boss.mutantmonsters_mutant_skeleton": "Мутант Скелет",
+  "boss_checklist.boss.mutantmonsters_mutant_creeper": "Мутант Крипер",
+  "boss_checklist.boss.mutantmonsters_mutant_enderman": "Мутант Эндермен",
+
+  "boss_checklist.boss.arthropocolypse_behemoth_desert_spider": "Пустынный Паук-бегемот",
+
+  "boss_checklist.boss.frostiful_frostologer": "Морозбойник",
+
+  "boss_checklist.boss.mutantmore_mutant_jungle_zombie": "Mutant Jungle Zombie",
+  "boss_checklist.boss.mutantmore_mutant_frozen_zombie": "Mutant Frozen Zombie",
+  "boss_checklist.boss.mutantmore_mutant_hoglin": "Mutant Hoglin",
+  "boss_checklist.boss.mutantmore_mutant_husk": "Mutant Husk",
+  "boss_checklist.boss.mutantmore_mutant_wither_skeleton": "Mutant Wither Skeleton",
+  "boss_checklist.boss.mutantmore_mutant_blaze": "Mutant Blaze",
+  "boss_checklist.boss.mutantmore_mutant_shulker": "Mutant Shulker",
+  
+  "boss_checklist.boss.friendsandfoes_wildfire": "Инферно",
+  
+  "boss_checklist.boss.mythsandlegends_black_charro": "The Black Charro",
+
 
 
 
 
   "boss_checklist.summon.minecraft_wither": "Создаётся из §14 песка душ§r§0 и §13 черепов иссушителя§r§0.",
-  "boss_checklist.summon.minecraft_ender_dragon": "Появляется на центральном острове Энда.",
+  "boss_checklist.summon.minecraft_ender_dragon": "Находится на центральном острове Энда. Может быть повторно призван с помощью 4 Кристаллов края, установленных на каждой стороне обратного портала.",
+  "boss_checklist.summon.minecraft_elder_guardian": "Появляются в Подводной Крепости на третьем этаже и в обоих её крыльях.",
+  "boss_checklist.summon.minecraft_warden": "Появляется при активации натурально сгенерированного Скалкового крикуна 4 раза.",
 
-  "boss_checklist.summon.irons_spellbooks_dead_king": "Отыщите его в Катакомбах, куда указывает Капризный компас.",
-  "boss_checklist.summon.irons_spellbooks_fire_boss": "Используйте Cinderous Soulcaller в Цитадели, найденной с помощью Древней карты в Незере.",
+  "boss_checklist.summon.irons_spellbooks_dead_king": "Отыщите его в Катакомбах, куда указывает §1Капризный компас§r§0.",
+  "boss_checklist.summon.irons_spellbooks_fire_boss": "Используйте §1Cinderous Soulcaller§r§0 в Цитадели, найденной с помощью §1Древней карты§r§0 в Незере.",
 
   "boss_checklist.summon.unusualend_endstone_golem": "Возложите §1Драконье дыхание§r§0 на Алтарь голема на вершине башни в Энде.",
 
-  "boss_checklist.summon.aquamirae_captain_cornelia": "Можно призвать с помощью Горна-ракушки, которого можно найти на Корабле.",
+  "boss_checklist.summon.aquamirae_captain_cornelia": "Можно призвать с помощью §1Горна-ракушки§r§0 около воды в Ледяном Лабиринте.",
+  "boss_checklist.summon.aquamirae_eel": "Найдите его на дне подземного убежища в Ледяном Лабиринте.",
 
   "boss_checklist.summon.born_in_chaos_v1_lord_pumpkinhead": "Щёлкните правой кнопкой мыши по Адской Злой Тыкве, используя Эликсир Трансмутации.",
 
@@ -202,9 +384,9 @@
   "boss_checklist.summon.block_factorys_bosses_yeti": "Наткнитесь на усыпанный костями ледяной пик в заснеженной равнине.",
   "boss_checklist.summon.block_factorys_bosses_sandworm": "Ищите подозрительные руины с костями в пустыне.",
 
-  "boss_checklist.summon.bosses_of_mass_destruction_obsidilith": "Вставьте §1око эндера§r§0 в Обсидиановый алтарь на вершине гигантского парящего сооружения в Энде.",
-  "boss_checklist.summon.bosses_of_mass_destruction_gauntlet": "Найдите арену с боссом в озёрах лавы Незера.",
-  "boss_checklist.summon.bosses_of_mass_destruction_lich": "Найдите Башню Лича с помощью Звезды души, выпадающей с маленьким шансом из нежити. Для призыва босса потребуется §14 единицы Звёзд души§r.",
+  "boss_checklist.summon.bosses_of_mass_destruction_obsidilith": "Вставьте §1Око эндера§r§0 в Обсидиановый алтарь на вершине гигантского парящего сооружения в Энде.",
+  "boss_checklist.summon.bosses_of_mass_destruction_gauntlet": "Найдите большую арену в озёрах лавы Незера и разрушьте §1Древний резной чернит§r§0 в её центре.",
+  "boss_checklist.summon.bosses_of_mass_destruction_lich": "Найдите Башню Лича с помощью Звезды души, выпадающей с маленьким шансом из нежити. Для призыва босса потребуется §14 Звёзды души§r§0.",
   "boss_checklist.summon.bosses_of_mass_destruction_void_blossom": "Отыщите его глубоко в пещерах, посадив Пустотную лилию, которая укажет в сторону босса.",
 
   "boss_checklist.summon.cataclysm_ancient_remnant": "Найдите спящего босса в Проклятой пирамиде с помощью Ока пустыни и используйте §1Пустынное ожерелье§r§0, получаемое из подозрительного песка.",
@@ -216,8 +398,9 @@
   "boss_checklist.summon.cataclysm_ender_guardian": "Следуйте за Оком пустоты в Разрушенную Цитадель в Энде.",
   "boss_checklist.summon.cataclysm_ignis": "Найдите Пылающую арену с помощью Ока огня, победите Огненных ревенантов и щёлкните ПКМ §1Пылающим пеплом§r§0 по Огненному алтарю.",
 
-  "boss_checklist.summon.fdbosses_malkuth": "Найдите арену с боссом с помощью Глаза Малхута. Внимательно изучите его описание (на арене) перед боем.",
-  "boss_checklist.summon.fdbosses_chesed": "Найдите арену с боссом с помощью Глаза Хеседа. Внимательно изучите его описание (на арене) перед боем.",
+  "boss_checklist.summon.fdbosses_malkuth": "Найдите арену с боссом с помощью §1Глаза Малхута§r§0.",
+  "boss_checklist.summon.fdbosses_chesed": "Найдите арену с боссом с помощью §1Глаза Хеседа§r§0.",
+  "boss_checklist.summon.fdbosses_geburah": "Найдите арену с боссом в Энде с помощью §1Глаза Гебуры§r§0.",
 
   "boss_checklist.summon.mowziesmobs_sculptor": "Появляется в центре Монастыря.",
   "boss_checklist.summon.mowziesmobs_ferrous_wroughtnaut": "Найдите его в Кованной Камере под землёй.",
@@ -225,7 +408,7 @@
   "boss_checklist.summon.mowziesmobs_frostmaw": "Появляется в снежных биомах, таких как Заснеженные равнины или Ледяные пики.",
 
   "boss_checklist.summon.soulsweapons_draugr_boss": "Обитает в Могилах Старого Чемпиона.",
-  "boss_checklist.summon.soulsweapons_night_shade": "Появлется после убийства Остатков Старого Чемпиона.",
+  "boss_checklist.summon.soulsweapons_night_shade": "Появляется после убийства Остатков Старого Чемпиона.",
   "boss_checklist.summon.soulsweapons_returning_knight": "Используйте Потерянную Душу на Старом Лунном Алтаре.",
   "boss_checklist.summon.soulsweapons_accursed_lord_boss": "Найдите Разлагающееся Королевство в Незере.",
   "boss_checklist.summon.soulsweapons_day_stalker": "Используйте Сферу Хаоса днём.",
@@ -233,18 +416,19 @@
   "boss_checklist.summon.soulsweapons_chaos_monarch": "Используйте Осколок Неопределенности (выпадающий из Иссушителя) на Чернокаменном Пьедестале.",
   "boss_checklist.summon.soulsweapons_moonknight": "Используйте Эссенцию Вечера на Старом Лунном Алтаре.",
 
-  "boss_checklist.summon.eeeabsmobs_corpse_warlock": "Найдите его у Кровавого Алтаря в Незере.",
-  "boss_checklist.summon.eeeabsmobs_nameless_guardian": "Найдите глубинное подземное сооружение и спуститесь в самый его низ, пройдя несколько испытаний.",
+  "boss_checklist.summon.eeeabsmobs_corpse_warlock": "Найдите его у Кровавого Алтаря с помощью §1Ока Кровавого Алтаря§r§0 в Незере.",
+  "boss_checklist.summon.eeeabsmobs_nameless_guardian": "Найдите подземное сооружение с помощью §1Глаза Древности§r§0 и спуститесь в самый его низ, пройдя несколько испытаний.",
 
   "boss_checklist.summon.call_of_yucutan_ah_puch": "Сломайте Идол Ах Пуча в Смертельном Склепе.",
   "boss_checklist.summon.call_of_yucutan_kukulkan": "Сломайте Идол Кукультана в Заросшем Храме.",
 
   "boss_checklist.summon.alexsmobs_void_worm": "Бросьте §1Таинственного Червя§r§0 в бездну Энда.",
+  "boss_checklist.summon.alexsmobs_warped_mosco": "Покормите багрового комара §1Искажённой смесью§r§0.",
 
   "boss_checklist.summon.alexscaves_luxtructosaurus": "Бросьте §1Зловещий Катализатор§r§0 в жерло вулкана.",
 
   "boss_checklist.summon.witherstormmod_wither_storm": "Соберите форму иссушителя в разрушенной структуре в центре мира.",
-  "boss_checklist.summon.witherstormmod_withered_symbiont": "Появлется во время 4 фазы Иссушающей Бури.",
+  "boss_checklist.summon.witherstormmod_withered_symbiont": "Появляется во конце 5 фазы Иссушающей Бури.",
 
   "boss_checklist.summon.dungeonnowloading_chaos_spawner": "Используйте §1Череп Хаоса§r§0, чтобы пробудить запечатанного босса в глубоком подземелье.",
   "boss_checklist.summon.dungeonnowloading_fairkeeper_boros": "Используйте Redstone Idol в центре глубокого подземелья в джунглях. (Вызывается вместе с Fairkeeper Ouros)",
@@ -271,6 +455,16 @@
 
   "boss_checklist.summon.goety_apostle": "Проведите Sabbath Ritual.",
   "boss_checklist.summon.goety_vizier": "Используйте §1Тёмный Свиток§r§0 в лесном особняке или подобной структуре в тёмном лесу.",
+  "boss_checklist.summon.goety_ender_keeper": "Найдите Финальный Терминал в Энде с помощью §1Ока пустоты§r§0; откройте Пустотные рамки с помощью §1Ключей пустоты§r§0 и полученные §1Осколки пустоты§r§0 вставьте в Пустотное святилище в центре структуры.",
+  "boss_checklist.summon.goety_hostile_redstone_monstrosity": "Включите параметр \"hostileRedstoneMonstrosityRaid\" в файле goety-mobs.toml. Появляется на финальной волне рейда с Bad Omen V на сложном уровне сложности.", 
+  "boss_checklist.summon.goety_brood_mother": "Разрушьте §1Логово паучьей королева§r§0 в большой комнате Паучьего логова.",
+  "boss_checklist.summon.goety_hostile_redstone_golem": "Включите параметр \"hostileRedstoneGolemRaid\" в файле goety-mobs.toml. Появляется на 5 и 6 волне рейда.",
+  "boss_checklist.summon.goety_wither_necromancer": "Используйте §1Пламенный рог§r§0 в Незерской крепости.",
+  "boss_checklist.summon.goety_minister": "С вероятностью 15% появляется в патруле разбойников, если у игрока много Энергии душ; или на финальной волне рейда с Bad Omen V на сложном уровне сложности.",
+  "boss_checklist.summon.goety_wight": "Иногда появляется рядом с игроками, у которых 9000 или более единиц Энергии душ.",
+  "boss_checklist.summon.goety_skull_lord": "Откройте запертый §1Питос§r§0 в склепе, путь к которому вам укажет §1Око Склепа§r§0.",
+  "boss_checklist.summon.goety_endersent": "Найдите Финальный Терминал в Энде с помощью §1Ока пустоты§r§0; откройте Пустотную рамку с помощью §1Ключа пустоты§r§0.",
+  "boss_checklist.summon.goety_crone": "Кликните по §1Хрустальному шару§r§0 в Заброшенной хижине, которую можно найти в болоте.",
   
   "boss_checklist.summon.adventurez_blackstone_golem": "Постройте в Незере алтарь согласно вики или странице мода.",
   "boss_checklist.summon.adventurez_the_eye": "Постройте в Энде алтарь согласно вики или странице мода.",
@@ -280,8 +474,10 @@
   "boss_checklist.summon.twilightforest_lich": "Можно найти на вершине Башни Лича в лесу.",
   "boss_checklist.summon.twilightforest_minoshroom": "Находится на дне Лабиринта в болоте.",
   "boss_checklist.summon.twilightforest_hydra": "Обитает в Логове Гидры в огненном болоте.",
+  "boss_checklist.summon.twilightforest_knight_phantom": "Найдите их на нижнем уровне Крепости рыцарей-гоблинов в тёмном лесу.",
   "boss_checklist.summon.twilightforest_ur_ghast": "Можно найти на вершине Тёмной Башни в тёмном лесу.",
   "boss_checklist.summon.twilightforest_yeti_alpha": "Обитает в Логове Йети в снежном лесу.",
+  "boss_checklist.summon.twilightforest_alpha_yeti": "Обитает в Логове Йети в снежном лесу.",
   "boss_checklist.summon.twilightforest_snow_queen": "Находится на вершине Дворца Авроры в леднике.",
 
   "boss_checklist.summon.callfromthedepth__agonysoul": "Используйте Ключ агонии на Камне жертвы в Жертвенном Бастионе.",
@@ -292,5 +488,103 @@
 
   "boss_checklist.summon.traveloptics_the_nightwarden": "Используйте §1Excrucis§r§0 на спящем боссе в Пустотном Соборе.",
 
-  "boss_checklist.summon.darkdoppelganger_dark_doppelganger": "Бросьте §1Shadow Orb§r§0 в бездну в Энде."
+  "boss_checklist.summon.darkdoppelganger_dark_doppelganger": "Бросьте §1Shadow Orb§r§0 в бездну в Энде.",
+
+  "boss_checklist.summon.terra_entity_king_slime": "Используйте §1Слизевую корону§r§0.",
+  "boss_checklist.summon.terra_entity_eye_of_cthulhu": "Используйте §1Подозрительный глаз§r§0.",
+  "boss_checklist.summon.terra_entity_eater_of_worlds": "Используйте §1Корм для червей§r§0 или разрушьте §13 Теневые сферы§r§0.",
+  "boss_checklist.summon.terra_entity_brain_of_cthulhu": "Используйте §1Кровавый позвоночник§r§0 или §13 Багряных сердца§r§0.",
+  "boss_checklist.summon.terra_entity_queen_bee": "Используйте §1Пчелиную манию§r§0 или разрушьте §1Личинку§r§0 в улье.",
+  "boss_checklist.summon.terra_entity_skeletron": "Поговорите с Old man ночью или убейте Портного с его куклой вуду в слоте для аксессуаров.",
+
+  "boss_checklist.summon.legendary_monsters_cloud_golem": "Найдите Облачный храм с помощью §1Eye of Air§r§0.",
+  "boss_checklist.summon.legendary_monsters_lava_eater": "Найдите его с помощью §1Eye of Magma§r§0 в Незере.",
+  "boss_checklist.summon.legendary_monsters_frostbitten_golem": "Найдите его с помощью §1Eye of Frost§r§0.",
+  "boss_checklist.summon.legendary_monsters_shulker_mimic": "Найдите его с помощью §1Eye of Shulker§r§0 в Энде.",
+  "boss_checklist.summon.legendary_monsters_dune_sentinel": "Найдите его с помощью §1Eye of Sandstorm§r§0.",
+  "boss_checklist.summon.legendary_monsters_ancient_guardian": "Найдите его с помощью §1Eye of Many Ribs§r§0.",
+  "boss_checklist.summon.legendary_monsters_overgrown_colossus": "Найдите его с помощью §1Eye of Moss§r§0.",
+  "boss_checklist.summon.legendary_monsters_withered_abomination": "Найдите его с помощью §1Eye of Soul§r§0 в Незере.",
+  "boss_checklist.summon.legendary_monsters_skeletosaurus": "Найдите его с помощью §1Eye of Bones§r§0 в Незере.",
+  "boss_checklist.summon.legendary_monsters_endersent": "Найдите его с помощью §1Eye of Chorus§r§0 в Энде.",
+  "boss_checklist.summon.legendary_monsters_posessed_paladin": "Найдите его с помощью §1Eye of Ghost§r§0.",
+
+  "boss_checklist.summon.illagerinvasion_invoker": "Найдите его в Особняке в тёмном лесу.",
+
+  "boss_checklist.summon.graveyard_lich": "Текст не умещается здесь, ссылка на него в закладке снизу.",
+
+  "boss_checklist.summon.mofus_better_end__endermite_queen": "Найдите большую комнату с алтарём в Эндермитовом Гнезде и используйте на нем и блоках под ним 5 Blood Jug, после чего возложите на него Endermite Queen Idol.",
+  "boss_checklist.summon.mofus_better_end__eye_guardian": "Найдите Часовую Башню, используйте 4 FosEnd Energy Cube на алтарях вокруг неё, убейте минибоссов и пробудите босса с помощью Mechanical Fosend Eye.",
+  "boss_checklist.summon.mofus_better_end__forgotten_litch": "Найдите Forgotten Town в измерении Broken Constellation.",
+  "boss_checklist.summon.mofus_better_end__reborn_litch": "Встаньте в центр на вершине структуры, появившейся после победы над Забытый Литчем.",
+
+  "boss_checklist.summon.dungeons_and_combat_kamath": "Найдите Руины Каматха.",
+  "boss_checklist.summon.dungeons_and_combat_sunleia": "Найдите Пантеон Санлеи.",
+
+  "boss_checklist.summon.rediscovered_red_dragon": "Найдите кирпичную пирамиду в измерении Skylands и разрушьте все Драконьи пилоны внутри, после чего поднимитесь на вершину.",
+
+  "boss_checklist.summon.deeperdarker_stalker": "В измерении The Otherside в Древнем Храме есть Древние Вазы, из которых при разрушении с 0.5% шансом появляется босс.",
+
+  "boss_checklist.summon.armageddon_mod_the_iron_colossus": "Создайте и используйте §1Железный пульт§r§0.",
+  "boss_checklist.summon.armageddon_mod_the_gobelin_lord": "Создайте и используйте §1Странную монету§r§0.",
+  "boss_checklist.summon.armageddon_mod_arion_tyrantofthe_emerald_wrath_ravager": "Создайте и используйте §1Изумрудный тотем§r§0.",
+  "boss_checklist.summon.armageddon_mod_eldoraththe_ancient_builder": "Создайте и используйте §1Камень строителя§r§0.",
+  "boss_checklist.summon.armageddon_mod_zoranththe_forgotten_one": "Создайте и используйте §1Огненный череп иссушителя§r§0 в Незере.",
+  "boss_checklist.summon.armageddon_mod_elvenite_paladin": "Создайте и используйте §1Эмблему Титана§r§0.",
+  "boss_checklist.summon.armageddon_mod_vaedricthe_fallen_wanderer": "Создайте и используйте §1Падший осколок Странника§r§0.",
+  "boss_checklist.summon.armageddon_mod_bringer_of_doom": "Создайте и используйте §1Ключ судьбы§r§0.",
+  "boss_checklist.summon.armageddon_mod_the_discord": "Создайте и используйте §1Сигил Бедствия§r§0.",
+  "boss_checklist.summon.armageddon_mod_sanghor_lord_of_blood": "Создайте и используйте §1The Key Of Doom§r§0.",
+  "boss_checklist.summon.armageddon_mod_zoranth_newborn_of_the_zenith": "Создайте и используйте §1Эмблему Солнца§r§0.",
+  "boss_checklist.summon.armageddon_mod_nyxaris_the_veil_of_oblivion": "Создайте и используйте §1Испорченную слезу§r§0.",
+
+  "boss_checklist.summon.illageandspillage_magispeller": "Появляется во время рейда.",
+  "boss_checklist.summon.illageandspillage_spiritcaller": "Появляется во время рейда.",
+  "boss_checklist.summon.illageandspillage_freakager": "Появляется во время рейда.",
+
+  "boss_checklist.summon.blue_skies_summoner": "Купите 4 §1Ослепляющих ключа подземелья§r§0 у Привратника и войдите в комнату с боссом на вершине Ослепительного подземелья Эвербрайта.",
+  "boss_checklist.summon.blue_skies_alchemist": "Купите 4 §1Ослепляющих ключа подземелья§r§0 у Привратника и войдите в комнату с боссом на вершине Ослепительного подземелья Эвердоуна.",
+  "boss_checklist.summon.blue_skies_starlit_crusher": "Отыщите 4 §1Ключа от подземелья природы§r§0 в Подземелье Природы и войдите в комнату с боссом на его вершине.",
+  "boss_checklist.summon.blue_skies_arachnarch": "Отыщите 4 §1Ключа от ядовитого подземелья§r§0 в Ядовитом Подземелье и войдите в комнату с боссом на его нижнем уровне.",
+
+  "boss_checklist.summon.remnant_bosses_ossukage": "Постройте особый алтарь и возложите на него §1Звезду Незера§r§0.",
+
+  "boss_checklist.summon.ancient_elements_ancient_elemental": "Используйте Elemental Charge.",
+
+  "boss_checklist.summon.conjurer_illager_conjurer": "Найдите его в Театре в тёмном лесу.",
+
+  "boss_checklist.summon.sleepy_hollows_horseman": "Используйте §1Luminous Essence§r§0 на пьедестале в центре Кладбища.",
+
+  "boss_checklist.summon.galosphere_berserker": "Найдите его в глубокой святыне в Розовых Соляных Пещерах.",
+
+  "boss_checklist.summon.knightquest_netherman": "Полностью заполните Great Chalice эссенциями, затем используйте §1Сияющую Эссенцию§r§0 на нём.",
+
+  "boss_checklist.summon.companions_sacred_pontiff": "Найдите его в центре Обезьяньего Храма в джунглях и кликните ПКМ по нему.",
+
+  "boss_checklist.summon.wetlands_elder_gear_golem": "Найдите в болотах подземелье; соберите форму голема, прокрутив медный вентиль; одушевите Сломанную медную шестерню §1Огоньком в бутылке§r§0 и поставьте тыкву, которая лежит в сундуке.",
+
+  "boss_checklist.summon.monsterexpansion_rhyza": "Иногда появляется на островах Энда.",
+  "boss_checklist.summon.monsterexpansion_skrythe": "Иногда появляется на поверхности.",
+  "boss_checklist.summon.monsterexpansion_leivekilth": "Иногда появляется в замёрзших океанах.",
+
+  "boss_checklist.summon.mutantmonsters_mutant_zombie": "Иногда появляется на поверхности.",
+  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Иногда появляется на поверхности.",
+  "boss_checklist.summon.mutantmonsters_mutant_creeper": "Иногда появляется на поверхности.",
+  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Иногда появляется на островах Энда.",
+
+  "boss_checklist.summon.arthropocolypse_behemoth_desert_spider": "Найдите арену с боссом в пустыне.",
+
+  "boss_checklist.summon.frostiful_frostologer": "Найдите его на третьем этаже замка, карту к которому можно найти в аванпостах в холодных биомах.",
+
+  "boss_checklist.summon.mutantmore_mutant_jungle_zombie": "Найдите заброшенную лабораторию в лесу, сварите зелье §1Formula Y§r§0 или §1Compound Z§r§0 и используйте его на зомби в джунглях.",
+  "boss_checklist.summon.mutantmore_mutant_frozen_zombie": "Найдите заброшенную лабораторию в лесу, сварите зелье §1Formula Y§r§0 или §1Compound Z§r§0 и используйте его на зомби в холодном биоме.",
+  "boss_checklist.summon.mutantmore_mutant_hoglin": "Найдите заброшенную лабораторию в лесу, сварите зелье §1Formula Y§r§0 или §1Compound Z§r§0 и используйте его на хоглине.",
+  "boss_checklist.summon.mutantmore_mutant_husk": "Найдите заброшенную лабораторию в лесу, сварите зелье §1Formula Y§r§0 или §1Compound Z§r§0 и используйте его на кадавре.",
+  "boss_checklist.summon.mutantmore_mutant_wither_skeleton": "Найдите заброшенную лабораторию в лесу, сварите зелье §1Formula Y§r§0 или §1Compound Z§r§0 и используйте его на визер-скелете.",
+  "boss_checklist.summon.mutantmore_mutant_blaze": "Найдите заброшенную лабораторию в лесу, сварите зелье §1Formula Y§r§0 или §1Compound Z§r§0 и используйте его на всполохе.",
+  "boss_checklist.summon.mutantmore_mutant_shulker": "Найдите заброшенную лабораторию в лесу, сварите зелье §1Formula Y§r§0 или §1Compound Z§r§0 и используйте его на шалкере.",
+  
+  "boss_checklist.summon.friendsandfoes_wildfire": "Найдите в Незере большую структуру – Цитадель, в центре которой будет минибосс.",
+  
+  "boss_checklist.summon.mythsandlegends_black_charro": "Найдите алтарь на кладбище в пустыне или бесплодных землях и используйте §1Soulbinder Amulet§r§0 на нём ночью."
 }
