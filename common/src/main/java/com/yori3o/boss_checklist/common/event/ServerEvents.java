@@ -24,6 +24,7 @@ import net.minecraft.world.level.storage.LevelResource;
 
 import java.io.File;
 import java.time.Instant;
+import java.util.Map;
 
 
 
@@ -44,13 +45,13 @@ public class ServerEvents {
             String startTime = "";
             String endTime = "";
 
-            if (sa != null && DynamicConfigHandler.statisticsEnabled_dynamic && !sa.endTime.equals("")) {
+            if (sa != null && DynamicConfigHandler.server().statisticsEnabled && !sa.endTime.equals("")) {
                 attemptTop3 = sa.getTop3PlayersNamesAndDamages_SplittedByHashtag();
                 startTime = sa.startTime;
                 endTime = sa.endTime;
             }
 
-            if (DynamicConfigHandler.statisticsEnabled_dynamic) {
+            if (DynamicConfigHandler.server().statisticsEnabled) {
                 globalTop3 = ServerStorage.getTop3PlayersNamesAndDamagesGlobal_SplittedByHashtag();
             }
 
@@ -60,8 +61,8 @@ public class ServerEvents {
 
 
     protected static void loadServerData(MinecraftServer server) {
-
-        DynamicConfigHandler.ServerConfigLoad();
+        LoggerUtil.info("loadServerData!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        DynamicConfigHandler.loadServer();
 
         // this block is needed to take the main data that was written in older versions of the mod (3.4.0-)
         OutdatedBossDefeatedDataSaver dataFromOldVersion = OutdatedBossDefeatedDataSaver.get(server.overworld());
@@ -75,10 +76,17 @@ public class ServerEvents {
         }
 
         File worldDir = server.getWorldPath(LevelResource.ROOT).toFile();
-
         try {
-            ServerStorage.defeatedBossesAndTheirKillers = BossChecklistJsonDataSaver.loadDefeatedBosses(worldDir);
-            if (DynamicConfigHandler.statisticsEnabled_dynamic) {
+            Map<String, String> defeatedBossesMap = BossChecklistJsonDataSaver.loadDefeatedBosses(worldDir);
+            if (!defeatedBossesMap.isEmpty()) {
+                for (String id : defeatedBossesMap.keySet()) {
+                    if (!ServerBossIdsLoader.isBoss(id)) {
+                        defeatedBossesMap.remove(id);
+                    }
+                }
+                ServerStorage.defeatedBossesAndTheirKillers = defeatedBossesMap;
+            }
+            if (DynamicConfigHandler.server().statisticsEnabled) {
                 ServerStorage.serverBossAttempts = BossChecklistJsonDataSaver.loadLatestBossBattles(worldDir);
                 ServerStorage.playerDamages = BossChecklistJsonDataSaver.loadGlobalStatistics(worldDir);
             }
@@ -159,7 +167,7 @@ public class ServerEvents {
 
                 String killerName2 = "";
 
-                if (DynamicConfigHandler.saveBossKiller_dynamic) {
+                if (DynamicConfigHandler.server().saveBossKillerName) {
                     killerName2 = killerName;
                 }
 
@@ -179,7 +187,7 @@ public class ServerEvents {
                         top3attempt = sa.getTop3PlayersNamesAndDamages_SplittedByHashtag();
                     }
                 }
-                if (DynamicConfigHandler.statisticsEnabled_dynamic) {
+                if (DynamicConfigHandler.server().statisticsEnabled) {
                     top3attemptGlobal = ServerStorage.getTop3PlayersNamesAndDamagesGlobal_SplittedByHashtag();
                 }
                 ServerSender.sendDefeatedBossDataToAllPlayers(level, bossId, killerName2, true,  startTime, endTime, top3attempt, top3attemptGlobal);

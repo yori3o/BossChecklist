@@ -22,7 +22,7 @@ public class ConfigScreen extends Screen {
 
     private CustomButton closeButton;
 
-    private final boolean isLocalServer;
+    private final boolean IS_LOCAL_SERVER;
 
     private final Screen parent;
 
@@ -38,19 +38,17 @@ public class ConfigScreen extends Screen {
     private static final int cb22_y = 100;
     private static final int cb23_y = 130;
 
-    private static final int MAX_LABEL_WIDTH = 105;
-
 
     // --- server config variables ---
-    public static boolean saveBossKiller = DynamicConfigHandler.saveBossKiller_dynamic;
-    public static boolean statisticsEnabled = DynamicConfigHandler.statisticsEnabled_dynamic;
-    public static boolean asyncLogic = DynamicConfigHandler.asyncLogic_dynamic;
+    public static boolean saveBossKillerName = DynamicConfigHandler.server().saveBossKillerName;
+    public static boolean statisticsEnabled = DynamicConfigHandler.server().statisticsEnabled;
+    public static boolean asyncLogic = DynamicConfigHandler.server().asyncLogic;
 
     // --- client config variables ---
-    public static boolean progressionMode = DynamicConfigHandler.progressionMode_dynamic;
-    public static boolean progressionModePlus = DynamicConfigHandler.progressionModePlus_dynamic;
-    public static boolean searchBarEnabled = DynamicConfigHandler.searchBarEnabled_dynamic;
-    public static boolean openButtonEnabled = DynamicConfigHandler.openButtonEnabled_dynamic;
+    public static boolean progressionMode = DynamicConfigHandler.client().progressionMode;
+    public static boolean progressionModePlus = DynamicConfigHandler.client().progressionModePlus;
+    public static boolean searchBarEnabled = DynamicConfigHandler.client().searchBarEnabled;
+    public static boolean openButtonEnabled = DynamicConfigHandler.client().openButtonEnabled;
     
 
 
@@ -59,7 +57,7 @@ public class ConfigScreen extends Screen {
     public ConfigScreen(Screen parent) {
         super(Component.literal("Config"));
         this.parent = parent;
-        isLocalServer = Minecraft.getInstance().isLocalServer();
+        IS_LOCAL_SERVER = Minecraft.getInstance().isLocalServer();
     }
 
 
@@ -73,8 +71,8 @@ public class ConfigScreen extends Screen {
         int bookX = (this.width - 512) / 2;
         int bookY = (this.height - 256) / 2;
 
-        CustomCheckbox progression_mode = new CustomCheckbox(bookX + cbs_client_x, bookY + cb1_y, MAX_LABEL_WIDTH, 
-            Component.translatable("gui.boss_checklist.settings.progression_mode"), DynamicConfigHandler.progressionMode_dynamic, 
+        CustomCheckbox progression_mode = new CustomCheckbox(bookX + cbs_client_x, bookY + cb1_y, GuiConstants.MAX_LABEL_WIDTH, 
+            Component.translatable("gui.boss_checklist.settings.progression_mode"), DynamicConfigHandler.client().progressionMode, 
             false, false,
             checked -> {
                 progressionMode = checked; 
@@ -85,20 +83,20 @@ public class ConfigScreen extends Screen {
             },
             () -> {}
         );
-        CustomCheckbox progression_mode_plus = new CustomCheckbox(bookX + cbs_client_x, bookY + cb2_y, MAX_LABEL_WIDTH, 
-            Component.translatable("gui.boss_checklist.settings.progression_mode_plus"), DynamicConfigHandler.progressionModePlus_dynamic, 
+        CustomCheckbox progression_mode_plus = new CustomCheckbox(bookX + cbs_client_x, bookY + cb2_y, GuiConstants.MAX_LABEL_WIDTH, 
+            Component.translatable("gui.boss_checklist.settings.progression_mode_plus"), DynamicConfigHandler.client().progressionModePlus, 
             false, false,
             checked -> {progressionModePlus = checked;},
             () -> {}
         );
-        CustomCheckbox search_bar = new CustomCheckbox(bookX + cbs_client_x, bookY + cb3_y, MAX_LABEL_WIDTH, 
-            Component.translatable("gui.boss_checklist.settings.search_bar_enabled"), DynamicConfigHandler.searchBarEnabled_dynamic, 
+        CustomCheckbox search_bar = new CustomCheckbox(bookX + cbs_client_x, bookY + cb3_y, GuiConstants.MAX_LABEL_WIDTH, 
+            Component.translatable("gui.boss_checklist.settings.search_bar_enabled"), DynamicConfigHandler.client().searchBarEnabled, 
             false, false,
             checked -> {searchBarEnabled = checked;},
             () -> {}
         );
-        CustomCheckbox button = new CustomCheckbox(bookX + cbs_client_x, bookY + cb4_y, MAX_LABEL_WIDTH, 
-            Component.translatable("gui.boss_checklist.settings.button_enabled"), DynamicConfigHandler.openButtonEnabled_dynamic, 
+        CustomCheckbox button = new CustomCheckbox(bookX + cbs_client_x, bookY + cb4_y, GuiConstants.MAX_LABEL_WIDTH, 
+            Component.translatable("gui.boss_checklist.settings.button_enabled"), DynamicConfigHandler.client().openButtonEnabled, 
             false, false,
             checked -> {openButtonEnabled = checked;},
             () -> {}
@@ -110,21 +108,21 @@ public class ConfigScreen extends Screen {
         addRenderableWidget(button);
 
 
-        if (isLocalServer) {
-            CustomCheckbox killer_save = new CustomCheckbox(bookX + cbs_server_x, bookY + cb21_y, MAX_LABEL_WIDTH, 
-                Component.translatable("gui.boss_checklist.settings.save_boss_killer"), DynamicConfigHandler.saveBossKiller_dynamic, 
+        if (IS_LOCAL_SERVER) {
+            CustomCheckbox killer_save = new CustomCheckbox(bookX + cbs_server_x, bookY + cb21_y, GuiConstants.MAX_LABEL_WIDTH, 
+                Component.translatable("gui.boss_checklist.settings.save_boss_killer"), DynamicConfigHandler.server().saveBossKillerName, 
                 false, false,
-                checked -> {saveBossKiller = checked;},
+                checked -> {saveBossKillerName = checked;},
                 () -> {}
             );
-            CustomCheckbox enable_statistics = new CustomCheckbox(bookX + cbs_server_x, bookY + cb22_y, MAX_LABEL_WIDTH, 
-                Component.translatable("gui.boss_checklist.settings.enable_statistics"), DynamicConfigHandler.statisticsEnabled_dynamic, 
+            CustomCheckbox enable_statistics = new CustomCheckbox(bookX + cbs_server_x, bookY + cb22_y, GuiConstants.MAX_LABEL_WIDTH, 
+                Component.translatable("gui.boss_checklist.settings.enable_statistics"), DynamicConfigHandler.server().statisticsEnabled, 
                 false, false,
                 checked -> {statisticsEnabled = checked;},
                 () -> {}
             );
-            CustomCheckbox enable_async = new CustomCheckbox(bookX + cbs_server_x, bookY + cb23_y, MAX_LABEL_WIDTH, 
-                Component.translatable("gui.boss_checklist.settings.enable_async"), DynamicConfigHandler.asyncLogic_dynamic, 
+            CustomCheckbox enable_async = new CustomCheckbox(bookX + cbs_server_x, bookY + cb23_y, GuiConstants.MAX_LABEL_WIDTH, 
+                Component.translatable("gui.boss_checklist.settings.enable_async"), DynamicConfigHandler.server().asyncLogic, 
                 false, false,
                 checked -> {asyncLogic = checked;},
                 () -> {}
@@ -135,7 +133,7 @@ public class ConfigScreen extends Screen {
         }
 
         closeButton = new CustomButton(
-            bookX + GuiConstants.CloseButtonX, bookY + GuiConstants.CloseButtonY, GuiConstants.CloseButtonWidth, GuiConstants.CloseButtonHeight, 0, 0, 
+            bookX + GuiConstants.CLOSE_BUTTON_X, bookY + GuiConstants.CLOSE_BUTTON_Y, GuiConstants.CLOSE_BUTTON_SIZE, GuiConstants.CLOSE_BUTTON_SIZE, 0, 0, 
             null, 
             GuiConstants.CLOSE_BUTTON_TEXTURE, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, null, 
             () -> {
@@ -216,7 +214,7 @@ public class ConfigScreen extends Screen {
             }
         }
 
-        if (isLocalServer) {
+        if (IS_LOCAL_SERVER) {
             if (mouseX >= bookX + cbs_server_x && mouseX < bookX + cbs_server_x + 8 && mouseY >= bookY + cb21_y && mouseY < bookY + cb21_y + 8) {
                     guiGraphics.renderTooltip(
                         Minecraft.getInstance().font,
@@ -271,23 +269,21 @@ public class ConfigScreen extends Screen {
     @Override
     public void onClose() {
 
-        ClientConfig cc = new ClientConfig();
-        cc.get().progressionMode = progressionMode;
-        cc.get().progressionModePlus = progressionModePlus;
-        cc.get().openButtonEnabled = openButtonEnabled;
-        cc.get().searchBarEnabled = searchBarEnabled;
+        ClientConfig.Values ccv = DynamicConfigHandler.client();
+        ccv.progressionMode = progressionMode;
+        ccv.progressionModePlus = progressionModePlus;
+        ccv.openButtonEnabled = openButtonEnabled;
+        ccv.searchBarEnabled = searchBarEnabled;
         
-        DynamicConfigHandler.ClientConfigUpdate(cc.get());
-        cc.save();
+        DynamicConfigHandler.cc.save();
         
-        if (isLocalServer) {
-            ServerConfig sc = new ServerConfig();
-            sc.get().saveBossKiller = saveBossKiller;
-            sc.get().statisticsEnabled = statisticsEnabled;
-            sc.get().asyncLogic = asyncLogic;
+        if (IS_LOCAL_SERVER) {
+            ServerConfig.Values scv = DynamicConfigHandler.server();
+            scv.saveBossKillerName = saveBossKillerName;
+            scv.statisticsEnabled = statisticsEnabled;
+            scv.asyncLogic = asyncLogic;
 
-            DynamicConfigHandler.ServerConfigUpdate(sc.get());
-            sc.save();
+            DynamicConfigHandler.sc.save();
         }
 
         Minecraft.getInstance().setScreen(parent);

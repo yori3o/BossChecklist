@@ -1,6 +1,7 @@
 package com.yori3o.boss_checklist.common.client.data;
 
 
+import com.yori3o.boss_checklist.common.client.boss.BossProgress;
 import com.yori3o.boss_checklist.common.util.LoggerUtil;
 import com.yori3o.boss_checklist.impl.PlatformUtil;
 
@@ -41,11 +42,6 @@ public class ClientDataSaver {
     }
 
 
-    public static boolean isDefeated(String bossId) {
-        return defeatedIds.contains(bossId);
-    }
-
-
     public static void load() {
         updateWorldKeyIfNeeded();
 
@@ -60,7 +56,7 @@ public class ClientDataSaver {
 
             if (list != null) {
                 for (String id : list) {
-                    if (PlatformUtil.isModLoaded(id.split(":")[0])) {
+                    if (PlatformUtil.isModLoaded(id.split(":")[0]) && BossRegistry.get(id) != null) {
                         defeatedIds.add(id);
                     }
                 }
@@ -76,6 +72,10 @@ public class ClientDataSaver {
     }
 
 
+    /**
+     * This method will write the boss to the file and cache, but will not change the state of the boss itself, i.e., the checkbox will not be checked in the checklist.
+     */
+    @Deprecated(since = "Generally not recommended for use.")
     public static void setDefeated(String bossId, boolean defeated) {
         updateWorldKeyIfNeeded();
 
@@ -90,6 +90,14 @@ public class ClientDataSaver {
         if (!changed) return;
 
         save();
+    }
+
+    /**
+     * The recommended method for marking bosses that automatically places a checkmark on the checklist.
+     */
+    public static void setDefeated(String bossId, boolean defeated, BossProgress bossProgress) {
+        bossProgress.markDefeatedClient(defeated);
+        setDefeated(bossId, defeated);
     }
 
 

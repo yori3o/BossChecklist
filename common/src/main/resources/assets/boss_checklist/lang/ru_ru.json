@@ -133,7 +133,6 @@
   "boss_checklist.boss.minecraft_wither": "Иссушитель",
   "boss_checklist.boss.minecraft_ender_dragon": "Эндер-дракон",
   "boss_checklist.boss.minecraft_elder_guardian": "Древний Страж",
-  "boss_checklist.boss.minecraft_warden": "Хранитель",
 
   "boss_checklist.boss.irons_spellbooks_dead_king": "Мёртвый Король",
   "boss_checklist.boss.irons_spellbooks_fire_boss": "Эхо Тайроса, Первого Пламеносца",
@@ -364,7 +363,6 @@
   "boss_checklist.summon.minecraft_wither": "Создаётся из §14 песка душ§r§0 и §13 черепов иссушителя§r§0.",
   "boss_checklist.summon.minecraft_ender_dragon": "Находится на центральном острове Энда. Может быть повторно призван с помощью 4 Кристаллов края, установленных на каждой стороне обратного портала.",
   "boss_checklist.summon.minecraft_elder_guardian": "Появляются в Подводной Крепости на третьем этаже и в обоих её крыльях.",
-  "boss_checklist.summon.minecraft_warden": "Появляется при активации натурально сгенерированного Скалкового крикуна 4 раза.",
 
   "boss_checklist.summon.irons_spellbooks_dead_king": "Отыщите его в Катакомбах, куда указывает §1Капризный компас§r§0.",
   "boss_checklist.summon.irons_spellbooks_fire_boss": "Используйте §1Cinderous Soulcaller§r§0 в Цитадели, найденной с помощью §1Древней карты§r§0 в Незере.",

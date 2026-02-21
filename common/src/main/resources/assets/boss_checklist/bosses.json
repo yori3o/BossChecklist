@@ -2385,18 +2385,5 @@
         "additional_info": false,
         "position": 18.6,
         "type": 2
-    },
-    {
-        "drops": [
-            "minecraft:sculk_catalyst",
-            "deeperdarker:heart_of_the_deep"
-        ],
-        "id": "minecraft:warden",
-        "scale": 19,
-        "y_offset": 19,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 61.6,
-        "type": 2
     }
 ]

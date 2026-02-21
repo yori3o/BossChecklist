@@ -42,7 +42,7 @@ public class OutdatedBossDefeatedDataSaver extends SavedData {
     }
 
     @Override
-    // he can't write anymore
+    // it can't write anymore
     public CompoundTag save(CompoundTag tag, HolderLookup.Provider provider) {
         /*ListTag bossList = new ListTag();
         for (String bossId : defeatedBosses) {

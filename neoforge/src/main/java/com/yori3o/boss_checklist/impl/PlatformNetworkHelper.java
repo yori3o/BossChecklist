@@ -31,7 +31,7 @@ public class PlatformNetworkHelper {
     public static <T extends CustomPacketPayload> void registerS2C(
             CustomPacketPayload.Type<T> type,
             StreamCodec<? super RegistryFriendlyByteBuf, T> codec,
-            BiConsumer<T, IPayloadContext> handler
+            BiConsumer<T, PayloadContext> handler
     ) {
         if (registrationEvent == null) {
             throw new IllegalStateException("PlatformNetworkHelper.init() must be called before registration!");
@@ -39,7 +39,7 @@ public class PlatformNetworkHelper {
 
         registrationEvent.registrar(BossChecklist.MOD_ID)
             .playToClient(type, codec, (payload, context) -> {
-                handler.accept(payload, new IPayloadContext() {
+                handler.accept(payload, new PayloadContext() {
                     @Override
                     public void enqueue(Runnable runnable) {
                         context.enqueueWork(runnable);
@@ -53,7 +53,7 @@ public class PlatformNetworkHelper {
             });
     }
 
-    public interface IPayloadContext {
+    public interface PayloadContext {
         void enqueue(Runnable runnable);
         Player getPlayer();
     }

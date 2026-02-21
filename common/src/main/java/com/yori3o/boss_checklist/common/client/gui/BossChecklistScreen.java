@@ -1,8 +1,6 @@
 package com.yori3o.boss_checklist.common.client.gui;
 
 
-import com.mojang.blaze3d.platform.InputConstants;
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.yori3o.boss_checklist.common.BossChecklistClient;
 import com.yori3o.boss_checklist.common.client.ClientGlobalStatistics;
 import com.yori3o.boss_checklist.common.client.boss.BossEntry;
@@ -15,6 +13,8 @@ import com.yori3o.boss_checklist.common.util.LoggerUtil;
 import com.yori3o.boss_checklist.common.client.data.BossNameCache;
 import com.yori3o.boss_checklist.common.client.data.BossService;
 
+import com.mojang.blaze3d.platform.InputConstants;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.EditBox;
@@ -23,41 +23,30 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
-//import net.minecraft.client.renderer.RenderType; // FOR 1.21.4+
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map.Entry;
-import java.util.concurrent.CompletableFuture;
 
 
 
 public class BossChecklistScreen extends Screen {
 
     
-    private static final int BOOKMARK_SETTINGS_x = 387;
-    private static final int BOOKMARK_SETTINGS_y = 65;
+    private static final int BOOKMARK_SETTINGS_X = 387;
+    private static final int BOOKMARK_SETTINGS_Y = 65;
+    private static final int BOOKMARK_SETTINGS_WIDTH = 12;
+    private static final int BOOKMARK_SETTINGS_HEIGHT = 22;
 
 
     private static final int ELEMENTS_PER_PAGE = 7;
     private static int currentSpread = 0;
     private int totalSpreads;
     
-    public static final int MAX_LABEL_WIDTH = 100;
 
-
-    private static final int StatsInfoX = 86;
-    private static final int StatsInfoY = 51;
-    private static final int StatsInfoWidth = 17;
-    private static final int StatsInfoHeight = 68;
-    private static final int IconsSize = 10;
-
-    private boolean showStats = false;
-    private boolean showStatsInfo = false;
-
-    private boolean showTop2 = false;
-    private boolean showTop3 = false;
+    private boolean statisticsTabEnabled = false;
+    private boolean showStatisticsTab = false;
 
     
     public boolean invalidateNames = false;
@@ -68,66 +57,61 @@ public class BossChecklistScreen extends Screen {
     private List<CustomCheckbox> currentCheckboxes = new ArrayList<>();
     private CustomPageButton nextButton, prevButton;
     private CustomButton closeButton;
-    private int leftPage;
-    private int rightPage;
+    private int leftPage, rightPage;
 
     private boolean skipNextRenderBackground = false;
     private boolean noBossesLoaded = false;
     private boolean noBossesFindedWhenSearch = false;
-    private boolean checklistAreLoaded = false;
-    private final boolean fromPauseMenu;
+    private boolean namesMapAreLoaded = false;
+    private final boolean FROM_PAUSE_MENU;
 
-    private LinkedHashMap<String, Component> bosses = BossNameCache.CACHE; // read-only 
+    private LinkedHashMap<String, Component> bosses = BossNameCache.CACHE_TRUNCATED; // read-only 
     private LinkedHashMap<String, Component> bossesFiltered = new LinkedHashMap<>();
 
-    private int defeatedCount;
-    private int totalCount;
-    private float percent;
+    private int defeatedCount = 0;
+    private int totalCount = 0;
+    private float percent = 0;
 
 
 
-    public BossChecklistScreen(Boolean fromPauseMenu) {
-        super(Component.literal("Checklist"));
-        this.fromPauseMenu = fromPauseMenu;
+    public BossChecklistScreen(boolean fromPauseMenu) {
+        super(Component.literal("Boss checklist"));
+        FROM_PAUSE_MENU = fromPauseMenu;
     }
 
 
 
     public void init() {
         super.init();
-        
-        if (!checklistAreLoaded) {
-            bossesFiltered.putAll(bosses);
 
-            checklistAreLoaded = true;
+        statisticsTabEnabled = (ClientGlobalStatistics.top1 != null) && (DynamicConfigHandler.client().statisticsTabEnabled);
+        
+        reloadNamesMap();
+        createButtons();
+        updateSearch(null);
+    }
+
+
+    private void reloadNamesMap() {
+        if (!namesMapAreLoaded) {
+            bossesFiltered.putAll(bosses);
+            namesMapAreLoaded = true;
         }
         if (invalidateNames) {
             BossNameCache.rebuild();
             bossesFiltered.clear();
             bossesFiltered.putAll(bosses);
         }
-
-        if (!ClientGlobalStatistics.top1.equals("")) {
-            showStats = true;
-            if (!ClientGlobalStatistics.top2.equals("")) showTop2 = true;
-            if (!ClientGlobalStatistics.top3.equals("")) showTop3 = true;
-
-        }
-        
-        createButtons();
-        updateSearch(null);
     }
 
 
-
-
-
-
     private void updateCounts() {
-        defeatedCount = ClientDataSaver.defeatedBossesCount();
-        totalCount = bossesFiltered.size();
-        percent = totalCount > 0 ? (float) defeatedCount / totalCount : 0f;
-        percent = Math.min(percent, 1);
+        if (DynamicConfigHandler.client().progressBarEnabled) {
+            defeatedCount = ClientDataSaver.defeatedBossesCount();
+            totalCount = bossesFiltered.size();
+            percent = totalCount > 0 ? (float) defeatedCount / totalCount : 0f;
+            percent = Math.min(percent, 1);
+        }
     }
 
 
@@ -154,20 +138,20 @@ public class BossChecklistScreen extends Screen {
         });
         addRenderableWidget(nextButton);
 
-        if (showStats) {
+        if (statisticsTabEnabled) {
             CustomButton openStatsButton = new CustomButton(
-                bookX + StatsInfoX, bookY + StatsInfoY, StatsInfoWidth, StatsInfoWidth, 0, 0, 
-                Component.literal(""), 
+                bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, 0, 0, 
+                null, 
                 GuiConstants.SMALL_BUTTON_TEXTURE, GuiConstants.SMALL_BUTTON_TEXTURE_hovered, GuiConstants.SMALL_BUTTON_TEXTURE_pressed, null, 
                 () -> {
-                    showStatsInfo = !showStatsInfo;
+                    showStatisticsTab = !showStatisticsTab;
                 }
             );
             addRenderableWidget(openStatsButton);
         }
 
         closeButton = new CustomButton(
-            bookX + GuiConstants.CloseButtonX, bookY + GuiConstants.CloseButtonY, GuiConstants.CloseButtonWidth, GuiConstants.CloseButtonHeight, 0, 0, 
+            bookX + GuiConstants.CLOSE_BUTTON_X, bookY + GuiConstants.CLOSE_BUTTON_Y, GuiConstants.CLOSE_BUTTON_SIZE, GuiConstants.CLOSE_BUTTON_SIZE, 0, 0, 
             null, 
             GuiConstants.CLOSE_BUTTON_TEXTURE, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, null,
             () -> {
@@ -176,7 +160,7 @@ public class BossChecklistScreen extends Screen {
         );
         addRenderableWidget(closeButton);
         
-        if (DynamicConfigHandler.searchBarEnabled_dynamic) {
+        if (DynamicConfigHandler.client().searchBarEnabled) {
             this.searchBox = new EditBox(
                     this.font,
                     this.width / 2 - 100,
@@ -253,11 +237,8 @@ public class BossChecklistScreen extends Screen {
 
             CustomCheckbox cb = new CustomCheckbox(x, y, 300, name, isThisBossDefeated, true, isFresh,
                 checked -> {
-                        CompletableFuture.runAsync(() -> {
-                            data.progress().markDefeatedClient(checked);
-                            ClientDataSaver.setDefeated(bossId, checked);
-                            updateCounts(); 
-                        });
+                    ClientDataSaver.setDefeated(bossId, checked, data.progress());
+                    updateCounts(); 
                 },
                 () -> {
                     Minecraft.getInstance().setScreen(new BossInfoScreen(this, bossId));
@@ -265,7 +246,7 @@ public class BossChecklistScreen extends Screen {
                 }
             );
 
-            if (DynamicConfigHandler.animationsEnabled) {
+            if (DynamicConfigHandler.client().animationsEnabled) {
                 if (isThisBossDefeated && !data.progress().alreadyAnimated) {
                     data.progress().alreadyAnimated = true;
                     cb.isAnimating = true;
@@ -343,29 +324,34 @@ public class BossChecklistScreen extends Screen {
         // FOR 1.21.4+ - add RenderType::guiTextured, as first argument and delete all RenderSystem.enableBlend();
         guiGraphics.blit(GuiConstants.BOOK, bookX, bookY, 0, 0, 512, 256, 512, 256);
 
-        guiGraphics.blit(GuiConstants.PROGRESS_BAR_BACKGROUND, (this.width / 2) - (GuiConstants.BarWidth / 2), bookY + 27, 0, 0, 
-            GuiConstants.BarWidth, GuiConstants.BarHeight, GuiConstants.BarWidth, GuiConstants.BarHeight);
-        guiGraphics.blit(GuiConstants.PROGRESS_BAR_FILL, (this.width / 2) - (GuiConstants.BarWidth / 2), bookY + 27, 0, 0, 
-            (int) (percent * GuiConstants.BarWidth), GuiConstants.BarHeight, GuiConstants.BarWidth, GuiConstants.BarHeight);
-
-        if (DynamicConfigHandler.showConfigScreen) {
-            guiGraphics.blit(GuiConstants.BOOKMARK_SETTINGS, bookX + BOOKMARK_SETTINGS_x, bookY + BOOKMARK_SETTINGS_y, 0, 0, 12, 22, 12, 22);
+        if (DynamicConfigHandler.client().progressBarEnabled) {
+            guiGraphics.blit(GuiConstants.PROGRESS_BAR_BACKGROUND, (this.width / 2) - (GuiConstants.BAR_WIDTH / 2), bookY + 27, 0, 0, 
+                GuiConstants.BAR_WIDTH, GuiConstants.BAR_HEIGHT, GuiConstants.BAR_WIDTH, GuiConstants.BAR_HEIGHT);
+            guiGraphics.blit(GuiConstants.PROGRESS_BAR_FILL, (this.width / 2) - (GuiConstants.BAR_WIDTH / 2), bookY + 27, 0, 0, 
+                (int) (percent * GuiConstants.BAR_WIDTH), GuiConstants.BAR_HEIGHT, GuiConstants.BAR_WIDTH, GuiConstants.BAR_HEIGHT);
+            guiGraphics.drawCenteredString(this.font, defeatedCount + " / " + totalCount, (this.width / 2), bookY + 20, 0xFFFFFFFF);
         }
 
-        if (showStats) {
+        if (DynamicConfigHandler.client().showConfigScreen) {
+            guiGraphics.blit(GuiConstants.BOOKMARK_SETTINGS, bookX + BOOKMARK_SETTINGS_X, bookY + BOOKMARK_SETTINGS_Y, 0, 0, BOOKMARK_SETTINGS_WIDTH, BOOKMARK_SETTINGS_HEIGHT, BOOKMARK_SETTINGS_WIDTH, BOOKMARK_SETTINGS_HEIGHT);
+        }
+
+        // --- rendering statistics ---
+        if (showStatisticsTab) {
             RenderSystem.enableBlend();
-            if (showStatsInfo) {
-                guiGraphics.blit(GuiConstants.STATS_INFO_BACK, bookX + StatsInfoX, bookY + StatsInfoY, 0, 0, StatsInfoWidth, StatsInfoHeight, StatsInfoWidth, StatsInfoHeight);
-                guiGraphics.blit(GuiConstants.TOP_1, bookX + StatsInfoX + 4, bookY + StatsInfoY + 24, 0, 0, IconsSize, IconsSize, IconsSize, IconsSize);
-                if (showTop2) guiGraphics.blit(GuiConstants.TOP_2, bookX + StatsInfoX + 4, bookY + StatsInfoY + 38, 0, 0, IconsSize, IconsSize, IconsSize, IconsSize);
-                if (showTop3) guiGraphics.blit(GuiConstants.TOP_3, bookX + StatsInfoX + 4, bookY + StatsInfoY + 52, 0, 0, IconsSize, IconsSize, IconsSize, IconsSize);
+            guiGraphics.blit(GuiConstants.STATS_INFO_BACK, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_HEIGHT, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_HEIGHT);
+            guiGraphics.blit(GuiConstants.TOP_1, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 24, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
+            if (ClientGlobalStatistics.top2 != null) {
+                guiGraphics.blit(GuiConstants.TOP_2, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 38, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
+                if (ClientGlobalStatistics.top3 != null) {
+                    guiGraphics.blit(GuiConstants.TOP_3, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 52, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
+                }
             }
         }
-
-        guiGraphics.drawCenteredString(this.font, defeatedCount + " / " + totalCount, (this.width / 2), bookY + 20, 0xFFFFFFFF);
+        
         
         if (noBossesLoaded) {
-            guiGraphics.drawWordWrap(font, Component.translatable("gui.boss_checklist.no_bosses_loaded"), bookX + 140, bookY + 53, 0xFF000000, MAX_LABEL_WIDTH);
+            guiGraphics.drawWordWrap(font, Component.translatable("gui.boss_checklist.no_bosses_loaded"), bookX + 140, bookY + 53, 0xFF000000, GuiConstants.MAX_LABEL_WIDTH);
         } else if (noBossesFindedWhenSearch) {
             guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.no_bosses_finded_when_search"), bookX + 140, bookY + 53, 0xFF000000, false);
         } else {
@@ -378,12 +364,13 @@ public class BossChecklistScreen extends Screen {
 
         super.render(guiGraphics, mouseX, mouseY, partialTick);
 
-        if (showStats) {
+        // --- rendering the arrow icon in the statistics tab ---
+        if (statisticsTabEnabled) {
             RenderSystem.enableBlend();
-            if (showStatsInfo) {
-                guiGraphics.blit(GuiConstants.ARROW_UP, bookX + StatsInfoX, bookY + StatsInfoY, 0, 0, StatsInfoWidth, StatsInfoWidth, StatsInfoWidth, StatsInfoWidth);
+            if (showStatisticsTab) {
+                guiGraphics.blit(GuiConstants.ARROW_UP, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH);
             } else {
-                guiGraphics.blit(GuiConstants.ARROW_DOWN, bookX + StatsInfoX, bookY + StatsInfoY, 0, 0, StatsInfoWidth, StatsInfoWidth, StatsInfoWidth, StatsInfoWidth);
+                guiGraphics.blit(GuiConstants.ARROW_DOWN, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH);
             }
         }
     }
@@ -393,8 +380,8 @@ public class BossChecklistScreen extends Screen {
 
 
     private void renderTooltips(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick, int bookX, int bookY) {
-        if (DynamicConfigHandler.showConfigScreen) {
-            if (mouseX >= bookX + BOOKMARK_SETTINGS_x && mouseX < bookX + BOOKMARK_SETTINGS_x + 12 && mouseY >= bookY + BOOKMARK_SETTINGS_y && mouseY < bookY + BOOKMARK_SETTINGS_y + 22) {
+        if (DynamicConfigHandler.client().showConfigScreen) {
+            if (mouseX >= bookX + BOOKMARK_SETTINGS_X && mouseX < bookX + BOOKMARK_SETTINGS_X + BOOKMARK_SETTINGS_WIDTH && mouseY >= bookY + BOOKMARK_SETTINGS_Y && mouseY < bookY + BOOKMARK_SETTINGS_Y + BOOKMARK_SETTINGS_HEIGHT) {
                 guiGraphics.renderTooltip(
                     Minecraft.getInstance().font,
                     Component.literal(Component.translatable("gui.boss_checklist.settings").getString()),
@@ -402,29 +389,27 @@ public class BossChecklistScreen extends Screen {
                 );
             }
         }
-        if (showStats) {
-            if (showStatsInfo) {
-                if (mouseX >= bookX + StatsInfoX + 3 && mouseX < bookX + StatsInfoX + StatsInfoWidth - 3 && mouseY >= bookY + StatsInfoY + 23 && mouseY < bookY + StatsInfoY + 34) {
+        if (showStatisticsTab) {
+            if (mouseX >= bookX + GuiConstants.STATS_TAB_X + 3 && mouseX < bookX + GuiConstants.STATS_TAB_X + GuiConstants.STATS_TAB_WIDTH - 3 && mouseY >= bookY + GuiConstants.STATS_TAB_Y + 23 && mouseY < bookY + GuiConstants.STATS_TAB_Y + 34) {
+                guiGraphics.renderTooltip(
+                    Minecraft.getInstance().font,
+                    Component.literal("1. " + ClientGlobalStatistics.top1 + " - §c" + ClientGlobalStatistics.damage1),
+                    mouseX, mouseY
+                );
+            } else if (ClientGlobalStatistics.top2 != null) {
+                if (mouseX >= bookX + GuiConstants.STATS_TAB_X + 3 && mouseX < bookX + GuiConstants.STATS_TAB_X + GuiConstants.STATS_TAB_WIDTH - 3 && mouseY >= bookY + GuiConstants.STATS_TAB_Y + 37 && mouseY < bookY + GuiConstants.STATS_TAB_Y + 48) {
                     guiGraphics.renderTooltip(
                         Minecraft.getInstance().font,
-                        Component.literal("1. " + ClientGlobalStatistics.top1 + " - §c" + ClientGlobalStatistics.damage1),
+                        Component.literal("2. " + ClientGlobalStatistics.top2 + " - §c" + ClientGlobalStatistics.damage2),
                         mouseX, mouseY
                     );
-                } else if (showTop2) {
-                    if (mouseX >= bookX + StatsInfoX + 3 && mouseX < bookX + StatsInfoX + StatsInfoWidth - 3 && mouseY >= bookY + StatsInfoY + 37 && mouseY < bookY + StatsInfoY + 48) {
+                } else if (ClientGlobalStatistics.top3 != null) {
+                    if (mouseX >= bookX + GuiConstants.STATS_TAB_X + 3 && mouseX < bookX + GuiConstants.STATS_TAB_X + GuiConstants.STATS_TAB_WIDTH - 3 && mouseY >= bookY + GuiConstants.STATS_TAB_Y + 53 && mouseY < bookY + GuiConstants.STATS_TAB_Y + 64) {
                         guiGraphics.renderTooltip(
                             Minecraft.getInstance().font,
-                            Component.literal("2. " + ClientGlobalStatistics.top2 + " - §c" + ClientGlobalStatistics.damage2),
+                            Component.literal("3. " + ClientGlobalStatistics.top3 + " - §c" + ClientGlobalStatistics.damage3),
                             mouseX, mouseY
                         );
-                    } else if (showTop3) {
-                        if (mouseX >= bookX + StatsInfoX + 3 && mouseX < bookX + StatsInfoX + StatsInfoWidth - 3 && mouseY >= bookY + StatsInfoY + 53 && mouseY < bookY + StatsInfoY + 64) {
-                            guiGraphics.renderTooltip(
-                                Minecraft.getInstance().font,
-                                Component.literal("3. " + ClientGlobalStatistics.top3 + " - §c" + ClientGlobalStatistics.damage3),
-                                mouseX, mouseY
-                            );
-                        }
                     }
                 }
             }
@@ -455,8 +440,8 @@ public class BossChecklistScreen extends Screen {
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
         int bookX = (this.width - 512) / 2;
         int bookY = (this.height - 256) / 2;
-        if (DynamicConfigHandler.showConfigScreen) {
-            if (mouseX >= bookX + BOOKMARK_SETTINGS_x && mouseX <= bookX + BOOKMARK_SETTINGS_x + 11 && mouseY >= bookY + BOOKMARK_SETTINGS_y && mouseY <= bookY + BOOKMARK_SETTINGS_y + 22) {
+        if (DynamicConfigHandler.client().showConfigScreen) {
+            if (mouseX >= bookX + BOOKMARK_SETTINGS_X && mouseX <= bookX + BOOKMARK_SETTINGS_X + BOOKMARK_SETTINGS_WIDTH - 1 && mouseY >= bookY + BOOKMARK_SETTINGS_Y && mouseY <= bookY + BOOKMARK_SETTINGS_Y + BOOKMARK_SETTINGS_HEIGHT - 1) {
                 minecraft.setScreen(new ConfigScreen(this));
                 Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.UI_BUTTON_CLICK, 1.0F));
                 return true;
@@ -469,7 +454,7 @@ public class BossChecklistScreen extends Screen {
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if (BossChecklistClient.OPEN_CHECKLIST.matches(keyCode, scanCode)) {
-            if (DynamicConfigHandler.searchBarEnabled_dynamic) {
+            if (DynamicConfigHandler.client().searchBarEnabled) {
                 if (!searchBox.canConsumeInput()) {
                     onClose();
                     return true;
@@ -498,7 +483,7 @@ public class BossChecklistScreen extends Screen {
 
     @Override
     public void onClose() {
-        if (fromPauseMenu) {
+        if (FROM_PAUSE_MENU) {
             this.minecraft.setScreen(new PauseScreen(true));
         } else {
             this.minecraft.setScreen(null);

@@ -79,6 +79,7 @@ public final class ServerBossIdsLoader {
         try {
             return LOADED_BOSSES.contains(bossId);
         } catch (Exception e) {
+            LoggerUtil.LOGGER.error("There was an error checking the boss ID on the server. Perhaps the list of boss IDs hasn't loaded yet?", e);
             return false;
         }
     }

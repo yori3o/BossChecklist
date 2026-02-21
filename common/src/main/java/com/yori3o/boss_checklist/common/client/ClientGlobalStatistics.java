@@ -6,6 +6,7 @@ package com.yori3o.boss_checklist.common.client;
  */
 public final class ClientGlobalStatistics {
 
+
     public static String top1;
     public static String top2;
     public static String top3;
@@ -14,14 +15,20 @@ public final class ClientGlobalStatistics {
     public static String damage2;
     public static String damage3;
 
+    
     public static void setTop3(String[] list) {
-        top1 = list[0];
-        top2 = list[2];
-        top3 = list[4];
-
-        damage1 = list[1];
-        damage2 = list[3];
-        damage3 = list[5];
+        if (!list[0].equals("")) {
+            top1 = list[0];
+            damage1 = list[1];
+            if (!list[2].equals("")) {
+                top2 = list[2];
+                damage2 = list[3];
+                if (!list[4].equals("")) {
+                    top3 = list[4];
+                    damage3 = list[5];
+                }
+            }
+        }
     }
 
     public static void deleteStatsData() {

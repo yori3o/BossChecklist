@@ -9,9 +9,10 @@ import java.util.List;
 
 
 /**
- * This class is used to get information about the boss from anywhere (on the client).
+ * This class is used to get information about the boss from anywhere (client-side).
  */
 public class BossService {
+
 
     public static BossEntry get(String bossId) {
         BossDefinition def = BossRegistry.get(bossId);

@@ -104,22 +104,29 @@ public class GuiConstants {
         new ResourceLocation("boss_checklist", "textures/gui/page_forward_highlighted.png");*/
 
 
-    public static final int CloseButtonX = 403;
-    public static final int CloseButtonY = 44;
-    public static final int CloseButtonHeight = 10;
-    public static final int CloseButtonWidth = 10;
+    public static final int MAX_LABEL_WIDTH = 103;
 
-    public static final int DropButtonX = 265;
-    public static final int DropButtonY = 51;
-    public static final int SpawnButtonX = 328;
-    public static final int SpawnButtonY = 51;
-    public static final int BigButtonsHeight = 18;
-    public static final int BigButtonsWidth = 50;
-    public static final int BigButtonsOverlayHeight = 40;
-    public static final int BigButtonsOverlayWidth = 70;
+    public static final int CLOSE_BUTTON_X = 403;
+    public static final int CLOSE_BUTTON_Y = 44;
+    public static final int CLOSE_BUTTON_SIZE = 10;
+
+    public static final int DROP_BUTTON_X = 265;
+    public static final int DROP_BUTTON_Y = 51;
+    public static final int SPAWN_BUTTON_X = 328;
+    public static final int SPAWN_BUTTON_Y = 51;
+    public static final int BIG_BUTTONS_HEIGHT = 18;
+    public static final int BIG_BUTTONS_WIDTH = 50;
+    public static final int BIG_BUTTONS_OVERLAY_HEIGHT = 40;
+    public static final int BIG_BUTTONS_OVERLAY_WIDTH = 70;
     
-    public static final int BarHeight = 9;
-    public static final int BarWidth = 186;
+    public static final int BAR_HEIGHT = 9;
+    public static final int BAR_WIDTH = 186;
+
+    public static final int STATS_TAB_X = 86;
+    public static final int STATS_TAB_Y = 51;
+    public static final int STATS_TAB_WIDTH = 17;
+    public static final int STATS_TAB_HEIGHT = 68;
+    public static final int ICONS_SIZE = 10;
 
    
 }

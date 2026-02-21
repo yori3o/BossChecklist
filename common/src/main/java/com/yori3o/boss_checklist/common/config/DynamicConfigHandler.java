@@ -1,15 +1,13 @@
 package com.yori3o.boss_checklist.common.config;
 
 
-
 /**
- * This class loads and writes the config, and is also needed for the config menu to work.
- * The config values ​​need to be taken from here.
+ * This class stores instances of configs from which you can take and write values, as well as load and save them to disk.
  */
 public class DynamicConfigHandler {
 
     // --- server config variables ---
-    public static boolean saveBossKiller_dynamic;
+    /*public static boolean saveBossKillerName_dynamic;
     public static boolean statisticsEnabled_dynamic;
     public static boolean asyncLogic_dynamic;
 
@@ -21,38 +19,50 @@ public class DynamicConfigHandler {
     public static boolean showConfigScreen;
     public static boolean searchBarEnabled_dynamic;
     public static boolean progressBarEnabled;
-    public static boolean statisticsBarEnabled;
+    public static boolean statisticsTabEnabled;
+    public static int openButtonYOffset;*/
+
+    public static ClientConfig cc = new ClientConfig();
+    public static ServerConfig sc = new ServerConfig();
 
 
+    public static ClientConfig.Values client() {
+        return cc.get();
+    }
 
-    public static void ClientConfigLoad() {
-        ClientConfig cc = new ClientConfig();
+    public static ServerConfig.Values server() {
+        return sc.get();
+    }
+
+    public static void loadClient() {
         cc.load();
-        animationsEnabled = cc.get().animationsEnabled;
+        /*animationsEnabled = cc.get().animationsEnabled;
         showConfigScreen = cc.get().showConfigScreen;
         progressBarEnabled = cc.get().progressBarEnabled;
-        statisticsBarEnabled = cc.get().statisticsBarEnabled;
-        ClientConfigUpdate(cc.get());
+        statisticsTabEnabled = cc.get().statisticsTabEnabled;
+        openButtonYOffset = cc.get().openButtonYOffset;
+        ClientConfigUpdate(cc.get());*/
     }
 
-    public static void ServerConfigLoad() {
-        ServerConfig sc = new ServerConfig();
+    public static void loadServer() {
         sc.load();
-        ServerConfigUpdate(sc.get());
+        //ServerConfigUpdate(sc.get());
     }
 
 
-    public static void ClientConfigUpdate(ClientConfig.Values values) {
+    /*public static void ClientConfigUpdate(ClientConfig.Values values) {
         progressionMode_dynamic = values.progressionMode;
         progressionModePlus_dynamic = values.progressionModePlus;
         openButtonEnabled_dynamic = values.openButtonEnabled;
         searchBarEnabled_dynamic = values.searchBarEnabled;
+        //cc.save();
     }
 
     public static void ServerConfigUpdate(ServerConfig.Values values) {
-        saveBossKiller_dynamic = values.saveBossKiller;
+        saveBossKillerName_dynamic = values.saveBossKillerName;
         statisticsEnabled_dynamic = values.statisticsEnabled;
         asyncLogic_dynamic = values.asyncLogic;
-    }
+        //sc.save();
+    }*/
 
 }

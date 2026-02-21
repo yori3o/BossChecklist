@@ -133,7 +133,6 @@
   "boss_checklist.boss.minecraft_wither": "Wither",
   "boss_checklist.boss.minecraft_ender_dragon": "Ender Dragon",
   "boss_checklist.boss.minecraft_elder_guardian": "Elder Guardian",
-  "boss_checklist.boss.minecraft_warden": "Warden",
 
   "boss_checklist.boss.irons_spellbooks_dead_king": "Dead King",
   "boss_checklist.boss.irons_spellbooks_fire_boss": "Echo of Tyros, First Flamebearer",
@@ -364,7 +363,6 @@
   "boss_checklist.summon.minecraft_wither": "Crafted with §14 Soul Sand§r§0 and §13 Wither Skulls§r§0.",
   "boss_checklist.summon.minecraft_ender_dragon": "Located on the central island of The End. Can be re-summoned using 4 End Crystals placed on each side of the return portal.",
   "boss_checklist.summon.minecraft_elder_guardian": "Appears in the Ocean Monument on the third floor and in both of its wings.",
-  "boss_checklist.summon.minecraft_warden": "Spawns when a naturally generated Skulk Shrieker is activated 4 times.",
 
   "boss_checklist.summon.irons_spellbooks_dead_king": "Find it in the Catacombs, where the §1Wayward Compass§r§0 points.",
   "boss_checklist.summon.irons_spellbooks_fire_boss": "Use the §1Cinderous Soulcaller§r§0 in the Citadel found via the §1Ancient Map§r§0 in the Nether.",

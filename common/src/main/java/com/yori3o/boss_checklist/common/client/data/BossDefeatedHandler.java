@@ -15,8 +15,6 @@ public class BossDefeatedHandler {
 
     public static boolean anyoneBossKilledOnce = false;
 
-    public static final Object FILE_IO_LOCK = new Object();
-
 
     public static void handleBossUpdate(
             String bossId,
@@ -25,30 +23,26 @@ public class BossDefeatedHandler {
             boolean fresh,
             ClientBossAttempt attempt
     ) {
-        synchronized (FILE_IO_LOCK) {
+        anyoneBossKilledOnce = true;
 
-            anyoneBossKilledOnce = true;
+        BossDefinition def = BossRegistry.get(bossId);
+        if (def == null) {
+            LoggerUtil.warn("Boss not registered: " + bossId);
+            return;
+        }
 
-            BossDefinition def = BossRegistry.get(bossId);
-            if (def == null) {
-                LoggerUtil.warn("Boss not registered: " + bossId);
-                return;
-            }
+        BossProgress progress = BossProgressStorage.getOrCreate(bossId);
 
-            BossProgress progress = BossProgressStorage.getOrCreate(bossId);
+        if (defeated) {
+            progress.markDefeated(killer, fresh, attempt);
+        } else {
+            progress.markNotDefeated();
+        }
 
-            if (defeated) {
-                progress.markDefeated(killer, fresh, attempt);
-            } else {
-                progress.markNotDefeated();
-            }
-            progress.markDefeatedClient(defeated);
+        ClientDataSaver.setDefeated(bossId.toString(), defeated, progress);
 
-            ClientDataSaver.setDefeated(bossId.toString(), defeated);
-
-            if (DynamicConfigHandler.progressionMode_dynamic) {
-                BossNameCache.invalidate();
-            }
+        if (DynamicConfigHandler.client().progressionMode) {
+            BossNameCache.invalidate();
         }
     }
 }

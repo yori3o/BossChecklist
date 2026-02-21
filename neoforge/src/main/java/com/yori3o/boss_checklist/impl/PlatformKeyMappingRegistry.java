@@ -1,10 +1,10 @@
 package com.yori3o.boss_checklist.impl;
 
 
+import net.minecraft.client.KeyMapping;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import net.minecraft.client.KeyMapping;
 
 
 

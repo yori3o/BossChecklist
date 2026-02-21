@@ -10,7 +10,7 @@ import com.yori3o.boss_checklist.impl.PlatformUtil;
 public class ServerConfig extends JsonConfigManager<ServerConfig.Values> {
 
     public static class Values {
-        public boolean saveBossKiller = true;
+        public boolean saveBossKillerName = true;
         public boolean statisticsEnabled = true;
         public boolean asyncLogic = true;
     }

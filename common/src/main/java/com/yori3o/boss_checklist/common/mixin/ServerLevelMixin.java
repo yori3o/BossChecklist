@@ -32,7 +32,7 @@ public abstract class ServerLevelMixin {
     private void saveBossChecklistData(ProgressListener progressListener, boolean bl, boolean bl2, CallbackInfo ci) {
         if (!bl2) {
             File worldDir = ((ServerLevel)(Object)this).getServer().getWorldPath(LevelResource.ROOT).toFile();
-            if (DynamicConfigHandler.asyncLogic_dynamic) {
+            if (DynamicConfigHandler.server().asyncLogic) {
                 CompletableFuture.runAsync(() -> {
                     saveData(worldDir);
                 });
@@ -46,7 +46,7 @@ public abstract class ServerLevelMixin {
     private void saveData(File worldDir) {
         try {
             BossChecklistJsonDataSaver.saveDefeatedBosses(worldDir, ServerStorage.defeatedBossesAndTheirKillers);
-            if (DynamicConfigHandler.statisticsEnabled_dynamic) {
+            if (DynamicConfigHandler.server().statisticsEnabled) {
                 BossChecklistJsonDataSaver.saveLatestBossBattles(worldDir, ServerStorage.serverBossAttempts);
                 BossChecklistJsonDataSaver.saveGlobalStatistics(worldDir, ServerStorage.playerDamages);
             }

@@ -16,8 +16,9 @@ public class ClientConfig extends JsonConfigManager<ClientConfig.Values> {
         public boolean showConfigScreen = true;
         public boolean openButtonEnabled = true;
         public boolean searchBarEnabled = false;
-        public boolean progressBarEnabled = false;
-        public boolean statisticsBarEnabled = false;
+        public boolean progressBarEnabled = true;
+        public boolean statisticsTabEnabled = true;
+        public int openButtonYOffset = 0;
     }
 
     private static final Path CONFIG_PATH = PlatformUtil.getConfigDir().resolve("boss_checklist_client.json");

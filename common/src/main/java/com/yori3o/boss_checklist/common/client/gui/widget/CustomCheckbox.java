@@ -93,7 +93,7 @@ public class CustomCheckbox extends AbstractWidget {
 
         // checkmark
         if (this.selected) {
-            if (DynamicConfigHandler.animationsEnabled) {
+            if (DynamicConfigHandler.client().animationsEnabled) {
                 RenderSystem.enableBlend();
 
                 int frameIndex = FRAME_COUNT - 1; // last frame by default
@@ -165,14 +165,14 @@ public class CustomCheckbox extends AbstractWidget {
 
             if (this.selected) {
                 Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundRegistry.CHECKMARK_ADDED, 1.0F));
-                if (DynamicConfigHandler.animationsEnabled) {
+                if (DynamicConfigHandler.client().animationsEnabled) {
                     this.isAnimating = true;
                     this.animationPlayed = false;
                     this.animationStartTime = System.currentTimeMillis();
                 }
             } else {
                 Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundRegistry.CHECKMARK_DELETED, 1.0F));
-                if (DynamicConfigHandler.animationsEnabled) {
+                if (DynamicConfigHandler.client().animationsEnabled) {
                     this.isAnimating = false;
                     this.animationPlayed = true;
                 }

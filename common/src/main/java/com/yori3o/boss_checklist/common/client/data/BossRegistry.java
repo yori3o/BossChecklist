@@ -8,12 +8,17 @@ import com.yori3o.boss_checklist.impl.PlatformUtil;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.Minecraft;
 
+import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.*;
-import java.lang.reflect.Field;
-import java.util.*;
-import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.io.Reader;
+import java.lang.reflect.Field;
+import java.lang.reflect.Type;
 
 
 /**
@@ -85,6 +90,7 @@ public class BossRegistry {
         BossNameCache.rebuild();
 
         LoggerUtil.info("Count of registered bosses: " + DEFINITIONS.size());
+        LoggerUtil.info("Count of all bosses: " + loaded.size());
     }
 
 

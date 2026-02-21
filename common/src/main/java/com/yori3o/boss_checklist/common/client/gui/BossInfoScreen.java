@@ -33,20 +33,12 @@ import com.mojang.math.Axis;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.mojang.blaze3d.PlatformUtil.Lighting;
-
 
 
 public class BossInfoScreen extends Screen {
 
-    private static final int StatsInfoX = 86;
-    private static final int StatsInfoY = 51;
-    private static final int StatsInfoWidth = 17;
-    private static final int StatsInfoHeight = 68;
-    private static final int IconsSize = 10;
-
-    private static final int dropSpacing = 22; // length from icons items
-    private static final int perRow = 5; // maximum in row
+    private static final int DROP_SPACING = 22; // length from icons items
+    private static final int PER_ROW = 5; // maximum in row
 
     private static final float MOUSE_SENSITIVITY = 0.7f;
 
@@ -207,10 +199,10 @@ public class BossInfoScreen extends Screen {
 
         additionalInfo = boss.definition().additionalInfo();
 
-        if (DynamicConfigHandler.progressionMode_dynamic && !isBossDefeatedInWorld) {
+        if (DynamicConfigHandler.client().progressionMode && !isBossDefeatedInWorld) {
             showInfo = false;
             bossName = "???";
-            if (DynamicConfigHandler.progressionModePlus_dynamic) {
+            if (DynamicConfigHandler.client().progressionModePlus) {
                 showAdditionalInfo = false;
                 modName = "???";
                 wikiLink = "";
@@ -326,8 +318,8 @@ public class BossInfoScreen extends Screen {
 
         if (showInfo) {
             dropButton = new CustomButton(
-                bookX + GuiConstants.DropButtonX, bookY + GuiConstants.DropButtonY, GuiConstants.BigButtonsWidth, GuiConstants.BigButtonsHeight, 
-                GuiConstants.BigButtonsOverlayWidth, GuiConstants.BigButtonsOverlayHeight, 
+                bookX + GuiConstants.DROP_BUTTON_X, bookY + GuiConstants.DROP_BUTTON_Y, GuiConstants.BIG_BUTTONS_WIDTH, GuiConstants.BIG_BUTTONS_HEIGHT, 
+                GuiConstants.BIG_BUTTONS_OVERLAY_WIDTH, GuiConstants.BIG_BUTTONS_OVERLAY_HEIGHT, 
                 Component.translatable("gui.boss_checklist.drop"), 
                 GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_hovered, GuiConstants.BUTTON_TEXTURE_pressed, GuiConstants.BUTTON_TEXTURE_overlay, 
                 () -> {
@@ -336,31 +328,31 @@ public class BossInfoScreen extends Screen {
             );
         } else {
             dropButton = new CustomButton(
-                bookX + GuiConstants.DropButtonX, bookY + GuiConstants.DropButtonY, GuiConstants.BigButtonsWidth, GuiConstants.BigButtonsHeight, 
-                GuiConstants.BigButtonsOverlayWidth, GuiConstants.BigButtonsOverlayHeight, 
+                bookX + GuiConstants.DROP_BUTTON_X, bookY + GuiConstants.DROP_BUTTON_Y, GuiConstants.BIG_BUTTONS_WIDTH, GuiConstants.BIG_BUTTONS_HEIGHT, 
+                GuiConstants.BIG_BUTTONS_OVERLAY_WIDTH, GuiConstants.BIG_BUTTONS_OVERLAY_HEIGHT, 
                 Component.translatable("gui.boss_checklist.drop"), GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_overlay, () -> {
                 //currentTab = InfoTab.DROP;
             });
         }
 
         if (showAdditionalInfo) {
-            spawnButton = new CustomButton(bookX + GuiConstants.SpawnButtonX, bookY + GuiConstants.SpawnButtonY, GuiConstants.BigButtonsWidth, GuiConstants.BigButtonsHeight, GuiConstants.BigButtonsOverlayWidth, GuiConstants.BigButtonsOverlayHeight, Component.translatable("gui.boss_checklist.spawn_info"), GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_hovered, GuiConstants.BUTTON_TEXTURE_pressed, GuiConstants.BUTTON_TEXTURE_overlay, () -> {
+            spawnButton = new CustomButton(bookX + GuiConstants.SPAWN_BUTTON_X, bookY + GuiConstants.SPAWN_BUTTON_Y, GuiConstants.BIG_BUTTONS_WIDTH, GuiConstants.BIG_BUTTONS_HEIGHT, GuiConstants.BIG_BUTTONS_OVERLAY_WIDTH, GuiConstants.BIG_BUTTONS_OVERLAY_HEIGHT, Component.translatable("gui.boss_checklist.spawn_info"), GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_hovered, GuiConstants.BUTTON_TEXTURE_pressed, GuiConstants.BUTTON_TEXTURE_overlay, () -> {
                 currentTab = InfoTab.SPAWN;
             });
         } else {
-            spawnButton = new CustomButton(bookX + GuiConstants.SpawnButtonX, bookY + GuiConstants.SpawnButtonY, GuiConstants.BigButtonsWidth, GuiConstants.BigButtonsHeight, GuiConstants.BigButtonsOverlayWidth, GuiConstants.BigButtonsOverlayHeight, Component.translatable("gui.boss_checklist.spawn_info"), GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_overlay, () -> {
+            spawnButton = new CustomButton(bookX + GuiConstants.SPAWN_BUTTON_X, bookY + GuiConstants.SPAWN_BUTTON_Y, GuiConstants.BIG_BUTTONS_WIDTH, GuiConstants.BIG_BUTTONS_HEIGHT, GuiConstants.BIG_BUTTONS_OVERLAY_WIDTH, GuiConstants.BIG_BUTTONS_OVERLAY_HEIGHT, Component.translatable("gui.boss_checklist.spawn_info"), GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_overlay, () -> {
                 //currentTab = InfoTab.SPAWN;
             });
         }
 
         if (showLastAttempt) {
-            openAttemptButton = new CustomButton(bookX + StatsInfoX, bookY + StatsInfoY, StatsInfoWidth, StatsInfoWidth, 0, 0, Component.literal(""), GuiConstants.SMALL_BUTTON_TEXTURE, GuiConstants.SMALL_BUTTON_TEXTURE_hovered, GuiConstants.SMALL_BUTTON_TEXTURE_pressed, null, () -> {
+            openAttemptButton = new CustomButton(bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, 0, 0, null, GuiConstants.SMALL_BUTTON_TEXTURE, GuiConstants.SMALL_BUTTON_TEXTURE_hovered, GuiConstants.SMALL_BUTTON_TEXTURE_pressed, null, () -> {
                 showLastAttemptInfo = !showLastAttemptInfo;
             });
             addRenderableWidget(openAttemptButton);
         }
 
-        closeButton = new CustomButton(bookX + GuiConstants.CloseButtonX, bookY + GuiConstants.CloseButtonY, GuiConstants.CloseButtonWidth, GuiConstants.CloseButtonHeight, 0, 0, null, GuiConstants.CLOSE_BUTTON_TEXTURE, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, null, () -> {
+        closeButton = new CustomButton(bookX + GuiConstants.CLOSE_BUTTON_X, bookY + GuiConstants.CLOSE_BUTTON_Y, GuiConstants.CLOSE_BUTTON_SIZE, GuiConstants.CLOSE_BUTTON_SIZE, 0, 0, null, GuiConstants.CLOSE_BUTTON_TEXTURE, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, null, () -> {
             onClose();
         });
 
@@ -420,11 +412,11 @@ public class BossInfoScreen extends Screen {
         if (showLastAttempt) {
             RenderSystem.enableBlend();
             if (showLastAttemptInfo) {
-                guiGraphics.blit(GuiConstants.STATS_INFO_BACK, bookX + StatsInfoX, bookY + StatsInfoY, 0, 0, StatsInfoWidth, StatsInfoHeight, StatsInfoWidth, StatsInfoHeight);
-                guiGraphics.blit(GuiConstants.BATTLE_ICON, bookX + StatsInfoX + 4, bookY + StatsInfoY + 24, 0, 0, IconsSize, IconsSize, IconsSize, IconsSize);
-                guiGraphics.blit(GuiConstants.DURATION_ICON, bookX + StatsInfoX + 4, bookY + StatsInfoY + 38, 0, 0, IconsSize, IconsSize, IconsSize, IconsSize);
+                guiGraphics.blit(GuiConstants.STATS_INFO_BACK, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_HEIGHT, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_HEIGHT);
+                guiGraphics.blit(GuiConstants.BATTLE_ICON, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 24, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
+                guiGraphics.blit(GuiConstants.DURATION_ICON, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 38, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
                 if (!lastAttempt.damageMap_top3.isEmpty()) {
-                    guiGraphics.blit(GuiConstants.TOP_ICON, bookX + StatsInfoX + 4, bookY + StatsInfoY + 52, 0, 0, IconsSize, IconsSize, IconsSize, IconsSize);
+                    guiGraphics.blit(GuiConstants.TOP_ICON, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 52, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
                 }
             }
         }
@@ -470,9 +462,9 @@ public class BossInfoScreen extends Screen {
         if (showLastAttempt) {
             RenderSystem.enableBlend();
             if (showLastAttemptInfo) {
-                guiGraphics.blit(GuiConstants.ARROW_UP, bookX + StatsInfoX, bookY + StatsInfoY, 0, 0, StatsInfoWidth, StatsInfoWidth, StatsInfoWidth, StatsInfoWidth);
+                guiGraphics.blit(GuiConstants.ARROW_UP, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH);
             } else {
-                guiGraphics.blit(GuiConstants.ARROW_DOWN, bookX + StatsInfoX, bookY + StatsInfoY, 0, 0, StatsInfoWidth, StatsInfoWidth, StatsInfoWidth, StatsInfoWidth);
+                guiGraphics.blit(GuiConstants.ARROW_DOWN, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH);
             }
         }
         
@@ -486,9 +478,9 @@ public class BossInfoScreen extends Screen {
 
         // makes buttons gray if they are disabled
         if (!showInfo) {
-            guiGraphics.fill(bookX + GuiConstants.DropButtonX, bookY + GuiConstants.DropButtonY, bookX + GuiConstants.DropButtonX + GuiConstants.BigButtonsWidth, bookY + GuiConstants.DropButtonY + GuiConstants.BigButtonsHeight, 0x88AAAAAA);
+            guiGraphics.fill(bookX + GuiConstants.DROP_BUTTON_X, bookY + GuiConstants.DROP_BUTTON_Y, bookX + GuiConstants.DROP_BUTTON_X + GuiConstants.BIG_BUTTONS_WIDTH, bookY + GuiConstants.DROP_BUTTON_Y + GuiConstants.BIG_BUTTONS_HEIGHT, 0x88AAAAAA);
             if (!showAdditionalInfo) {
-                guiGraphics.fill(bookX + GuiConstants.SpawnButtonX, bookY + GuiConstants.SpawnButtonY, bookX + GuiConstants.SpawnButtonX + GuiConstants.BigButtonsWidth, bookY + GuiConstants.SpawnButtonY + GuiConstants.BigButtonsHeight, 0x88AAAAAA);
+                guiGraphics.fill(bookX + GuiConstants.SPAWN_BUTTON_X, bookY + GuiConstants.SPAWN_BUTTON_Y, bookX + GuiConstants.SPAWN_BUTTON_X + GuiConstants.BIG_BUTTONS_WIDTH, bookY + GuiConstants.SPAWN_BUTTON_Y + GuiConstants.BIG_BUTTONS_HEIGHT, 0x88AAAAAA);
             }
         }
     }
@@ -553,21 +545,21 @@ public class BossInfoScreen extends Screen {
                 }
                 if (showLastAttempt) {
                     if (showLastAttemptInfo) {
-                        if (mouseX >= bookX + StatsInfoX + 3 && mouseX < bookX + StatsInfoX + StatsInfoWidth - 3 && mouseY >= bookY + StatsInfoY + 23 && mouseY < bookY + StatsInfoY + 34) {
+                        if (mouseX >= bookX + GuiConstants.STATS_TAB_X + 3 && mouseX < bookX + GuiConstants.STATS_TAB_X + GuiConstants.STATS_TAB_WIDTH - 3 && mouseY >= bookY + GuiConstants.STATS_TAB_Y + 23 && mouseY < bookY + GuiConstants.STATS_TAB_Y + 34) {
                             guiGraphics.renderComponentTooltip(
                                 Minecraft.getInstance().font,
                                 tooltip_attemptTime,
                                 mouseX, mouseY
                             );
                         } else {
-                            if (mouseX >= bookX + StatsInfoX + 3 && mouseX < bookX + StatsInfoX + StatsInfoWidth - 3 && mouseY >= bookY + StatsInfoY + 37 && mouseY < bookY + StatsInfoY + 48) {
+                            if (mouseX >= bookX + GuiConstants.STATS_TAB_X + 3 && mouseX < bookX + GuiConstants.STATS_TAB_X + GuiConstants.STATS_TAB_WIDTH - 3 && mouseY >= bookY + GuiConstants.STATS_TAB_Y + 37 && mouseY < bookY + GuiConstants.STATS_TAB_Y + 48) {
                                 guiGraphics.renderTooltip(
                                     Minecraft.getInstance().font,
                                     Component.literal(tooltip_duration),
                                     mouseX, mouseY
                                 );
                             } else if (!lastAttempt.damageMap_top3.isEmpty()) {
-                                if (mouseX >= bookX + StatsInfoX + 3 && mouseX < bookX + StatsInfoX + StatsInfoWidth - 3 && mouseY >= bookY + StatsInfoY + 53 && mouseY < bookY + StatsInfoY + 64) {
+                                if (mouseX >= bookX + GuiConstants.STATS_TAB_X + 3 && mouseX < bookX + GuiConstants.STATS_TAB_X + GuiConstants.STATS_TAB_WIDTH - 3 && mouseY >= bookY + GuiConstants.STATS_TAB_Y + 53 && mouseY < bookY + GuiConstants.STATS_TAB_Y + 64) {
                                     guiGraphics.renderComponentTooltip(
                                         Minecraft.getInstance().font,
                                         tooltip_attemptTop3,
@@ -602,11 +594,11 @@ public class BossInfoScreen extends Screen {
         int i = 0;
         for (String id : drops) {
             
-            int row = i / perRow;
-            int col = i % perRow;
+            int row = i / PER_ROW;
+            int col = i % PER_ROW;
 
-            int xPos = x + col * dropSpacing;
-            int yPos = y + row * dropSpacing;
+            int xPos = x + col * DROP_SPACING;
+            int yPos = y + row * DROP_SPACING;
 
             // if suffix #*number* there is render drop chance
             if (id.split("#").length > 1) {

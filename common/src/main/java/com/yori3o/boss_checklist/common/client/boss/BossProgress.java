@@ -3,6 +3,7 @@ package com.yori3o.boss_checklist.common.client.boss;
 
 import com.yori3o.boss_checklist.common.client.data.ClientBossAttempt;
 
+
 /**
  * This class contains information about the boss's status.
  */

@@ -19,7 +19,7 @@ public class EventHandler {
 
 
     public static void whenEntityDeath(LivingEntity entity, DamageSource source) {
-        if (DynamicConfigHandler.asyncLogic_dynamic) {
+        if (DynamicConfigHandler.server().asyncLogic) {
             CompletableFuture.runAsync(() -> {
                 ServerEvents.whenEntityKilled(entity, source);
             });
@@ -29,8 +29,8 @@ public class EventHandler {
     }
 
     public static void whenEntityAllowDamage(LivingEntity entity, DamageSource source, float amount) {
-        if (DynamicConfigHandler.statisticsEnabled_dynamic) {
-            if (DynamicConfigHandler.asyncLogic_dynamic) {
+        if (DynamicConfigHandler.server().statisticsEnabled) {
+            if (DynamicConfigHandler.server().asyncLogic) {
                 CompletableFuture.runAsync(() -> {
                     ServerEvents.whenEntityDamaged(entity, source, amount);
                 });
@@ -41,7 +41,7 @@ public class EventHandler {
     }
 
     public static void whenPlayerJoinToServer(ServerPlayer player) {
-        if (DynamicConfigHandler.asyncLogic_dynamic) {
+        if (DynamicConfigHandler.server().asyncLogic) {
             CompletableFuture.runAsync(() -> {
                 ServerEvents.sendDefeatedBossesToNewPlayer(player);
             });

@@ -25,7 +25,7 @@ public abstract class PauseScreenMixin extends Screen {
 
 
     protected PauseScreenMixin() {
-        super(Component.literal("Menu"));
+        super(Component.literal("Pause menu"));
     }
 
     @Inject(
@@ -33,21 +33,32 @@ public abstract class PauseScreenMixin extends Screen {
         at = @At(value = "TAIL")
     )
     private void BossChecklist$addBossChecklistButton(CallbackInfo ci) {
-        if (DynamicConfigHandler.openButtonEnabled_dynamic) {
+        if (DynamicConfigHandler.client().openButtonEnabled) {
             if (((PauseScreen)(Object)this).showsPauseMenu()) {
             
                 int x = this.width / 2 + 107;
-                int y = this.height / 4 + 26;
+                int y = (this.height / 4 + 26) + DynamicConfigHandler.client().openButtonYOffset;
 
-                CustomButton openButton = new CustomButton(x, y, 20, 20, 0, 0, Component.literal(""), 
-                GuiConstants.OPEN_BUTTON_TEXTURE, GuiConstants.OPEN_BUTTON_TEXTURE_hovered, GuiConstants.OPEN_BUTTON_TEXTURE_hovered, null, () -> {
+                CustomButton openButton = new CustomButton(
+                    x, 
+                    y, 
+                    20, 
+                    20, 
+                    0, 
+                    0, 
+                    null, 
+                    GuiConstants.OPEN_BUTTON_TEXTURE, 
+                    GuiConstants.OPEN_BUTTON_TEXTURE_hovered, 
+                    GuiConstants.OPEN_BUTTON_TEXTURE_hovered, 
+                    null, 
+                    () -> {
                         Minecraft.getInstance().setScreen(new BossChecklistScreen(true));
-                    });
+                    }
+                );
 
                 this.addRenderableWidget(openButton);
-                }
+            }
         }
     }
-
 }
 

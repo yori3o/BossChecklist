@@ -16,7 +16,6 @@ public class BossChecklist {
 
         SetDefeatedCommand.register();
 
-        // --- only client logic ---
         if (PlatformUtil.isClient()) {
             BossChecklistClient.initClient();
         }

@@ -23,7 +23,7 @@ public class BossChecklistClient {
 
     public static void initClient() {
 
-        DynamicConfigHandler.ClientConfigLoad();
+        DynamicConfigHandler.loadClient();
 
         BossChecklistDataMigrator.migrateIfNeeded();
         

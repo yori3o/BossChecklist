@@ -10,5 +10,3 @@ The boss list can be edited through resources, as detailed in the _Wiki_ tab.
 [CurseForge link](https://www.curseforge.com/minecraft/mc-mods/boss-checklist)
 
 [Modrinth link](https://modrinth.com/mod/boss-checklist)
-
-
