@@ -26,9 +26,7 @@ public class BossChecklistJsonDataSaver {
 
     public static final Object FILE_IO_LOCK = new Object();
 
-    private static final Gson GSON = new GsonBuilder()
-            .setPrettyPrinting()
-            .create();
+    private static final Gson GSON = new GsonBuilder().create();
 
     private static final String FOLDER_NAME = "boss_checklist";
 

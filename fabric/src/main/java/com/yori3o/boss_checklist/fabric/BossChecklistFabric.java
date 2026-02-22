@@ -5,11 +5,9 @@ import com.yori3o.boss_checklist.common.event.EventHandler;
 import com.yori3o.boss_checklist.common.server.data.ServerBossIdsLoader;
 import com.yori3o.boss_checklist.common.BossChecklist;
 
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.world.damagesource.DamageSource;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
@@ -28,17 +26,16 @@ public class BossChecklistFabric implements ModInitializer {
 
         EventHandler.whenRegisterPayloads();
 
-        ServerLivingEntityEvents.AFTER_DEATH.register((LivingEntity entity, DamageSource source) -> {
-            EventHandler.whenEntityDeath(entity, source);
+        ServerLivingEntityEvents.AFTER_DEATH.register((livingEntity, damageSource) -> {
+            EventHandler.whenEntityDeath(livingEntity, damageSource);
         });
 
-        ServerLivingEntityEvents.ALLOW_DAMAGE.register((LivingEntity entity, DamageSource source, float amount) -> {
-            EventHandler.whenEntityAllowDamage(entity, source, amount);
-            return true; 
+        ServerLivingEntityEvents.AFTER_DAMAGE.register((livingEntity, damageSource, amount, float2, boolean1) -> {
+            EventHandler.whenEntityAllowDamage(livingEntity, damageSource, amount);
         });
 
-        ServerPlayerEvents.JOIN.register((player) -> {
-            EventHandler.whenPlayerJoinToServer(player);
+        ServerPlayerEvents.JOIN.register((serverPlayer) -> {
+            EventHandler.whenPlayerJoinToServer(serverPlayer);
         });
 
         ServerLifecycleEvents.SERVER_STARTED.register((minecraftServer) -> {

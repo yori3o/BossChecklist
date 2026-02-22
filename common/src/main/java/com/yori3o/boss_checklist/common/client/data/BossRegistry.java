@@ -47,9 +47,9 @@ public class BossRegistry {
         for (var res : mc.getResourceManager().getResourceStack(BOSSES_JSON)) {
             try (Reader reader = res.openAsReader()) {
                 Type listType = new TypeToken<List<BossDefinition>>() {}.getType();
-                loaded = GSON.fromJson(reader, listType);
+                loaded.addAll(GSON.fromJson(reader, listType));
 
-                LoggerUtil.info("Loading bosses.json from " + res.sourcePackId());
+                //LoggerUtil.info("Loading bosses.json from " + res.sourcePackId());
             } catch (Exception e) {
                 LoggerUtil.LOGGER.warn("Failed to read bosses.json from " + res.sourcePackId(), e);
             }
@@ -68,11 +68,16 @@ public class BossRegistry {
 
             BossDefinition existing = merged.get(def.id());
 
-            if (existing == null || def.replace) {
+            if (existing == null) {
                 merged.put(def.id(), def);
             } else {
-                // merge fields
-                mergeDefinitions(existing, def);
+                if (def.replace) {
+                    merged.put(def.id(), def);
+                } else if (existing.replace) {
+                    merged.put(existing.id(),existing);
+                } else {
+                    mergeDefinitions(existing, def);
+                }
             }
         }
 
@@ -90,7 +95,7 @@ public class BossRegistry {
         BossNameCache.rebuild();
 
         LoggerUtil.info("Count of registered bosses: " + DEFINITIONS.size());
-        LoggerUtil.info("Count of all bosses: " + loaded.size());
+        //LoggerUtil.info("Count of all bosses: " + merged.size());
     }
 
 

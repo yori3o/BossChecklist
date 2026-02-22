@@ -81,7 +81,7 @@ public class BossInfoScreen extends Screen {
 
     // for model rendering and animation
     private long lastTime;
-    private float rotationY = 0;
+    private float rotationY = 0f;
     private float rotationX = 0f;
     private boolean dragging = false;
     private boolean allowRotation = true;
@@ -99,11 +99,6 @@ public class BossInfoScreen extends Screen {
     private List<Component> tooltip_attemptTop3 = new ArrayList<>();
     private String tooltip_duration = "";
 
-    //private int dgdfg = 0;
-    //private int dgdfgY = 0;
-
-
-
 
     
     
@@ -115,13 +110,13 @@ public class BossInfoScreen extends Screen {
         this.bossId = bossId;
         this.boss = BossService.get(bossId);
 
-        if (bossId.equals("minecraft:wither")) { // hack for this mod support
+        if (bossId.equals("minecraft:wither")) {
             if (PlatformUtil.isModLoaded("witherreincarnated")) {
                 modName = Component.translatable("boss_checklist.mod.witherreincarnated").getString();
             } else {
                 modName = Component.translatable("boss_checklist.mod." + boss.definition().modId()).getString();
             }
-        } if (bossId.equals("minecraft:ender_dragon")) { // also for this mod support
+        } if (bossId.equals("minecraft:ender_dragon")) {
             if (PlatformUtil.isModLoaded("endertrigon")) {
                 modName = Component.translatable("boss_checklist.mod.endertrigon").getString();
             } else {
@@ -144,6 +139,7 @@ public class BossInfoScreen extends Screen {
             BOSS_IMG = ResourceLocation.fromNamespaceAndPath("boss_checklist", "textures/gui/bosses/" + bossId.replace(":", "_") + ".png");
             brokenBossModel = true;
         } else {
+            rotationY += boss.definition().rotateY();
             bossScale = boss.definition().scale();
             bossYCorrection = boss.definition().yOffset();
             dispatcher = Minecraft.getInstance().getEntityRenderDispatcher();
@@ -429,15 +425,6 @@ public class BossInfoScreen extends Screen {
         guiGraphics.drawWordWrap(font, Component.literal(modName), bookX + 137, secondY, 110, 0xFF616161);
 
 
-        // Shitty code to fit all the text. Titles are usually no more than two lines long.
-        /*if (bossNameIsBig) { // FOR 1.21.4+ - add , false
-            guiGraphics.drawWordWrap(font,  Component.literal("§l" + bossName + "\n" + modName), bookX + 137, bookY + 53, 110, 0xFF000000);
-             guiGraphics.drawWordWrap(font,  Component.literal(modName),  bookX + 137,  bookY + 73, 110, 0xFF616161);
-        } else {
-            guiGraphics.drawString(font,  "§l" + bossName, bookX + 137, bookY + 53, 0xFF000000, false);
-            guiGraphics.drawWordWrap(font,  Component.literal(modName),  bookX + 137,  bookY + 65, 110, 0xFF616161);
-        }*/
-
         if (showInfo) {
             if (brokenBossModel) {
                 RenderSystem.enableBlend();
@@ -466,14 +453,6 @@ public class BossInfoScreen extends Screen {
                 guiGraphics.blit(GuiConstants.ARROW_DOWN, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH);
             }
         }
-        
-        /*if (ClientStatistics.top1 != null) {
-            guiGraphics.drawString(font, ClientStatistics.top1 + ClientStatistics.damage1, bookX , bookY - 20, 0xFF000000, false);
-            guiGraphics.drawString(font, ClientStatistics.top2 + ClientStatistics.damage2, bookX , bookY - 10, 0xFF000000, false);
-        }*/
-
-        //guiGraphics.drawString(font, String.valueOf(dgdfg), bookX + 0, bookY , 0xFF000000, false);
-        //guiGraphics.drawString(font, String.valueOf(dgdfgY), bookX + 50, bookY, 0xFF000000, false);
 
         // makes buttons gray if they are disabled
         if (!showInfo) {
@@ -491,7 +470,6 @@ public class BossInfoScreen extends Screen {
 
 
     public void renderTooltips(GuiGraphics guiGraphics, int mouseX, int mouseY, int bookX, int bookY) {
-        // The structure is a bit complex, but at least it is optimized.
         // health and armor info
         if (mouseX >= bookX + 145 && mouseX < bookX + 145 + 16 && mouseY >= bookY + 209 && mouseY < bookY + 209 + 27) {
             guiGraphics.renderComponentTooltip(
@@ -528,7 +506,7 @@ public class BossInfoScreen extends Screen {
                     if (mouseX >= bookX + 350 && mouseX < bookX + 350 + 16 && mouseY >= bookY + 210 && mouseY < bookY + 210 + 27) {
                         guiGraphics.renderTooltip(
                             Minecraft.getInstance().font,
-                            Component.literal(Component.translatable("gui.boss_checklist.wikiLink_info").getString()),
+                            Component.literal(Component.translatable("gui.boss_checklist.wiki_link_info").getString()),
                             mouseX, mouseY
                         );
                     }
@@ -690,8 +668,6 @@ public class BossInfoScreen extends Screen {
 
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
-        //dgdfg = (int) (mouseX - ((this.width - 512) / 2) );
-        //dgdfgY = (int) ( mouseY - ((this.height - 256) / 2));
         int bookX = (this.width - 512) / 2;
         int bookY = (this.height - 256) / 2;
 

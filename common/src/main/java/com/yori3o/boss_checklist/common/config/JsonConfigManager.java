@@ -87,7 +87,6 @@ public abstract class JsonConfigManager<T> {
             try (Writer writer = Files.newBufferedWriter(configPath)) {
                 gson.toJson(configInstance, writer);
             }
-            LoggerUtil.info("[CONFIG] Created new config file: " + configPath);
         } catch (IOException e) {
             e.printStackTrace();
         }

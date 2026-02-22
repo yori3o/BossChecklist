@@ -14,7 +14,6 @@
   },
   "license": "MIT Licence",
   "icon": "logo.png",
-  "environment": "*",
   "entrypoints": {
     "main": [
       "com.yori3o.boss_checklist.fabric.BossChecklistFabric"

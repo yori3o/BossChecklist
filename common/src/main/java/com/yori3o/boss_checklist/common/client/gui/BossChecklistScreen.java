@@ -459,26 +459,7 @@ public class BossChecklistScreen extends Screen {
                 onClose();
                 return true;
             }
-        } /*else if (keyCode == InputConstants.KEY_LEFT) {
-            if (currentSpread > 0) {
-                currentSpread--;
-                updatePage();
-                Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.BOOK_PAGE_TURN, 1.0F));
-            }
-            return true;
-        } else if (keyCode == InputConstants.KEY_RIGHT) {
-            if (currentSpread < totalSpreads - 1) {
-                currentSpread++;
-                updatePage();
-                Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.BOOK_PAGE_TURN, 1.0F));
-            }
-            return true;
-        }/*  else if (keyCode == InputConstants.KEY_UP) {
-            indexOfCheckboxThatHoveredByKeyboard--;
-            indexOfCheckboxThatHoveredByKeyboard = Math.clamp(indexOfCheckboxThatHoveredByKeyboard, 1, bossesFiltered.size());
-            currentCheckboxes.get(indexOfCheckboxThatHoveredByKeyboard).
-            return true;
-        }*/
+        }
         return super.keyPressed(keyCode, scanCode, modifiers);
     }
 

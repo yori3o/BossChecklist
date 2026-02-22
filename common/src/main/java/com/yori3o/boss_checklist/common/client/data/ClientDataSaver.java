@@ -68,6 +68,7 @@ public class ClientDataSaver {
 
         for (String id : defeatedIds) {
             BossService.get(id).progress().markDefeatedClient(true);
+            BossService.get(id).progress().clearFreshFlag();
         }
     }
 

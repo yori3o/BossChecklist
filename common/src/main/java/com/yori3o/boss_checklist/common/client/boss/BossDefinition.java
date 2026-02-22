@@ -27,6 +27,9 @@ public class BossDefinition {
     @SerializedName("broken_model") // the variable names are different from the JSON ones, so you need to specify them
     private boolean brokenModel = false;
 
+    @SerializedName("rotate_y")
+    private int rotateY;
+
     @SerializedName("additional_info")
     private boolean additionalInfo = false;
 
@@ -70,6 +73,9 @@ public class BossDefinition {
         return yOffset;
     }
 
+    public int rotateY() {
+        return rotateY;
+    }
     public boolean brokenModel() {
         return brokenModel;
     }

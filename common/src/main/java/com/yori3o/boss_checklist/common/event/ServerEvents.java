@@ -65,7 +65,6 @@ public class ServerEvents {
 
 
     protected static void loadServerData(MinecraftServer server) {
-        LoggerUtil.info("loadServerData!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         DynamicConfigHandler.loadServer();
 
         // this block is needed to take the main data that was written in older versions of the mod (3.4.0-)

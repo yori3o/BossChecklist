@@ -85,9 +85,10 @@
         "id": "twilightforest:naga",
         "scale": 10,
         "y_offset": 0,
-        "broken_model": false,
+        "broken_model": true,
         "additional_info": false,
-        "position": 7
+        "position": 7,
+        "mod_version": "4.8.3287"
     },
     {
         "drops": [
@@ -178,11 +179,12 @@
             "twilightforest:zombie_scepter#25%"
         ],
         "id": "twilightforest:lich",
-        "scale": 20,
-        "y_offset": 2,
+        "scale": 21,
+        "y_offset": 14,
         "broken_model": false,
         "additional_info": false,
-        "position": 14
+        "position": 14,
+        "mod_version": "4.8.3287"
     },
     {
         "drops": [
@@ -191,11 +193,12 @@
             "twilightforest:minoshroom_trophy"
         ],
         "id": "twilightforest:minoshroom",
-        "scale": 20,
-        "y_offset": 2,
+        "scale": 22,
+        "y_offset": 14,
         "broken_model": false,
         "additional_info": false,
-        "position": 15
+        "position": 15,
+        "mod_version": "4.8.3287"
     },
     {
         "drops": [
@@ -477,7 +480,8 @@
         "y_offset": 6,
         "broken_model": false,
         "additional_info": false,
-        "position": 36
+        "position": 36,
+        "mod_version": "4.8.3287"
     },
     {
         "drops": [
@@ -494,7 +498,8 @@
         "broken_model": true,
         "additional_info": true,
         "position": 37,
-        "type": 2
+        "type": 2,
+        "mod_version": "4.8.3287"
     },
     {
         "drops": [
@@ -768,11 +773,12 @@
             "minecraft:gold_ingot"
         ],
         "id": "minecells:concierge",
-        "scale": 15,
-        "y_offset": 0,
+        "scale": 17,
+        "y_offset": 18,
         "broken_model": false,
         "additional_info": false,
-        "position": 55
+        "position": 55,
+        "mod_version": "2.0.3"
     },
     {
         "drops": [
@@ -790,7 +796,9 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": false,
-        "position": 56
+        "rotate_y": 180,
+        "position": 56,
+        "mod_version": "2.0.3"
     },
     {
         "drops": [
@@ -827,10 +835,11 @@
         ],
         "id": "twilightforest:ur_ghast",
         "scale": 3,
-        "y_offset": 0,
+        "y_offset": 6,
         "broken_model": false,
         "additional_info": false,
-        "position": 59
+        "position": 59,
+        "mod_version": "4.8.3287"
     },
     {
         "drops": [
@@ -838,12 +847,13 @@
             "twilightforest:alpha_yeti_trophy",
             "twilightforest:ice_bomb"
         ],
-        "id": "twilightforest:yeti_alpha",
+        "id": "twilightforest:alpha_yeti",
         "scale": 10,
-        "y_offset": 10,
+        "y_offset": 14,
         "broken_model": false,
         "additional_info": false,
-        "position": 60
+        "position": 60,
+        "mod_version": "4.8.3287"
     },
     {
         "drops": [
@@ -854,11 +864,12 @@
             "twilightforest:triple_bow#50%"
         ],
         "id": "twilightforest:snow_queen",
-        "scale": 20,
-        "y_offset": 2,
+        "scale": 22,
+        "y_offset": 14,
         "broken_model": false,
         "additional_info": false,
-        "position": 61
+        "position": 61,
+        "mod_version": "4.8.3287"
     },
     {
         "drops": [
@@ -929,7 +940,8 @@
         ],
         "id": "minecraft:ender_dragon",
         "scale": 7,
-        "y_offset": 0,
+        "y_offset": 6,
+        "rotate_y": 180,
         "broken_model": false,
         "additional_info": false,
         "position": 66
@@ -1403,7 +1415,8 @@
         "broken_model": false,
         "additional_info": false,
         "wiki_link": "https://globox1997.github.io/wiki/mods/AdventureZ/Structures/Blackstone_Altar/",
-        "position": 100
+        "position": 100,
+        "mod_version": "1.5.0"
     },
     {
         "drops": [
@@ -1457,7 +1470,8 @@
         "broken_model": false,
         "additional_info": false,
         "wiki_link": "https://globox1997.github.io/wiki/mods/AdventureZ/Structures/Eye_Shrine/",
-        "position": 103
+        "position": 103,
+        "mod_version": "1.5.0"
     },
     {
         "drops": [
@@ -2186,7 +2200,8 @@
         "y_offset": 37,
         "broken_model": false,
         "additional_info": true,
-        "position": 153
+        "position": 153,
+        "mod_version": "1.5.0"
     },
     {
         "drops": [],
