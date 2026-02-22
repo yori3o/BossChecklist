@@ -48,7 +48,7 @@ public class CustomButton extends Button {
 
         if (pressedFlag) {
             tex = pressedTex;
-        } else if (this.isHovered) {
+        } else if (this.isHoveredOrFocused()) {
             tex = hoverTex;
         } else {
             tex = normalTex;
@@ -79,14 +79,20 @@ public class CustomButton extends Button {
 
     @Override
     public void onPress() {
-        pressedFlag = true;
         super.onPress(); 
+    }
+
+    @Override
+    public void onClick(double mouseX, double mouseY) {
+        pressedFlag = true;
+        this.onPress();
     }
 
     // on 1.20 it run only if cursor on button
     @Override
     public void onRelease(double mouseX, double mouseY) {
         pressedFlag = false;
+        this.setFocused(false);
     }
 
 }

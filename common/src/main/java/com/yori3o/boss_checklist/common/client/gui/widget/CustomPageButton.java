@@ -36,7 +36,7 @@ public class CustomPageButton extends Button {
 
     @Override
     public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
-        tex = this.isHovered() ? hoverTex : normalTex;
+        tex = this.isHoveredOrFocused() ? hoverTex : normalTex;
         guiGraphics.blit(tex, this.getX(), this.getY(), 0, 0, 23, 13, 23, 13);
     }
 

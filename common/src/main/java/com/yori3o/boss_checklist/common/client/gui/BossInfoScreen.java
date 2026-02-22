@@ -25,7 +25,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.math.Axis;
@@ -749,16 +748,6 @@ public class BossInfoScreen extends Screen {
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if (BossChecklistClient.OPEN_CHECKLIST.matches(keyCode, scanCode)) {
             onClose();
-            return true;
-        } else if (keyCode == InputConstants.KEY_LEFT) {
-            if (showInfo) {
-                currentTab = InfoTab.DROP;
-            }
-            return true;
-        } else if (keyCode == InputConstants.KEY_RIGHT) {
-            if (showAdditionalInfo) {
-                currentTab = InfoTab.SPAWN;
-            }
             return true;
         }
         return super.keyPressed(keyCode, scanCode, modifiers);

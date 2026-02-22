@@ -13,7 +13,6 @@ import com.yori3o.boss_checklist.common.util.LoggerUtil;
 import com.yori3o.boss_checklist.common.client.data.BossNameCache;
 import com.yori3o.boss_checklist.common.client.data.BossService;
 
-import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -463,7 +462,7 @@ public class BossChecklistScreen extends Screen {
                 onClose();
                 return true;
             }
-        } else if (keyCode == InputConstants.KEY_LEFT) {
+        } /*else if (keyCode == InputConstants.KEY_LEFT) {
             if (currentSpread > 0) {
                 currentSpread--;
                 updatePage();
@@ -477,7 +476,12 @@ public class BossChecklistScreen extends Screen {
                 Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.BOOK_PAGE_TURN, 1.0F));
             }
             return true;
-        }
+        }/*  else if (keyCode == InputConstants.KEY_UP) {
+            indexOfCheckboxThatHoveredByKeyboard--;
+            indexOfCheckboxThatHoveredByKeyboard = Math.clamp(indexOfCheckboxThatHoveredByKeyboard, 1, bossesFiltered.size());
+            currentCheckboxes.get(indexOfCheckboxThatHoveredByKeyboard).
+            return true;
+        }*/
         return super.keyPressed(keyCode, scanCode, modifiers);
     }
 

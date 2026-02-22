@@ -5,6 +5,7 @@ import com.yori3o.boss_checklist.common.client.gui.GuiConstants;
 import com.yori3o.boss_checklist.common.config.DynamicConfigHandler;
 import com.yori3o.boss_checklist.common.sound.SoundRegistry;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -72,7 +73,7 @@ public class CustomCheckbox extends AbstractWidget {
         int labelStart = sx + boxScreen + PADDING;
         
         //int lines = (int) labelLen / MAX_LENGTH;
-        boolean hoverLabel = mouseX >= labelStart && mouseY >= sy /*(lines * 16)*/ && mouseX < labelStart + labelLen && mouseY < sy + boxScreen;
+        boolean hoverLabel = (mouseX >= labelStart && mouseY >= sy /*(lines * 16)*/ && mouseX < labelStart + labelLen && mouseY < sy + boxScreen) || this.isFocused();
 
         // --- draw box ---
         guiGraphics.pose().pushPose();
@@ -151,6 +152,7 @@ public class CustomCheckbox extends AbstractWidget {
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
         if (button != 0) return false;
+        if (!this.active && !this.visible) return false;
 
         int sx = this.getX();
         int sy = this.getY();
@@ -178,6 +180,8 @@ public class CustomCheckbox extends AbstractWidget {
                 }
             }
 
+            this.setFocused(false);
+
             return true;
         }
 
@@ -186,12 +190,30 @@ public class CustomCheckbox extends AbstractWidget {
         int labelLen = (int) (Minecraft.getInstance().font.width(this.getMessage()) * TEXT_SCALE);
         if (mouseX >= labelStart && mouseY >= sy && mouseX < labelStart + labelLen && mouseY < sy + boxScreen) {
             if (this.onLabelClick != null) {
-                renderNotice = false;
-                this.onLabelClick.run();
+                onClick(mouseX, mouseY);
                 return true;
             }
         }
 
+        return false;
+    }
+
+    @Override
+    public void onClick(double mouseX, double mouseY) {
+        renderNotice = false;
+        this.onLabelClick.run();
+    }
+
+    @Override
+    public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
+        super.keyPressed(keyCode, scanCode, modifiers);
+        if (InputConstants.KEY_RETURN == keyCode) {
+            if (this.isFocused()) {
+                if (this.onLabelClick != null) {
+                    onClick(scanCode, modifiers);
+                }
+            }
+        }
         return false;
     }
 
