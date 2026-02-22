@@ -191,6 +191,7 @@ public class CustomCheckbox extends AbstractWidget {
         if (mouseX >= labelStart && mouseY >= sy && mouseX < labelStart + labelLen && mouseY < sy + boxScreen) {
             if (this.onLabelClick != null) {
                 onClick(mouseX, mouseY);
+                this.setFocused(false);
                 return true;
             }
         }

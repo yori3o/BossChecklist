@@ -49,8 +49,6 @@ public class BossProgress {
 
     public void markDefeatedClient(boolean bool) {
         this.markedAsDefeatedOnClient = bool;
-        this.fresh = false;
-        this.alreadyAnimated = true;
     }
 
     public void markNotDefeated() {
@@ -62,5 +60,6 @@ public class BossProgress {
 
     public void clearFreshFlag() {
         this.fresh = false;
+        this.alreadyAnimated = true;
     }
 }

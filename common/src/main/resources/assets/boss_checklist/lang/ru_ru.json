@@ -147,10 +147,10 @@
   "boss_checklist.boss.minecells_concierge": "Привратник",
   "boss_checklist.boss.minecells_conjunctivius": "Конъюктивиус",
 
-  "boss_checklist.boss.block_factorys_bosses_infernal_dragon": "Инфернальный Дракон",
-  "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Рыцарь Преисподнии",
-  "boss_checklist.boss.block_factorys_bosses_yeti": "Йети",
-  "boss_checklist.boss.block_factorys_bosses_sandworm": "Пустынный Червь",
+  "boss_checklist.boss.block_factorys_bosses_infernal_dragon": "Ashlord, The Infernal Dragon",
+  "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Helvar, The Underworld Knight",
+  "boss_checklist.boss.block_factorys_bosses_yeti": "Skor, The Yeti",
+  "boss_checklist.boss.block_factorys_bosses_sandworm": "Sirok, The Sandworm",
 
   "boss_checklist.boss.bosses_of_mass_destruction_obsidilith": "Обсидилит",
   "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Перчатка Незера",
@@ -378,9 +378,9 @@
   "boss_checklist.summon.minecells_conjunctivius": "Получите Руну лозы в Тропе обречённых, затем вернитесь в Тюремные камеры и найдите место, где можно использовать Руну. (я не смог повторить это в игре, скопировано с вики)",
 
   "boss_checklist.summon.block_factorys_bosses_infernal_dragon": "Отыщите высокую башню в Верхнем мире, на вершине которой будет босс.",
-  "boss_checklist.summon.block_factorys_bosses_underworld_knight": "Найдите арену с боссом в Незере.",
-  "boss_checklist.summon.block_factorys_bosses_yeti": "Наткнитесь на усыпанный костями ледяной пик в заснеженной равнине.",
-  "boss_checklist.summon.block_factorys_bosses_sandworm": "Ищите подозрительные руины с костями в пустыне.",
+  "boss_checklist.summon.block_factorys_bosses_underworld_knight": "Найдите арену с боссом в Незере и откройте дверь §1Underworld Arena key§r§0, который можно получить из рассадников испытаний.",
+  "boss_checklist.summon.block_factorys_bosses_yeti": "Наткнитесь на усыпанный скелетами ледяной пик в заснеженной равнине и потревожьте заледеневшего босса.",
+  "boss_checklist.summon.block_factorys_bosses_sandworm": "Подойдите близко к подозрительным руинам с костями в пустыне.",
 
   "boss_checklist.summon.bosses_of_mass_destruction_obsidilith": "Вставьте §1Око эндера§r§0 в Обсидиановый алтарь на вершине гигантского парящего сооружения в Энде.",
   "boss_checklist.summon.bosses_of_mass_destruction_gauntlet": "Найдите большую арену в озёрах лавы Незера и разрушьте §1Древний резной чернит§r§0 в её центре.",
@@ -391,7 +391,7 @@
   "boss_checklist.summon.cataclysm_netherite_monstrosity": "Следуйте за Оком чудовища в Кузницу Душ в Незере.",
   "boss_checklist.summon.cataclysm_the_harbinger": "Найдите Древнюю фабрику с помощью Ока меха и используйте §1Звезду Незера§r§0 для пробуждения босса.",
   "boss_checklist.summon.cataclysm_the_leviathan": "Возложите §1Жертвоприношение бездне§r§0 на Глубинный алтарь в Затонувшем городе, путь к которому вам укажет Око глубины.",
-  "boss_checklist.summon.cataclysm_scylla": "Кликните по якорю на вершине Акрополя, которого можно найти с помощью Ока шторма в Верхнем мире.",
+  "boss_checklist.summon.cataclysm_scylla": "Кликните по якорю на вершине Акрополя, который можно найти с помощью Ока шторма в Верхнем мире.",
   "boss_checklist.summon.cataclysm_maledictus": "Кликните по Проклятому надгробию за Дверью Печати, открываемой §1Странным ключом§r§0, в Морозной тюрьме, путь к которой вам укажет Око проклятия.",
   "boss_checklist.summon.cataclysm_ender_guardian": "Следуйте за Оком пустоты в Разрушенную Цитадель в Энде.",
   "boss_checklist.summon.cataclysm_ignis": "Найдите Пылающую арену с помощью Ока огня, победите Огненных ревенантов и щёлкните ПКМ §1Пылающим пеплом§r§0 по Огненному алтарю.",
@@ -436,7 +436,7 @@
   "boss_checklist.summon.aether_valkyrie_queen": "Находится в Серебрянном Подземелье.",
   "boss_checklist.summon.aether_sun_spirit": "Находится в Золотом Подземелье.",
 
-  "boss_checklist.summon.deep_aether_eots_controller": "Находится в Латунной Темнице.",
+  "boss_checklist.summon.deep_aether_eots_controller": "Находится в Латунной Темнице высоко в небе Эфира.",
 
   "boss_checklist.summon.lost_aether_content_aerwhale_king": "Кликните по Камню Песни на вершине Платиновой башни.",
 

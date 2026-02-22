@@ -147,10 +147,10 @@
   "boss_checklist.boss.minecells_concierge": "Concierge",
   "boss_checklist.boss.minecells_conjunctivius": "Conjunctivius",
 
-  "boss_checklist.boss.block_factorys_bosses_infernal_dragon": "Infernal Dragon",
-  "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Underworld Knight",
-  "boss_checklist.boss.block_factorys_bosses_yeti": "Yeti",
-  "boss_checklist.boss.block_factorys_bosses_sandworm": "Sandworm",
+  "boss_checklist.boss.block_factorys_bosses_infernal_dragon": "Ashlord, The Infernal Dragon",
+  "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Helvar, The Underworld Knight",
+  "boss_checklist.boss.block_factorys_bosses_yeti": "Skor, The Yeti",
+  "boss_checklist.boss.block_factorys_bosses_sandworm": "Sirok, The Sandworm",
 
   "boss_checklist.boss.bosses_of_mass_destruction_obsidilith": "Obsidilith",
   "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Nether Gauntlet",
@@ -378,7 +378,7 @@
   "boss_checklist.summon.minecells_conjunctivius": "Get the Vine Rune in the Promenade of The Condemned, then return to the Prison and find a place to use the Rune. (I couldn't replicate this in-game, so I copied it from the wiki.)",
 
   "boss_checklist.summon.block_factorys_bosses_infernal_dragon": "Find the tall tower in the Overworld with the boss at the top.",
-  "boss_checklist.summon.block_factorys_bosses_underworld_knight": "Find the boss arena in the Nether.",
+  "boss_checklist.summon.block_factorys_bosses_underworld_knight": "Find the boss arena in the Nether and open the door with the §1Underworld Arena key§r§0, which can be obtained from the trial spawmers.",
   "boss_checklist.summon.block_factorys_bosses_yeti": "Encounter a bone-strewn icy peak in a snowy plain.",
   "boss_checklist.summon.block_factorys_bosses_sandworm": "Look for suspicious ruins with bones in the desert.",
 
@@ -436,7 +436,7 @@
   "boss_checklist.summon.aether_valkyrie_queen": "Located in the Silver Dungeon.",
   "boss_checklist.summon.aether_sun_spirit": "Located in the Gold Dungeon.",
 
-  "boss_checklist.summon.deep_aether_eots_controller": "Located in the Brass Dungeon.",
+  "boss_checklist.summon.deep_aether_eots_controller": "Located in the Brass Dungeon high in the sky of Aether.",
 
   "boss_checklist.summon.lost_aether_content_aerwhale_king": "Click on the Songstone at the top of the Platinum Dungeon.",
 

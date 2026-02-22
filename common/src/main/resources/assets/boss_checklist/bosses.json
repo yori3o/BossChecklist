@@ -37,7 +37,8 @@
         "y_offset": 25,
         "broken_model": false,
         "additional_info": false,
-        "position": 3
+        "position": 3,
+        "mod_version": "1.2"
     },
     {
         "drops": [
@@ -70,7 +71,7 @@
             "bosses_of_mass_destruction:void_thorn"
         ],
         "id": "bosses_of_mass_destruction:void_blossom",
-        "scale": 0,
+        "scale": 10,
         "y_offset": 0,
         "broken_model": true,
         "additional_info": false,
@@ -90,14 +91,15 @@
     },
     {
         "drops": [
-            "block_factorys_bosses:sandworm_dart"
+            "block_factorys_bosses:sandworm_gauntlet"
         ],
         "id": "block_factorys_bosses:sandworm",
-        "scale": 0,
+        "scale": 10,
         "y_offset": 0,
         "broken_model": true,
         "additional_info": false,
-        "position": 8
+        "position": 8,
+        "mod_version": "2.0.4"
     },
     {
         "drops": [
@@ -109,7 +111,8 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": false,
-        "position": 9
+        "position": 9,
+        "mod_version": "1.5.11"
     },
     {
         "drops": [
@@ -238,14 +241,15 @@
     },
     {
         "drops": [
-            "block_factorys_bosses:frozen_fist"
+            "block_factorys_bosses:ice_gauntlet"
         ],
         "id": "block_factorys_bosses:yeti",
-        "scale": 0,
-        "y_offset": 0,
-        "broken_model": true,
+        "scale": 11,
+        "y_offset": 20,
+        "broken_model": false,
         "additional_info": false,
-        "position": 19
+        "position": 19,
+        "mod_version": "2.0.4"
     },
     {
         "drops": [
@@ -730,7 +734,7 @@
             "minecraft:ancient_debris"
         ],
         "id": "bosses_of_mass_destruction:gauntlet",
-        "scale": 0,
+        "scale": 10,
         "y_offset": 0,
         "broken_model": true,
         "additional_info": false,
@@ -752,7 +756,8 @@
         "y_offset": 11,
         "broken_model": false,
         "additional_info": false,
-        "position": 54
+        "position": 54,
+        "mod_version": "1.21.1-3.15.3"
     },
     {
         "drops": [
@@ -797,11 +802,12 @@
         "y_offset": 9,
         "broken_model": false,
         "additional_info": false,
-        "position": 57
+        "position": 57,
+        "mod_version": "1.5.11"
     },
     {
         "drops": [
-            "aether:aercloud",
+            "aether:cold_aercloud",
             "deep_aether:brass_dungeon_key",
             "deep_aether:floaty_scarf"
         ],
@@ -810,7 +816,8 @@
         "y_offset": 10,
         "broken_model": false,
         "additional_info": false,
-        "position": 58
+        "position": 58,
+        "mod_version": "1.1.4"
     },
     {
         "drops": [
@@ -960,7 +967,7 @@
             "minecraft:purpur_block"
         ],
         "id": "bosses_of_mass_destruction:obsidilith",
-        "scale": 0,
+        "scale": 10,
         "y_offset": 0,
         "broken_model": true,
         "additional_info": false,
@@ -1228,7 +1235,7 @@
             "alexsmobs:void_worm_mandible"
         ],
         "id": "alexsmobs:void_worm",
-        "scale": 0,
+        "scale": 10,
         "y_offset": 0,
         "broken_model": true,
         "additional_info": false,
@@ -1263,11 +1270,12 @@
             "block_factorys_bosses:knight_sword"
         ],
         "id": "block_factorys_bosses:underworld_knight",
-        "scale": 0,
+        "scale": 10,
         "y_offset": 0,
         "broken_model": true,
         "additional_info": false,
-        "position": 91
+        "position": 91,
+        "mod_version": "2.0.4"
     },
     {
         "drops": [
@@ -1407,7 +1415,8 @@
         "y_offset": 12,
         "broken_model": false,
         "additional_info": false,
-        "position": 101
+        "position": 101,
+        "mod_version": "1.5.11"
     },
     {
         "drops": [
@@ -1508,12 +1517,12 @@
             "traveloptics:pyro_spellweave_ingot"
         ],
         "id": "cataclysm:netherite_monstrosity",
-        "scale": 11,
-        "y_offset": 27,
+        "scale": 9,
+        "y_offset": 18,
         "broken_model": false,
         "additional_info": false,
         "position": 107,
-        "mod_version": "3.16"
+        "mod_version": "3.23"
     },
     {
         "drops": [
@@ -1561,11 +1570,12 @@
             "block_factorys_bosses:dragon_skull"
         ],
         "id": "block_factorys_bosses:infernal_dragon",
-        "scale": 0,
+        "scale": 10,
         "y_offset": 0,
         "broken_model": true,
         "additional_info": false,
-        "position": 111
+        "position": 111,
+        "mod_version": "2.0.4"
     },
     {
         "drops": [
@@ -1721,7 +1731,8 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": false,
-        "position": 124
+        "position": 124,
+        "mod_version": "1.2.3"
     },
     {
         "drops": [
@@ -1733,11 +1744,11 @@
         ],
         "id": "cataclysm:ender_guardian",
         "scale": 15,
-        "y_offset": 16,
+        "y_offset": 22,
         "broken_model": false,
         "additional_info": false,
         "position": 125,
-        "mod_version": "3.16"
+        "mod_version": "3.23"
     },
     {
         "drops": [
@@ -1841,11 +1852,11 @@
         ],
         "id": "cataclysm:the_harbinger",
         "scale": 12,
-        "y_offset": 0,
+        "y_offset": 20,
         "broken_model": false,
         "additional_info": false,
         "position": 133,
-        "mod_version": "3.16"
+        "mod_version": "3.23"
     },
     {
         "drops": [
@@ -1858,12 +1869,12 @@
             "traveloptics:scourge_of_the_sands#45%"
         ],
         "id": "cataclysm:ancient_remnant",
-        "scale": 8,
-        "y_offset": 0,
+        "scale": 7,
+        "y_offset": 14,
         "broken_model": false,
         "additional_info": false,
         "position": 134,
-        "mod_version": "3.16"
+        "mod_version": "3.23"
     },
     {
         "drops": [
@@ -1906,7 +1917,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 137,
-        "mod_version": "3.16"
+        "mod_version": "3.23"
     },
     {
         "drops": [
@@ -1939,6 +1950,7 @@
     },
     {
         "drops": [
+            "irons_spellbooks:decrepit_key",
             "irons_spellbooks:arcane_essence",
             "irons_spellbooks:betrayer_signet#50%",
             "irons_spellbooks:cinder_essence",
@@ -1950,7 +1962,8 @@
         "y_offset": 8,
         "broken_model": false,
         "additional_info": false,
-        "position": 140
+        "position": 140,
+        "mod_version": "1.21.1-3.15.3"
     },
     {
         "drops": [
@@ -1961,11 +1974,11 @@
         ],
         "id": "cataclysm:scylla",
         "scale": 15,
-        "y_offset": 6,
+        "y_offset": 10,
         "broken_model": false,
         "additional_info": false,
         "position": 141,
-        "mod_version": "3.16"
+        "mod_version": "3.23"
     },
     {
         "drops": [
@@ -1998,7 +2011,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 143,
-        "mod_version": "3.16"
+        "mod_version": "3.23"
     },
     {
         "drops": [
@@ -2060,7 +2073,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 146,
-        "mod_version": "3.16"
+        "mod_version": "3.23"
     },
     {
         "drops": [
@@ -2069,7 +2082,8 @@
             "darkdoppelganger:summons_necklace#33%",
             "minecraft:diamond_block",
             "minecraft:echo_shard",
-            "minecraft:nether_star"
+            "minecraft:nether_star",
+            "irons_spellbooks:scroll"
         ],
         "id": "darkdoppelganger:dark_doppelganger",
         "scale": 10,
@@ -2343,7 +2357,7 @@
             "fdbosses:polished_justicestone"
         ],
         "id": "fdbosses:geburah",
-        "scale": 0,
+        "scale": 10,
         "y_offset": 0,
         "broken_model": true,
         "additional_info": true,

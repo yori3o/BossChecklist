@@ -55,6 +55,10 @@ public class ServerEvents {
                 globalTop3 = ServerStorage.getTop3PlayersNamesAndDamagesGlobal_SplittedByHashtag();
             }
 
+            if (!DynamicConfigHandler.server().saveBossKillerName) {
+                killerName = "";
+            }
+
             ServerSender.sendDefeatedBossDataToPlayer(player, id, killerName, true, startTime, endTime, attemptTop3, globalTop3);
         }
     }

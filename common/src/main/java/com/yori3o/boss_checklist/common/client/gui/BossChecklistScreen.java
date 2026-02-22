@@ -230,13 +230,10 @@ public class BossChecklistScreen extends Screen {
 
             boolean isThisBossDefeated = data.progress().isMarkedAsDefeatedOnClient();
 
-            boolean isFresh = false;
-            if (isThisBossDefeated && data.progress().isFresh())
-                isFresh = true;
-
-            CustomCheckbox cb = new CustomCheckbox(x, y, 300, name, isThisBossDefeated, true, isFresh,
+            CustomCheckbox cb = new CustomCheckbox(x, y, 300, name, isThisBossDefeated, true, data.progress().isFresh(),
                 checked -> {
                     ClientDataSaver.setDefeated(bossId, checked, data.progress());
+                    data.progress().clearFreshFlag();
                     updateCounts(); 
                 },
                 () -> {
