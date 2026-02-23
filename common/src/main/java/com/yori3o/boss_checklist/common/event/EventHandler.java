@@ -62,7 +62,7 @@ public class EventHandler {
         ClientEvents.clearClientCache();
     }
 
-    public static void whenClientTickPre() {
+    public static void whenClientTickStart() {
         ClientEvents.checkKeybindPressed();
     }
 

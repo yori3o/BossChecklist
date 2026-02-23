@@ -88,10 +88,7 @@ public class BossChecklistJsonDataSaver {
 
     private static <T> void saveMap(File file, T map, Type type) throws IOException {
         synchronized (FILE_IO_LOCK) {
-            // if null, we save an empty structure
-            if (map == null) {
-                map = GSON.fromJson("{}", type);
-            }
+            if (map == null) return;
 
             String json = GSON.toJson(map, type);
 

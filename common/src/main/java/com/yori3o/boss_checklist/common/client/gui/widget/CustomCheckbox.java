@@ -4,7 +4,6 @@ package com.yori3o.boss_checklist.common.client.gui.widget;
 import com.yori3o.boss_checklist.common.client.gui.GuiConstants;
 import com.yori3o.boss_checklist.common.config.DynamicConfigHandler;
 import com.yori3o.boss_checklist.common.sound.SoundRegistry;
-
 import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
@@ -38,6 +37,7 @@ public class CustomCheckbox extends AbstractWidget {
 
     private final int labelLen;
 
+    public boolean avoidFocusedLogic = false; // TODO: Bring order, in particular with the rendering logic
     public boolean isAnimating = false;
     public boolean animationPlayed = true;
     public long animationStartTime = 0L;
@@ -69,11 +69,10 @@ public class CustomCheckbox extends AbstractWidget {
         int sy = this.getY();
         int boxScreen = (int) (LOGICAL_BOX * SCALE);
 
-        boolean hoverBox = mouseX >= sx && mouseY >= sy && mouseX < sx + boxScreen && mouseY < sy + boxScreen;
+        boolean hoverBox = (!avoidFocusedLogic && this.isFocused() && onLabelClick == null) || (mouseX >= sx && mouseY >= sy && mouseX < sx + boxScreen && mouseY < sy + boxScreen);
         int labelStart = sx + boxScreen + PADDING;
         
-        //int lines = (int) labelLen / MAX_LENGTH;
-        boolean hoverLabel = (mouseX >= labelStart && mouseY >= sy /*(lines * 16)*/ && mouseX < labelStart + labelLen && mouseY < sy + boxScreen) || this.isFocused();
+        boolean hoverLabel = (!avoidFocusedLogic && this.isFocused()) || (mouseX >= labelStart && mouseY >= sy /*(lines * 16)*/ && mouseX < labelStart + labelLen && mouseY < sy + boxScreen);
 
         // --- draw box ---
         guiGraphics.pose().pushPose();
@@ -135,10 +134,10 @@ public class CustomCheckbox extends AbstractWidget {
 
         int textColor;
         if (isLabelClickDoingAnything) {
-            textColor = this.selected ? 0xFF209920 : 0xFFAA5555;
-
             if (hoverLabel) {
                 textColor = this.selected ? 0xFF4DBD4D : 0xFFD69494;
+            } else {
+                textColor = this.selected ? 0xFF209920 : 0xFFAA5555;
             }
         } else {
             textColor = 0xFF323538;
@@ -160,28 +159,8 @@ public class CustomCheckbox extends AbstractWidget {
 
         // click on box
         if (mouseX >= sx && mouseY >= sy && mouseX < sx + boxScreen && mouseY < sy + boxScreen) {
-            this.selected = !this.selected;
-            if (this.onValueChange != null) this.onValueChange.accept(this.selected);
-
-            renderNotice = false;
-
-            if (this.selected) {
-                Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundRegistry.CHECKMARK_ADDED, 1.0F));
-                if (DynamicConfigHandler.client().animationsEnabled) {
-                    this.isAnimating = true;
-                    this.animationPlayed = false;
-                    this.animationStartTime = System.currentTimeMillis();
-                }
-            } else {
-                Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundRegistry.CHECKMARK_DELETED, 1.0F));
-                if (DynamicConfigHandler.client().animationsEnabled) {
-                    this.isAnimating = false;
-                    this.animationPlayed = true;
-                }
-            }
-
-            this.setFocused(false);
-
+            invertValue();
+            avoidFocusedLogic = true;
             return true;
         }
 
@@ -191,7 +170,7 @@ public class CustomCheckbox extends AbstractWidget {
         if (mouseX >= labelStart && mouseY >= sy && mouseX < labelStart + labelLen && mouseY < sy + boxScreen) {
             if (this.onLabelClick != null) {
                 onClick(mouseX, mouseY);
-                this.setFocused(false);
+                avoidFocusedLogic = true;
                 return true;
             }
         }
@@ -205,13 +184,37 @@ public class CustomCheckbox extends AbstractWidget {
         this.onLabelClick.run();
     }
 
+    public void invertValue() {
+        this.selected = !this.selected;
+        if (this.onValueChange != null) this.onValueChange.accept(this.selected);
+
+        renderNotice = false;
+
+        if (this.selected) {
+            Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundRegistry.CHECKMARK_ADDED, 1.0F));
+            if (DynamicConfigHandler.client().animationsEnabled) {
+                this.isAnimating = true;
+                this.animationPlayed = false;
+                this.animationStartTime = System.currentTimeMillis();
+            }
+        } else {
+            Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundRegistry.CHECKMARK_DELETED, 1.0F));
+            if (DynamicConfigHandler.client().animationsEnabled) {
+                this.isAnimating = false;
+                this.animationPlayed = true;
+            }
+        }
+    }
+
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         super.keyPressed(keyCode, scanCode, modifiers);
         if (InputConstants.KEY_RETURN == keyCode) {
-            if (this.isFocused()) {
+            if (this.isFocused() && !avoidFocusedLogic) {
                 if (this.onLabelClick != null) {
                     onClick(scanCode, modifiers);
+                } else if (this.onValueChange != null) {
+                    invertValue();
                 }
             }
         }
@@ -224,6 +227,12 @@ public class CustomCheckbox extends AbstractWidget {
 
     public void setSelected(boolean s) {
         this.selected = s;
+    }
+
+    @Override
+    public void onRelease(double mouseX, double mouseY) {
+        avoidFocusedLogic = false;
+        this.setFocused(false);
     }
 
     @Override

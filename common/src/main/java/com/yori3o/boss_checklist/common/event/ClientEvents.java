@@ -17,7 +17,7 @@ import net.minecraft.sounds.SoundEvents;
 public class ClientEvents {
 
 
-    private static boolean openChecklistKeyWasDown = false;
+    public static boolean openChecklistKeyWasDown = false;
 
 
     protected static void updateClientBossDefeatedData() {

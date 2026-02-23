@@ -81,25 +81,25 @@ public class ConfigScreen extends Screen {
                     screen.invalidateNames = true;
                 }
             },
-            () -> {}
+            null
         );
         CustomCheckbox progression_mode_plus = new CustomCheckbox(bookX + cbs_client_x, bookY + cb2_y, GuiConstants.MAX_LABEL_WIDTH, 
             Component.translatable("gui.boss_checklist.settings.progression_mode_plus"), DynamicConfigHandler.client().progressionModePlus, 
             false, false,
             checked -> {progressionModePlus = checked;},
-            () -> {}
+            null
         );
         CustomCheckbox search_bar = new CustomCheckbox(bookX + cbs_client_x, bookY + cb3_y, GuiConstants.MAX_LABEL_WIDTH, 
             Component.translatable("gui.boss_checklist.settings.search_bar_enabled"), DynamicConfigHandler.client().searchBarEnabled, 
             false, false,
             checked -> {searchBarEnabled = checked;},
-            () -> {}
+            null
         );
         CustomCheckbox button = new CustomCheckbox(bookX + cbs_client_x, bookY + cb4_y, GuiConstants.MAX_LABEL_WIDTH, 
             Component.translatable("gui.boss_checklist.settings.button_enabled"), DynamicConfigHandler.client().openButtonEnabled, 
             false, false,
             checked -> {openButtonEnabled = checked;},
-            () -> {}
+            null
         );
 
         addRenderableWidget(progression_mode);
@@ -113,19 +113,19 @@ public class ConfigScreen extends Screen {
                 Component.translatable("gui.boss_checklist.settings.save_boss_killer"), DynamicConfigHandler.server().saveBossKillerName, 
                 false, false,
                 checked -> {saveBossKillerName = checked;},
-                () -> {}
+                null
             );
             CustomCheckbox enable_statistics = new CustomCheckbox(bookX + cbs_server_x, bookY + cb22_y, GuiConstants.MAX_LABEL_WIDTH, 
                 Component.translatable("gui.boss_checklist.settings.enable_statistics"), DynamicConfigHandler.server().statisticsEnabled, 
                 false, false,
                 checked -> {statisticsEnabled = checked;},
-                () -> {}
+                null
             );
             CustomCheckbox enable_async = new CustomCheckbox(bookX + cbs_server_x, bookY + cb23_y, GuiConstants.MAX_LABEL_WIDTH, 
                 Component.translatable("gui.boss_checklist.settings.enable_async"), DynamicConfigHandler.server().asyncLogic, 
                 false, false,
                 checked -> {asyncLogic = checked;},
-                () -> {}
+                null
             );
             addRenderableWidget(killer_save);
             addRenderableWidget(enable_statistics);

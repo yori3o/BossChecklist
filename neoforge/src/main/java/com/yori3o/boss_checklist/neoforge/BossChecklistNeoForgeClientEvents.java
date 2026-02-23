@@ -33,7 +33,7 @@ public class BossChecklistNeoForgeClientEvents {
 
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Pre event) {
-        EventHandler.whenClientTickPre();
+        EventHandler.whenClientTickStart();
     }
 
     @SubscribeEvent

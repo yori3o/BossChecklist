@@ -1,4 +1,4 @@
-Boss Checklist is a handy Minecraft mod that adds a checklist to the game with all the bosses from your modpack.
+Boss Checklist is a handy Minecraft mod that adds a checklist to the game with all bosses from your modpack.
 It can be accessed via a button in the pause menu or keybind.
 
 The mod is primarily client-side, but can be installed on the server for automatic boss marking.

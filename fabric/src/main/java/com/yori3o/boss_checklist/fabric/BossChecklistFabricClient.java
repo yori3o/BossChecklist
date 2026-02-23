@@ -31,7 +31,7 @@ public class BossChecklistFabricClient implements ClientModInitializer {
         });
 
         ClientTickEvents.START_CLIENT_TICK.register((minecraft) -> {
-            EventHandler.whenClientTickPre();
+            EventHandler.whenClientTickStart();
         });
 
         ResourceManagerHelper.get(PackType.CLIENT_RESOURCES)

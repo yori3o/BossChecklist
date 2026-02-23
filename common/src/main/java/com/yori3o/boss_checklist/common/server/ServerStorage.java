@@ -38,9 +38,8 @@ public final class ServerStorage {
         playerDamages.merge(playerName, damage, Float::sum);
     }
 
-    /**
-     * It's a terrible crutch, but I don't want to redo it, because "if it works, don't touch it."
-     */
+    
+    // It's a terrible crutch, but I don't want to redo it, because "if it works, don't touch it."
     public static String getTop3PlayersNamesAndDamagesGlobal_SplittedByHashtag() {
 
         List<Map.Entry<String, Float>> entryList = new ArrayList<>(playerDamages.entrySet());

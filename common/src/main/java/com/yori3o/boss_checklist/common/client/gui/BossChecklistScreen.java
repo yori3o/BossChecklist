@@ -9,6 +9,7 @@ import com.yori3o.boss_checklist.common.client.gui.widget.CustomButton;
 import com.yori3o.boss_checklist.common.client.gui.widget.CustomCheckbox;
 import com.yori3o.boss_checklist.common.client.gui.widget.CustomPageButton;
 import com.yori3o.boss_checklist.common.config.DynamicConfigHandler;
+import com.yori3o.boss_checklist.common.event.ClientEvents;
 import com.yori3o.boss_checklist.common.util.LoggerUtil;
 import com.yori3o.boss_checklist.common.client.data.BossNameCache;
 import com.yori3o.boss_checklist.common.client.data.BossService;
@@ -452,10 +453,12 @@ public class BossChecklistScreen extends Screen {
         if (BossChecklistClient.OPEN_CHECKLIST.matches(keyCode, scanCode)) {
             if (DynamicConfigHandler.client().searchBarEnabled) {
                 if (!searchBox.canConsumeInput()) {
+                    ClientEvents.openChecklistKeyWasDown = true;
                     onClose();
                     return true;
                 }
             } else {
+                ClientEvents.openChecklistKeyWasDown = true;
                 onClose();
                 return true;
             }
