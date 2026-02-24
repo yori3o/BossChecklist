@@ -349,9 +349,9 @@ public class BossChecklistScreen extends Screen {
         
         
         if (noBossesLoaded) {
-            guiGraphics.drawWordWrap(font, Component.translatable("gui.boss_checklist.no_bosses_loaded"), bookX + 140, bookY + 53, 0xFF000000, GuiConstants.MAX_LABEL_WIDTH);
+            guiGraphics.drawWordWrap(font, Component.translatable("gui.boss_checklist.no_bosses_loaded"), bookX + 137, bookY + 54, GuiConstants.MAX_LABEL_WIDTH, 0xFF000000);
         } else if (noBossesFindedWhenSearch) {
-            guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.no_bosses_finded_when_search"), bookX + 140, bookY + 53, 0xFF000000, false);
+            guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.no_bosses_finded_when_search"), bookX + 137, bookY + 54, 0xFF000000, false);
         } else {
             guiGraphics.drawString(font, String.valueOf(leftPage), bookX + 187, bookY + 195, 0xFF45443F, false);
             guiGraphics.drawString(font, String.valueOf(rightPage), bookX + 320, bookY + 195, 0xFF45443F, false); 

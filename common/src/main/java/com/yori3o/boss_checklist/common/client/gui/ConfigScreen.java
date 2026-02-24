@@ -272,8 +272,8 @@ public class ConfigScreen extends Screen {
         ClientConfig.Values ccv = DynamicConfigHandler.client();
         ccv.progressionMode = progressionMode;
         ccv.progressionModePlus = progressionModePlus;
-        ccv.openButtonEnabled = openButtonEnabled;
         ccv.searchBarEnabled = searchBarEnabled;
+        ccv.openButtonEnabled = openButtonEnabled;
         
         DynamicConfigHandler.cc.save();
         

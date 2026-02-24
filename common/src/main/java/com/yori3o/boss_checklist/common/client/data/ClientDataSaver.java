@@ -3,7 +3,6 @@ package com.yori3o.boss_checklist.common.client.data;
 
 import com.yori3o.boss_checklist.common.client.boss.BossProgress;
 import com.yori3o.boss_checklist.common.util.LoggerUtil;
-import com.yori3o.boss_checklist.impl.PlatformUtil;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
@@ -56,7 +55,7 @@ public class ClientDataSaver {
 
             if (list != null) {
                 for (String id : list) {
-                    if (PlatformUtil.isModLoaded(id.split(":")[0]) && BossRegistry.get(id) != null) {
+                    if (BossRegistry.get(id) != null) {
                         defeatedIds.add(id);
                     }
                 }

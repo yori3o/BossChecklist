@@ -35,6 +35,7 @@ public class BossNameCache {
 
     public static void rebuild() {
         CACHE.clear();
+        CACHE_TRUNCATED.clear();
 
         for (BossEntry entry : BossService.all()) {
             String id = entry.id();
