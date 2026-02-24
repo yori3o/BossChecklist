@@ -67,34 +67,35 @@ public class ServerEvents {
     protected static void loadServerData(MinecraftServer server) {
         DynamicConfigHandler.loadServer();
 
-        // this block is needed to take the main data that was written in older versions of the mod (3.4.0-)
-        OutdatedBossDefeatedDataSaver dataFromOldVersion = OutdatedBossDefeatedDataSaver.get(server.overworld());
-        for (String line : dataFromOldVersion.getDefeatedBosses()) {
-            String[] obsoleteFormat = line.split("#", -1);
-            if (obsoleteFormat.length > 1) {
-                if (ServerBossIdsLoader.isBoss(obsoleteFormat[0])) {
-                    ServerStorage.defeatedBossesAndTheirKillers.put(obsoleteFormat[0], obsoleteFormat[1]);
-                }
-            }
-        }
-
         File worldDir = server.getWorldPath(LevelResource.ROOT).toFile();
         try {
             Map<String, String> defeatedBossesMap = BossChecklistJsonDataSaver.loadDefeatedBosses(worldDir);
             if (!defeatedBossesMap.isEmpty()) {
                 for (String id : defeatedBossesMap.keySet()) {
-                    if (!ServerBossIdsLoader.isBoss(id)) {
-                        defeatedBossesMap.remove(id);
+                    if (ServerBossIdsLoader.isBoss(id)) {
+                        ServerStorage.defeatedBossesAndTheirKillers.put(id, defeatedBossesMap.get(id));
                     }
                 }
-                ServerStorage.defeatedBossesAndTheirKillers = defeatedBossesMap;
+            } else {
+                // this block is needed to take the main data that was written in older versions of the mod (3.4.0-)
+                OutdatedBossDefeatedDataSaver dataFromOldVersion = OutdatedBossDefeatedDataSaver.get(server.overworld());
+                for (String line : dataFromOldVersion.getDefeatedBosses()) {
+                    String[] obsoleteFormat = line.split("#", -1);
+                    if (obsoleteFormat.length > 1) {
+                        if (ServerBossIdsLoader.isBoss(obsoleteFormat[0])) {
+                            ServerStorage.defeatedBossesAndTheirKillers.put(obsoleteFormat[0], obsoleteFormat[1]);
+                        }
+                    }
+                }
             }
             if (DynamicConfigHandler.server().statisticsEnabled) {
                 ServerStorage.serverBossAttempts = BossChecklistJsonDataSaver.loadLatestBossBattles(worldDir);
+                // if the boss is not a boss, we delete the attempt.
+                ServerStorage.serverBossAttempts.keySet().removeIf(id -> !ServerBossIdsLoader.isBoss(id));
                 ServerStorage.playerDamages = BossChecklistJsonDataSaver.loadGlobalStatistics(worldDir);
             }
         } catch (Exception e) {
-            LoggerUtil.error("Unexpected error while reading data from world folder: " + e.getMessage());
+            LoggerUtil.LOGGER.error("Unexpected error while reading data from world folder: ", e);
         }
 
     }
@@ -152,7 +153,6 @@ public class ServerEvents {
     }
 
     protected static void whenEntityKilled(LivingEntity entity, DamageSource source) {
-
         String killerName = "";
 
         if (source.getEntity() instanceof Player player) {

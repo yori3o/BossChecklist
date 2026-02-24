@@ -52,7 +52,7 @@ public abstract class JsonConfigManager<T> {
             save();
 
         } catch (Exception e) {
-            LoggerUtil.error("[CONFIG] Failed to load " + configPath.getFileName() + ": " + e.getMessage());
+            LoggerUtil.LOGGER.error("[CONFIG] Failed to load " + configPath.getFileName() + ": ", e);
             backupCorruptedFile();
             saveDefault();
         }
@@ -74,7 +74,7 @@ public abstract class JsonConfigManager<T> {
                 gson.toJson(configInstance, writer);
             }
         } catch (Exception e) {
-            LoggerUtil.error("[CONFIG] Failed to save config: " + e.getMessage());
+            LoggerUtil.LOGGER.error("[CONFIG] Failed to save config: ", e);
             e.printStackTrace();
         }
     }

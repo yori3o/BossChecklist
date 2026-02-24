@@ -109,20 +109,22 @@ public class BossChecklistJsonDataSaver {
     }
 
     private static <T> T loadMap(File file, Type type) throws IOException {
-        if (!file.exists()) {
-            // if the file does not exist, we return an empty map
-            return GSON.fromJson("{}", type);
-        }
-
-        try (Reader reader = new InputStreamReader(new FileInputStream(file), java.nio.charset.StandardCharsets.UTF_8)) {
-            T loaded = GSON.fromJson(reader, type);
-
-            // if the file is empty/broken/returned null
-            if (loaded == null) {
+        synchronized (FILE_IO_LOCK) {
+            if (!file.exists()) {
+                // if the file does not exist, we return an empty map
                 return GSON.fromJson("{}", type);
             }
 
-            return loaded;
+            try (Reader reader = new InputStreamReader(new FileInputStream(file), java.nio.charset.StandardCharsets.UTF_8)) {
+                T loaded = GSON.fromJson(reader, type);
+
+                // if the file is empty/broken/returned null
+                if (loaded == null) {
+                    return GSON.fromJson("{}", type);
+                }
+
+                return loaded;
+            }
         }
     }
 }

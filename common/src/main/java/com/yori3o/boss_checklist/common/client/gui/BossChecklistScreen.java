@@ -93,6 +93,7 @@ public class BossChecklistScreen extends Screen {
 
 
     private void reloadNamesMap() {
+        BossNameCache.rebuildIfNeeded();
         if (!namesMapAreLoaded) {
             bossesFiltered.putAll(bosses);
             namesMapAreLoaded = true;
@@ -160,7 +161,7 @@ public class BossChecklistScreen extends Screen {
         );
         addRenderableWidget(closeButton);
         
-        if (DynamicConfigHandler.client().searchBarEnabled) {
+        if (DynamicConfigHandler.client().searchBarEnabled && this.height > 305) {
             this.searchBox = new EditBox(
                     this.font,
                     this.width / 2 - 100,

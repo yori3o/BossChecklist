@@ -53,4 +53,8 @@ public class BossNameCache {
 
         dirty = false;
     }
+
+    public static void rebuildIfNeeded() {
+        if (dirty) rebuild();
+    }
 }

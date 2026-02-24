@@ -70,7 +70,7 @@ public final class ServerBossIdsLoader {
             }
         }
 
-        LoggerUtil.info("Number of loaded boss ids on the server: " + LOADED_BOSSES.size());
+        LoggerUtil.info("Number of registered boss ids on the server: " + LOADED_BOSSES.size());
         //LoggerUtil.info("Number of all boss ids on the server: " + ALL_BOSSES.size());
     }
 

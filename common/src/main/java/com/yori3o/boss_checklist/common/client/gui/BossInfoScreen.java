@@ -148,6 +148,7 @@ public class BossInfoScreen extends Screen {
 
         // for entity rendering and info
         entity = createEntityFromId(bossId);
+        if (entity == null) return;
         if (boss.definition().health() == -1) {
             bossHealth = (int) entity.getAttributeValue(Attributes.MAX_HEALTH);
         } else {
@@ -288,7 +289,7 @@ public class BossInfoScreen extends Screen {
 
 
 
-    public static LivingEntity createEntityFromId(String id) {
+    public LivingEntity createEntityFromId(String id) {
         ResourceLocation rl = ResourceLocation.parse(id);
 
         // FOR 1.21.4+ - add .get().value()
@@ -301,7 +302,12 @@ public class BossInfoScreen extends Screen {
         // FOR 1.21.4+ - add , EntitySpawnReason.LOAD
         Entity entity = type.create(Minecraft.getInstance().level);
         
-        return (LivingEntity) entity; // crash if not Living entity
+        if (entity instanceof LivingEntity livingEntity) {
+            return livingEntity;
+        } else {
+            this.onClose();
+            return null;
+        }
     }
 
 

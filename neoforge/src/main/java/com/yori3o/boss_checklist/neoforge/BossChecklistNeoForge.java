@@ -37,7 +37,7 @@ public class BossChecklistNeoForge {
         LivingEntity entity = event.getEntity();
         
         if (!entity.level().isClientSide()) {
-            EventHandler.whenEntityDeath(entity, event.getSource()); 
+            EventHandler.whenEntityDeath(entity, event.getSource());
         }
     }
 }

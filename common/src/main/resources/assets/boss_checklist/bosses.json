@@ -1562,7 +1562,7 @@
         "broken_model": false,
         "additional_info": true,
         "position": 109,
-        "mod_version": "3.1.0"
+        "mod_version": "3.1.0.3"
     },
     {
         "drops": [
@@ -1576,7 +1576,7 @@
         "broken_model": false,
         "additional_info": true,
         "position": 110,
-        "mod_version": "3.1.0"
+        "mod_version": "3.1.0.3"
     },
     {
         "drops": [
@@ -2377,7 +2377,7 @@
         "broken_model": true,
         "additional_info": true,
         "position": 110.1,
-        "mod_version": "3.1.0"
+        "mod_version": "3.1.0.3"
     },
     {
         "drops": [
@@ -2393,7 +2393,7 @@
         "y_offset": 16,
         "broken_model": false,
         "additional_info": false,
-        "position": 110.1,
+        "position": 77.6,
         "type": 2,
         "mod_version": "6.1.2"
     },

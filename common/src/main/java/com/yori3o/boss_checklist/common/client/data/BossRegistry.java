@@ -94,7 +94,7 @@ public class BossRegistry {
 
         BossNameCache.rebuild();
 
-        LoggerUtil.info("Count of registered bosses: " + DEFINITIONS.size());
+        LoggerUtil.info("Number of registered bosses: " + DEFINITIONS.size());
         //LoggerUtil.info("Count of all bosses: " + merged.size());
     }
 
