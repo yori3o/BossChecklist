@@ -142,7 +142,7 @@ public class BossChecklistScreen extends Screen {
         if (statisticsTabEnabled) {
             CustomButton openStatsButton = new CustomButton(
                 bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, 0, 0, 
-                null, 
+                Component.empty(), 
                 GuiConstants.SMALL_BUTTON_TEXTURE, GuiConstants.SMALL_BUTTON_TEXTURE_hovered, GuiConstants.SMALL_BUTTON_TEXTURE_pressed, null, 
                 () -> {
                     showStatisticsTab = !showStatisticsTab;
@@ -153,7 +153,7 @@ public class BossChecklistScreen extends Screen {
 
         closeButton = new CustomButton(
             bookX + GuiConstants.CLOSE_BUTTON_X, bookY + GuiConstants.CLOSE_BUTTON_Y, GuiConstants.CLOSE_BUTTON_SIZE, GuiConstants.CLOSE_BUTTON_SIZE, 0, 0, 
-            null, 
+            Component.empty(), 
             GuiConstants.CLOSE_BUTTON_TEXTURE, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, null,
             () -> {
                 onClose();

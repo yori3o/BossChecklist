@@ -46,7 +46,7 @@ public abstract class PauseScreenMixin extends Screen {
                     20, 
                     0, 
                     0, 
-                    null, 
+                    Component.empty(), 
                     GuiConstants.OPEN_BUTTON_TEXTURE, 
                     GuiConstants.OPEN_BUTTON_TEXTURE_hovered, 
                     GuiConstants.OPEN_BUTTON_TEXTURE_hovered, 
