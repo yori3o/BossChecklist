@@ -12,7 +12,7 @@ import java.io.Writer;
 import java.lang.reflect.Type;
 import java.util.Map;
 
-import com.google.common.reflect.TypeToken;
+import com.google.gson.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

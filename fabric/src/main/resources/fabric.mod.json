@@ -35,7 +35,8 @@
     "modmenu": {
       "links": {
         "modmenu.curseforge":"https://www.curseforge.com/minecraft/mc-mods/boss-checklist",
-        "modmenu.modrinth":"https://modrinth.com/mod/boss-checklist"
+        "modmenu.modrinth":"https://modrinth.com/mod/boss-checklist",
+        "modmenu.donate":"https://sprightly-smakager-c8e2b1.netlify.app"
       }
     }
   }
