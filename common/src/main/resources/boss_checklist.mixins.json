@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "com.yori3o.boss_checklist.common.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+    "PauseScreenMixin"
+  ],
+  "mixins": [
+    "DeleteWorldMixin",
+    "ServerLevelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

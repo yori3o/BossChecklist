@@ -1,0 +1,36 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+#issueTrackerURL = "https://github.com/yori3o/BossChecklist/issues"
+logoFile = "logo.png"
+license = "MIT Licence"
+
+[[mods]]
+modId = "boss_checklist"
+version = "${version}"
+displayName = "Boss Checklist"
+authors = "Yori3o"
+description = '''
+Adds a convenient list of bosses to the game with brief information about them.
+'''
+displayURL="https://modrinth.com/mod/boss-checklist"
+
+[[dependencies.boss_checklist]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.boss_checklist]]
+modId = "minecraft"
+mandatory = true
+versionRange = "1.20.1"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.boss_checklist]]
+modId = "architectury"
+mandatory = true
+versionRange = "[9.0.8,)"
+ordering = "AFTER"
+side = "BOTH"
