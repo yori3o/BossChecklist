@@ -1,6 +1,7 @@
 {
   "key.boss_checklist.open_checklist": "Open Checklist",
   "category.boss_checklist": "Boss Checklist",
+  "key.category.boss_checklist.checklist": "Boss Checklist",
   "gui.boss_checklist.drop": "Drop",
   "gui.boss_checklist.no_drop": "No drop",
   "gui.boss_checklist.spawn_info": "Spawn",
@@ -276,6 +277,7 @@
   "boss_checklist.boss.legendary_monsters_skeletosaurus": "Skeletosaurus",
   "boss_checklist.boss.legendary_monsters_endersent": "Endersent",
   "boss_checklist.boss.legendary_monsters_posessed_paladin": "Posessed Paladin",
+  "boss_checklist.boss.legendary_monsters_the_obliterator": "The Obliterator",
 
   "boss_checklist.boss.illagerinvasion_invoker": "Invoker",
 
@@ -411,7 +413,7 @@
   "boss_checklist.summon.soulsweapons_accursed_lord_boss": "Find the Decaying Kingdom in the Nether.",
   "boss_checklist.summon.soulsweapons_day_stalker": "Use Chaos Orb during the day.",
   "boss_checklist.summon.soulsweapons_night_prowler": "Use Chaos Orb during the night.",
-  "boss_checklist.summon.soulsweapons_chaos_monarch": "Use the Shard of Uncertainty (dropped by the Wither) on the Blackstone Pedestal.",
+  "boss_checklist.summon.soulsweapons_chaos_monarch": "Use the Shard of Uncertainty, that dropped by the Wither, on the Blackstone Pedestal.",
   "boss_checklist.summon.soulsweapons_moonknight": "Use the Essence of Eventide on the Old Moon Altar.",
 
   "boss_checklist.summon.eeeabsmobs_corpse_warlock": "Find him at the Blood Altar using the §1Eye of Bloody Altar§r§0 in the Nether.",
@@ -505,6 +507,7 @@
   "boss_checklist.summon.legendary_monsters_skeletosaurus": "Find it with §1Eye of Bones§r§0 in the Nether.",
   "boss_checklist.summon.legendary_monsters_endersent": "Find it with §1Eye of Chorus§r§0 in The End.",
   "boss_checklist.summon.legendary_monsters_posessed_paladin": "Find it with §1Eye of Ghost§r§0.",
+  "boss_checklist.summon.legendary_monsters_the_obliterator": "Find the arena with Eye Of Annihilation in the End and insert the §1Eye Crystal§r§0 into the Teleport Machine.",
 
   "boss_checklist.summon.illagerinvasion_invoker": "Find him in the Mansion in a dark forest.",
 

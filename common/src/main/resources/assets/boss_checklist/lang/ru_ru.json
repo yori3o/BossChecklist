@@ -1,6 +1,7 @@
 {
   "key.boss_checklist.open_checklist": "Открыть чеклист",
   "category.boss_checklist": "Boss Checklist",
+  "key.category.boss_checklist.checklist": "Boss Checklist",
   "gui.boss_checklist.drop": "Дроп",
   "gui.boss_checklist.no_drop": "Дропа нет.",
   "gui.boss_checklist.spawn_info": "Спавн",
@@ -148,10 +149,10 @@
   "boss_checklist.boss.minecells_concierge": "Привратник",
   "boss_checklist.boss.minecells_conjunctivius": "Конъюктивиус",
 
-  "boss_checklist.boss.block_factorys_bosses_infernal_dragon": "Ashlord, The Infernal Dragon",
-  "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Helvar, The Underworld Knight",
-  "boss_checklist.boss.block_factorys_bosses_yeti": "Skor, The Yeti",
-  "boss_checklist.boss.block_factorys_bosses_sandworm": "Sirok, The Sandworm",
+  "boss_checklist.boss.block_factorys_bosses_infernal_dragon": "Адский дракон Эшлорд",
+  "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Рыцарь преисподней Хелвар",
+  "boss_checklist.boss.block_factorys_bosses_yeti": "Йети Скор",
+  "boss_checklist.boss.block_factorys_bosses_sandworm": "Песчаный червь Сирок",
 
   "boss_checklist.boss.bosses_of_mass_destruction_obsidilith": "Обсидилит",
   "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Перчатка Незера",
@@ -276,6 +277,7 @@
   "boss_checklist.boss.legendary_monsters_skeletosaurus": "Skeletosaurus",
   "boss_checklist.boss.legendary_monsters_endersent": "Endersent",
   "boss_checklist.boss.legendary_monsters_posessed_paladin": "Posessed Paladin",
+  "boss_checklist.boss.legendary_monsters_the_obliterator": "The Obliterator",
 
   "boss_checklist.boss.illagerinvasion_invoker": "Вызыватель",
 
@@ -411,7 +413,7 @@
   "boss_checklist.summon.soulsweapons_accursed_lord_boss": "Найдите Разлагающееся Королевство в Незере.",
   "boss_checklist.summon.soulsweapons_day_stalker": "Используйте Сферу Хаоса днём.",
   "boss_checklist.summon.soulsweapons_night_prowler": "Используйте Сферу Хаоса ночью.",
-  "boss_checklist.summon.soulsweapons_chaos_monarch": "Используйте Осколок Неопределенности (выпадающий из Иссушителя) на Чернокаменном Пьедестале.",
+  "boss_checklist.summon.soulsweapons_chaos_monarch": "Используйте Осколок Неопределенности, выпадающий из Иссушителя, на Чернокаменном Пьедестале.",
   "boss_checklist.summon.soulsweapons_moonknight": "Используйте Эссенцию Вечера на Старом Лунном Алтаре.",
 
   "boss_checklist.summon.eeeabsmobs_corpse_warlock": "Найдите его у Кровавого Алтаря с помощью §1Ока Кровавого Алтаря§r§0 в Незере.",
@@ -505,6 +507,7 @@
   "boss_checklist.summon.legendary_monsters_skeletosaurus": "Найдите его с помощью §1Eye of Bones§r§0 в Незере.",
   "boss_checklist.summon.legendary_monsters_endersent": "Найдите его с помощью §1Eye of Chorus§r§0 в Энде.",
   "boss_checklist.summon.legendary_monsters_posessed_paladin": "Найдите его с помощью §1Eye of Ghost§r§0.",
+  "boss_checklist.summon.legendary_monsters_the_obliterator": "Найдите арену с помощью Eye Of Annihilation в Энде и вставьте §1Eye Crystal§r§0 в Teleport Machine.",
 
   "boss_checklist.summon.illagerinvasion_invoker": "Найдите его в Особняке в тёмном лесу.",
 

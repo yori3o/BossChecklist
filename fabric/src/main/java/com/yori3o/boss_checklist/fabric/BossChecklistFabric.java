@@ -37,6 +37,9 @@ public class BossChecklistFabric implements ModInitializer {
         ServerPlayerEvents.JOIN.register((serverPlayer) -> {
             EventHandler.whenPlayerJoinToServer(serverPlayer);
         });
+        //ServerPlayConnectionEvents.JOIN.register((serverGamePacketListenerImpl, packetSender, minecraftServer) -> {
+         //   EventHandler.whenPlayerJoinToServer(serverGamePacketListenerImpl.player);
+        //});
 
         ServerLifecycleEvents.SERVER_STARTED.register((minecraftServer) -> {
             EventHandler.whenServerStarted(minecraftServer);

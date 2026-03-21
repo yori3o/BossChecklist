@@ -28,6 +28,24 @@
     },
     {
         "drops": [
+            "bettertridents:trident_fragment",
+            "endrem:guardian_eye#35%",
+            "minecraft:cod#30%",
+            "minecraft:prismarine_crystals#20%",
+            "minecraft:prismarine_shard#66%",
+            "minecraft:tide_armor_trim_smithing_template#20%",
+            "minecraft:wet_sponge"
+        ],
+        "id": "minecraft:elder_guardian",
+        "scale": 12,
+        "y_offset": -5,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 2.5,
+        "type": 2
+    },
+    {
+        "drops": [
             "minecraft:copper_ingot",
             "wetlands:copper_gear#50%",
             "wetlands:elder_gear_golem_heart"
@@ -92,18 +110,6 @@
     },
     {
         "drops": [
-            "block_factorys_bosses:sandworm_gauntlet"
-        ],
-        "id": "block_factorys_bosses:sandworm",
-        "scale": 10,
-        "y_offset": 0,
-        "broken_model": true,
-        "additional_info": false,
-        "position": 8,
-        "mod_version": "2.0.4"
-    },
-    {
-        "drops": [
             "aether:bronze_dungeon_key",
             "aether:carved_stone"
         ],
@@ -112,7 +118,7 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": false,
-        "position": 9,
+        "position": 8,
         "mod_version": "1.5.11"
     },
     {
@@ -125,7 +131,7 @@
         "y_offset": 18,
         "broken_model": false,
         "additional_info": false,
-        "position": 10
+        "position": 9
     },
     {
         "drops": [
@@ -140,7 +146,7 @@
         "y_offset": 30,
         "broken_model": false,
         "additional_info": false,
-        "position": 11,
+        "position": 10,
         "type": 2
     },
     {
@@ -152,7 +158,7 @@
         "y_offset": 12,
         "broken_model": false,
         "additional_info": false,
-        "position": 12,
+        "position": 11,
         "type": 2
     },
     {
@@ -164,7 +170,7 @@
         "y_offset": 25,
         "broken_model": false,
         "additional_info": false,
-        "position": 13,
+        "position": 12,
         "type": 2
     },
     {
@@ -183,7 +189,7 @@
         "y_offset": 14,
         "broken_model": false,
         "additional_info": false,
-        "position": 14,
+        "position": 13,
         "mod_version": "4.8.3287"
     },
     {
@@ -197,13 +203,13 @@
         "y_offset": 14,
         "broken_model": false,
         "additional_info": false,
-        "position": 15,
+        "position": 14,
         "mod_version": "4.8.3287"
     },
     {
         "drops": [
             "goety:spider_egg",
-            "goety:spider_nest",
+            "goety:spider_nest#11%",
             "goety:treasure_pouch",
             "goety:venomous_fang",
             "minecraft:cobweb#80%",
@@ -215,8 +221,9 @@
         "broken_model": false,
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
-        "position": 16,
-        "type": 2
+        "position": 15,
+        "type": 2,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
@@ -228,7 +235,7 @@
         "y_offset": 10,
         "broken_model": false,
         "additional_info": false,
-        "position": 17
+        "position": 16
     },
     {
         "drops": [
@@ -240,7 +247,19 @@
         "y_offset": 10,
         "broken_model": false,
         "additional_info": false,
-        "position": 18
+        "position": 17
+    },
+    {
+        "drops": [
+            "block_factorys_bosses:sandworm_gauntlet"
+        ],
+        "id": "block_factorys_bosses:sandworm",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 18,
+        "mod_version": "2.0.11"
     },
     {
         "drops": [
@@ -252,7 +271,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 19,
-        "mod_version": "2.0.4"
+        "mod_version": "2.0.11"
     },
     {
         "drops": [
@@ -348,6 +367,19 @@
     },
     {
         "drops": [
+            "friendsandfoes:wildfire_crown_fragment"
+        ],
+        "id": "friendsandfoes:wildfire",
+        "scale": 18,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 26.2,
+        "type": 2,
+        "mod_version": "4.0.19"
+    },
+    {
+        "drops": [
             "minecraft:feather#50%",
             "mowziesmobs:sol_visage"
         ],
@@ -378,7 +410,8 @@
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 28,
-        "type": 2
+        "type": 2,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
@@ -415,11 +448,12 @@
             "soulsweapons:draugr"
         ],
         "id": "soulsweapons:draugr_boss",
-        "scale": 15,
-        "y_offset": 0,
+        "scale": 17,
+        "y_offset": 17,
         "broken_model": false,
         "additional_info": false,
-        "position": 31
+        "position": 31,
+        "mod_version": "1.4.1-1.21.1-fabric"
     },
     {
         "drops": [
@@ -427,11 +461,12 @@
             "soulsweapons:lord_soul_dark"
         ],
         "id": "soulsweapons:night_shade",
-        "scale": 15,
-        "y_offset": 0,
+        "scale": 17,
+        "y_offset": 20,
         "broken_model": false,
         "additional_info": false,
-        "position": 32
+        "position": 32,
+        "mod_version": "1.4.1-1.21.1-fabric"
     },
     {
         "drops": [
@@ -717,7 +752,8 @@
         "broken_model": false,
         "additional_info": true,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
-        "position": 51
+        "position": 51,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
@@ -731,7 +767,8 @@
         "broken_model": false,
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
-        "position": 52
+        "position": 52,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
@@ -762,7 +799,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 54,
-        "mod_version": "1.21.1-3.15.3"
+        "mod_version": "1.21.1-3.15.4"
     },
     {
         "drops": [
@@ -883,7 +920,8 @@
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 62,
-        "type": 2
+        "type": 2,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
@@ -895,7 +933,8 @@
         "y_offset": 21,
         "broken_model": false,
         "additional_info": false,
-        "position": 63
+        "position": 63,
+        "mod_version": "1.2.2"
     },
     {
         "drops": [
@@ -915,7 +954,33 @@
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 64,
-        "type": 2
+        "type": 2,
+        "mod_version": "2.5.50.1"
+    },
+    {
+        "drops": [
+            "block_factorys_bosses:dragon_bone",
+            "block_factorys_bosses:dragon_skull"
+        ],
+        "id": "block_factorys_bosses:infernal_dragon",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 64.5,
+        "mod_version": "2.0.11"
+    },
+    {
+        "drops": [
+            "block_factorys_bosses:knight_sword"
+        ],
+        "id": "block_factorys_bosses:underworld_knight",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 64.6,
+        "mod_version": "2.0.11"
     },
     {
         "drops": [
@@ -929,6 +994,125 @@
         "additional_info": false,
         "position": 65,
         "type": 2
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_adrenaline_rush",
+            "mutantmore:mutant_jungle_zombie_vine_seed"
+        ],
+        "id": "mutantmore:mutant_jungle_zombie",
+        "scale": 14,
+        "y_offset": 12,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.1,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_forces_unknown",
+            "mutantmore:mutant_frozen_zombie_spikes"
+        ],
+        "id": "mutantmore:mutant_frozen_zombie",
+        "scale": 17,
+        "y_offset": 21,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.2,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_aegis",
+            "mutantmore:mutant_husk_vocal_cords"
+        ],
+        "id": "mutantmore:mutant_husk",
+        "scale": 16,
+        "y_offset": 18,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.3,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_adrenaline_rush",
+            "mutantmore:mutant_wither_skeleton_limb",
+            "mutantmore:mutant_wither_skeleton_pelvis",
+            "mutantmore:mutant_wither_skeleton_rib",
+            "mutantmore:mutant_wither_skeleton_shoulder_pad",
+            "mutantmore:mutant_wither_skeleton_skull"
+        ],
+        "id": "mutantmore:mutant_wither_skeleton",
+        "scale": 14,
+        "y_offset": 21,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.4,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_adrenaline_rush",
+            "mutantmore:mutant_hoglin_tusk"
+        ],
+        "id": "mutantmore:mutant_hoglin",
+        "scale": 13,
+        "y_offset": 7,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.5,
+        "type": 2
+    },
+    {
+        "drops": [
+            "minecraft:blaze_powder",
+            "mutantmore:disc_fragment_aegis",
+            "mutantmore:mutant_blaze_core"
+        ],
+        "id": "mutantmore:mutant_blaze",
+        "scale": 14,
+        "y_offset": 23,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.6,
+        "type": 2
+    },
+    {
+        "drops": [
+            "aquamirae:dead_sea_scroll#60%",
+            "aquamirae:fin#60%",
+            "aquamirae:sharp_bones#60%",
+            "aquamirae:ship_graveyard_echo",
+            "aquamirae:spinefish#60%",
+            "aquamirae:treasure_pouch#85%"
+        ],
+        "id": "aquamirae:eel",
+        "scale": 13,
+        "y_offset": 16,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.91,
+        "type": 2,
+        "mod_version": "6.2.0"
+    },
+    {
+        "drops": [
+            "aquamirae:frozen_key",
+            "aquamirae:music_disc_forsaken_drownage#10%",
+            "aquamirae:oxygen_tank#50%",
+            "aquamirae:ship_graveyard_echo#50%",
+            "aquamirae:three_bolt_helmet",
+            "aquamirae:treasure_pouch#50%",
+            "minecraft:filled_map"
+        ],
+        "id": "aquamirae:captain_cornelia",
+        "scale": 21,
+        "y_offset": 7,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.92,
+        "mod_version": "6.2.0"
     },
     {
         "drops": [
@@ -971,6 +1155,19 @@
         "broken_model": false,
         "additional_info": false,
         "position": 68
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_forces_unknown",
+            "mutantmore:mutant_shulker_shell"
+        ],
+        "id": "mutantmore:mutant_shulker",
+        "scale": 15,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 68.5,
+        "type": 2
     },
     {
         "drops": [
@@ -1022,45 +1219,6 @@
     },
     {
         "drops": [
-            "mutantmore:disc_fragment_adrenaline_rush",
-            "mutantmore:mutant_jungle_zombie_vine_seed"
-        ],
-        "id": "mutantmore:mutant_jungle_zombie",
-        "scale": 14,
-        "y_offset": 12,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 73,
-        "type": 2
-    },
-    {
-        "drops": [
-            "mutantmore:disc_fragment_forces_unknown",
-            "mutantmore:mutant_frozen_zombie_spikes"
-        ],
-        "id": "mutantmore:mutant_frozen_zombie",
-        "scale": 17,
-        "y_offset": 21,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 74,
-        "type": 2
-    },
-    {
-        "drops": [
-            "mutantmore:disc_fragment_aegis",
-            "mutantmore:mutant_husk_vocal_cords"
-        ],
-        "id": "mutantmore:mutant_husk",
-        "scale": 16,
-        "y_offset": 18,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 75,
-        "type": 2
-    },
-    {
-        "drops": [
             "armageddon_mod:vaedric_the_fallen_wanderer_relic",
             "armageddon_mod:vaedric_treasure_bag"
         ],
@@ -1097,24 +1255,6 @@
     },
     {
         "drops": [
-            "aquamirae:frozen_key",
-            "aquamirae:oxygen_tank#50%",
-            "aquamirae:three_bolt_helmet",
-            "minecraft:filled_map",
-            "aquamirae:treasure_pouch#50%",
-            "aquamirae:ship_graveyard_echo#50%",
-            "aquamirae:music_disc_forsaken_drownage#10%"
-        ],
-        "id": "aquamirae:captain_cornelia",
-        "scale": 21,
-        "y_offset": 7,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 78,
-        "mod_version": "6.1.2"
-    },
-    {
-        "drops": [
             "rediscovered:red_dragon_egg"
         ],
         "id": "rediscovered:red_dragon",
@@ -1139,6 +1279,18 @@
         "broken_model": false,
         "additional_info": false,
         "position": 80
+    },
+    {
+        "drops": [
+            "mythsandlegends:umbras_whisper"
+        ],
+        "id": "mythsandlegends:black_charro",
+        "scale": 25,
+        "y_offset": -25,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 80.6,
+        "mod_version": "0.0.8.5"
     },
     {
         "drops": [
@@ -1186,63 +1338,6 @@
     },
     {
         "drops": [
-            "mutantmore:disc_fragment_adrenaline_rush",
-            "mutantmore:mutant_hoglin_tusk"
-        ],
-        "id": "mutantmore:mutant_hoglin",
-        "scale": 13,
-        "y_offset": 7,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 84,
-        "type": 2
-    },
-    {
-        "drops": [
-            "mutantmore:disc_fragment_adrenaline_rush",
-            "mutantmore:mutant_wither_skeleton_limb",
-            "mutantmore:mutant_wither_skeleton_pelvis",
-            "mutantmore:mutant_wither_skeleton_rib",
-            "mutantmore:mutant_wither_skeleton_shoulder_pad",
-            "mutantmore:mutant_wither_skeleton_skull"
-        ],
-        "id": "mutantmore:mutant_wither_skeleton",
-        "scale": 14,
-        "y_offset": 21,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 85,
-        "type": 2
-    },
-    {
-        "drops": [
-            "minecraft:blaze_powder",
-            "mutantmore:disc_fragment_aegis",
-            "mutantmore:mutant_blaze_core"
-        ],
-        "id": "mutantmore:mutant_blaze",
-        "scale": 14,
-        "y_offset": 23,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 86,
-        "type": 2
-    },
-    {
-        "drops": [
-            "mutantmore:disc_fragment_forces_unknown",
-            "mutantmore:mutant_shulker_shell"
-        ],
-        "id": "mutantmore:mutant_shulker",
-        "scale": 15,
-        "y_offset": 10,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 87,
-        "type": 2
-    },
-    {
-        "drops": [
             "alexsmobs:void_worm_eye",
             "alexsmobs:void_worm_mandible"
         ],
@@ -1276,18 +1371,6 @@
         "broken_model": false,
         "additional_info": true,
         "position": 90
-    },
-    {
-        "drops": [
-            "block_factorys_bosses:knight_sword"
-        ],
-        "id": "block_factorys_bosses:underworld_knight",
-        "scale": 10,
-        "y_offset": 0,
-        "broken_model": true,
-        "additional_info": false,
-        "position": 91,
-        "mod_version": "2.0.4"
     },
     {
         "drops": [
@@ -1327,11 +1410,12 @@
             "soulsweapons:soul_ingot"
         ],
         "id": "soulsweapons:returning_knight",
-        "scale": 11,
+        "scale": 10,
         "y_offset": 52,
         "broken_model": false,
         "additional_info": false,
-        "position": 94
+        "position": 94,
+        "mod_version": "1.4.1-1.21.1-fabric"
     },
     {
         "drops": [
@@ -1344,7 +1428,8 @@
         "y_offset": 19,
         "broken_model": false,
         "additional_info": false,
-        "position": 95
+        "position": 95,
+        "mod_version": "1.4.1-1.21.1-fabric"
     },
     {
         "drops": [
@@ -1353,10 +1438,11 @@
         ],
         "id": "soulsweapons:day_stalker",
         "scale": 11,
-        "y_offset": 9,
+        "y_offset": 18,
         "broken_model": false,
         "additional_info": false,
-        "position": 96
+        "position": 96,
+        "mod_version": "1.4.1-1.21.1-fabric"
     },
     {
         "drops": [
@@ -1366,10 +1452,11 @@
         ],
         "id": "soulsweapons:night_prowler",
         "scale": 11,
-        "y_offset": 9,
+        "y_offset": 18,
         "broken_model": false,
         "additional_info": false,
-        "position": 97
+        "position": 97,
+        "mod_version": "1.4.1-1.21.1-fabric"
     },
     {
         "drops": [
@@ -1382,10 +1469,11 @@
         ],
         "id": "soulsweapons:chaos_monarch",
         "scale": 11,
-        "y_offset": 20,
+        "y_offset": 28,
         "broken_model": false,
         "additional_info": false,
-        "position": 98
+        "position": 98,
+        "mod_version": "1.4.1-1.21.1-fabric"
     },
     {
         "drops": [
@@ -1395,11 +1483,12 @@
             "soulsweapons:moonstone"
         ],
         "id": "soulsweapons:moonknight",
-        "scale": 11,
+        "scale": 10,
         "y_offset": 52,
         "broken_model": false,
         "additional_info": false,
-        "position": 99
+        "position": 99,
+        "mod_version": "1.4.1-1.21.1-fabric"
     },
     {
         "drops": [
@@ -1485,7 +1574,8 @@
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 104,
-        "type": 2
+        "type": 2,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
@@ -1501,7 +1591,8 @@
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 105,
-        "type": 2
+        "type": 2,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
@@ -1518,7 +1609,8 @@
         "broken_model": false,
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
-        "position": 106
+        "position": 106,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
@@ -1536,7 +1628,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 107,
-        "mod_version": "3.23"
+        "mod_version": "3.24"
     },
     {
         "drops": [
@@ -1567,8 +1659,8 @@
     {
         "drops": [
             "fdbosses:fire_and_ice_core",
-            "fdbosses:malkuth_trophy",
-            "fdbosses:malkuth_fist"
+            "fdbosses:malkuth_fist",
+            "fdbosses:malkuth_trophy"
         ],
         "id": "fdbosses:malkuth",
         "scale": 15,
@@ -1580,16 +1672,18 @@
     },
     {
         "drops": [
-            "block_factorys_bosses:dragon_bone",
-            "block_factorys_bosses:dragon_skull"
+            "fdbosses:divine_gear",
+            "fdbosses:geburah_trophy",
+            "fdbosses:justice_core",
+            "fdbosses:polished_justicestone"
         ],
-        "id": "block_factorys_bosses:infernal_dragon",
+        "id": "fdbosses:geburah",
         "scale": 10,
         "y_offset": 0,
         "broken_model": true,
-        "additional_info": false,
-        "position": 111,
-        "mod_version": "2.0.4"
+        "additional_info": true,
+        "position": 110.1,
+        "mod_version": "3.1.0.3"
     },
     {
         "drops": [
@@ -1601,7 +1695,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 112,
-        "type": 2
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1613,7 +1708,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 113,
-        "type": 2
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1625,7 +1721,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 114,
-        "type": 2
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1637,7 +1734,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 115,
-        "type": 2
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1649,7 +1747,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 116,
-        "type": 2
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1661,7 +1760,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 117,
-        "type": 2
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1673,7 +1773,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 118,
-        "type": 2
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1685,7 +1786,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 119,
-        "type": 2
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1698,7 +1800,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 120,
-        "type": 2
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1710,7 +1813,8 @@
         "y_offset": 8,
         "broken_model": false,
         "additional_info": false,
-        "position": 121
+        "position": 122,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1721,8 +1825,21 @@
         "y_offset": 6,
         "broken_model": false,
         "additional_info": false,
-        "position": 122,
-        "type": 2
+        "position": 121,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:portal_shard"
+        ],
+        "id": "legendary_monsters:the_obliterator",
+        "scale": 14,
+        "y_offset": 21,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 122.5,
+        "mod_version": "1.20.1 (v2.0.6)"
     },
     {
         "drops": [
@@ -1762,7 +1879,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 125,
-        "mod_version": "3.23"
+        "mod_version": "3.24"
     },
     {
         "drops": [
@@ -1801,7 +1918,8 @@
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 128,
-        "type": 2
+        "type": 2,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
@@ -1870,7 +1988,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 133,
-        "mod_version": "3.23"
+        "mod_version": "3.24"
     },
     {
         "drops": [
@@ -1888,7 +2006,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 134,
-        "mod_version": "3.23"
+        "mod_version": "3.24"
     },
     {
         "drops": [
@@ -1931,7 +2049,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 137,
-        "mod_version": "3.23"
+        "mod_version": "3.24"
     },
     {
         "drops": [
@@ -1946,7 +2064,8 @@
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 138,
-        "type": 2
+        "type": 2,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
@@ -1960,14 +2079,15 @@
         "broken_model": false,
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
-        "position": 139
+        "position": 139,
+        "mod_version": "2.5.50.1"
     },
     {
         "drops": [
-            "irons_spellbooks:decrepit_key",
             "irons_spellbooks:arcane_essence",
             "irons_spellbooks:betrayer_signet#50%",
             "irons_spellbooks:cinder_essence",
+            "irons_spellbooks:decrepit_key",
             "irons_spellbooks:decrepit_scythe#50%",
             "irons_spellbooks:divine_soulshard"
         ],
@@ -1977,7 +2097,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 140,
-        "mod_version": "1.21.1-3.15.3"
+        "mod_version": "1.21.1-3.15.4"
     },
     {
         "drops": [
@@ -1992,7 +2112,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 141,
-        "mod_version": "3.23"
+        "mod_version": "3.24"
     },
     {
         "drops": [
@@ -2025,7 +2145,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 143,
-        "mod_version": "3.23"
+        "mod_version": "3.24"
     },
     {
         "drops": [
@@ -2087,17 +2207,17 @@
         "broken_model": false,
         "additional_info": false,
         "position": 146,
-        "mod_version": "3.23"
+        "mod_version": "3.24"
     },
     {
         "drops": [
             "darkdoppelganger:doppelganger_ring#33%",
             "darkdoppelganger:elder_necklace#33%",
             "darkdoppelganger:summons_necklace#33%",
+            "irons_spellbooks:scroll",
             "minecraft:diamond_block",
             "minecraft:echo_shard",
-            "minecraft:nether_star",
-            "irons_spellbooks:scroll"
+            "minecraft:nether_star"
         ],
         "id": "darkdoppelganger:dark_doppelganger",
         "scale": 10,
@@ -2338,81 +2458,5 @@
         "broken_model": false,
         "additional_info": false,
         "position": 163
-    },
-    {
-        "drops": [
-            "friendsandfoes:wildfire_crown_fragment"
-        ],
-        "id": "friendsandfoes:wildfire",
-        "scale": 18,
-        "y_offset": 10,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 26.2,
-        "type": 2,
-        "mod_version": "4.0.19"
-    },
-    {
-        "drops": [
-            "mythsandlegends:umbras_whisper"
-        ],
-        "id": "mythsandlegends:black_charro",
-        "scale": 25,
-        "y_offset": -25,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 80.6,
-        "mod_version": "0.0.8.5"
-    },
-    {
-        "drops": [
-            "fdbosses:justice_core",
-            "fdbosses:divine_gear",
-            "fdbosses:geburah_trophy",
-            "fdbosses:polished_justicestone"
-        ],
-        "id": "fdbosses:geburah",
-        "scale": 10,
-        "y_offset": 0,
-        "broken_model": true,
-        "additional_info": true,
-        "position": 110.1,
-        "mod_version": "3.1.0.3"
-    },
-    {
-        "drops": [
-            "aquamirae:fin#60%",
-            "aquamirae:sharp_bones#60%",
-            "aquamirae:spinefish#60%",
-            "aquamirae:dead_sea_scroll#60%",
-            "aquamirae:treasure_pouch#85%",
-            "aquamirae:ship_graveyard_echo"
-        ],
-        "id": "aquamirae:eel",
-        "scale": 13,
-        "y_offset": 16,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 77.6,
-        "type": 2,
-        "mod_version": "6.1.2"
-    },
-    {
-        "drops": [
-            "minecraft:prismarine_shard#66%",
-            "minecraft:cod#30%",
-            "minecraft:prismarine_crystals#20%",
-            "minecraft:wet_sponge",
-            "minecraft:tide_armor_trim_smithing_template#20%",
-            "bettertridents:trident_fragment",
-            "endrem:guardian_eye#35%"
-        ],
-        "id": "minecraft:elder_guardian",
-        "scale": 12,
-        "y_offset": -5,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 18.6,
-        "type": 2
     }
 ]
