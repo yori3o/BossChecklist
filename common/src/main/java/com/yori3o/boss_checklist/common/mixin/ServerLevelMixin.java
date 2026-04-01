@@ -33,9 +33,9 @@ public abstract class ServerLevelMixin {
         if (!bl2) {
             File worldDir = ((ServerLevel)(Object)this).getServer().getWorldPath(LevelResource.ROOT).toFile();
             if (DynamicConfigHandler.server().asyncLogic) {
-                //ClassLoader cl = Thread.currentThread().getContextClassLoader();
+                ClassLoader cl = Thread.currentThread().getContextClassLoader();
                 CompletableFuture.runAsync(() -> {
-                    //Thread.currentThread().setContextClassLoader(cl);
+                    Thread.currentThread().setContextClassLoader(cl);
                     saveData(worldDir);
                 });
             } else {

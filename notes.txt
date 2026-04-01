@@ -1,0 +1,22 @@
+
+Mojang stated that Warden isn't a boss, but simply a mob that players should fear. Plus, it doesn't drop any valuable loot.
+    {
+        "drops": [
+            "minecraft:sculk_catalyst",
+            "deeperdarker:heart_of_the_deep"
+        ],
+        "id": "minecraft:warden",
+        "scale": 19,
+        "y_offset": 19,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 61.6,
+        "type": 2
+    }
+	{
+		"id": "minecraft:warden"
+	},
+  "boss_checklist.boss.minecraft_warden": "Хранитель",
+  "boss_checklist.summon.minecraft_warden": "Появляется при активации натурально сгенерированного Скалкового крикуна 4 раза.",
+  "boss_checklist.boss.minecraft_warden": "Warden",
+  "boss_checklist.summon.minecraft_warden": "Spawns when a naturally generated Skulk Shrieker is activated 4 times.",

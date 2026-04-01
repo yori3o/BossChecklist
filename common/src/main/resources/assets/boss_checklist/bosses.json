@@ -223,7 +223,7 @@
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 15,
         "type": 2,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -259,7 +259,7 @@
         "broken_model": true,
         "additional_info": false,
         "position": 18,
-        "mod_version": "2.0.11"
+        "mod_version": "2.0.12"
     },
     {
         "drops": [
@@ -271,7 +271,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 19,
-        "mod_version": "2.0.11"
+        "mod_version": "2.0.12"
     },
     {
         "drops": [
@@ -411,7 +411,7 @@
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 28,
         "type": 2,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -586,14 +586,16 @@
             "confluence:slime_hook",
             "confluence:solidifier",
             "terra_curio:royal_gel",
-            "terra_entity:slimy_saddle"
+            "terra_entity:slimy_saddle",
+            "terra_entity:slime_staff#3%"
         ],
         "id": "terra_entity:king_slime",
         "scale": 7,
         "y_offset": 25,
         "broken_model": false,
         "additional_info": true,
-        "position": 41
+        "position": 41,
+        "mod_version": "1.2.1"
     },
     {
         "drops": [
@@ -613,7 +615,8 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": true,
-        "position": 42
+        "position": 42,
+        "mod_version": "1.2.1"
     },
     {
         "drops": [
@@ -629,7 +632,8 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": true,
-        "position": 43
+        "position": 43,
+        "mod_version": "1.2.1"
     },
     {
         "drops": [
@@ -645,7 +649,8 @@
         "y_offset": 0,
         "broken_model": true,
         "additional_info": true,
-        "position": 44
+        "position": 44,
+        "mod_version": "1.2.1"
     },
     {
         "drops": [
@@ -667,13 +672,14 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": true,
-        "position": 45
+        "position": 45,
+        "mod_version": "1.2.1"
     },
     {
         "drops": [
             "confluence:book_of_skulls#33%",
             "confluence:gold_coin",
-            "confluence:lesser_healing_potion",
+            "confluence:healing_potion",
             "confluence:silver_coin",
             "confluence:skeletron_hand",
             "terra_curio:bone_glove"
@@ -683,7 +689,26 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": true,
-        "position": 46
+        "position": 46,
+        "mod_version": "1.2.1"
+    },
+    {
+        "drops": [
+            "confluence:radio_thing#33%",
+            "confluence:gold_coin",
+            "confluence:healing_potion",
+            "confluence:silver_coin",
+            "confluence:weather_pain#25%",
+            "confluence:lucy_the_axe#25%",
+            "terra_entity:chester_staff#33%"
+        ],
+        "id": "terra_entity:deerclops",
+        "scale": 14,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": true,
+        "position": 46,
+        "mod_version": "1.2.1"
     },
     {
         "drops": [
@@ -707,7 +732,8 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": false,
-        "position": 48
+        "position": 48,
+        "mod_version": "1.0.6"
     },
     {
         "drops": [
@@ -718,7 +744,8 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": false,
-        "position": 49
+        "position": 49,
+        "mod_version": "5.11.3"
     },
     {
         "drops": [
@@ -753,7 +780,7 @@
         "additional_info": true,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 51,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -768,7 +795,7 @@
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 52,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -921,7 +948,7 @@
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 62,
         "type": 2,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -955,7 +982,7 @@
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 64,
         "type": 2,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -968,7 +995,7 @@
         "broken_model": true,
         "additional_info": false,
         "position": 64.5,
-        "mod_version": "2.0.11"
+        "mod_version": "2.0.12"
     },
     {
         "drops": [
@@ -980,7 +1007,7 @@
         "broken_model": true,
         "additional_info": false,
         "position": 64.6,
-        "mod_version": "2.0.11"
+        "mod_version": "2.0.12"
     },
     {
         "drops": [
@@ -1077,6 +1104,26 @@
         "additional_info": false,
         "position": 65.6,
         "type": 2
+    },
+    {
+        "drops": [
+            "confluence:pwnhammer",
+            "terra_curio:warrior_emblem#25%",
+            "terra_curio:ranger_emblem#25%",
+            "terra_curio:sorcerer_emblem#25%",
+            "confluence:summoner_emblem#25%",
+            "confluence:gold_coin",
+            "confluence:healing_potion",
+            "confluence:breaker_blade#50%",
+            "terra_entity:firecracker#50%"
+        ],
+        "id": "terra_entity:wall_of_flesh",
+        "scale": 14,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": true,
+        "position": 46,
+        "mod_version": "1.2.1"
     },
     {
         "drops": [
@@ -1575,7 +1622,7 @@
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 104,
         "type": 2,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -1592,7 +1639,7 @@
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 105,
         "type": 2,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -1610,7 +1657,7 @@
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 106,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -1628,7 +1675,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 107,
-        "mod_version": "3.24"
+        "mod_version": "3.26"
     },
     {
         "drops": [
@@ -1879,7 +1926,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 125,
-        "mod_version": "3.24"
+        "mod_version": "3.26"
     },
     {
         "drops": [
@@ -1891,7 +1938,8 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": false,
-        "position": 126
+        "position": 126,
+        "mod_version": "1.0.13"
     },
     {
         "drops": [
@@ -1903,7 +1951,8 @@
         "y_offset": 0,
         "broken_model": false,
         "additional_info": false,
-        "position": 127
+        "position": 127,
+        "mod_version": "1.0.13"
     },
     {
         "drops": [
@@ -1919,7 +1968,7 @@
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 128,
         "type": 2,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -1988,7 +2037,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 133,
-        "mod_version": "3.24"
+        "mod_version": "3.26"
     },
     {
         "drops": [
@@ -2006,7 +2055,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 134,
-        "mod_version": "3.24"
+        "mod_version": "3.26"
     },
     {
         "drops": [
@@ -2017,7 +2066,8 @@
         "y_offset": 10,
         "broken_model": false,
         "additional_info": false,
-        "position": 135
+        "position": 135,
+        "mod_version": "4.2.1"
     },
     {
         "drops": [
@@ -2028,7 +2078,8 @@
         "y_offset": 8,
         "broken_model": false,
         "additional_info": false,
-        "position": 136
+        "position": 136,
+        "mod_version": "4.2.1"
     },
     {
         "drops": [
@@ -2049,7 +2100,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 137,
-        "mod_version": "3.24"
+        "mod_version": "3.26"
     },
     {
         "drops": [
@@ -2065,7 +2116,7 @@
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 138,
         "type": 2,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -2080,7 +2131,7 @@
         "additional_info": false,
         "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
         "position": 139,
-        "mod_version": "2.5.50.1"
+        "mod_version": "2.5.50.2"
     },
     {
         "drops": [
@@ -2112,7 +2163,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 141,
-        "mod_version": "3.24"
+        "mod_version": "3.26"
     },
     {
         "drops": [
@@ -2145,7 +2196,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 143,
-        "mod_version": "3.24"
+        "mod_version": "3.26"
     },
     {
         "drops": [
@@ -2207,7 +2258,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 146,
-        "mod_version": "3.24"
+        "mod_version": "3.26"
     },
     {
         "drops": [
