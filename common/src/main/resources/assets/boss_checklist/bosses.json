@@ -2276,8 +2276,8 @@
         "broken_model": true,
         "additional_info": false,
         "position": 147,
-        "health": 1800,
-        "armor": 10
+        "health": 3072,
+        "mod_version": "9.8.2-1.20.1"
     },
     {
         "drops": [
