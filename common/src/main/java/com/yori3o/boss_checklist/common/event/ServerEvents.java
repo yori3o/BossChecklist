@@ -3,7 +3,6 @@ package com.yori3o.boss_checklist.common.event;
 
 import com.yori3o.boss_checklist.common.config.DynamicConfigHandler;
 import com.yori3o.boss_checklist.common.network.ServerSender;
-import com.yori3o.boss_checklist.common.network.ClientReceiver;
 import com.yori3o.boss_checklist.common.server.ServerStorage;
 import com.yori3o.boss_checklist.common.server.data.BossChecklistJsonDataSaver;
 import com.yori3o.boss_checklist.common.server.data.OutdatedBossDefeatedDataSaver;

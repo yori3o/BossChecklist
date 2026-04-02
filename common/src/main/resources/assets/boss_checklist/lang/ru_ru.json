@@ -1,6 +1,7 @@
 {
   "key.boss_checklist.open_checklist": "Открыть чеклист",
   "category.boss_checklist": "Boss Checklist",
+  "key.category.boss_checklist.checklist": "Boss Checklist",
   "gui.boss_checklist.drop": "Дроп",
   "gui.boss_checklist.no_drop": "Дропа нет.",
   "gui.boss_checklist.spawn_info": "Спавн",
@@ -57,12 +58,14 @@
   "gui.boss_checklist.info_terramity_gundalf": "Имеет три фазы в виде трёх разных боссов.",
   "gui.boss_checklist.info_hs_bosses_sand_warrior": "Может быть, §3Тотем Бессмертия§f можно найти в этой же башне..?",
   "gui.boss_checklist.info_adventurez_void_shadow": "Для появления портала нужен мод VoidZ.",
-  "gui.boss_checklist.info_terra_entity_king_slime": "Дроп указан для режима Эксперт.",
-  "gui.boss_checklist.info_terra_entity_eye_of_cthulhu": "Дроп указан для режима Эксперт и обоих зол.",
-  "gui.boss_checklist.info_terra_entity_eater_of_worlds": "Дроп указан для режима Эксперт.",
-  "gui.boss_checklist.info_terra_entity_brain_of_cthulhu": "Дроп указан для режима Эксперт.",
-  "gui.boss_checklist.info_terra_entity_queen_bee": "Дроп указан для режима Эксперт.",
-  "gui.boss_checklist.info_terra_entity_skeletron": "Дроп указан для режима Эксперт.",
+  "gui.boss_checklist.info_terra_entity_king_slime": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "gui.boss_checklist.info_terra_entity_eye_of_cthulhu": "Дроп указан для режима Эксперт (нормальная сложность) и обоих зол.",
+  "gui.boss_checklist.info_terra_entity_eater_of_worlds": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "gui.boss_checklist.info_terra_entity_brain_of_cthulhu": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "gui.boss_checklist.info_terra_entity_queen_bee": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "gui.boss_checklist.info_terra_entity_skeletron": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "gui.boss_checklist.info_terra_entity_deerclops": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "gui.boss_checklist.info_terra_entity_wall_of_flesh": "Дроп указан для режима Эксперт (нормальная сложность).",
   "gui.boss_checklist.info_armageddon_mod_the_discord": "Это три босса, которые появляются друг за другом.",
   "gui.boss_checklist.info_twilightforest_knight_phantom": "Их будет шестеро, и нужно победить каждого.",
   "gui.boss_checklist.info_goety_apostle": "Часть дропа выпадает только при призыве в Незере.",
@@ -148,10 +151,10 @@
   "boss_checklist.boss.minecells_concierge": "Привратник",
   "boss_checklist.boss.minecells_conjunctivius": "Конъюктивиус",
 
-  "boss_checklist.boss.block_factorys_bosses_infernal_dragon": "Ashlord, The Infernal Dragon",
-  "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Helvar, The Underworld Knight",
-  "boss_checklist.boss.block_factorys_bosses_yeti": "Skor, The Yeti",
-  "boss_checklist.boss.block_factorys_bosses_sandworm": "Sirok, The Sandworm",
+  "boss_checklist.boss.block_factorys_bosses_infernal_dragon": "Адский дракон Эшлорд",
+  "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Рыцарь преисподней Хелвар",
+  "boss_checklist.boss.block_factorys_bosses_yeti": "Йети Скор",
+  "boss_checklist.boss.block_factorys_bosses_sandworm": "Песчаный червь Сирок",
 
   "boss_checklist.boss.bosses_of_mass_destruction_obsidilith": "Обсидилит",
   "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Перчатка Незера",
@@ -264,6 +267,8 @@
   "boss_checklist.boss.terra_entity_brain_of_cthulhu": "Мозг Ктулху",
   "boss_checklist.boss.terra_entity_queen_bee": "Королева Пчёл",
   "boss_checklist.boss.terra_entity_skeletron": "Скелетрон",
+  "boss_checklist.boss.terra_entity_deerclops": "Циклоп-олень",
+  "boss_checklist.boss.terra_entity_wall_of_flesh": "Стена Плоти",
 
   "boss_checklist.boss.legendary_monsters_cloud_golem": "Cumulonimbus",
   "boss_checklist.boss.legendary_monsters_lava_eater": "Lava Eater",
@@ -276,6 +281,7 @@
   "boss_checklist.boss.legendary_monsters_skeletosaurus": "Skeletosaurus",
   "boss_checklist.boss.legendary_monsters_endersent": "Endersent",
   "boss_checklist.boss.legendary_monsters_posessed_paladin": "Posessed Paladin",
+  "boss_checklist.boss.legendary_monsters_the_obliterator": "The Obliterator",
 
   "boss_checklist.boss.illagerinvasion_invoker": "Вызыватель",
 
@@ -411,7 +417,7 @@
   "boss_checklist.summon.soulsweapons_accursed_lord_boss": "Найдите Разлагающееся Королевство в Незере.",
   "boss_checklist.summon.soulsweapons_day_stalker": "Используйте Сферу Хаоса днём.",
   "boss_checklist.summon.soulsweapons_night_prowler": "Используйте Сферу Хаоса ночью.",
-  "boss_checklist.summon.soulsweapons_chaos_monarch": "Используйте Осколок Неопределенности (выпадающий из Иссушителя) на Чернокаменном Пьедестале.",
+  "boss_checklist.summon.soulsweapons_chaos_monarch": "Используйте Осколок Неопределенности, выпадающий из Иссушителя, на Чернокаменном Пьедестале.",
   "boss_checklist.summon.soulsweapons_moonknight": "Используйте Эссенцию Вечера на Старом Лунном Алтаре.",
 
   "boss_checklist.summon.eeeabsmobs_corpse_warlock": "Найдите его у Кровавого Алтаря с помощью §1Ока Кровавого Алтаря§r§0 в Незере.",
@@ -493,6 +499,8 @@
   "boss_checklist.summon.terra_entity_brain_of_cthulhu": "Используйте §1Кровавый позвоночник§r§0 или §13 Багряных сердца§r§0.",
   "boss_checklist.summon.terra_entity_queen_bee": "Используйте §1Пчелиную манию§r§0 или разрушьте §1Личинку§r§0 в улье.",
   "boss_checklist.summon.terra_entity_skeletron": "Поговорите с Old man ночью или убейте Портного с его куклой вуду в слоте для аксессуаров.",
+  "boss_checklist.summon.terra_entity_deerclops": "Используйте §1Deer Thing§r§0 в снежном биоме.",
+  "boss_checklist.summon.terra_entity_wall_of_flesh": "Бросьте §1Вуду-куклу проводника§r§0 в лаву в Незере.",
 
   "boss_checklist.summon.legendary_monsters_cloud_golem": "Найдите Облачный храм с помощью §1Eye of Air§r§0.",
   "boss_checklist.summon.legendary_monsters_lava_eater": "Найдите его с помощью §1Eye of Magma§r§0 в Незере.",
@@ -505,6 +513,7 @@
   "boss_checklist.summon.legendary_monsters_skeletosaurus": "Найдите его с помощью §1Eye of Bones§r§0 в Незере.",
   "boss_checklist.summon.legendary_monsters_endersent": "Найдите его с помощью §1Eye of Chorus§r§0 в Энде.",
   "boss_checklist.summon.legendary_monsters_posessed_paladin": "Найдите его с помощью §1Eye of Ghost§r§0.",
+  "boss_checklist.summon.legendary_monsters_the_obliterator": "Найдите арену с помощью Eye Of Annihilation в Энде и вставьте §1Eye Crystal§r§0 в Teleport Machine.",
 
   "boss_checklist.summon.illagerinvasion_invoker": "Найдите его в Особняке в тёмном лесу.",
 

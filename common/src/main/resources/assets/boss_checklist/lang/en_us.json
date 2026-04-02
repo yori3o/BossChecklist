@@ -1,6 +1,7 @@
 {
   "key.boss_checklist.open_checklist": "Open Checklist",
   "category.boss_checklist": "Boss Checklist",
+  "key.category.boss_checklist.checklist": "Boss Checklist",
   "gui.boss_checklist.drop": "Drop",
   "gui.boss_checklist.no_drop": "No drop",
   "gui.boss_checklist.spawn_info": "Spawn",
@@ -57,12 +58,14 @@
   "gui.boss_checklist.info_terramity_gundalf": "It has three phases in the form of three different bosses.",
   "gui.boss_checklist.info_hs_bosses_sand_warrior": "Perhaps the §3Totem of Undying§f can be found in this same tower..?",
   "gui.boss_checklist.info_adventurez_void_shadow": "The VoidZ mod is required for the portal to appear.",
-  "gui.boss_checklist.info_terra_entity_king_slime": "The drop is specified for Expert mode.",
-  "gui.boss_checklist.info_terra_entity_eye_of_cthulhu": "The drop is indicated for Expert mode and both evils.",
-  "gui.boss_checklist.info_terra_entity_eater_of_worlds": "The drop is specified for Expert mode.",
-  "gui.boss_checklist.info_terra_entity_brain_of_cthulhu": "The drop is specified for Expert mode.",
-  "gui.boss_checklist.info_terra_entity_queen_bee": "The drop is specified for Expert mode.",
-  "gui.boss_checklist.info_terra_entity_skeletron": "The drop is specified for Expert mode.",
+  "gui.boss_checklist.info_terra_entity_king_slime": "The drop is specified for Expert mode (normal difficulty).",
+  "gui.boss_checklist.info_terra_entity_eye_of_cthulhu": "The drop is indicated for Expert mode (normal difficulty) and both evils.",
+  "gui.boss_checklist.info_terra_entity_eater_of_worlds": "The drop is specified for Expert mode (normal difficulty).",
+  "gui.boss_checklist.info_terra_entity_brain_of_cthulhu": "The drop is specified for Expert mode (normal difficulty).",
+  "gui.boss_checklist.info_terra_entity_queen_bee": "The drop is specified for Expert mode (normal difficulty).",
+  "gui.boss_checklist.info_terra_entity_skeletron": "The drop is specified for Expert mode (normal difficulty).",
+  "gui.boss_checklist.info_terra_entity_deerclops": "The drop is specified for Expert mode (normal difficulty).",
+  "gui.boss_checklist.info_terra_entity_wall_of_flesh": "The drop is specified for Expert mode (normal difficulty).",
   "gui.boss_checklist.info_armageddon_mod_the_discord": "These are three bosses that appear one after another.",
   "gui.boss_checklist.info_twilightforest_knight_phantom": "There will be six of them, and you need to defeat each one.",
   "gui.boss_checklist.info_goety_apostle": "Some drops only occur when summoned in the Nether.",
@@ -158,7 +161,7 @@
   "boss_checklist.boss.bosses_of_mass_destruction_lich": "Night Lich",
   "boss_checklist.boss.bosses_of_mass_destruction_void_blossom": "Void Blossom",
 
-  "boss_checklist.boss.cataclysm_ancient_remnant": "Ancient Revenant",
+  "boss_checklist.boss.cataclysm_ancient_remnant": "Ancient Remnant",
   "boss_checklist.boss.cataclysm_netherite_monstrosity": "Netherite Monstrosity",
   "boss_checklist.boss.cataclysm_the_harbinger": "The Harbinger",
   "boss_checklist.boss.cataclysm_the_leviathan": "The Leviathan",
@@ -264,6 +267,8 @@
   "boss_checklist.boss.terra_entity_brain_of_cthulhu": "Brain of Cthulhu",
   "boss_checklist.boss.terra_entity_queen_bee": "Queen Bee",
   "boss_checklist.boss.terra_entity_skeletron": "Skeletron",
+  "boss_checklist.boss.terra_entity_deerclops": "Deerclops",
+  "boss_checklist.boss.terra_entity_wall_of_flesh": "Wall of Flesh",
 
   "boss_checklist.boss.legendary_monsters_cloud_golem": "Cumulonimbus",
   "boss_checklist.boss.legendary_monsters_lava_eater": "Lava Eater",
@@ -276,6 +281,7 @@
   "boss_checklist.boss.legendary_monsters_skeletosaurus": "Skeletosaurus",
   "boss_checklist.boss.legendary_monsters_endersent": "Endersent",
   "boss_checklist.boss.legendary_monsters_posessed_paladin": "Posessed Paladin",
+  "boss_checklist.boss.legendary_monsters_the_obliterator": "The Obliterator",
 
   "boss_checklist.boss.illagerinvasion_invoker": "Invoker",
 
@@ -411,7 +417,7 @@
   "boss_checklist.summon.soulsweapons_accursed_lord_boss": "Find the Decaying Kingdom in the Nether.",
   "boss_checklist.summon.soulsweapons_day_stalker": "Use Chaos Orb during the day.",
   "boss_checklist.summon.soulsweapons_night_prowler": "Use Chaos Orb during the night.",
-  "boss_checklist.summon.soulsweapons_chaos_monarch": "Use the Shard of Uncertainty (dropped by the Wither) on the Blackstone Pedestal.",
+  "boss_checklist.summon.soulsweapons_chaos_monarch": "Use the Shard of Uncertainty, that dropped by the Wither, on the Blackstone Pedestal.",
   "boss_checklist.summon.soulsweapons_moonknight": "Use the Essence of Eventide on the Old Moon Altar.",
 
   "boss_checklist.summon.eeeabsmobs_corpse_warlock": "Find him at the Blood Altar using the §1Eye of Bloody Altar§r§0 in the Nether.",
@@ -492,7 +498,9 @@
   "boss_checklist.summon.terra_entity_eater_of_worlds": "Use §1Worm Food§r§0 or destroy §13 Shadow Orbs§r§0.",
   "boss_checklist.summon.terra_entity_brain_of_cthulhu": "Use §1Bloody Spine§r§0 or §13 Crimson Hearts§r§0.",
   "boss_checklist.summon.terra_entity_queen_bee": "Use §1Abeemiantion§r§0 or destroy the §1Larva§r§0 in the hive.",
-  "boss_checklist.summon.terra_entity_skeletron": "Talk to the Old Man at night or kill the Tailor with his voodoo doll in the accessory slot.",
+  "boss_checklist.summon.terra_entity_skeletron": "Talk to the Old Man at night or kill the Clothier with his voodoo doll in the accessory slot.",
+  "boss_checklist.summon.terra_entity_deerclops": "Use §1Deer Thing§r§0 in snowy biome.",
+  "boss_checklist.summon.terra_entity_wall_of_flesh": "Throw the §1Guide Voodoo Doll§r§0 into the lava in the Nether.",
 
   "boss_checklist.summon.legendary_monsters_cloud_golem": "Find the Cloudy Temple using §1Eye of Air§r§0.",
   "boss_checklist.summon.legendary_monsters_lava_eater": "Find it with §1Eye of Magma§r§0 in the Nether.",
@@ -505,6 +513,7 @@
   "boss_checklist.summon.legendary_monsters_skeletosaurus": "Find it with §1Eye of Bones§r§0 in the Nether.",
   "boss_checklist.summon.legendary_monsters_endersent": "Find it with §1Eye of Chorus§r§0 in The End.",
   "boss_checklist.summon.legendary_monsters_posessed_paladin": "Find it with §1Eye of Ghost§r§0.",
+  "boss_checklist.summon.legendary_monsters_the_obliterator": "Find the arena with Eye Of Annihilation in the End and insert the §1Eye Crystal§r§0 into the Teleport Machine.",
 
   "boss_checklist.summon.illagerinvasion_invoker": "Find him in the Mansion in a dark forest.",
 
