@@ -81,7 +81,7 @@ public class ServerEvents {
                 ServerStorage.playerDamages = BossChecklistJsonDataSaver.loadGlobalStatistics(worldDir);
             }
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("Unexpected error while reading data from world folder: ", e);
+            LoggerUtil.errorWithException("Unexpected error while reading data from world folder: ", e);
         }
 
     }

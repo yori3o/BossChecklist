@@ -4,7 +4,7 @@ package com.yori3o.boss_checklist.common.client.boss;
 /**
  * This class connects all the information about the boss for later use everywhere.
  */
-public final class BossEntry {
+public class BossEntry {
 
 
     private final BossDefinition definition;

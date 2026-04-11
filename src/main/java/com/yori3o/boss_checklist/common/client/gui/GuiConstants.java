@@ -22,6 +22,13 @@ public class GuiConstants {
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/button_pressed.png");
     public static final Identifier BUTTON_TEXTURE_overlay =
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/button_overlay.png");
+        
+    public static final Identifier BIG_BUTTON_TEXTURE =
+        Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/big_button.png");
+    public static final Identifier BIG_BUTTON_TEXTURE_hovered =
+        Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/big_button_hovered.png");
+    public static final Identifier BIG_BUTTON_TEXTURE_pressed =
+        Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/big_button_pressed.png");
 
     public static final Identifier SMALL_BUTTON_TEXTURE_hovered =
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/small_button_hovered.png");
@@ -114,10 +121,12 @@ public class GuiConstants {
     public static final int DROP_BUTTON_Y = 51;
     public static final int SPAWN_BUTTON_X = 328;
     public static final int SPAWN_BUTTON_Y = 51;
+    public static final int MEDIUM_BUTTONS_HEIGHT = 18;
+    public static final int MEDIUM_BUTTONS_WIDTH = 50;
+    public static final int MEDIUM_BUTTONS_OVERLAY_HEIGHT = 40;
+    public static final int MEDIUM_BUTTONS_OVERLAY_WIDTH = 70;
     public static final int BIG_BUTTONS_HEIGHT = 18;
-    public static final int BIG_BUTTONS_WIDTH = 50;
-    public static final int BIG_BUTTONS_OVERLAY_HEIGHT = 40;
-    public static final int BIG_BUTTONS_OVERLAY_WIDTH = 70;
+    public static final int BIG_BUTTONS_WIDTH = 100;
     
     public static final int BAR_HEIGHT = 9;
     public static final int BAR_WIDTH = 186;

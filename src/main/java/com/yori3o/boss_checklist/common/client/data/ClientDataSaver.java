@@ -62,7 +62,7 @@ public class ClientDataSaver {
             }
 
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("Failed to load defeated bosses file", e);
+            LoggerUtil.errorWithException("Failed to load defeated bosses file", e);
         }
 
         for (String id : defeatedIds) {
@@ -107,7 +107,7 @@ public class ClientDataSaver {
         try (FileWriter writer = new FileWriter(file)) {
             GSON.toJson(defeatedIds, writer);
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("Failed to save defeated bosses file", e);
+            LoggerUtil.errorWithException("Failed to save defeated bosses file", e);
         }
     }
 

@@ -41,7 +41,7 @@ public class BossDefinition {
     private Integer health;
     private Integer armor;
 
-    private Integer type;
+    private Integer type; // 1-boss, 2-miniboss
 
     @SerializedName("mod_version")
     private String modVersion;
@@ -51,6 +51,17 @@ public class BossDefinition {
 
     public BossDefinition(String id) {
         this.id = id;
+    }
+
+    public BossDefinition(String id, float position, int scale, int yOffset, boolean brokenModel, boolean miniboss, List<String> drops) {
+        this.id = id;
+        this.position = position;
+        this.scale = scale;
+        this.yOffset = yOffset;
+        this.brokenModel = brokenModel;
+        if (miniboss) this.type = 2;
+        this.drops = drops;
+        this.applyDefaults();
     }
 
     public String id() {

@@ -165,6 +165,16 @@ public class BossChecklistScreen extends Screen {
             }
         );
         addRenderableWidget(closeButton);
+
+        CustomButton openEditorButton = new CustomButton(
+            bookX + GuiConstants.CLOSE_BUTTON_X + 50, bookY + GuiConstants.CLOSE_BUTTON_Y, GuiConstants.CLOSE_BUTTON_SIZE, GuiConstants.CLOSE_BUTTON_SIZE, 0, 0, 
+            Component.empty(), 
+            GuiConstants.CLOSE_BUTTON_TEXTURE, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, null,
+            () -> {
+                this.minecraft.setScreen(new EditorScreen(this));
+            }
+        );
+        addRenderableWidget(openEditorButton);
         
         if (DynamicConfigHandler.client().searchBarEnabled && this.height > 305) {
             this.searchBox = new EditBox(

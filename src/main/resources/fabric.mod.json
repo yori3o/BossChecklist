@@ -25,6 +25,7 @@
   "mixins": [
     "boss_checklist.mixins.json"
   ],
+    "accessWidener": "boss_checklist.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.18.4",
 		"minecraft": "~26.1",

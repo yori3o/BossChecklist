@@ -281,6 +281,12 @@
 	{
 		"id": "terra_entity:skeletron"
 	},
+    {
+        "id": "terra_entity:deerclops"
+    },
+    {
+        "id": "terra_entity:wall_of_flesh"
+    },
 	{
 		"id": "legendary_monsters:cloud_golem"
 	},

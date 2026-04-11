@@ -24,7 +24,7 @@ public class CustomButton extends Button {
     private final int overlayWidth;
     private final int overlayHeight;
 
-    Identifier tex;
+    private Identifier tex;
     private boolean pressedFlag = false;
     
 
@@ -57,7 +57,6 @@ public class CustomButton extends Button {
             tex = normalTex;
         }
 
-         
 
         guiGraphics.blit(RenderPipelines.GUI_TEXTURED, tex, this.getX(), this.getY(), 0, 0, this.width, this.height, this.width, this.height);
         
@@ -91,7 +90,6 @@ public class CustomButton extends Button {
         this.onPress(null);
     }
 
-    // on 1.20 it run only if cursor on button
     @Override
     public void onRelease(MouseButtonEvent mouseButtonEvent) {
         pressedFlag = false;

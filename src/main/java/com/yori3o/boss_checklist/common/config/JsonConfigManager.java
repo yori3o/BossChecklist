@@ -52,7 +52,7 @@ public abstract class JsonConfigManager<T> {
             save();
 
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("[CONFIG] Failed to load " + configPath.getFileName() + ": ", e);
+            LoggerUtil.errorWithException("[CONFIG] Failed to load " + configPath.getFileName() + ": ", e);
             backupCorruptedFile();
             saveDefault();
         }
@@ -74,8 +74,7 @@ public abstract class JsonConfigManager<T> {
                 gson.toJson(configInstance, writer);
             }
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("[CONFIG] Failed to save config: ", e);
-            e.printStackTrace();
+            LoggerUtil.errorWithException("[CONFIG] Failed to save config: ", e);
         }
     }
 
@@ -88,7 +87,7 @@ public abstract class JsonConfigManager<T> {
                 gson.toJson(configInstance, writer);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerUtil.errorWithException("[CONFIG] Failed to save config: ", e);
         }
     }
 
@@ -102,8 +101,8 @@ public abstract class JsonConfigManager<T> {
                 Files.move(configPath, backup, StandardCopyOption.REPLACE_EXISTING);
                 LoggerUtil.info("[CONFIG] Corrupted config renamed to: " + backup.getFileName());
             }
-        } catch (IOException ex) {
-            LoggerUtil.error("[CONFIG] Failed to backup corrupted file: " + ex.getMessage());
+        } catch (IOException e) {
+            LoggerUtil.errorWithException("[CONFIG] Failed to backup corrupted file: ", e);
         }
     }
 

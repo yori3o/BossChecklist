@@ -3,12 +3,14 @@
 	"package": "com.yori3o.boss_checklist.common.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
-    "PauseScreenMixin"
-  ],
-  "mixins": [
-    "DeleteWorldMixin",
-    "ServerLevelMixin"
-  ],
+        "PauseScreenMixin",
+        "MouseMixin",
+        "ClientLanguageMixin"
+    ],
+    "mixins": [
+        "DeleteWorldMixin",
+        "ServerLevelMixin"
+    ],
 	"injectors": {
 		"defaultRequire": 1
 	},

@@ -5,6 +5,7 @@ import com.yori3o.boss_checklist.common.config.DynamicConfigHandler;
 import com.yori3o.boss_checklist.common.util.LoggerUtil;
 import com.yori3o.boss_checklist.impl.PlatformUtil;
 import com.yori3o.boss_checklist.common.client.boss.BossEntry;
+import com.yori3o.boss_checklist.common.client.boss.CustomBossEntry;
 import com.yori3o.boss_checklist.common.client.data.BossDefeatedHandler;
 import com.yori3o.boss_checklist.common.client.data.BossService;
 import com.yori3o.boss_checklist.common.client.data.ClientBossAttempt;
@@ -24,6 +25,7 @@ import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.state.EntityRenderState;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySpawnReason;
@@ -34,10 +36,13 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.core.Holder.Reference;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+
 import org.joml.Matrix3x2fStack;
 import org.joml.Quaternionf;
 import org.joml.Vector2i;
@@ -107,6 +112,8 @@ public class BossInfoScreen extends Screen {
     private List<Component> tooltip_attemptTop3 = new ArrayList<>();
     private String tooltip_duration = "";
 
+    private boolean ignoreProgressionMode;
+
 
     
     
@@ -134,6 +141,19 @@ public class BossInfoScreen extends Screen {
             modName = Component.translatable("boss_checklist.mod." + boss.definition().modId()).getString();
         }
         bossName = Component.translatable("boss_checklist.boss." + bossId.replace(":", "_")).getString();
+        summonText = Component.translatable("boss_checklist.summon." + bossId.replace(":", "_"));
+    }
+
+    public BossInfoScreen(Screen parent, CustomBossEntry boss) {
+        super(Component.literal("Boss Info"));
+        lastTime = System.nanoTime();
+        this.parent = parent;
+        this.bossId = boss.id();
+        this.boss = boss;
+        bossName = boss.name();
+        modName = boss.modName();
+        summonText = Component.literal(boss.spawnInfo());
+        ignoreProgressionMode = true;
     }
 
 
@@ -201,18 +221,18 @@ public class BossInfoScreen extends Screen {
 
         additionalInfo = boss.definition().additionalInfo();
 
-        if (DynamicConfigHandler.client().progressionMode && !isBossDefeatedInWorld) {
-            showInfo = false;
-            bossName = "???";
-            if (DynamicConfigHandler.client().progressionModePlus) {
-                showAdditionalInfo = false;
-                modName = "???";
-                wikiLink = "";
-                additionalInfo = false;
+        if (!ignoreProgressionMode) {
+            if (DynamicConfigHandler.client().progressionMode && !isBossDefeatedInWorld) {
+                showInfo = false;
+                bossName = "???";
+                if (DynamicConfigHandler.client().progressionModePlus) {
+                    showAdditionalInfo = false;
+                    modName = "???";
+                    wikiLink = "";
+                    additionalInfo = false;
+                }
             }
         }
-
-        summonText = Component.translatable("boss_checklist.summon." + bossId.replace(":", "_"));
         
         if (!boss.definition().wikiLink().equals("")) {
             wikiLinkEnabled = true;
@@ -299,11 +319,15 @@ public class BossInfoScreen extends Screen {
         Identifier rl = Identifier.parse(id);
 
         // FOR 1.21.4+ - add .get().value()
-         EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.get(rl).get().value();
-        //EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.get(rl);
-        if (type == null) {
-            throw new IllegalArgumentException("Not found EntityType by id: " + id);
+        Optional<Reference<EntityType<?>>> a = BuiltInRegistries.ENTITY_TYPE.get(rl);
+        EntityType<?> type = null;
+        if (a.isPresent()) {
+            type = a.get().value();
+        } else {
+            LoggerUtil.error("There is no entity with this ID: " + id);
+            return null;
         }
+        
         
         // FOR 1.21.4+ - add , EntitySpawnReason.LOAD
         Entity entity = type.create(Minecraft.getInstance().level, EntitySpawnReason.LOAD);
@@ -325,8 +349,8 @@ public class BossInfoScreen extends Screen {
 
         if (showInfo) {
             dropButton = new CustomButton(
-                bookX + GuiConstants.DROP_BUTTON_X, bookY + GuiConstants.DROP_BUTTON_Y, GuiConstants.BIG_BUTTONS_WIDTH, GuiConstants.BIG_BUTTONS_HEIGHT, 
-                GuiConstants.BIG_BUTTONS_OVERLAY_WIDTH, GuiConstants.BIG_BUTTONS_OVERLAY_HEIGHT, 
+                bookX + GuiConstants.DROP_BUTTON_X, bookY + GuiConstants.DROP_BUTTON_Y, GuiConstants.MEDIUM_BUTTONS_WIDTH, GuiConstants.MEDIUM_BUTTONS_HEIGHT, 
+                GuiConstants.MEDIUM_BUTTONS_OVERLAY_WIDTH, GuiConstants.MEDIUM_BUTTONS_OVERLAY_HEIGHT, 
                 Component.translatable("gui.boss_checklist.drop"), 
                 GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_hovered, GuiConstants.BUTTON_TEXTURE_pressed, GuiConstants.BUTTON_TEXTURE_overlay, 
                 () -> {
@@ -335,19 +359,19 @@ public class BossInfoScreen extends Screen {
             );
         } else {
             dropButton = new CustomButton(
-                bookX + GuiConstants.DROP_BUTTON_X, bookY + GuiConstants.DROP_BUTTON_Y, GuiConstants.BIG_BUTTONS_WIDTH, GuiConstants.BIG_BUTTONS_HEIGHT, 
-                GuiConstants.BIG_BUTTONS_OVERLAY_WIDTH, GuiConstants.BIG_BUTTONS_OVERLAY_HEIGHT, 
+                bookX + GuiConstants.DROP_BUTTON_X, bookY + GuiConstants.DROP_BUTTON_Y, GuiConstants.MEDIUM_BUTTONS_WIDTH, GuiConstants.MEDIUM_BUTTONS_HEIGHT, 
+                GuiConstants.MEDIUM_BUTTONS_OVERLAY_WIDTH, GuiConstants.MEDIUM_BUTTONS_OVERLAY_HEIGHT, 
                 Component.translatable("gui.boss_checklist.drop"), GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_overlay, () -> {
                 //currentTab = InfoTab.DROP;
             });
         }
 
         if (showAdditionalInfo) {
-            spawnButton = new CustomButton(bookX + GuiConstants.SPAWN_BUTTON_X, bookY + GuiConstants.SPAWN_BUTTON_Y, GuiConstants.BIG_BUTTONS_WIDTH, GuiConstants.BIG_BUTTONS_HEIGHT, GuiConstants.BIG_BUTTONS_OVERLAY_WIDTH, GuiConstants.BIG_BUTTONS_OVERLAY_HEIGHT, Component.translatable("gui.boss_checklist.spawn_info"), GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_hovered, GuiConstants.BUTTON_TEXTURE_pressed, GuiConstants.BUTTON_TEXTURE_overlay, () -> {
+            spawnButton = new CustomButton(bookX + GuiConstants.SPAWN_BUTTON_X, bookY + GuiConstants.SPAWN_BUTTON_Y, GuiConstants.MEDIUM_BUTTONS_WIDTH, GuiConstants.MEDIUM_BUTTONS_HEIGHT, GuiConstants.MEDIUM_BUTTONS_OVERLAY_WIDTH, GuiConstants.MEDIUM_BUTTONS_OVERLAY_HEIGHT, Component.translatable("gui.boss_checklist.spawn_info"), GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_hovered, GuiConstants.BUTTON_TEXTURE_pressed, GuiConstants.BUTTON_TEXTURE_overlay, () -> {
                 currentTab = InfoTab.SPAWN;
             });
         } else {
-            spawnButton = new CustomButton(bookX + GuiConstants.SPAWN_BUTTON_X, bookY + GuiConstants.SPAWN_BUTTON_Y, GuiConstants.BIG_BUTTONS_WIDTH, GuiConstants.BIG_BUTTONS_HEIGHT, GuiConstants.BIG_BUTTONS_OVERLAY_WIDTH, GuiConstants.BIG_BUTTONS_OVERLAY_HEIGHT, Component.translatable("gui.boss_checklist.spawn_info"), GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_overlay, () -> {
+            spawnButton = new CustomButton(bookX + GuiConstants.SPAWN_BUTTON_X, bookY + GuiConstants.SPAWN_BUTTON_Y, GuiConstants.MEDIUM_BUTTONS_WIDTH, GuiConstants.MEDIUM_BUTTONS_HEIGHT, GuiConstants.MEDIUM_BUTTONS_OVERLAY_WIDTH, GuiConstants.MEDIUM_BUTTONS_OVERLAY_HEIGHT, Component.translatable("gui.boss_checklist.spawn_info"), GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE, GuiConstants.BUTTON_TEXTURE_overlay, () -> {
                 //currentTab = InfoTab.SPAWN;
             });
         }
@@ -364,6 +388,7 @@ public class BossInfoScreen extends Screen {
         });
 
         addRenderableWidget(closeButton);
+        if (entity == null) return;
         addRenderableWidget(dropButton);
         addRenderableWidget(spawnButton);
     }
@@ -432,7 +457,6 @@ public class BossInfoScreen extends Screen {
 
         if (showInfo) {
             if (brokenBossModel) {
-                 
                 guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BOSS_IMG, bookX + 137, bookY + 100, 0, 0, 100, 100, 100, 100);
             } else {
                 renderEntityInGui(guiGraphics, bookX + 132 + 56, bookY + 90 + 85, bossScale, partialTick);
@@ -459,11 +483,15 @@ public class BossInfoScreen extends Screen {
             }
         }
 
+        if (entity == null) {
+            guiGraphics.textWithWordWrap(this.font, Component.translatable("gui.boss_checklist.no_entity"), bookX + GuiConstants.DROP_BUTTON_X, bookY + GuiConstants.DROP_BUTTON_Y, 115, 0xFF616161, false);
+        }
+
         // makes buttons gray if they are disabled
         if (!showInfo) {
-            guiGraphics.fill(bookX + GuiConstants.DROP_BUTTON_X, bookY + GuiConstants.DROP_BUTTON_Y, bookX + GuiConstants.DROP_BUTTON_X + GuiConstants.BIG_BUTTONS_WIDTH, bookY + GuiConstants.DROP_BUTTON_Y + GuiConstants.BIG_BUTTONS_HEIGHT, 0x88AAAAAA);
+            guiGraphics.fill(bookX + GuiConstants.DROP_BUTTON_X, bookY + GuiConstants.DROP_BUTTON_Y, bookX + GuiConstants.DROP_BUTTON_X + GuiConstants.MEDIUM_BUTTONS_WIDTH, bookY + GuiConstants.DROP_BUTTON_Y + GuiConstants.MEDIUM_BUTTONS_HEIGHT, 0x88AAAAAA);
             if (!showAdditionalInfo) {
-                guiGraphics.fill(bookX + GuiConstants.SPAWN_BUTTON_X, bookY + GuiConstants.SPAWN_BUTTON_Y, bookX + GuiConstants.SPAWN_BUTTON_X + GuiConstants.BIG_BUTTONS_WIDTH, bookY + GuiConstants.SPAWN_BUTTON_Y + GuiConstants.BIG_BUTTONS_HEIGHT, 0x88AAAAAA);
+                guiGraphics.fill(bookX + GuiConstants.SPAWN_BUTTON_X, bookY + GuiConstants.SPAWN_BUTTON_Y, bookX + GuiConstants.SPAWN_BUTTON_X + GuiConstants.MEDIUM_BUTTONS_WIDTH, bookY + GuiConstants.SPAWN_BUTTON_Y + GuiConstants.MEDIUM_BUTTONS_HEIGHT, 0x88AAAAAA);
             }
         }
     }
@@ -475,6 +503,7 @@ public class BossInfoScreen extends Screen {
 
     // fuck
     public void renderTooltips(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, int bookX, int bookY) {
+        if (entity == null) return;
         
         // health and armor info
         if (mouseX >= bookX + 145 && mouseX < bookX + 145 + 16 && mouseY >= bookY + 209 && mouseY < bookY + 209 + 27) {
@@ -636,7 +665,12 @@ public class BossInfoScreen extends Screen {
             }
 
             // FOR 1.21.4+ - add .get().value()
-            ItemStack stack = new ItemStack(BuiltInRegistries.ITEM.get(Identifier.parse(itemId)).get().value());
+            Optional<Reference<Item>> s = BuiltInRegistries.ITEM.get(Identifier.parse(itemId));
+            if (!s.isPresent()) {
+                LoggerUtil.warn("There is no item with this ID: " + itemId);
+                return;
+            }
+            ItemStack stack = new ItemStack(s.get().value());
             
             guiGraphics.item(stack, xPos, yPos);
 
@@ -665,10 +699,10 @@ public class BossInfoScreen extends Screen {
         }
         if (renderTooltip) {
             guiGraphics.tooltip(
-                    this.font,
-                    tooltip,
-                    mouseX, mouseY, (screenWidth, screenHeight, x2, y2, tooltipWidth, tooltipHeight) -> new Vector2i(x2 + 12, y2 - 2), null
-                );
+                this.font,
+                tooltip,
+                mouseX, mouseY, (screenWidth, screenHeight, x2, y2, tooltipWidth, tooltipHeight) -> new Vector2i(x2 + 12, y2 - 2), null
+            );
         }
     }
 
@@ -676,6 +710,7 @@ public class BossInfoScreen extends Screen {
 
     public void renderEntityInGui(GuiGraphicsExtractor graphics, int x, int y, int scale, float partialTicks) {
         try {
+            if (entity == null) return;
             EntityRenderState state = extractRenderState(entity);
 
             Quaternionf mainRotation = new Quaternionf()
@@ -686,20 +721,16 @@ public class BossInfoScreen extends Screen {
             if (state instanceof LivingEntityRenderState livingState) {
                 livingState.yRot = 0; 
                 livingState.xRot = 0;
-
-                /*livingState.boundingBoxWidth /= livingState.scale;
-                livingState.boundingBoxHeight /= livingState.scale;
-                livingState.scale = 1.0F;*/
             }
             
             float entityOffset = -state.boundingBoxHeight / 2.0F;
             Vector3f translation = new Vector3f(0.0F, ((entityOffset / (float) scale) + (bossYCorrection / (float) scale) - 1.1f), 0.0F);
 
             graphics.entity(state, (float)scale, translation, mainRotation, null, 
-                x - 100, y - 100, x + 100, y + 100);
+                x - 85, y - 85, x + 85, y + 85);
 
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error(e);
+            LoggerUtil.errorWithException("Error when rendering boss:", e);
         }
     }
 
@@ -726,9 +757,6 @@ public class BossInfoScreen extends Screen {
 
         guiGraphics.blit(RenderPipelines.GUI_TEXTURED, GuiConstants.BOOK, bookX, bookY, 0, 0, 512, 256, 512, 256);
     }
-
-
-
 
 
 

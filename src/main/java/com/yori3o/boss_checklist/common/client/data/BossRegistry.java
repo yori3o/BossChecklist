@@ -51,9 +51,11 @@ public class BossRegistry {
 
                 //LoggerUtil.info("Loading bosses.json from " + res.sourcePackId());
             } catch (Exception e) {
-                LoggerUtil.LOGGER.warn("Failed to read bosses.json from " + res.sourcePackId(), e);
+                LoggerUtil.errorWithException("Failed to read bosses.json from " + res.sourcePackId(), e);
             }
         }
+        OverlapManager.loadOverlaps();
+        loaded.addAll(OverlapManager.OVERLAP_DEFINITIONS.values());
         
         loaded.sort(Comparator.comparingDouble(BossDefinition::position));
 
@@ -109,6 +111,11 @@ public class BossRegistry {
     }
 
 
+    public static boolean isBoss(String id) {
+        return DEFINITIONS.keySet().contains(id);
+    }
+
+
     @SuppressWarnings("unchecked")
     private static void mergeDefinitions(BossDefinition base, BossDefinition addition) {
 
@@ -141,7 +148,7 @@ public class BossRegistry {
                 }
             }
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("Error when merging BossDefinition fields", e);
+            LoggerUtil.errorWithException("Error when merging BossDefinition fields", e);
         }
     }
 }

@@ -51,7 +51,7 @@ public abstract class ServerLevelMixin {
                 BossChecklistJsonDataSaver.saveGlobalStatistics(worldDir, ServerStorage.playerDamages);
             }
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("Unexpected error while saving data to world folder: ", e);
+            LoggerUtil.errorWithException("Unexpected error while saving data to world folder: ", e);
         }
         
     }

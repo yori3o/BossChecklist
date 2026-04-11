@@ -42,7 +42,7 @@ public class BossChecklistDataMigrator {
             deleteFolder(oldDir);
 
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("Failed to migrate BossChecklist data folder!", e);
+            LoggerUtil.errorWithException("Failed to migrate BossChecklist data folder!", e);
         }
     }
 
