@@ -1171,7 +1171,7 @@
         ],
         "id": "minecraft:ender_dragon",
         "scale": 7,
-        "y_offset": 6,
+        "y_offset": 9,
         "rotate_y": 180,
         "broken_model": false,
         "additional_info": false,

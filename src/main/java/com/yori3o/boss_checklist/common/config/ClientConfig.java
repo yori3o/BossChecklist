@@ -1,7 +1,7 @@
 package com.yori3o.boss_checklist.common.config;
 
 
-import com.yori3o.boss_checklist.impl.PlatformUtil;
+import com.yori3o.boss_checklist.common.BossChecklist;
 
 import java.nio.file.Path;
 
@@ -21,7 +21,7 @@ public class ClientConfig extends JsonConfigManager<ClientConfig.Values> {
         public int openButtonYOffset = 0;
     }
 
-    private static final Path CONFIG_PATH = PlatformUtil.getConfigDir().resolve("boss_checklist_client.json");
+    private static final Path CONFIG_PATH = BossChecklist.CONFIG_FOLDER.resolve("boss_checklist-client.json");
 
     public ClientConfig() {
         super(Values.class, CONFIG_PATH);

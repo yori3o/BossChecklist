@@ -3,7 +3,7 @@ package com.yori3o.boss_checklist.common.config;
 
 import java.nio.file.Path;
 
-import com.yori3o.boss_checklist.impl.PlatformUtil;
+import com.yori3o.boss_checklist.common.BossChecklist;
 
 
 
@@ -15,7 +15,7 @@ public class ServerConfig extends JsonConfigManager<ServerConfig.Values> {
         public boolean asyncLogic = true;
     }
 
-    private static final Path CONFIG_PATH = PlatformUtil.getConfigDir().resolve("boss_checklist_server.json");
+    private static final Path CONFIG_PATH = BossChecklist.CONFIG_FOLDER.resolve("boss_checklist-server.json");
 
     public ServerConfig() {
         super(Values.class, CONFIG_PATH);
