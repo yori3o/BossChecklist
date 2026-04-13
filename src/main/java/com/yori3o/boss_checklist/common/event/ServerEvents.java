@@ -182,6 +182,7 @@ public class ServerEvents {
                 ServerSender.sendDefeatedBossDataToAllPlayers(level, bossId, killerName2, true,  startTime, endTime, top3attempt, top3attemptGlobal);
                 
                 ServerStorage.defeatedBossesAndTheirKillers.put(bossId, killerName2);
+                ServerStorage.needsSaving = true;
             } 
         }
     }

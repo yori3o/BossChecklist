@@ -167,9 +167,9 @@ public class BossChecklistScreen extends Screen {
         addRenderableWidget(closeButton);
 
         CustomButton openEditorButton = new CustomButton(
-            bookX + GuiConstants.CLOSE_BUTTON_X + 50, bookY + GuiConstants.CLOSE_BUTTON_Y, GuiConstants.CLOSE_BUTTON_SIZE, GuiConstants.CLOSE_BUTTON_SIZE, 0, 0, 
+            bookX + GuiConstants.CLOSE_BUTTON_X, bookY + GuiConstants.CLOSE_BUTTON_Y + 160, GuiConstants.EDITOR_BUTTON_SIZE, GuiConstants.EDITOR_BUTTON_SIZE, 0, 0, 
             Component.empty(), 
-            GuiConstants.CLOSE_BUTTON_TEXTURE, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, GuiConstants.CLOSE_BUTTON_TEXTURE_hovered, null,
+            GuiConstants.EDITOR_BUTTON_TEXTURE, GuiConstants.EDITOR_BUTTON_TEXTURE_hovered, GuiConstants.EDITOR_BUTTON_TEXTURE_hovered, null,
             () -> {
                 this.minecraft.setScreen(new EditorScreen(this));
             }
@@ -346,7 +346,6 @@ public class BossChecklistScreen extends Screen {
 
         // --- rendering statistics ---
         if (showStatisticsTab) {
-             
             guiGraphics.blit(RenderPipelines.GUI_TEXTURED, GuiConstants.STATS_INFO_BACK, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_HEIGHT, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_HEIGHT);
             guiGraphics.blit(RenderPipelines.GUI_TEXTURED, GuiConstants.TOP_1, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 24, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
             if (ClientGlobalStatistics.top2 != null) {
@@ -367,7 +366,6 @@ public class BossChecklistScreen extends Screen {
             guiGraphics.text(font, String.valueOf(rightPage), bookX + 320, bookY + 195, 0xFF45443F, false); 
         }
 
-        
     
         super.extractRenderState(guiGraphics, mouseX, mouseY, partialTick);
 
@@ -375,7 +373,6 @@ public class BossChecklistScreen extends Screen {
 
         // --- rendering the arrow icon in the statistics tab ---
         if (statisticsTabEnabled) {
-             
             if (showStatisticsTab) {
                 guiGraphics.blit(RenderPipelines.GUI_TEXTURED, GuiConstants.ARROW_UP, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH);
             } else {

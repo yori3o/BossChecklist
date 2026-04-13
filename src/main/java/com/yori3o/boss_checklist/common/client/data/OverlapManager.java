@@ -56,7 +56,7 @@ public class OverlapManager {
         List<String> bossesServerIds = new ArrayList<>();
         bossesServerIds.addAll(OVERLAP_SERVER_BOSSES_IDS);
         if (!OVERLAP_SERVER_BOSSES_IDS.contains(id)) {
-            OVERLAP_SERVER_BOSSES_IDS.add(id);
+            bossesServerIds.add(id);
             ServerBossIdsLoader.LOADED_BOSSES.add(id);
             saveServerBossesIdsOverlap(bossesServerIds);
         }
@@ -115,6 +115,7 @@ public class OverlapManager {
     }
 
     public static void loadServerOverlap() {
+        if (!OVERLAP_SERVER_BOSSES_IDS_PATH.toFile().exists()) return;
         try (Reader reader = Files.newBufferedReader(OVERLAP_SERVER_BOSSES_IDS_PATH)) {
             Type listType = new TypeToken<List<String>>() {}.getType();
             List<String> list = GSON.fromJson(new JsonReader(reader), listType);

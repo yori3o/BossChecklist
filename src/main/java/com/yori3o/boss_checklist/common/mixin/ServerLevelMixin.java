@@ -30,7 +30,8 @@ public abstract class ServerLevelMixin {
         at = @At(value = "TAIL")
     )
     private void saveBossChecklistData(ProgressListener progressListener, boolean bl, boolean bl2, CallbackInfo ci) {
-        if (!bl2) {
+        if (!bl2 && ServerStorage.needsSaving) {
+            ServerStorage.needsSaving = false;
             File worldDir = ((ServerLevel)(Object)this).getServer().getWorldPath(LevelResource.ROOT).toFile();
             if (DynamicConfigHandler.server().asyncLogic) {
                 CompletableFuture.runAsync(() -> {

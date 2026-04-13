@@ -22,7 +22,8 @@
   "gui.boss_checklist.no_bosses_loaded": "There are no bosses! The resources may be broken or empty.",
   "gui.boss_checklist.no_bosses_finded_when_search": "Nothing found.",
   "gui.boss_checklist.search": "Search...",
-  "gui.boss_checklist.no_entity": "It seems that such an entity does not exist.",
+  "gui.boss_checklist.no_entity": "It seems that such an entity does not exist: ",
+  "gui.boss_checklist.entity_not_living": "The entity is not living (mob) and cannot be displayed.",
 
   "gui.boss_checklist.settings": "Settings",
   "gui.boss_checklist.settings.progression_mode": "Progression mode",
@@ -56,6 +57,7 @@
   "gui.boss_checklist.editor.guide_help": "Help",
   "gui.boss_checklist.editor.guide_id_format": "Id format: mod:boss_id",
   "gui.boss_checklist.editor.guide_drop_format": "Drops format: mod:item_id, mod:item_id ...",
+  "gui.boss_checklist.editor.guide_y_offset_inverted": "Y offset is the opposite - increase it to move the boss down and vice versa.",
   "gui.boss_checklist.editor.guide_save_path": "Saved bosses located in config/boss_checklist/overlap/",
 
   "command.boss_checklist.invalid_boss_id": "Invalid boss id: ",

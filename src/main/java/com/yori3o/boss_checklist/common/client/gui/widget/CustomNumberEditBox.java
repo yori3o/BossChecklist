@@ -123,15 +123,12 @@ public class CustomNumberEditBox extends EditBox {
 
         if (!allowNegative) value = Math.max(0, value);
 
-        setValue(format(Math.round(value * 10f) / 10f));
+        setValue(format(value));
     }
 
     public double getStep() {
         if (Minecraft.getInstance().hasShiftDown()) {
             return step * 10;
-        }
-        if (allowDecimal && Minecraft.getInstance().hasControlDown()) {
-            return step * 0.1;
         }
         return step;
     }

@@ -29,6 +29,8 @@ public class GuiConstants {
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/big_button_hovered.png");
     public static final Identifier BIG_BUTTON_TEXTURE_pressed =
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/big_button_pressed.png");
+    public static final Identifier BIG_BUTTON_TEXTURE_overlay =
+        Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/big_button_overlay.png");
 
     public static final Identifier SMALL_BUTTON_TEXTURE_hovered =
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/small_button_hovered.png");
@@ -46,6 +48,11 @@ public class GuiConstants {
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/open.png");
     public static final Identifier OPEN_BUTTON_TEXTURE_hovered =
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/open_hovered.png");
+
+    public static final Identifier EDITOR_BUTTON_TEXTURE =
+        Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/editor.png");
+    public static final Identifier EDITOR_BUTTON_TEXTURE_hovered =
+        Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/editor_hovered.png");
 
 
     public static final Identifier BOOKMARK =
@@ -116,6 +123,8 @@ public class GuiConstants {
     public static final int CLOSE_BUTTON_X = 403;
     public static final int CLOSE_BUTTON_Y = 44;
     public static final int CLOSE_BUTTON_SIZE = 10;
+    
+    public static final int EDITOR_BUTTON_SIZE = 11;
 
     public static final int DROP_BUTTON_X = 265;
     public static final int DROP_BUTTON_Y = 51;
@@ -127,6 +136,8 @@ public class GuiConstants {
     public static final int MEDIUM_BUTTONS_OVERLAY_WIDTH = 70;
     public static final int BIG_BUTTONS_HEIGHT = 18;
     public static final int BIG_BUTTONS_WIDTH = 100;
+    public static final int BIG_BUTTONS_OVERLAY_HEIGHT = 40;
+    public static final int BIG_BUTTONS_OVERLAY_WIDTH = 120;
     
     public static final int BAR_HEIGHT = 9;
     public static final int BAR_WIDTH = 186;

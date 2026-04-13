@@ -22,7 +22,8 @@
   "gui.boss_checklist.no_bosses_loaded": "Нет ни одного босса! Возможно, ресурсы сломаны или пусты.",
   "gui.boss_checklist.no_bosses_finded_when_search": "Ничего не нашлось.",
   "gui.boss_checklist.search": "Поиск...",
-  "gui.boss_checklist.no_entity": "Похоже, такой сущности нет.",
+  "gui.boss_checklist.no_entity": "Похоже, такой сущности нет: ",
+  "gui.boss_checklist.entity_not_living": "Сущность не является живой (мобом) и не может быть отображена.",
 
   "gui.boss_checklist.settings": "Настройки",
   "gui.boss_checklist.settings.progression_mode": "Режим прогрессии",
@@ -56,6 +57,7 @@
   "gui.boss_checklist.editor.guide_help": "Помощь",
   "gui.boss_checklist.editor.guide_id_format": "Формат айди: mod:boss_id",
   "gui.boss_checklist.editor.guide_drop_format": "Формат дропа: mod:item_id, mod:item_id ...",
+  "gui.boss_checklist.editor.guide_y_offset_inverted": "Смещение Y противоположно - увеличьте, чтобы опустить босса вниз и наоборот.",
   "gui.boss_checklist.editor.guide_save_path": "Сохранённые боссы находятся в config/boss_checklist/overlap/",
 
   "command.boss_checklist.invalid_boss_id": "Неверный айди босса: ",

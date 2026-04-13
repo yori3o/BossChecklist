@@ -2,6 +2,7 @@ package com.yori3o.boss_checklist.common.event;
 
 
 import com.yori3o.boss_checklist.common.config.DynamicConfigHandler;
+
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
