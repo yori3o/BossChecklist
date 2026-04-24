@@ -2,7 +2,9 @@ package com.yori3o.boss_checklist.common.client.data;
 
 
 import com.yori3o.boss_checklist.common.client.boss.BossDefinition;
+import com.yori3o.boss_checklist.common.client.gui.BossChecklistScreen;
 import com.yori3o.boss_checklist.common.util.LoggerUtil;
+import com.yori3o.boss_checklist.common.util.MoveCursorUtil;
 import com.yori3o.boss_checklist.impl.PlatformUtil;
 
 import net.minecraft.resources.Identifier;
@@ -12,6 +14,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -30,7 +33,7 @@ public class BossRegistry {
     private static final Identifier BOSSES_JSON = Identifier.fromNamespaceAndPath("boss_checklist", "bosses.json");
     private static final Gson GSON = new Gson();
 
-    private static final Map<String, BossDefinition> DEFINITIONS = new LinkedHashMap<>();
+    public static final Map<String, BossDefinition> DEFINITIONS = new LinkedHashMap<>();
 
 
     public static void reload() {
@@ -56,10 +59,17 @@ public class BossRegistry {
         }
         OverlapManager.loadOverlaps();
         loaded.addAll(OverlapManager.OVERLAP_DEFINITIONS.values());
-        
+
+        if (!OverlapManager.OVERLAP_POSITIONS.isEmpty()) {
+            for (BossDefinition def : loaded) {
+                if (OverlapManager.OVERLAP_POSITIONS.containsKey(def.id())) {
+                    def.setPosition(OverlapManager.OVERLAP_POSITIONS.get(def.id()));
+                }
+            }
+        }
+
         loaded.sort(Comparator.comparingDouble(BossDefinition::position));
 
-        // merge replace
         Map<String, BossDefinition> merged = new LinkedHashMap<>();
 
         for (BossDefinition def : loaded) {
@@ -97,7 +107,7 @@ public class BossRegistry {
         BossNameCache.rebuild();
 
         LoggerUtil.info("Number of registered bosses: " + DEFINITIONS.size());
-        //LoggerUtil.info("Count of all bosses: " + merged.size());
+        //LoggerUtil.info("Number of all bosses: " + merged.size());
     }
 
 
@@ -150,5 +160,54 @@ public class BossRegistry {
         } catch (Exception e) {
             LoggerUtil.errorWithException("Error when merging BossDefinition fields", e);
         }
+    }
+
+    public static boolean moveBossPosition(boolean up, BossDefinition boss, BossChecklistScreen screen, boolean moveCursor, long window) {
+        List<BossDefinition> list = new ArrayList<>(DEFINITIONS.values());
+
+        int index = list.indexOf(boss);
+        if (index == -1) return false;
+
+        int newIndex = up ? index - 1 : index + 1;
+        if (newIndex < 0 || newIndex >= list.size()) return false;
+
+        Collections.swap(list, index, newIndex);
+
+        // обновляем порядок
+        DEFINITIONS.clear();
+        for (BossDefinition def : list) {
+            DEFINITIONS.put(def.id(), def);
+        }
+
+        float posOfBoss = list.get(newIndex).position();
+        float posOfSwappedBoss = list.get(index).position();
+        OverlapManager.addPositionOverlap(list.get(index).id(), posOfBoss);
+        OverlapManager.addPositionOverlap(boss.id(), posOfSwappedBoss);
+        list.get(index).setPosition(posOfBoss);
+        boss.setPosition(posOfSwappedBoss);
+        OverlapManager.savePositionOverlap(OverlapManager.OVERLAP_POSITIONS);
+
+        if (moveCursor) {
+            // старые координаты
+            int oldPage = index / 7;
+            int oldSpread = oldPage / 2;
+            int oldSlot = index % 7;
+
+            // новые координаты
+            int newPage = newIndex / 7;
+            int newSpread = newPage / 2;
+            int newSlot = newIndex % 7;
+
+            int rowDelta = newSlot - oldSlot;
+            int pageDelta = newPage - oldPage;
+            int spreadDelta = newSpread - oldSpread;
+
+            if (spreadDelta != 0) pageDelta = -pageDelta;
+
+            MoveCursorUtil.moveCursorInChecklist(window, rowDelta, pageDelta);
+            screen.flipPage(spreadDelta);
+        }
+
+        return true;
     }
 }

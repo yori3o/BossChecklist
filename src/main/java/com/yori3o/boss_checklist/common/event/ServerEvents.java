@@ -88,11 +88,8 @@ public class ServerEvents {
 
 
     protected static void whenEntityDamaged(LivingEntity entity, DamageSource source, float damageAmount) {
-
-        String killerName = "";
-
         if (source.getEntity() instanceof Player player) {
-            killerName = player.getName().getString();
+            String killerName = player.getName().getString();
 
             EntityType<?> type = entity.getType();
             Identifier id = BuiltInRegistries.ENTITY_TYPE.getKey(type);
@@ -101,38 +98,7 @@ public class ServerEvents {
                 String bossId = id.toString();
 
                 if (ServerBossIdsLoader.isBoss(bossId)) {
-
-                    ServerStorage.addPlayerDamageGlobal(killerName, damageAmount);
-
-                    ServerBossAttempt sa = ServerStorage.serverBossAttempts.get(bossId);
-                    String UUID = entity.getStringUUID();
-
-                    if (sa == null) {
-                        ServerBossAttempt new_sa = new ServerBossAttempt(bossId, UUID);
-                        
-                        new_sa.saveFormattedTime(Instant.now(), true);
-                        new_sa.addPlayerDamage(killerName, damageAmount);
-
-                        ServerStorage.serverBossAttempts.put(bossId, new_sa);
-
-                        ServerStorage.serverBossAttempts.put(bossId, new_sa);
-                    } else {
-                        if (sa.uuid.equals(UUID)) {
-                            sa.addPlayerDamage(killerName, damageAmount);
-                            ServerStorage.serverBossAttempts.remove(bossId);
-                            ServerStorage.serverBossAttempts.put(bossId, sa);
-                        } else {
-                            ServerBossAttempt new_sa = new ServerBossAttempt(bossId, UUID);
-                        
-                            new_sa.saveFormattedTime(Instant.now(), true);
-                            new_sa.addPlayerDamage(killerName, damageAmount);
-
-                            ServerStorage.serverBossAttempts.put(bossId, new_sa);
-
-                            ServerStorage.serverBossAttempts.remove(bossId);
-                            ServerStorage.serverBossAttempts.put(bossId, new_sa);
-                        }
-                    }
+                    handleAttemptLogic(entity, bossId, killerName, damageAmount);
                 } 
             }
         }
@@ -152,12 +118,26 @@ public class ServerEvents {
             String bossId = id.toString();
 
             if (ServerBossIdsLoader.isBoss(bossId)) {
+
+                //LoggerUtil.info(String.valueOf(entity.latest));
+                if (DynamicConfigHandler.server().statisticsEnabled) {
+                    ServerBossAttempt sa = ServerStorage.serverBossAttempts.get(bossId);
+                    if (sa != null) {
+                        String UUID = entity.getStringUUID();
+                        if (UUID == sa.uuid) {
+                            handleAttemptLogic(entity, bossId, killerName, sa.latestHealth);
+                        } else {
+                            handleAttemptLogic(entity, bossId, killerName, entity.getMaxHealth());
+                        }
+                    } else {
+                        handleAttemptLogic(entity, bossId, killerName, entity.getMaxHealth());
+                    }
+                }
+
                 ServerLevel level = (ServerLevel) entity.level();
 
-                String killerName2 = "";
-
-                if (DynamicConfigHandler.server().saveBossKillerName) {
-                    killerName2 = killerName;
+                if (!DynamicConfigHandler.server().saveBossKillerName) {
+                    killerName = "";
                 }
 
                 String startTime = "";
@@ -179,11 +159,48 @@ public class ServerEvents {
                 if (DynamicConfigHandler.server().statisticsEnabled) {
                     top3attemptGlobal = ServerStorage.getTop3PlayersNamesAndDamagesGlobal_SplittedByHashtag();
                 }
-                ServerSender.sendDefeatedBossDataToAllPlayers(level, bossId, killerName2, true,  startTime, endTime, top3attempt, top3attemptGlobal);
+                ServerSender.sendDefeatedBossDataToAllPlayers(level, bossId, killerName, true,  startTime, endTime, top3attempt, top3attemptGlobal);
                 
-                ServerStorage.defeatedBossesAndTheirKillers.put(bossId, killerName2);
+                ServerStorage.defeatedBossesAndTheirKillers.put(bossId, killerName);
                 ServerStorage.needsSaving = true;
             } 
+        }
+    }
+
+    private static void handleAttemptLogic(LivingEntity entity, String bossId, String killerName, float damageAmount) {
+        ServerStorage.addPlayerDamageGlobal(killerName, damageAmount);
+
+        ServerBossAttempt sa = ServerStorage.serverBossAttempts.get(bossId);
+        String UUID = entity.getStringUUID();
+
+        if (sa == null) {
+            ServerBossAttempt new_sa = new ServerBossAttempt(bossId, UUID);
+            
+            new_sa.saveFormattedTime(Instant.now(), true);
+            new_sa.addPlayerDamage(killerName, damageAmount);
+            new_sa.latestHealth = entity.getHealth();
+
+            ServerStorage.serverBossAttempts.put(bossId, new_sa);
+
+            ServerStorage.serverBossAttempts.put(bossId, new_sa);
+        } else {
+            if (sa.uuid.equals(UUID)) {
+                sa.addPlayerDamage(killerName, damageAmount);
+                sa.latestHealth = entity.getHealth();
+                ServerStorage.serverBossAttempts.remove(bossId);
+                ServerStorage.serverBossAttempts.put(bossId, sa);
+            } else {
+                ServerBossAttempt new_sa = new ServerBossAttempt(bossId, UUID);
+            
+                new_sa.saveFormattedTime(Instant.now(), true);
+                new_sa.addPlayerDamage(killerName, damageAmount);
+                new_sa.latestHealth = entity.getHealth();
+
+                //ServerStorage.serverBossAttempts.put(bossId, new_sa);
+
+                ServerStorage.serverBossAttempts.remove(bossId);
+                ServerStorage.serverBossAttempts.put(bossId, new_sa);
+            }
         }
     }
 

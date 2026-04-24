@@ -34,45 +34,33 @@ import net.minecraft.resources.Identifier;
 public class EditorScreen extends Screen {
         
 
-    private CustomButton closeButton;
     private final Screen parent;
+    private CustomButton closeButton, previewButton, saveButton;
     
-    private CustomButton previewButton;
-    private CustomButton saveButton;
-    
-    private EditBox idTextBox;
-    private EditBox nameTextBox;
-    private EditBox modTextBox;
-    private EditBox spawnTextBox;
-    private EditBox dropsTextBox;
-    private CustomNumberEditBox scaleNumberBox;
-    private CustomNumberEditBox yOffsetNumberBox;
-    private CustomNumberEditBox positionNumberBox;
-    private CustomCheckbox brokenModelCheckbox;
-    private CustomCheckbox minibossCheckbox;
+    private EditBox idTextBox, nameTextBox, modTextBox, spawnTextBox, dropsTextBox, versionTextBox, wikiTextBox, addInfoTextBox;
+    private CustomNumberEditBox scaleNumberBox, yOffsetNumberBox, positionNumberBox;
+    private CustomCheckbox brokenModelCheckbox, minibossCheckbox;
 
-    private String id;
-    private String name;
-    private String mod;
-    private String spawn;
-    private String drops;
-    private Integer scale;
-    private Integer yOffset;
+    private String id, name, mod, spawn, drops, version, wikiLink, addtlInfo;
+    private Integer scale, yOffset;
     private Float position;
-    private boolean brokenModel = false;
-    private boolean miniboss = false;
-    
-    private static final int CHECKBOX_X = 400;
-    private static final int CB_BROKEN_MODEL_Y = 75;
-    private static final int CB_MINIBOSS_Y = 95;
+    private boolean brokenModel, miniboss, additionalInfo;
     
     private static final int TEXTBOX_X = 134;
+    private static final int TEXTBOX_X_RIGHT_PAGE = 270;
     private static final int TB_ID_Y = 55;
     private static final int TB_NAME_Y = 85;
     private static final int TB_MOD_Y = 115;
     private static final int TB_SPAWN_Y = 145;
     private static final int TB_DROPS_Y = 175;
-    private static final int TEXTBOX_X_RIGHT_PAGE = 270;
+
+    private static final int ADDITIONAL_X = 0;
+    private static final int TB_VERSION_Y = 55;
+    private static final int CB_BROKEN_MODEL_Y = 85;
+    private static final int CB_MINIBOSS_Y = 105;
+    private static final int TB_WIKI_Y = 145;
+    private static final int TB_ADDINFO_Y = 175;
+
 
     private String errorText;
 
@@ -137,25 +125,25 @@ public class EditorScreen extends Screen {
 
 
         /// --- CHECKBOXES: BROKEN MODEL, MINIBOSS ---
-        brokenModelCheckbox = new CustomCheckbox(bookX + CHECKBOX_X, bookY + CB_BROKEN_MODEL_Y, GuiConstants.MAX_LABEL_WIDTH, 
-            Component.translatable("gui.boss_checklist.editor.broken_model"), brokenModel, 
-            false, false,
-            checked -> {brokenModel = checked;},
-            null
+        brokenModelCheckbox = new CustomCheckbox(bookX + ADDITIONAL_X, bookY + CB_BROKEN_MODEL_Y,
+            Component.translatable("gui.boss_checklist.editor.broken_model"), 
+            GuiConstants.MAX_LABEL_WIDTH,
+            brokenModel, 
+            checked -> {brokenModel = checked;}
         );
         addRenderableWidget(brokenModelCheckbox);
 
-        minibossCheckbox = new CustomCheckbox(bookX + CHECKBOX_X, bookY + CB_MINIBOSS_Y, GuiConstants.MAX_LABEL_WIDTH, 
-            Component.translatable("gui.boss_checklist.editor.miniboss"), miniboss, 
-            false, false,
-            checked -> {miniboss = checked;},
-            null
+        minibossCheckbox = new CustomCheckbox(bookX + ADDITIONAL_X, bookY + CB_MINIBOSS_Y,
+            Component.translatable("gui.boss_checklist.editor.miniboss"), 
+            GuiConstants.MAX_LABEL_WIDTH,
+            miniboss, 
+            checked -> {miniboss = checked;}
         );
         addRenderableWidget(minibossCheckbox);
 
         
 
-        /// --- EDITBOXES: ID, NAME, MOD, SPAWN INFO ---
+        /// --- EDITBOXES: ID, NAME, MOD, SPAWN INFO, VERSION ---
         idTextBox = new EditBox(
             this.font,
             bookX + TEXTBOX_X,
@@ -226,6 +214,49 @@ public class EditorScreen extends Screen {
         if (drops != null) dropsTextBox.setValue(drops);
         addRenderableWidget(dropsTextBox);
 
+        versionTextBox = new EditBox(
+            this.font,
+            bookX + ADDITIONAL_X,
+            bookY + TB_VERSION_Y,
+            105,
+            20,
+            Component.translatable("gui.boss_checklist.editor.boss_version")
+        );
+        versionTextBox.setHint(Component.translatable("gui.boss_checklist.editor.boss_version"));
+        versionTextBox.setMaxLength(300);
+        versionTextBox.setResponder(this::updateVersionText);
+        if (version != null) versionTextBox.setValue(version);
+        addRenderableWidget(versionTextBox);
+
+        wikiTextBox = new EditBox(
+            this.font,
+            bookX + ADDITIONAL_X,
+            bookY + TB_WIKI_Y,
+            105,
+            20,
+            Component.translatable("gui.boss_checklist.editor.boss_wiki_link")
+        );
+        wikiTextBox.setHint(Component.translatable("gui.boss_checklist.editor.boss_wiki_link"));
+        wikiTextBox.setMaxLength(300);
+        wikiTextBox.setResponder(this::updateWikiText);
+        if (wikiLink != null) wikiTextBox.setValue(wikiLink);
+        addRenderableWidget(wikiTextBox);
+
+        addInfoTextBox = new EditBox(
+            this.font,
+            bookX + ADDITIONAL_X,
+            bookY + TB_ADDINFO_Y,
+            105,
+            20,
+            Component.translatable("gui.boss_checklist.editor.boss_additional_info")
+        );
+        addInfoTextBox.setHint(Component.translatable("gui.boss_checklist.editor.boss_additional_info"));
+        addInfoTextBox.setMaxLength(300);
+        addInfoTextBox.setResponder(this::updateAddtlText);
+        if (addtlInfo != null) addInfoTextBox.setValue(addtlInfo);
+        addRenderableWidget(addInfoTextBox);
+
+
 
 
         /// --- NUMBERBOXES: SCALE, Y OFFSET ---
@@ -265,6 +296,7 @@ public class EditorScreen extends Screen {
         id = text;
         suggetName();
         suggetModName();
+        suggetVersion();
     }
     private void updateNameText(String text) {
         name = text;
@@ -277,6 +309,15 @@ public class EditorScreen extends Screen {
     }
     private void updateDropsText(String text) {
         drops = text;
+    }
+    private void updateVersionText(String text) {
+        version = text;
+    }
+    private void updateWikiText(String text) {
+        wikiLink = text;
+    }
+    private void updateAddtlText(String text) {
+        addtlInfo = text;
     }
 
     private void updateScaleValue(String text) {
@@ -295,9 +336,9 @@ public class EditorScreen extends Screen {
         if (!checkFields()) {
             return;
         }
-        BossDefinition definition = new BossDefinition(id, position, scale, yOffset, brokenModel, miniboss, parseDrops(drops));
+        BossDefinition definition = new BossDefinition(id, position, scale, yOffset, brokenModel, miniboss, parseDrops(drops), version, wikiLink, additionalInfo);
         BossProgress progress = new BossProgress();
-        CustomBossEntry customBossEntry = new CustomBossEntry(definition, progress, name, mod, spawn);
+        CustomBossEntry customBossEntry = new CustomBossEntry(definition, progress, name, mod, spawn, addtlInfo);
         Minecraft.getInstance().setScreen(new BossInfoScreen(this, customBossEntry));
     }
 
@@ -377,6 +418,7 @@ public class EditorScreen extends Screen {
         int bookY = (this.height - 256) / 2;
 
         guiGraphics.blit(RenderPipelines.GUI_TEXTURED, GuiConstants.BOOK, bookX, bookY, 0, 0, 512, 256, 512, 256);
+        guiGraphics.blit(RenderPipelines.GUI_TEXTURED, GuiConstants.LEFT_SHEET, bookX - 6, bookY + 45, 0, 0, 122, 167, 122, 167);
     }
 
 
@@ -414,6 +456,10 @@ public class EditorScreen extends Screen {
     }
 
     private boolean checkFields() {
+        if (!isValidNamespacedId(id)) {
+            errorText = Component.translatable("gui.boss_checklist.editor.error_invalid_id").getString();
+            return false;
+        }
         if (position == null) position = 0f;
         if (scale == null) scale = 10;
         if (yOffset == null) yOffset = 0;
@@ -421,10 +467,9 @@ public class EditorScreen extends Screen {
         if (mod == null) mod = "*mod name*";
         if (spawn == null) spawn = "*spawn info*";
         if (drops == null) drops = "";
-        if (!isValidNamespacedId(id)) {
-            errorText = Component.translatable("gui.boss_checklist.editor.error_invalid_id").getString();
-            return false;
-        }
+        if (addtlInfo == null) addtlInfo = "";
+        additionalInfo = false;
+        if (!addtlInfo.isEmpty()) additionalInfo = true;
         return true;
     }
 
@@ -432,8 +477,8 @@ public class EditorScreen extends Screen {
         if (!checkFields()) {
             return;
         }
-        BossDefinition def = new BossDefinition(id, position, scale, yOffset, brokenModel, miniboss, parseDrops(drops));
-        OverlapManager.saveOrAdd(def, name, mod, spawn);
+        BossDefinition def = new BossDefinition(id, position, scale, yOffset, brokenModel, miniboss, parseDrops(drops), version, wikiLink, additionalInfo);
+        OverlapManager.saveAndAdd(def, name, mod, spawn, addtlInfo);
         reloadRequired = true;
     }
 
@@ -442,8 +487,7 @@ public class EditorScreen extends Screen {
             if (!name.isEmpty()) return;
         }   
         if (!isValidNamespacedId(id)) return;
-        String[] s = id.split(":");
-        String translationKey = "entity." + s[0] + "." + s[1];
+        String translationKey = "entity." + id.replace(":", ".");
         if (Language.getInstance().has(translationKey)) {
             nameTextBox.setValue(Component.translatable(translationKey).getString());
         }  
@@ -457,5 +501,15 @@ public class EditorScreen extends Screen {
         String modName = PlatformUtil.getModName(s[0]);
         if (modName == null) return;
         modTextBox.setValue(modName);
+    }
+
+    private void suggetVersion() {
+        if (version != null) {
+            if (!version.isEmpty()) return;
+        }    
+        String[] s = id.split(":", -1);
+        String version = PlatformUtil.getVerison(s[0]);
+        if (version == null) return;
+        versionTextBox.setValue(version);
     }
 }

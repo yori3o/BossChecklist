@@ -53,7 +53,7 @@ public class BossDefinition {
         this.id = id;
     }
 
-    public BossDefinition(String id, float position, int scale, int yOffset, boolean brokenModel, boolean miniboss, List<String> drops) {
+    public BossDefinition(String id, float position, int scale, int yOffset, boolean brokenModel, boolean miniboss, List<String> drops, String version, String wikiLink, boolean additionalInfo) {
         this.id = id;
         this.position = position;
         this.scale = scale;
@@ -61,6 +61,9 @@ public class BossDefinition {
         this.brokenModel = brokenModel;
         if (miniboss) this.type = 2;
         this.drops = drops;
+        this.modVersion = version;
+        this.additionalInfo = additionalInfo;
+        this.wikiLink = wikiLink;
         this.applyDefaults();
     }
 
@@ -104,11 +107,11 @@ public class BossDefinition {
         return wikiLink;
     }
 
-    public float health() {
+    public int health() {
         return health;
     }
 
-    public float armor() {
+    public int armor() {
         return armor;
     }
 
@@ -142,5 +145,9 @@ public class BossDefinition {
                 health = 300;
             }
         }
+    }
+
+    public void setPosition(float position) {
+        this.position = position;
     }
 }

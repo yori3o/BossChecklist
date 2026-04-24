@@ -18,6 +18,8 @@ public class ClientConfig extends JsonConfigManager<ClientConfig.Values> {
         public boolean searchBarEnabled = false;
         public boolean progressBarEnabled = true;
         public boolean statisticsTabEnabled = true;
+        public boolean showHealthAndArmor = true;
+        public boolean showEditorButton = true;
         public int openButtonYOffset = 0;
     }
 

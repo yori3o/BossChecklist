@@ -376,7 +376,7 @@
         "additional_info": false,
         "position": 26.2,
         "type": 2,
-        "mod_version": "4.0.19"
+        "mod_version": "4.0.24"
     },
     {
         "drops": [
@@ -1171,7 +1171,7 @@
         ],
         "id": "minecraft:ender_dragon",
         "scale": 7,
-        "y_offset": 9,
+        "y_offset": -10,
         "rotate_y": 180,
         "broken_model": false,
         "additional_info": false,

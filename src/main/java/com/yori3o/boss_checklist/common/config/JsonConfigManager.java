@@ -16,11 +16,13 @@ import java.time.format.DateTimeFormatter;
  */
 public abstract class JsonConfigManager<T> {
 
+
     private final Class<T> configClass;
     private final Path configPath;
     private final Gson gson;
 
     private T configInstance;
+
 
     protected JsonConfigManager(Class<T> configClass, Path configPath) {
         this.configClass = configClass;

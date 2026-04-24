@@ -7,9 +7,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 
 
-/**
- * You can register a sound here and take it from here later.
- */
+
 public class SoundRegistry {
 
     

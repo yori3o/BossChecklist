@@ -12,6 +12,9 @@ public class GuiConstants {
 
     public static final Identifier BOOK = 
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/book.png");
+        
+    public static final Identifier LEFT_SHEET = 
+        Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/left_sheet.png");
 
 
     public static final Identifier BUTTON_TEXTURE =
@@ -53,6 +56,11 @@ public class GuiConstants {
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/editor.png");
     public static final Identifier EDITOR_BUTTON_TEXTURE_hovered =
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/editor_hovered.png");
+        
+    public static final Identifier CONFIG_BUTTON_TEXTURE =
+        Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/config.png");
+    public static final Identifier CONFIG_BUTTON_TEXTURE_highlighted =
+        Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/buttons/config_highlighted.png");
 
 
     public static final Identifier BOOKMARK =
@@ -97,7 +105,6 @@ public class GuiConstants {
     public static final Identifier NOTICE = 
         Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/notice.png");
 
-    // FOR 1.21.1+
     public static final Identifier PAGE_BUTTON_TEXTURE_backward =
         Identifier.fromNamespaceAndPath("minecraft", "textures/gui/sprites/widget/page_backward.png");
     public static final Identifier PAGE_BUTTON_TEXTURE_backward_highlighted =
@@ -107,16 +114,6 @@ public class GuiConstants {
     public static final Identifier PAGE_BUTTON_TEXTURE_forward_highlighted =
         Identifier.fromNamespaceAndPath("minecraft", "textures/gui/sprites/widget/page_forward_highlighted.png");
 
-    // in 1.20.1 these textures are located in the atlas, and I am too lazy to select their position, so I just copied them from 1.21.1
-    /*public static final Identifier BUTTON_TEXTURE_backward =
-        new Identifier("boss_checklist", "textures/gui/page_backward.png");
-    public static final Identifier BUTTON_TEXTURE_backward_highlighted =
-        new Identifier("boss_checklist", "textures/gui/page_backward_highlighted.png");
-    public static final Identifier BUTTON_TEXTURE_forward =
-        new Identifier("boss_checklist", "textures/gui/page_forward.png");
-    public static final Identifier BUTTON_TEXTURE_forward_highlighted =
-        new Identifier("boss_checklist", "textures/gui/page_forward_highlighted.png");*/
-
 
     public static final int MAX_LABEL_WIDTH = 103;
 
@@ -125,6 +122,11 @@ public class GuiConstants {
     public static final int CLOSE_BUTTON_SIZE = 10;
     
     public static final int EDITOR_BUTTON_SIZE = 11;
+
+    public static final int CONFIG_BUTTON_X = 387;
+    public static final int CONFIG_BUTTON_Y = 65;
+    public static final int CONFIG_BUTTONS_HEIGHT = 22;
+    public static final int CONFIG_BUTTONS_WIDTH = 12;
 
     public static final int DROP_BUTTON_X = 265;
     public static final int DROP_BUTTON_Y = 51;
