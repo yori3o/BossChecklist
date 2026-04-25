@@ -77,11 +77,11 @@
         ],
         "id": "mowziesmobs:ferrous_wroughtnaut",
         "scale": 15,
-        "y_offset": 13,
+        "y_offset": 20,
         "broken_model": false,
         "additional_info": false,
         "position": 5,
-        "mod_version": "1.7.5"
+        "mod_version": "1.8.2"
     },
     {
         "drops": [
@@ -376,7 +376,7 @@
         "additional_info": false,
         "position": 26.2,
         "type": 2,
-        "mod_version": "4.0.19"
+        "mod_version": "4.0.24"
     },
     {
         "drops": [
@@ -389,7 +389,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 27,
-        "mod_version": "1.7.5"
+        "mod_version": "1.8.2"
     },
     {
         "drops": [
@@ -424,7 +424,7 @@
         "broken_model": false,
         "additional_info": true,
         "position": 29,
-        "mod_version": "1.7.5"
+        "mod_version": "1.8.2"
     },
     {
         "drops": [
@@ -437,11 +437,11 @@
         ],
         "id": "mowziesmobs:sculptor",
         "scale": 18,
-        "y_offset": 0,
+        "y_offset": 8,
         "broken_model": false,
         "additional_info": true,
         "position": 30,
-        "mod_version": "1.7.5"
+        "mod_version": "1.8.2"
     },
     {
         "drops": [
@@ -1171,7 +1171,7 @@
         ],
         "id": "minecraft:ender_dragon",
         "scale": 7,
-        "y_offset": 6,
+        "y_offset": -10,
         "rotate_y": 180,
         "broken_model": false,
         "additional_info": false,
@@ -1675,7 +1675,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 107,
-        "mod_version": "3.26"
+        "mod_version": "3.27"
     },
     {
         "drops": [
@@ -1926,7 +1926,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 125,
-        "mod_version": "3.26"
+        "mod_version": "3.27"
     },
     {
         "drops": [
@@ -2037,7 +2037,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 133,
-        "mod_version": "3.26"
+        "mod_version": "3.27"
     },
     {
         "drops": [
@@ -2055,7 +2055,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 134,
-        "mod_version": "3.26"
+        "mod_version": "3.27"
     },
     {
         "drops": [
@@ -2100,7 +2100,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 137,
-        "mod_version": "3.26"
+        "mod_version": "3.27"
     },
     {
         "drops": [
@@ -2163,7 +2163,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 141,
-        "mod_version": "3.26"
+        "mod_version": "3.27"
     },
     {
         "drops": [
@@ -2196,7 +2196,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 143,
-        "mod_version": "3.26"
+        "mod_version": "3.27"
     },
     {
         "drops": [
@@ -2258,7 +2258,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 146,
-        "mod_version": "3.26"
+        "mod_version": "3.27"
     },
     {
         "drops": [

@@ -26,7 +26,7 @@
     "boss_checklist.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.17.0",
+    "fabricloader": "*",
     "minecraft": "1.21.1",
     "fabric-api": "*"
   },

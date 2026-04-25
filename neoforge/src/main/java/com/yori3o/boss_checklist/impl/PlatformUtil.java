@@ -36,6 +36,13 @@ public class PlatformUtil {
                 .orElse(null);
     }
 
+    public static String getModName(String modId) {
+        return ModList.get()
+                .getModContainerById(modId)
+                .map(container -> container.getModInfo().getDisplayName())
+                .orElse(null);
+    }
+
     public static boolean isFabric() {
         return false;
     }

@@ -26,6 +26,10 @@ public class PlatformUtil {
     public static String getVerison(String modId) {
         throw new RuntimeException("Platform-specific implementation missing");
     }
+
+    public static String getModName(String modId) {
+        throw new RuntimeException("Platform-specific implementation missing");
+    }
     
     public static boolean isFabric() {
         throw new RuntimeException("Platform-specific implementation missing");

@@ -23,6 +23,7 @@ public class ServerBossAttempt {
     public String endTime = "";
 
     public Map<String, Float> damageMap = new HashMap<>();
+    public float latestHealth;
 
 
 

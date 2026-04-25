@@ -10,7 +10,7 @@ import org.apache.logging.log4j.LogManager;
 
 public class LoggerUtil {
 
-    public static final Logger LOGGER = LogManager.getLogger("boss_checklist"); // LoggerUtil.LOGGER.info("example");
+    private static final Logger LOGGER = LogManager.getLogger("boss_checklist"); // LoggerUtil.LOGGER.info("example");
 
 
     /// ==================
@@ -38,6 +38,14 @@ public class LoggerUtil {
             LOGGER.error("[boss_checklist] " + message);
         } else {
             LOGGER.error(message);
+        }
+    }
+
+    public static final void errorWithException(String message, Exception e) {
+        if (PlatformUtil.isFabric()) {
+            LOGGER.error("[boss_checklist]: " + message, e);
+        } else {
+            LOGGER.error(message, e);
         }
     }
 
