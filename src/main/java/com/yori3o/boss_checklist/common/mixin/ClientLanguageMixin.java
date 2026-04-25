@@ -11,7 +11,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
@@ -21,10 +20,9 @@ import java.util.HashMap;
 @Mixin(ClientLanguage.class)
 public class ClientLanguageMixin {
 
-
+    
     @Shadow 
     private Map<String, String> storage;
-
 
 
     @Inject(
@@ -36,17 +34,13 @@ public class ClientLanguageMixin {
                                          List<String> languageStack,
                                          boolean defaultRightToLeft,
                                          CallbackInfoReturnable<ClientLanguage> cir) {
+        ClientLanguage lang = cir.getReturnValue();
 
-        ClientLanguage original = cir.getReturnValue();
+        Map<String, String> old = ((ClientLanguageAccessor) lang).getStorage();
 
-        Map<String, String> map = new HashMap<>(original.storage);
+        Map<String, String> newMap = new HashMap<>(old);
+        newMap.putAll(OverlapManager.OVERLAP_EN_US);
 
-        if (!OverlapManager.OVERLAP_EN_US.isEmpty()) {
-            if (!map.containsKey(OverlapManager.OVERLAP_EN_US.keySet().toArray()[0])) {
-                map.putAll(OverlapManager.OVERLAP_EN_US);
-            }
-        }
-        
-        cir.setReturnValue(new ClientLanguage(map, original.isDefaultRightToLeft()));
+        ((ClientLanguageAccessor) lang).setStorage(newMap);
     }
 }

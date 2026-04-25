@@ -5,7 +5,8 @@
 	"client": [
         "PauseScreenMixin",
         "MouseMixin",
-        "ClientLanguageMixin"
+        "ClientLanguageMixin",
+        "ClientLanguageAccessor"
     ],
     "mixins": [
         "DeleteWorldMixin",

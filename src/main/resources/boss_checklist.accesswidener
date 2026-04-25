@@ -1,3 +1,0 @@
-accessWidener	v2	official
-accessible field net/minecraft/client/resources/language/ClientLanguage storage Ljava/util/Map;
-accessible method net/minecraft/client/resources/language/ClientLanguage <init> (Ljava/util/Map;Z)V
