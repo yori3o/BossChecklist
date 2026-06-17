@@ -1,0 +1,2513 @@
+[
+    {
+        "drops": [
+            "hs_bosses:sand_sword_test"
+        ],
+        "id": "hs_bosses:sand_warrior",
+        "scale": 19,
+        "y_offset": 8,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 1
+    },
+    {
+        "drops": [
+            "conjurer_illager:conjurer_hat",
+            "conjurer_illager:music_disc_delve_deeper#10%",
+            "conjurer_illager:throwable_ball",
+            "conjurer_illager:throwing_card",
+            "minecraft:emerald"
+        ],
+        "id": "conjurer_illager:conjurer",
+        "scale": 22,
+        "y_offset": 9,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 2,
+        "type": 2
+    },
+    {
+        "drops": [
+            "bettertridents:trident_fragment",
+            "endrem:guardian_eye#35%",
+            "minecraft:cod#30%",
+            "minecraft:prismarine_crystals#20%",
+            "minecraft:prismarine_shard#66%",
+            "minecraft:tide_armor_trim_smithing_template#20%",
+            "minecraft:wet_sponge"
+        ],
+        "id": "minecraft:elder_guardian",
+        "scale": 12,
+        "y_offset": -5,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 2.5,
+        "type": 2
+    },
+    {
+        "drops": [
+            "minecraft:copper_ingot",
+            "wetlands:copper_gear#50%",
+            "wetlands:elder_gear_golem_heart"
+        ],
+        "id": "wetlands:elder_gear_golem",
+        "scale": 17,
+        "y_offset": 25,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 3,
+        "mod_version": "1.2"
+    },
+    {
+        "drops": [
+            "frostiful:frozen_rod"
+        ],
+        "id": "frostiful:frostologer",
+        "scale": 26,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 4,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mowziesmobs:wrought_axe",
+            "mowziesmobs:wrought_helmet"
+        ],
+        "id": "mowziesmobs:ferrous_wroughtnaut",
+        "scale": 15,
+        "y_offset": 13,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 5,
+        "mod_version": "1.7.5"
+    },
+    {
+        "drops": [
+            "bosses_of_mass_destruction:crystal_fruit",
+            "bosses_of_mass_destruction:void_thorn"
+        ],
+        "id": "bosses_of_mass_destruction:void_blossom",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 6
+    },
+    {
+        "drops": [
+            "twilightforest:naga_scale",
+            "twilightforest:naga_trophy"
+        ],
+        "id": "twilightforest:naga",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 7,
+        "mod_version": "4.8.3287"
+    },
+    {
+        "drops": [
+            "aether:bronze_dungeon_key",
+            "aether:carved_stone"
+        ],
+        "id": "aether:slider",
+        "scale": 20,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 8,
+        "mod_version": "1.5.11"
+    },
+    {
+        "drops": [
+            "armageddon_mod:iron_colossus_relic",
+            "armageddon_mod:iron_colossus_treasure_bag"
+        ],
+        "id": "armageddon_mod:the_iron_colossus",
+        "scale": 16,
+        "y_offset": 18,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 9
+    },
+    {
+        "drops": [
+            "mutantmonsters:mutant_skeleton_limb",
+            "mutantmonsters:mutant_skeleton_pelvis",
+            "mutantmonsters:mutant_skeleton_rib",
+            "mutantmonsters:mutant_skeleton_shoulder_pad",
+            "mutantmonsters:mutant_skeleton_skull"
+        ],
+        "id": "mutantmonsters:mutant_skeleton",
+        "scale": 19,
+        "y_offset": 30,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 10,
+        "type": 2
+    },
+    {
+        "drops": [
+            "minecraft:gunpowder"
+        ],
+        "id": "mutantmonsters:mutant_creeper",
+        "scale": 19,
+        "y_offset": 12,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 11,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mutantmonsters:hulk_hammer"
+        ],
+        "id": "mutantmonsters:mutant_zombie",
+        "scale": 20,
+        "y_offset": 25,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 12,
+        "type": 2
+    },
+    {
+        "drops": [
+            "minecraft:bone",
+            "minecraft:ender_pearl",
+            "twilightforest:exanimate_essence",
+            "twilightforest:fortification_scepter#25%",
+            "twilightforest:lich_trophy",
+            "twilightforest:lifedrain_scepter#25%",
+            "twilightforest:twilight_scepter#25%",
+            "twilightforest:zombie_scepter#25%"
+        ],
+        "id": "twilightforest:lich",
+        "scale": 21,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 13,
+        "mod_version": "4.8.3287"
+    },
+    {
+        "drops": [
+            "twilightforest:diamond_minotaur_axe",
+            "twilightforest:meef_stroganoff",
+            "twilightforest:minoshroom_trophy"
+        ],
+        "id": "twilightforest:minoshroom",
+        "scale": 22,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 14,
+        "mod_version": "4.8.3287"
+    },
+    {
+        "drops": [
+            "goety:spider_egg",
+            "goety:spider_nest#11%",
+            "goety:treasure_pouch",
+            "goety:venomous_fang",
+            "minecraft:cobweb#80%",
+            "minecraft:spider_eye"
+        ],
+        "id": "goety:brood_mother",
+        "scale": 12,
+        "y_offset": -9,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 15,
+        "type": 2,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "armageddon_mod:goblin_lord_relic",
+            "armageddon_mod:goblin_lord_treasure_bag"
+        ],
+        "id": "armageddon_mod:the_gobelin_lord",
+        "scale": 14,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 16
+    },
+    {
+        "drops": [
+            "armageddon_mod:arion_relic",
+            "armageddon_mod:arion_treasurebag"
+        ],
+        "id": "armageddon_mod:arion_tyrantofthe_emerald_wrath_ravager",
+        "scale": 15,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 17
+    },
+    {
+        "drops": [
+            "block_factorys_bosses:sandworm_gauntlet"
+        ],
+        "id": "block_factorys_bosses:sandworm",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 18,
+        "mod_version": "2.0.12"
+    },
+    {
+        "drops": [
+            "block_factorys_bosses:ice_gauntlet"
+        ],
+        "id": "block_factorys_bosses:yeti",
+        "scale": 11,
+        "y_offset": 20,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 19,
+        "mod_version": "2.0.12"
+    },
+    {
+        "drops": [
+            "illagerinvasion:primal_essence",
+            "minecraft:emerald"
+        ],
+        "id": "illagerinvasion:invoker",
+        "scale": 26,
+        "y_offset": 19,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 20
+    },
+    {
+        "drops": [
+            "armageddon_mod:eldorath_relic",
+            "armageddon_mod:eldorath_treasure_bag"
+        ],
+        "id": "armageddon_mod:eldoraththe_ancient_builder",
+        "scale": 16,
+        "y_offset": 8,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 21
+    },
+    {
+        "drops": [
+            "blue_skies:loot_bag_summoner",
+            "blue_skies:summoner_trophy"
+        ],
+        "id": "blue_skies:summoner",
+        "scale": 24,
+        "y_offset": 11,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 22
+    },
+    {
+        "drops": [
+            "bosses_of_mass_destruction:ancient_anima",
+            "minecraft:bone",
+            "minecraft:diamond",
+            "minecraft:enchanted_book",
+            "minecraft:enchanted_book",
+            "minecraft:enchanted_book",
+            "minecraft:enchanted_book",
+            "minecraft:enchanted_book"
+        ],
+        "id": "bosses_of_mass_destruction:lich",
+        "scale": 16,
+        "y_offset": 6,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 23
+    },
+    {
+        "drops": [
+            "galosphere:preserved_flesh",
+            "galosphere:preserved_template"
+        ],
+        "id": "galosphere:berserker",
+        "scale": 21,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 24,
+        "type": 2
+    },
+    {
+        "drops": [
+            "blue_skies:loot_bag_starlit_crusher",
+            "blue_skies:starlit_crusher_trophy"
+        ],
+        "id": "blue_skies:starlit_crusher",
+        "scale": 14,
+        "y_offset": 18,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 25
+    },
+    {
+        "drops": [
+            "eeeabsmobs:heart_of_pagan",
+            "eeeabsmobs:soul_summoning_necklace"
+        ],
+        "id": "eeeabsmobs:corpse_warlock",
+        "scale": 19,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 26,
+        "mod_version": "1.20.1-0.97"
+    },
+    {
+        "drops": [
+            "friendsandfoes:wildfire_crown_fragment"
+        ],
+        "id": "friendsandfoes:wildfire",
+        "scale": 18,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 26.2,
+        "type": 2,
+        "mod_version": "4.0.24"
+    },
+    {
+        "drops": [
+            "minecraft:feather#50%",
+            "mowziesmobs:sol_visage"
+        ],
+        "id": "mowziesmobs:umvuthi",
+        "scale": 15,
+        "y_offset": 13,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 27,
+        "mod_version": "1.7.5"
+    },
+    {
+        "drops": [
+            "goety:treasure_pouch",
+            "minecraft:enchanted_book",
+            "minecraft:glass_bottle#10%",
+            "minecraft:glowstone_dust#10%",
+            "minecraft:gunpowder#10%",
+            "minecraft:redstone#10%",
+            "minecraft:spider_eye#10%",
+            "minecraft:stick#20%",
+            "minecraft:sugar#10%"
+        ],
+        "id": "goety:crone",
+        "scale": 21,
+        "y_offset": 12,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 28,
+        "type": 2,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "mowziesmobs:ice_crystal",
+            "mowziesmobs:music_disc_petiole"
+        ],
+        "id": "mowziesmobs:frostmaw",
+        "scale": 11,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 29,
+        "mod_version": "1.7.5"
+    },
+    {
+        "drops": [
+            "mowziesmobs:earthrend_gauntlet",
+            "mowziesmobs:geomancer_beads#20%",
+            "mowziesmobs:geomancer_belt#20%",
+            "mowziesmobs:geomancer_robe#20%",
+            "mowziesmobs:geomancer_sandals#20%",
+            "mowziesmobs:sculptor_staff#20"
+        ],
+        "id": "mowziesmobs:sculptor",
+        "scale": 18,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 30,
+        "mod_version": "1.7.5"
+    },
+    {
+        "drops": [
+            "soulsweapons:draugr"
+        ],
+        "id": "soulsweapons:draugr_boss",
+        "scale": 17,
+        "y_offset": 17,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 31,
+        "mod_version": "1.4.1-1.21.1-fabric"
+    },
+    {
+        "drops": [
+            "soulsweapons:essence_of_eventide",
+            "soulsweapons:lord_soul_dark"
+        ],
+        "id": "soulsweapons:night_shade",
+        "scale": 17,
+        "y_offset": 20,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 32,
+        "mod_version": "1.4.1-1.21.1-fabric"
+    },
+    {
+        "drops": [
+            "illageandspillage:totem_of_banishment"
+        ],
+        "id": "illageandspillage:magispeller",
+        "scale": 22,
+        "y_offset": 9,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 33,
+        "type": 2
+    },
+    {
+        "drops": [
+            "illageandspillage:spellbound_book"
+        ],
+        "id": "illageandspillage:spiritcaller",
+        "scale": 22,
+        "y_offset": 9,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 34,
+        "type": 2
+    },
+    {
+        "drops": [
+            "illageandspillage:bag_of_horrors"
+        ],
+        "id": "illageandspillage:freakager",
+        "scale": 22,
+        "y_offset": 9,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 35,
+        "type": 2
+    },
+    {
+        "drops": [
+            "twilightforest:fiery_blood",
+            "twilightforest:hydra_chop",
+            "twilightforest:hydra_trophy"
+        ],
+        "id": "twilightforest:hydra",
+        "scale": 5,
+        "y_offset": 6,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 36,
+        "mod_version": "4.8.3287"
+    },
+    {
+        "drops": [
+            "twilightforest:knight_phantom_trophy",
+            "twilightforest:knightmetal_axe",
+            "twilightforest:knightmetal_pickaxe",
+            "twilightforest:knightmetal_sword",
+            "twilightforest:phantom_chestplate",
+            "twilightforest:phantom_helmet"
+        ],
+        "id": "twilightforest:knight_phantom",
+        "scale": 20,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": true,
+        "position": 37,
+        "type": 2,
+        "mod_version": "4.8.3287"
+    },
+    {
+        "drops": [
+            "blue_skies:alchemist_trophy",
+            "blue_skies:loot_bag_alchemist"
+        ],
+        "id": "blue_skies:alchemist",
+        "scale": 24,
+        "y_offset": 11,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 38
+    },
+    {
+        "drops": [
+            "blue_skies:arachnarch_trophy",
+            "blue_skies:loot_bag_arachnarch"
+        ],
+        "id": "blue_skies:arachnarch",
+        "scale": 16,
+        "y_offset": -8,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 39
+    },
+    {
+        "drops": [
+            "armageddon_mod:wither_relic",
+            "armageddon_mod:wither_spine",
+            "endrem:wither_eye#99%",
+            "minecraft:nether_star"
+        ],
+        "id": "minecraft:wither",
+        "scale": 15,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 40
+    },
+    {
+        "drops": [
+            "confluence:gold_coin",
+            "confluence:lesser_healing_potion",
+            "confluence:ninja_boots#66%",
+            "confluence:ninja_chestplate#66%",
+            "confluence:ninja_helmet#66%",
+            "confluence:ninja_leggings#66%",
+            "confluence:silver_coin",
+            "confluence:slime_hook",
+            "confluence:solidifier",
+            "terra_curio:royal_gel",
+            "terra_entity:slimy_saddle",
+            "terra_entity:slime_staff#3%"
+        ],
+        "id": "terra_entity:king_slime",
+        "scale": 7,
+        "y_offset": 25,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 41,
+        "mod_version": "1.2.1"
+    },
+    {
+        "drops": [
+            "confluence:binoculars#3%",
+            "confluence:corrupt_seed",
+            "confluence:crimson_seed",
+            "confluence:gold_coin",
+            "confluence:lesser_healing_potion",
+            "confluence:raw_crimtane",
+            "confluence:raw_demonite",
+            "confluence:silver_coin",
+            "confluence:unholy_arrow",
+            "terra_curio:shield_of_cthulhu"
+        ],
+        "id": "terra_entity:eye_of_cthulhu",
+        "scale": 12,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 42,
+        "mod_version": "1.2.1"
+    },
+    {
+        "drops": [
+            "confluence:gold_coin",
+            "confluence:lesser_healing_potion",
+            "confluence:raw_demonite",
+            "confluence:shadow_scale",
+            "confluence:silver_coin",
+            "terra_curio:worm_scarf"
+        ],
+        "id": "terra_entity:eater_of_worlds",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 43,
+        "mod_version": "1.2.1"
+    },
+    {
+        "drops": [
+            "confluence:gold_coin",
+            "confluence:lesser_healing_potion",
+            "confluence:raw_crimtane",
+            "confluence:silver_coin",
+            "confluence:tissue_sample",
+            "terra_curio:brain_of_confusion"
+        ],
+        "id": "terra_entity:brain_of_cthulhu",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": true,
+        "position": 44,
+        "mod_version": "1.2.1"
+    },
+    {
+        "drops": [
+            "confluence:bee_gun#33%",
+            "confluence:bee_keeper#33%",
+            "confluence:beenade",
+            "confluence:gold_coin",
+            "confluence:hive_wand",
+            "confluence:royal_wax",
+            "confluence:silver_coin",
+            "confluence:the_bees_knees#33%",
+            "minecraft:honey_bottle",
+            "terra_curio:hive_pack",
+            "terra_curio:honey_comb#33%",
+            "terra_entity:honeyed_goggles#11%"
+        ],
+        "id": "terra_entity:queen_bee",
+        "scale": 14,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 45,
+        "mod_version": "1.2.1"
+    },
+    {
+        "drops": [
+            "confluence:book_of_skulls#33%",
+            "confluence:gold_coin",
+            "confluence:healing_potion",
+            "confluence:silver_coin",
+            "confluence:skeletron_hand",
+            "terra_curio:bone_glove"
+        ],
+        "id": "terra_entity:skeletron",
+        "scale": 14,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 46,
+        "mod_version": "1.2.1"
+    },
+    {
+        "drops": [
+            "confluence:radio_thing#33%",
+            "confluence:gold_coin",
+            "confluence:healing_potion",
+            "confluence:silver_coin",
+            "confluence:weather_pain#25%",
+            "confluence:lucy_the_axe#25%",
+            "terra_entity:chester_staff#33%"
+        ],
+        "id": "terra_entity:deerclops",
+        "scale": 14,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": true,
+        "position": 46,
+        "mod_version": "1.2.1"
+    },
+    {
+        "drops": [
+            "armageddon_mod:zoranth_relic",
+            "armageddon_mod:zoranth_treasure_bag"
+        ],
+        "id": "armageddon_mod:zoranththe_forgotten_one",
+        "scale": 15,
+        "y_offset": 9,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 47
+    },
+    {
+        "drops": [
+            "arthropocolypse:gilded_organ",
+            "arthropocolypse:gilded_scale"
+        ],
+        "id": "arthropocolypse:behemoth_desert_spider",
+        "scale": 12,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 48,
+        "mod_version": "1.0.6"
+    },
+    {
+        "drops": [
+            "ars_nouveau:wilden_tribute"
+        ],
+        "id": "ars_nouveau:wilden_boss",
+        "scale": 14,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 49,
+        "mod_version": "5.11.3"
+    },
+    {
+        "drops": [
+            "remnant_bosses:ossukage_sword"
+        ],
+        "id": "remnant_bosses:ossukage",
+        "scale": 20,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://www.youtube.com/watch?v=8djzQBruLto&t=19s",
+        "position": 50,
+        "health": 800,
+        "armor": 0
+    },
+    {
+        "drops": [
+            "goety:forbidden_fragment#25%",
+            "goety:music_disc_apostle#25%",
+            "goety:treasure_pouch",
+            "minecraft:ancient_debris",
+            "minecraft:blaze_rod#70%",
+            "minecraft:book#70%",
+            "minecraft:enchanted_golden_apple",
+            "minecraft:netherite_ingot",
+            "minecraft:paper#70%"
+        ],
+        "id": "goety:apostle",
+        "scale": 23,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": true,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 51,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "goety:music_disc_vizier#25%",
+            "goety:treasure_pouch",
+            "goetydelight:royal_cake_block#5%"
+        ],
+        "id": "goety:vizier",
+        "scale": 23,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 52,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "bosses_of_mass_destruction:blazing_eye",
+            "minecraft:ancient_debris"
+        ],
+        "id": "bosses_of_mass_destruction:gauntlet",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 53
+    },
+    {
+        "drops": [
+            "irons_spellbooks:arcane_essence",
+            "irons_spellbooks:blank_rune#75%",
+            "irons_spellbooks:blood_staff#50%",
+            "irons_spellbooks:epic_ink#76%",
+            "irons_spellbooks:legendary_ink#76%",
+            "irons_spellbooks:necronomicon_spell_book#50%",
+            "irons_spellbooks:rare_ink#58%",
+            "irons_spellbooks:scroll"
+        ],
+        "id": "irons_spellbooks:dead_king",
+        "scale": 13,
+        "y_offset": 11,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 54,
+        "mod_version": "1.21.1-3.15.4"
+    },
+    {
+        "drops": [
+            "minecells:boss_stem_cell",
+            "minecells:monster_cell",
+            "minecraft:diamond",
+            "minecraft:emerald",
+            "minecraft:gold_ingot"
+        ],
+        "id": "minecells:concierge",
+        "scale": 17,
+        "y_offset": 18,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 55,
+        "mod_version": "2.0.3"
+    },
+    {
+        "drops": [
+            "minecells:boss_stem_cell",
+            "minecells:guts",
+            "minecells:monster_cell",
+            "minecells:monsters_eye",
+            "minecells:sewer_calamari",
+            "minecraft:diamond",
+            "minecraft:emerald",
+            "minecraft:gold_ingot"
+        ],
+        "id": "minecells:conjunctivius",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "rotate_y": 180,
+        "position": 56,
+        "mod_version": "2.0.3"
+    },
+    {
+        "drops": [
+            "aether:silver_dungeon_key",
+            "minecraft:golden_sword"
+        ],
+        "id": "aether:valkyrie_queen",
+        "scale": 24,
+        "y_offset": 9,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 57,
+        "mod_version": "1.5.11"
+    },
+    {
+        "drops": [
+            "aether:cold_aercloud",
+            "deep_aether:brass_dungeon_key",
+            "deep_aether:floaty_scarf"
+        ],
+        "id": "deep_aether:eots_controller",
+        "scale": 20,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 58,
+        "mod_version": "1.1.4"
+    },
+    {
+        "drops": [
+            "twilightforest:carminite",
+            "twilightforest:fiery_tears",
+            "twilightforest:ur_ghast_trophy"
+        ],
+        "id": "twilightforest:ur_ghast",
+        "scale": 3,
+        "y_offset": 6,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 59,
+        "mod_version": "4.8.3287"
+    },
+    {
+        "drops": [
+            "twilightforest:alpha_yeti_fur",
+            "twilightforest:alpha_yeti_trophy",
+            "twilightforest:ice_bomb"
+        ],
+        "id": "twilightforest:alpha_yeti",
+        "scale": 10,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 60,
+        "mod_version": "4.8.3287"
+    },
+    {
+        "drops": [
+            "minecraft:packed_ice",
+            "minecraft:snowball",
+            "twilightforest:seeker_bow#50%",
+            "twilightforest:snow_queen_trophy",
+            "twilightforest:triple_bow#50%"
+        ],
+        "id": "twilightforest:snow_queen",
+        "scale": 22,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 61,
+        "mod_version": "4.8.3287"
+    },
+    {
+        "drops": [
+            "goety:treasure_pouch",
+            "minecraft:skeleton_skull#25%"
+        ],
+        "id": "goety:skull_lord",
+        "scale": 24,
+        "y_offset": -20,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 62,
+        "type": 2,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "companions:old_cloth",
+            "companions:relic_gold"
+        ],
+        "id": "companions:sacred_pontiff",
+        "scale": 13,
+        "y_offset": 21,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 63,
+        "mod_version": "1.2.2"
+    },
+    {
+        "drops": [
+            "goety:ectoplasm#50%",
+            "goety:forbidden_piece#3%",
+            "goety:treasure_pouch",
+            "goety:withered_manuscript",
+            "minecraft:blaze_rod#66%",
+            "minecraft:bone#66%",
+            "minecraft:netherite_scrap#66%",
+            "minecraft:wither_skeleton_skull#3%"
+        ],
+        "id": "goety:wither_necromancer",
+        "scale": 18,
+        "y_offset": 18,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 64,
+        "type": 2,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "block_factorys_bosses:dragon_bone",
+            "block_factorys_bosses:dragon_skull"
+        ],
+        "id": "block_factorys_bosses:infernal_dragon",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 64.5,
+        "mod_version": "2.0.12"
+    },
+    {
+        "drops": [
+            "block_factorys_bosses:knight_sword"
+        ],
+        "id": "block_factorys_bosses:underworld_knight",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 64.6,
+        "mod_version": "2.0.12"
+    },
+    {
+        "drops": [
+            "alexsmobs:hemolymph_sac",
+            "alexsmobs:warped_muscle#70%"
+        ],
+        "id": "alexsmobs:warped_mosco",
+        "scale": 15,
+        "y_offset": 15,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_adrenaline_rush",
+            "mutantmore:mutant_jungle_zombie_vine_seed"
+        ],
+        "id": "mutantmore:mutant_jungle_zombie",
+        "scale": 14,
+        "y_offset": 12,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.1,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_forces_unknown",
+            "mutantmore:mutant_frozen_zombie_spikes"
+        ],
+        "id": "mutantmore:mutant_frozen_zombie",
+        "scale": 17,
+        "y_offset": 21,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.2,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_aegis",
+            "mutantmore:mutant_husk_vocal_cords"
+        ],
+        "id": "mutantmore:mutant_husk",
+        "scale": 16,
+        "y_offset": 18,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.3,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_adrenaline_rush",
+            "mutantmore:mutant_wither_skeleton_limb",
+            "mutantmore:mutant_wither_skeleton_pelvis",
+            "mutantmore:mutant_wither_skeleton_rib",
+            "mutantmore:mutant_wither_skeleton_shoulder_pad",
+            "mutantmore:mutant_wither_skeleton_skull"
+        ],
+        "id": "mutantmore:mutant_wither_skeleton",
+        "scale": 14,
+        "y_offset": 21,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.4,
+        "type": 2
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_adrenaline_rush",
+            "mutantmore:mutant_hoglin_tusk"
+        ],
+        "id": "mutantmore:mutant_hoglin",
+        "scale": 13,
+        "y_offset": 7,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.5,
+        "type": 2
+    },
+    {
+        "drops": [
+            "minecraft:blaze_powder",
+            "mutantmore:disc_fragment_aegis",
+            "mutantmore:mutant_blaze_core"
+        ],
+        "id": "mutantmore:mutant_blaze",
+        "scale": 14,
+        "y_offset": 23,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.6,
+        "type": 2
+    },
+    {
+        "drops": [
+            "confluence:pwnhammer",
+            "terra_curio:warrior_emblem#25%",
+            "terra_curio:ranger_emblem#25%",
+            "terra_curio:sorcerer_emblem#25%",
+            "confluence:summoner_emblem#25%",
+            "confluence:gold_coin",
+            "confluence:healing_potion",
+            "confluence:breaker_blade#50%",
+            "terra_entity:firecracker#50%"
+        ],
+        "id": "terra_entity:wall_of_flesh",
+        "scale": 14,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": true,
+        "position": 46,
+        "mod_version": "1.2.1"
+    },
+    {
+        "drops": [
+            "aquamirae:dead_sea_scroll#60%",
+            "aquamirae:fin#60%",
+            "aquamirae:sharp_bones#60%",
+            "aquamirae:ship_graveyard_echo",
+            "aquamirae:spinefish#60%",
+            "aquamirae:treasure_pouch#85%"
+        ],
+        "id": "aquamirae:eel",
+        "scale": 13,
+        "y_offset": 16,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.91,
+        "type": 2,
+        "mod_version": "6.2.0"
+    },
+    {
+        "drops": [
+            "aquamirae:frozen_key",
+            "aquamirae:music_disc_forsaken_drownage#10%",
+            "aquamirae:oxygen_tank#50%",
+            "aquamirae:ship_graveyard_echo#50%",
+            "aquamirae:three_bolt_helmet",
+            "aquamirae:treasure_pouch#50%",
+            "minecraft:filled_map"
+        ],
+        "id": "aquamirae:captain_cornelia",
+        "scale": 21,
+        "y_offset": 7,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 65.92,
+        "mod_version": "6.2.0"
+    },
+    {
+        "drops": [
+            "armageddon_mod:ender_dragon_relic",
+            "armageddon_mod:ender_dragon_treasurebag",
+            "irons_spellbooks:arcane_essence",
+            "irons_spellbooks:dragonskin",
+            "minecraft:dragon_egg"
+        ],
+        "id": "minecraft:ender_dragon",
+        "scale": 7,
+        "y_offset": -10,
+        "rotate_y": 180,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 66
+    },
+    {
+        "drops": [
+            "minecraft:ender_eye",
+            "minecraft:ender_pearl"
+        ],
+        "id": "mutantmonsters:mutant_enderman",
+        "scale": 20,
+        "y_offset": 38,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 67,
+        "type": 2
+    },
+    {
+        "drops": [
+            "unusualend:ancient_shard",
+            "unusualend:golem_orb",
+            "unusualend:music_disc_endstone_golem_theme#50%"
+        ],
+        "id": "unusualend:endstone_golem",
+        "scale": 16,
+        "y_offset": 13,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 68
+    },
+    {
+        "drops": [
+            "mutantmore:disc_fragment_forces_unknown",
+            "mutantmore:mutant_shulker_shell"
+        ],
+        "id": "mutantmore:mutant_shulker",
+        "scale": 15,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 68.5,
+        "type": 2
+    },
+    {
+        "drops": [
+            "bosses_of_mass_destruction:obsidian_heart",
+            "minecraft:obsidian",
+            "minecraft:purpur_block"
+        ],
+        "id": "bosses_of_mass_destruction:obsidilith",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 69
+    },
+    {
+        "drops": [
+            "sleepy_hollows:lootbag"
+        ],
+        "id": "sleepy_hollows:horseman",
+        "scale": 19,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://github.com/Cursee-Development/Sleepy-Hollows/wiki/Introduction-&-First-Steps/",
+        "position": 70
+    },
+    {
+        "drops": [
+            "armageddon_mod:elvenite_paladin_relic",
+            "armageddon_mod:elvenite_paladin_treasure_bag"
+        ],
+        "id": "armageddon_mod:elvenite_paladin",
+        "scale": 14,
+        "y_offset": 9,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 71
+    },
+    {
+        "drops": [
+            "deeperdarker:soul_crystal"
+        ],
+        "id": "deeperdarker:stalker",
+        "scale": 16,
+        "y_offset": 28,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 72
+    },
+    {
+        "drops": [
+            "armageddon_mod:vaedric_the_fallen_wanderer_relic",
+            "armageddon_mod:vaedric_treasure_bag"
+        ],
+        "id": "armageddon_mod:vaedricthe_fallen_wanderer",
+        "scale": 14,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 76
+    },
+    {
+        "id": "terramity:gob",
+        "drops": [
+            "minecraft:diamond#36%",
+            "minecraft:gold_ingot",
+            "terramity:belt_of_the_gnome_king#33%",
+            "terramity:dimlite_upgrade_smithing_template#50%",
+            "terramity:gobs_claymore#33%",
+            "terramity:gobs_gilded_hat_helmet#33%",
+            "terramity:iridescent_shard#36%",
+            "terramity:lost_soul",
+            "terramity:music_sheet_of_the_gnome_king",
+            "terramity:onyx#36%",
+            "terramity:ruby#36%",
+            "terramity:sapphire#36%",
+            "terramity:topaz#36%",
+            "terramity:virentium_upgrade_smithing_template#50%"
+        ],
+        "scale": 14,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 77
+    },
+    {
+        "drops": [
+            "rediscovered:red_dragon_egg"
+        ],
+        "id": "rediscovered:red_dragon",
+        "scale": 7,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 79
+    },
+    {
+        "drops": [
+            "dungeonnowloading:chaotic_hexahedron",
+            "dungeonnowloading:great_experience_bottle",
+            "dungeonnowloading:spawner_blade#25%",
+            "dungeonnowloading:spawner_fragment",
+            "dungeonnowloading:spawner_frame#50%",
+            "minecraft:diamond"
+        ],
+        "id": "dungeonnowloading:chaos_spawner",
+        "scale": 12,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 80
+    },
+    {
+        "drops": [
+            "mythsandlegends:umbras_whisper"
+        ],
+        "id": "mythsandlegends:black_charro",
+        "scale": 25,
+        "y_offset": -25,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 80.6,
+        "mod_version": "0.0.8.5"
+    },
+    {
+        "drops": [
+            "ancient_elements:boss_disc#30%",
+            "ancient_elements:ruined_remnant",
+            "ancient_elements:sanctum_shard#30%"
+        ],
+        "id": "ancient_elements:ancient_elemental",
+        "scale": 20,
+        "y_offset": 15,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 81,
+        "type": 2
+    },
+    {
+        "drops": [
+            "dungeonnowloading:combustion_cell",
+            "dungeonnowloading:great_experience_bottle",
+            "dungeonnowloading:music_disc_clash_of_duality_boros",
+            "dungeonnowloading:redstone_suppressor",
+            "minecraft:diamond"
+        ],
+        "id": "dungeonnowloading:fairkeeper_boros",
+        "scale": 11,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 82
+    },
+    {
+        "drops": [
+            "dungeonnowloading:catalyzed_redstone",
+            "dungeonnowloading:great_experience_bottle",
+            "dungeonnowloading:music_disc_clash_of_duality_ouros",
+            "dungeonnowloading:redstone_chip",
+            "minecraft:diamond"
+        ],
+        "id": "dungeonnowloading:fairkeeper_ouros",
+        "scale": 11,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 83
+    },
+    {
+        "drops": [
+            "alexsmobs:void_worm_eye",
+            "alexsmobs:void_worm_mandible"
+        ],
+        "id": "alexsmobs:void_worm",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 88
+    },
+    {
+        "drops": [
+            "armageddon_mod:bringer_of_doom_relic",
+            "armageddon_mod:the_bringer_of_doom_treasure_bag"
+        ],
+        "id": "armageddon_mod:bringer_of_doom",
+        "scale": 15,
+        "y_offset": 8,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 89
+    },
+    {
+        "drops": [
+            "armageddon_mod:the_calamities_relic_1",
+            "armageddon_mod:the_calamities_treasure_bag"
+        ],
+        "id": "armageddon_mod:the_discord",
+        "scale": 14,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 90
+    },
+    {
+        "drops": [
+            "armageddon_mod:sanghor_lord_of_blood_treasure_bag",
+            "armageddon_mod:sanghor_lord_of_the_blood_relic"
+        ],
+        "id": "armageddon_mod:sanghor_lord_of_blood",
+        "scale": 10,
+        "y_offset": 12,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 92
+    },
+    {
+        "drops": [
+            "born_in_chaos_v1:bagof_candy",
+            "born_in_chaos_v1:lord_pumpkinheads_hat_helmet",
+            "born_in_chaos_v1:lord_pumpkinheads_lamp#50%",
+            "born_in_chaos_v1:magical_holiday_candy",
+            "born_in_chaos_v1:pumpkin_bullet",
+            "born_in_chaos_v1:pumpkinhandgun",
+            "born_in_chaos_v1:smoldering_infernal_ember",
+            "born_in_chaos_v1:soulbane"
+        ],
+        "id": "born_in_chaos_v1:lord_pumpkinhead",
+        "scale": 19,
+        "y_offset": 15,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 93
+    },
+    {
+        "drops": [
+            "soulsweapons:arkenstone",
+            "soulsweapons:lord_soul_rose",
+            "soulsweapons:nightfall",
+            "soulsweapons:soul_ingot"
+        ],
+        "id": "soulsweapons:returning_knight",
+        "scale": 10,
+        "y_offset": 52,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 94,
+        "mod_version": "1.4.1-1.21.1-fabric"
+    },
+    {
+        "drops": [
+            "soulsweapons:darkin_blade",
+            "soulsweapons:lord_soul_red",
+            "soulsweapons:withered_demon_heart"
+        ],
+        "id": "soulsweapons:accursed_lord_boss",
+        "scale": 10,
+        "y_offset": 19,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 95,
+        "mod_version": "1.4.1-1.21.1-fabric"
+    },
+    {
+        "drops": [
+            "soulsweapons:dawnbreaker",
+            "soulsweapons:lord_soul_day_stalker"
+        ],
+        "id": "soulsweapons:day_stalker",
+        "scale": 11,
+        "y_offset": 18,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 96,
+        "mod_version": "1.4.1-1.21.1-fabric"
+    },
+    {
+        "drops": [
+            "soulsweapons:forlorn_scythe",
+            "soulsweapons:lord_soul_night_prowler",
+            "soulsweapons:soul_reaper"
+        ],
+        "id": "soulsweapons:night_prowler",
+        "scale": 11,
+        "y_offset": 18,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 97,
+        "mod_version": "1.4.1-1.21.1-fabric"
+    },
+    {
+        "drops": [
+            "minecraft:netherite_upgrade_smithing_template",
+            "soulsweapons:blood_vial_recipe_page",
+            "soulsweapons:chaos_crown",
+            "soulsweapons:chaos_robes",
+            "soulsweapons:lord_soul_void",
+            "soulsweapons:withered_wabbajack"
+        ],
+        "id": "soulsweapons:chaos_monarch",
+        "scale": 11,
+        "y_offset": 28,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 98,
+        "mod_version": "1.4.1-1.21.1-fabric"
+    },
+    {
+        "drops": [
+            "soulsweapons:essence_of_luminescence",
+            "soulsweapons:lord_soul_white",
+            "soulsweapons:moonlight_greatsword",
+            "soulsweapons:moonstone"
+        ],
+        "id": "soulsweapons:moonknight",
+        "scale": 10,
+        "y_offset": 52,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 99,
+        "mod_version": "1.4.1-1.21.1-fabric"
+    },
+    {
+        "drops": [
+            "adventurez:blackstone_golem_heart",
+            "adventurez:gilded_netherite_fragment#70%",
+            "minecraft:ancient_debris#25%",
+            "minecraft:blackstone",
+            "minecraft:netherite_scrap#25%"
+        ],
+        "id": "adventurez:blackstone_golem",
+        "scale": 13,
+        "y_offset": 18,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://globox1997.github.io/wiki/mods/AdventureZ/Structures/Blackstone_Altar/",
+        "position": 100,
+        "mod_version": "1.5.0"
+    },
+    {
+        "drops": [
+            "aether:gold_dungeon_key",
+            "aether:sun_altar"
+        ],
+        "id": "aether:sun_spirit",
+        "scale": 16,
+        "y_offset": 12,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 101,
+        "mod_version": "1.5.11"
+    },
+    {
+        "drops": [
+            "minecraft:diamond#36%",
+            "terramity:accursed_soul",
+            "terramity:cosmilite_upgrade_smithing_template#50%",
+            "terramity:evil_king_armor_boots#25%",
+            "terramity:evil_king_armor_chestplate#25%",
+            "terramity:evil_king_armor_helmet#25%",
+            "terramity:evil_king_armor_leggings#25%",
+            "terramity:gaianite_cluster",
+            "terramity:giant_sniffers_hoof#33%",
+            "terramity:guided_energy_blast#33%",
+            "terramity:hermit_bean",
+            "terramity:iridescent_shard#36%",
+            "terramity:music_sheet_of_the_legendary_super_sniffer",
+            "terramity:onyx#36%",
+            "terramity:ruby#36%",
+            "terramity:sapphire#36%",
+            "terramity:super_sniffers_pelt#33%",
+            "terramity:topaz#36%",
+            "terramity:virentium_upgrade_smithing_template#50%"
+        ],
+        "id": "terramity:super_sniffer",
+        "scale": 11,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 102
+    },
+    {
+        "drops": [
+            "adventurez:prime_eye"
+        ],
+        "id": "adventurez:the_eye",
+        "scale": 15,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://globox1997.github.io/wiki/mods/AdventureZ/Structures/Eye_Shrine/",
+        "position": 103,
+        "mod_version": "1.5.0"
+    },
+    {
+        "drops": [
+            "goety:treasure_pouch",
+            "minecraft:emerald"
+        ],
+        "id": "goety:minister",
+        "scale": 23,
+        "y_offset": 15,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 104,
+        "type": 2,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "goety:treasure_pouch",
+            "minecraft:cobblestone",
+            "minecraft:diamond",
+            "minecraft:redstone"
+        ],
+        "id": "goety:hostile_redstone_golem",
+        "scale": 14,
+        "y_offset": 20,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 105,
+        "type": 2,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "goety:music_disc_rm#25%",
+            "goety:treasure_pouch",
+            "minecraft:cobblestone",
+            "minecraft:diamond_block",
+            "minecraft:emerald",
+            "minecraft:redstone_block"
+        ],
+        "id": "goety:hostile_redstone_monstrosity",
+        "scale": 10,
+        "y_offset": 25,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 106,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "cataclysm:infernal_forge",
+            "cataclysm:lava_power_cell",
+            "cataclysm:monstrous_horn",
+            "cataclysm:music_disc_netherite_monstrosity#10%",
+            "lendersdelight:netherite_monstrosity_meat",
+            "traveloptics:infernal_devastator#45%",
+            "traveloptics:pyro_spellweave_ingot"
+        ],
+        "id": "cataclysm:netherite_monstrosity",
+        "scale": 9,
+        "y_offset": 18,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 107,
+        "mod_version": "3.26"
+    },
+    {
+        "drops": [
+            "armageddon_mod:zoranth_newborn_of_the_zenith_relic",
+            "armageddon_mod:zoranth_newborn_of_the_zenith_treasure_bag"
+        ],
+        "id": "armageddon_mod:zoranth_newborn_of_the_zenith",
+        "scale": 14,
+        "y_offset": 8,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 108
+    },
+    {
+        "drops": [
+            "fdbosses:chesed_trophy",
+            "fdbosses:lightning_core",
+            "fdbosses:phase_sphere"
+        ],
+        "id": "fdbosses:chesed",
+        "scale": 15,
+        "y_offset": 2,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 109,
+        "mod_version": "3.1.0.3"
+    },
+    {
+        "drops": [
+            "fdbosses:fire_and_ice_core",
+            "fdbosses:malkuth_fist",
+            "fdbosses:malkuth_trophy"
+        ],
+        "id": "fdbosses:malkuth",
+        "scale": 15,
+        "y_offset": 8,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 110,
+        "mod_version": "3.1.0.3"
+    },
+    {
+        "drops": [
+            "fdbosses:divine_gear",
+            "fdbosses:geburah_trophy",
+            "fdbosses:justice_core",
+            "fdbosses:polished_justicestone"
+        ],
+        "id": "fdbosses:geburah",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": true,
+        "position": 110.1,
+        "mod_version": "3.1.0.3"
+    },
+    {
+        "drops": [
+            "legendary_monsters:nature_crystal"
+        ],
+        "id": "legendary_monsters:overgrown_colossus",
+        "scale": 19,
+        "y_offset": 20,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 112,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:crystal_of_sandstorm"
+        ],
+        "id": "legendary_monsters:dune_sentinel",
+        "scale": 12,
+        "y_offset": 15,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 113,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:dinosaur_bone"
+        ],
+        "id": "legendary_monsters:skeletosaurus",
+        "scale": 10,
+        "y_offset": 13,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 114,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:withered_bone"
+        ],
+        "id": "legendary_monsters:withered_abomination",
+        "scale": 15,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 115,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:anchor_handle"
+        ],
+        "id": "legendary_monsters:ancient_guardian",
+        "scale": 18,
+        "y_offset": 8,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 116,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:lava_eaters_skin"
+        ],
+        "id": "legendary_monsters:lava_eater",
+        "scale": 17,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 117,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:frozen_rune"
+        ],
+        "id": "legendary_monsters:frostbitten_golem",
+        "scale": 18,
+        "y_offset": 15,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 118,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:chorus_crystal"
+        ],
+        "id": "legendary_monsters:endersent",
+        "scale": 12,
+        "y_offset": 34,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 119,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:large_shulker_shell",
+            "minecraft:shulker_shell"
+        ],
+        "id": "legendary_monsters:shulker_mimic",
+        "scale": 18,
+        "y_offset": 11,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 120,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:air_rune",
+            "legendary_monsters:atmospheric_boots"
+        ],
+        "id": "legendary_monsters:cloud_golem",
+        "scale": 16,
+        "y_offset": 8,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 122,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:corrupted_soul"
+        ],
+        "id": "legendary_monsters:posessed_paladin",
+        "scale": 16,
+        "y_offset": 6,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 121,
+        "type": 2,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "legendary_monsters:portal_shard"
+        ],
+        "id": "legendary_monsters:the_obliterator",
+        "scale": 14,
+        "y_offset": 21,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 122.5,
+        "mod_version": "1.20.1 (v2.0.6)"
+    },
+    {
+        "drops": [
+            "knightquest:chaotic_essence"
+        ],
+        "id": "knightquest:netherman",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 123
+    },
+    {
+        "drops": [
+            "aether:blue_aercloud",
+            "lost_aether_content:platinum_key"
+        ],
+        "id": "lost_aether_content:aerwhale_king",
+        "scale": 5,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 124,
+        "mod_version": "1.2.3"
+    },
+    {
+        "drops": [
+            "cataclysm:gauntlet_of_guard",
+            "cataclysm:music_disc_ender_guardian#10%",
+            "lendersdelight:ender_guardian_crystal",
+            "traveloptics:void_spellweave_ingot",
+            "traveloptics:voidstrike_reaper#40%"
+        ],
+        "id": "cataclysm:ender_guardian",
+        "scale": 15,
+        "y_offset": 22,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 125,
+        "mod_version": "3.26"
+    },
+    {
+        "drops": [
+            "call_of_yucutan:elder_bone",
+            "call_of_yucutan:fragment_of_death"
+        ],
+        "id": "call_of_yucutan:ah_puch",
+        "scale": 13,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 126,
+        "mod_version": "1.0.13"
+    },
+    {
+        "drops": [
+            "call_of_yucutan:ancient_gold_ingot",
+            "call_of_yucutan:fragment_of_rebirth"
+        ],
+        "id": "call_of_yucutan:kukulkan",
+        "scale": 11,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 127,
+        "mod_version": "1.0.13"
+    },
+    {
+        "drops": [
+            "goety:ectoplasm",
+            "goety:shadow_essence",
+            "minecraft:ender_pearl"
+        ],
+        "id": "goety:wight",
+        "scale": 17,
+        "y_offset": 17,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 128,
+        "type": 2,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "graveyard:black_bone_staff#20%",
+            "graveyard:cyan_bone_staff#20%",
+            "graveyard:purple_bone_staff#20%",
+            "graveyard:red_bone_staff#20%",
+            "graveyard:white_bone_staff#20%"
+        ],
+        "id": "graveyard:lich",
+        "scale": 14,
+        "y_offset": 15,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://modrinth.com/mod/the-graveyard-forge#:~:text=How%20to%20summon%20the%20Corrupted%20Champion%3A",
+        "position": 129
+    },
+    {
+        "drops": [
+            "eeeabsmobs:guardian_axe",
+            "eeeabsmobs:guardian_core",
+            "eeeabsmobs:guardians_music_disc#50%"
+        ],
+        "id": "eeeabsmobs:nameless_guardian",
+        "scale": 13,
+        "y_offset": 15,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 130,
+        "mod_version": "1.20.1-0.97"
+    },
+    {
+        "drops": [
+            "alexscaves:tectonic_shard",
+            "traveloptics:gauntlet_of_extinction#45%"
+        ],
+        "id": "alexscaves:luxtructosaurus",
+        "scale": 5,
+        "y_offset": 5,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 131
+    },
+    {
+        "drops": [
+            "armageddon_mod:nyxaris_the_veil_of_oblivion_relic",
+            "armageddon_mod:nyxaris_the_veil_of_oblivion_treasure_bag"
+        ],
+        "id": "armageddon_mod:nyxaris_the_veil_of_oblivion",
+        "scale": 14,
+        "y_offset": 13,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 132
+    },
+    {
+        "drops": [
+            "cataclysm:music_disc_the_harbinger#10%",
+            "cataclysm:witherite_block",
+            "traveloptics:harbingers_wrath#45%",
+            "traveloptics:last_glow#40%"
+        ],
+        "id": "cataclysm:the_harbinger",
+        "scale": 12,
+        "y_offset": 20,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 133,
+        "mod_version": "3.26"
+    },
+    {
+        "drops": [
+            "cataclysm:ancient_metal_block",
+            "cataclysm:music_disc_ancient_remnant#10%",
+            "cataclysm:remnant_skull",
+            "cataclysm:sandstorm_in_a_bottle",
+            "cataclysm_spellbooks:desert_spell_book#50%",
+            "traveloptics:desert_jewel_fragment#40%",
+            "traveloptics:scourge_of_the_sands#45%"
+        ],
+        "id": "cataclysm:ancient_remnant",
+        "scale": 7,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 134,
+        "mod_version": "3.26"
+    },
+    {
+        "drops": [
+            "witherstormmod:withered_nether_star"
+        ],
+        "id": "witherstormmod:wither_storm",
+        "scale": 17,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 135,
+        "mod_version": "4.2.1"
+    },
+    {
+        "drops": [
+            "witherstormmod:command_block_book"
+        ],
+        "id": "witherstormmod:withered_symbiont",
+        "scale": 11,
+        "y_offset": 8,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 136,
+        "mod_version": "4.2.1"
+    },
+    {
+        "drops": [
+            "cataclysm:abyssal_egg",
+            "cataclysm:music_disc_the_leviathan#10%",
+            "cataclysm:tidal_claws",
+            "cataclysm_spellbooks:leviathans_blessing#30%",
+            "goety_cataclysm:abyss_essence",
+            "lendersdelight:leviathan",
+            "traveloptics:abyssal_spellweave_ingot",
+            "traveloptics:abyssal_tentacle#40%",
+            "traveloptics:abyssal_tidecaller#22%",
+            "traveloptics:archive_of_abyssal_secrets#22%"
+        ],
+        "id": "cataclysm:the_leviathan",
+        "scale": 6,
+        "y_offset": -20,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 137,
+        "mod_version": "3.26"
+    },
+    {
+        "drops": [
+            "goety:music_disc_enderman#10%",
+            "goety:treasure_pouch",
+            "minecraft:ender_pearl"
+        ],
+        "id": "goety:endersent",
+        "scale": 11,
+        "y_offset": 33,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 138,
+        "type": 2,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "goety:music_disc_keeper#10%",
+            "goety:treasure_pouch",
+            "goety:void_echo"
+        ],
+        "id": "goety:ender_keeper",
+        "scale": 12,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "wiki_link": "https://discord.com/channels/960328666670313503/960328667630813216/1361967475356602530/",
+        "position": 139,
+        "mod_version": "2.5.50.2"
+    },
+    {
+        "drops": [
+            "irons_spellbooks:arcane_essence",
+            "irons_spellbooks:betrayer_signet#50%",
+            "irons_spellbooks:cinder_essence",
+            "irons_spellbooks:decrepit_key",
+            "irons_spellbooks:decrepit_scythe#50%",
+            "irons_spellbooks:divine_soulshard"
+        ],
+        "id": "irons_spellbooks:fire_boss",
+        "scale": 13,
+        "y_offset": 8,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 140,
+        "mod_version": "1.21.1-3.15.4"
+    },
+    {
+        "drops": [
+            "cataclysm:essence_of_the_storm",
+            "cataclysm:lacrima",
+            "cataclysm:music_disc_scylla#10%",
+            "lendersdelight:scylla_snake"
+        ],
+        "id": "cataclysm:scylla",
+        "scale": 15,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 141,
+        "mod_version": "3.26"
+    },
+    {
+        "drops": [
+            "dungeons_and_combat:armor_plate#86%",
+            "dungeons_and_combat:cursed_soul",
+            "dungeons_and_combat:estus_flask#75%",
+            "dungeons_and_combat:kamath_music_disc",
+            "dungeons_and_combat:steel_ingot#90%",
+            "minecraft:bone#92%"
+        ],
+        "id": "dungeons_and_combat:kamath",
+        "scale": 18,
+        "y_offset": 15,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 142
+    },
+    {
+        "drops": [
+            "cataclysm:cursium_ingot",
+            "cataclysm:music_disc_maledictus#10%",
+            "lendersdelight:maledictus_heart",
+            "traveloptics:cursed_wraithblade#22%",
+            "traveloptics:echo_winglet#40%",
+            "traveloptics:the_accused_codex#22%"
+        ],
+        "id": "cataclysm:maledictus",
+        "scale": 12,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 143,
+        "mod_version": "3.26"
+    },
+    {
+        "drops": [
+            "terramity:chthonic_cursemark#20%",
+            "terramity:conductite_upgrade_smithing_template#33%",
+            "terramity:dimlite_nugget",
+            "terramity:energized_core#20%",
+            "terramity:giant_dungeon_slab#20%",
+            "terramity:guardian_grimoire#20%",
+            "terramity:guardians_hand#20%",
+            "terramity:hellspec_upgrade_smithing_template#33%",
+            "terramity:lost_soul",
+            "terramity:music_sheet_of_the_trial_guardian",
+            "terramity:perish_staff",
+            "terramity:spire_key",
+            "terramity:spiteful_soul",
+            "terramity:void_upgrade_smithing_template#33%"
+        ],
+        "id": "terramity:trial_guardian",
+        "scale": 11,
+        "y_offset": 12,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 144
+    },
+    {
+        "drops": [
+            "dungeons_and_combat:blessed_amulet#50%",
+            "dungeons_and_combat:blessed_gold_ingot#90%",
+            "dungeons_and_combat:divine_blood_vial#80%",
+            "dungeons_and_combat:essence_of_sunleia",
+            "dungeons_and_combat:estus_flask#75%",
+            "dungeons_and_combat:horus_klauen",
+            "dungeons_and_combat:horuso_feather#75%",
+            "dungeons_and_combat:solar_emblem#75%",
+            "dungeons_and_combat:sunleia_hand",
+            "dungeons_and_combat:sunleia_music_disc",
+            "dungeons_and_combat:sunrise_sword"
+        ],
+        "id": "dungeons_and_combat:sunleia",
+        "scale": 18,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 145
+    },
+    {
+        "drops": [
+            "cataclysm:ignitium_ingot",
+            "cataclysm:music_disc_ignis#10%",
+            "lendersdelight:ignis",
+            "traveloptics:chronicles_of_the_firelord#22%",
+            "traveloptics:flame_tempered_handguard#40%",
+            "traveloptics:flames_of_eldritch#22%"
+        ],
+        "id": "cataclysm:ignis",
+        "scale": 15,
+        "y_offset": 10,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 146,
+        "mod_version": "3.26"
+    },
+    {
+        "drops": [
+            "darkdoppelganger:doppelganger_ring#33%",
+            "darkdoppelganger:elder_necklace#33%",
+            "darkdoppelganger:summons_necklace#33%",
+            "irons_spellbooks:scroll",
+            "minecraft:diamond_block",
+            "minecraft:echo_shard",
+            "minecraft:nether_star"
+        ],
+        "id": "darkdoppelganger:dark_doppelganger",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": true,
+        "additional_info": false,
+        "position": 147,
+        "health": 1800,
+        "armor": 10
+    },
+    {
+        "drops": [
+            "mofus_better_end_:endermite_queen_claw",
+            "mofus_better_end_:endermite_queen_scale",
+            "mofus_better_end_:mite_queen_soul"
+        ],
+        "id": "mofus_better_end_:endermite_queen",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 148
+    },
+    {
+        "drops": [
+            "mofus_better_end_:eye_guardian_angel_eye"
+        ],
+        "id": "mofus_better_end_:eye_guardian",
+        "scale": 7,
+        "y_offset": 26,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 149
+    },
+    {
+        "drops": [
+            "minecraft:feather",
+            "minecraft:gold_ingot",
+            "terramity:angel_feather",
+            "terramity:archangel_halo",
+            "terramity:music_sheet_of_cleansing#33%"
+        ],
+        "id": "terramity:virtue",
+        "scale": 11,
+        "y_offset": -16,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 150
+    },
+    {
+        "drops": [
+            "terramity:antiprism",
+            "terramity:chthonic_shell_casing#40%",
+            "terramity:fortunes_favor",
+            "terramity:gold_medal",
+            "terramity:gundalfs_hat_helmet#20%",
+            "terramity:iridium_chunk",
+            "terramity:malediction_bracelets#40%",
+            "terramity:music_sheet_of_the_shadow_wizards",
+            "terramity:occult_fabric",
+            "terramity:swag_glasses"
+        ],
+        "id": "terramity:gundalf",
+        "scale": 11,
+        "y_offset": 6,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 151
+    },
+    {
+        "drops": [
+            "terramity:antiprism",
+            "terramity:black_matter",
+            "terramity:conductite_upgrade_smithing_template",
+            "terramity:dragon_band#50%",
+            "terramity:hellspec_upgrade_smithing_template",
+            "terramity:hermit_bean",
+            "terramity:iridium_chunk",
+            "terramity:kamehameha#50%",
+            "terramity:music_sheet_of_the_omnipotent_ultra_sniffer",
+            "terramity:prismatic_jewel",
+            "terramity:spectral_soul",
+            "terramity:ultra_sniffer_fur#50%",
+            "terramity:ultra_sniffers_pelt#50%",
+            "terramity:void_upgrade_smithing_template"
+        ],
+        "id": "terramity:ultra_sniffer",
+        "scale": 11,
+        "y_offset": 12,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 152
+    },
+    {
+        "drops": [
+            "minecraft:dragon_egg"
+        ],
+        "id": "adventurez:void_shadow",
+        "scale": 5,
+        "y_offset": 37,
+        "broken_model": false,
+        "additional_info": true,
+        "position": 153,
+        "mod_version": "1.5.0"
+    },
+    {
+        "drops": [],
+        "id": "mofus_better_end_:forgotten_litch",
+        "scale": 15,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 154
+    },
+    {
+        "drops": [
+            "mofus_better_end_:disc_piece_1",
+            "mofus_better_end_:litch_pendolum"
+        ],
+        "id": "mofus_better_end_:reborn_litch",
+        "scale": 10,
+        "y_offset": 26,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 155
+    },
+    {
+        "drops": [
+            "callfromthedepth_:agonysoul",
+            "callfromthedepth_:greatsoulessence"
+        ],
+        "id": "callfromthedepth_:agonysoul",
+        "scale": 15,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 156
+    },
+    {
+        "drops": [
+            "callfromthedepth_:energyinfernopowder",
+            "callfromthedepth_:greatsoulessence",
+            "callfromthedepth_:soulofsorrow"
+        ],
+        "id": "callfromthedepth_:injured_ancient_guard",
+        "scale": 15,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 157
+    },
+    {
+        "drops": [
+            "callfromthedepth_:greatsoulessence",
+            "callfromthedepth_:lost_harmony",
+            "callfromthedepth_:soulofabyss"
+        ],
+        "id": "callfromthedepth_:deepdarkestspawn",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 158
+    },
+    {
+        "drops": [
+            "irons_spellbooks:arcane_essence",
+            "irons_spellbooks:blank_rune",
+            "irons_spellbooks:legendary_ink",
+            "irons_spellbooks:scroll",
+            "traveloptics:cradle_of_will#50%",
+            "traveloptics:music_disc_nightwarden#20%",
+            "traveloptics:stellothorn",
+            "traveloptics:withered_excrucis"
+        ],
+        "id": "traveloptics:the_nightwarden",
+        "scale": 10,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 159
+    },
+    {
+        "drops": [
+            "monsterexpansion:monster_hardbone#75%",
+            "monsterexpansion:rhyza_carapace#50%",
+            "monsterexpansion:rhyza_claw#86%",
+            "monsterexpansion:rhyza_fur",
+            "monsterexpansion:rhyza_gleam_core#50%",
+            "monsterexpansion:rhyza_scale#68%",
+            "monsterexpansion:serrated_sharpclaw#25%"
+        ],
+        "id": "monsterexpansion:rhyza",
+        "scale": 11,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 160
+    },
+    {
+        "drops": [
+            "monsterexpansion:monster_hardbone#75%",
+            "monsterexpansion:skrythe_armorplate",
+            "monsterexpansion:skrythe_fang#50%",
+            "monsterexpansion:skrythe_frill#66%",
+            "monsterexpansion:skrythe_wing_membrane#66%",
+            "monsterexpansion:vocal_resonance_fold#25%"
+        ],
+        "id": "monsterexpansion:skrythe",
+        "scale": 5,
+        "y_offset": -6,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 161
+    },
+    {
+        "drops": [
+            "minecraft:blue_ice#68%",
+            "monsterexpansion:deepfreeze_gland#25%",
+            "monsterexpansion:hoarfrost_shard#88%",
+            "monsterexpansion:leivekilth_armorplate",
+            "monsterexpansion:leivekilth_rimepelt#91%",
+            "monsterexpansion:leivekilth_tusk#50%",
+            "monsterexpansion:monster_hardbone#75%"
+        ],
+        "id": "monsterexpansion:leivekilth",
+        "scale": 3,
+        "y_offset": -14,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 162
+    },
+    {
+        "drops": [],
+        "id": "wraithon:wraithon",
+        "scale": 4,
+        "y_offset": -14,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 163
+    }
+]

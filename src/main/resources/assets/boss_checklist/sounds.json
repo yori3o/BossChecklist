@@ -1,0 +1,16 @@
+{
+  "checkmark_added": {
+    "sounds": [
+      { "name": "boss_checklist:gui/checkmark_added1" },
+      { "name": "boss_checklist:gui/checkmark_added2" },
+      { "name": "boss_checklist:gui/checkmark_added3" }
+    ]
+  },
+  "checkmark_deleted": {
+    "sounds": [
+      { "name": "boss_checklist:gui/checkmark_deleted1" },
+      { "name": "boss_checklist:gui/checkmark_deleted2" },
+      { "name": "boss_checklist:gui/checkmark_deleted3" }
+    ]
+  }
+}
