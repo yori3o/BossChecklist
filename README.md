@@ -3,7 +3,7 @@ It can be accessed via a button in the pause menu or keybind.
 
 The mod is primarily client-side, but can be installed on the server for automatic boss marking.
 
-The boss list can be edited through resources, as detailed in the _Wiki_ tab.
+The boss list can be edited through built-in editor menu or addon, as detailed in the _Wiki_ tab.
 
 **You can suggest any ideas, report bugs, etc. in the _Issues_ tab.**
 

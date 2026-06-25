@@ -2509,5 +2509,24 @@
         "broken_model": false,
         "additional_info": false,
         "position": 163
+    },
+    {
+        "id": "yo_trash:boss",
+        "drops": [
+            "yo_trash:very_stinking_trash_can#75%",
+            "yo_trash:music_disc_boss_battle#35%",
+            "yo_trash:music_disc_boss_battle_2#35%",
+            "yo_trash:super_gas_mask",
+            "yo_trash:basketball_stick",
+            "yo_relics:fire_spellbook#33%",
+            "yo_relics:nature_spellbook#33%"
+        ],
+        "scale": 24,
+        "y_offset": 34,
+        "broken_model": false,
+        "rotate_y": 0,
+        "additional_info": false,
+        "position": 106.2,
+        "mod_version": "1.0.0"
     }
 ]

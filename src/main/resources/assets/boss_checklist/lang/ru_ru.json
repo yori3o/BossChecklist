@@ -156,6 +156,7 @@
   "boss_checklist.mod.mutantmore": "Mutant More",
   "boss_checklist.mod.friendsandfoes": "Friends&Foes",
   "boss_checklist.mod.mythsandlegends": "Myths & Legends",
+  "boss_checklist.mod.yo_trash": "Yori3o's Trash 'n Brainrot",
 
 
 
@@ -388,6 +389,8 @@
   
   "boss_checklist.boss.mythsandlegends_black_charro": "The Black Charro",
 
+  "boss_checklist.boss.yo_trash_boss": "Пожиратель Галактик",
+
 
 
 
@@ -618,5 +621,7 @@
   
   "boss_checklist.summon.friendsandfoes_wildfire": "Найдите в Незере большую структуру – Цитадель, в центре которой будет минибосс.",
   
-  "boss_checklist.summon.mythsandlegends_black_charro": "Найдите алтарь на кладбище в пустыне или бесплодных землях и используйте §1Soulbinder Amulet§r§0 на нём ночью."
+  "boss_checklist.summon.mythsandlegends_black_charro": "Найдите алтарь на кладбище в пустыне или бесплодных землях и используйте §1Soulbinder Amulet§r§0 на нём ночью.",
+
+  "boss_checklist.summon.yo_trash_boss": "Найдите арену с помощью §1Ока вони§r§0 и возложите на Алтарь Шмурдяк, который можно найти в лабиринте перед ней."
 }

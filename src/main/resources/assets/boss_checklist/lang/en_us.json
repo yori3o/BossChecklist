@@ -156,6 +156,7 @@
   "boss_checklist.mod.mutantmore": "Mutant More",
   "boss_checklist.mod.friendsandfoes": "Friends&Foes",
   "boss_checklist.mod.mythsandlegends": "Myths & Legends",
+  "boss_checklist.mod.yo_trash": "Yori3o's Trash 'n Brainrot",
 
 
 
@@ -388,6 +389,8 @@
   
   "boss_checklist.boss.mythsandlegends_black_charro": "The Black Charro",
 
+  "boss_checklist.boss.yo_trash_boss": "The Devourer of Galaxies",
+
 
 
 
@@ -618,5 +621,7 @@
   
   "boss_checklist.summon.friendsandfoes_wildfire": "Find a large structure in the Nether called the Citadel, with a miniboss in the center.",
   
-  "boss_checklist.summon.mythsandlegends_black_charro": "Find an altar in a graveyard in a desert or badlands and use the §1Soulbinder Amulet§r§0 on it at night."
+  "boss_checklist.summon.mythsandlegends_black_charro": "Find an altar in a graveyard in a desert or badlands and use the §1Soulbinder Amulet§r§0 on it at night.",
+
+  "boss_checklist.summon.yo_trash_boss": "Find the arena with the §1Eye of Stink§r§0 and place a Shmurdyak on the Altar, which can be found in the labyrinth in front of it."
 }
