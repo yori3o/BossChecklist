@@ -65,6 +65,9 @@
 	{
 		"id": "block_factorys_bosses:infernal_dragon"
 	},
+    {
+        "id": "block_factorys_bosses:kraken"
+    },
 	{
 		"id": "minecells:concierge"
 	},
@@ -511,5 +514,17 @@
 	},
 	{
 		"id": "mythsandlegends:black_charro"
-	}
+	},
+    {
+        "id": "yo_trash:boss"
+    },
+	{
+		"id": "eternal_starlight:the_gatekeeper"
+	},
+    {
+        "id": "eternal_starlight:lunar_monstrosity"
+    },
+    {
+        "id": "eternal_starlight:starlight_golem"
+    }
 ]

@@ -156,6 +156,8 @@
   "boss_checklist.mod.mutantmore": "Mutant More",
   "boss_checklist.mod.friendsandfoes": "Friends&Foes",
   "boss_checklist.mod.mythsandlegends": "Myths & Legends",
+  "boss_checklist.mod.yo_trash": "Yori3o's Trash 'n Brainrot",
+  "boss_checklist.mod.eternal_starlight": "Eternal Starlight",
 
 
 
@@ -181,6 +183,7 @@
   "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Helvar, The Underworld Knight",
   "boss_checklist.boss.block_factorys_bosses_yeti": "Skor, The Yeti",
   "boss_checklist.boss.block_factorys_bosses_sandworm": "Sirok, The Sandworm",
+  "boss_checklist.boss.block_factorys_bosses_kraken": "Nerakyss, The Kraken",
 
   "boss_checklist.boss.bosses_of_mass_destruction_obsidilith": "Obsidilith",
   "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Nether Gauntlet",
@@ -305,7 +308,7 @@
   "boss_checklist.boss.legendary_monsters_overgrown_colossus": "Overgrown Colossus",
   "boss_checklist.boss.legendary_monsters_withered_abomination": "Withered Abomination",
   "boss_checklist.boss.legendary_monsters_skeletosaurus": "Skeletosaurus",
-  "boss_checklist.boss.legendary_monsters_endersent": "Endersent",
+  "boss_checklist.boss.legendary_monsters_endersent": "Chorusent",
   "boss_checklist.boss.legendary_monsters_posessed_paladin": "Posessed Paladin",
   "boss_checklist.boss.legendary_monsters_the_obliterator": "The Obliterator",
 
@@ -388,6 +391,12 @@
   
   "boss_checklist.boss.mythsandlegends_black_charro": "The Black Charro",
 
+  "boss_checklist.boss.yo_trash_boss": "The Devourer of Galaxies",
+
+  "boss_checklist.boss.eternal_starlight_the_gatekeeper": "The Gatekeeper",
+  "boss_checklist.boss.eternal_starlight_starlight_golem": "Starlight Golem",
+  "boss_checklist.boss.eternal_starlight_lunar_monstrosity": "Lunar Monstrosity",
+
 
 
 
@@ -413,6 +422,7 @@
   "boss_checklist.summon.block_factorys_bosses_underworld_knight": "Find the boss arena in the Nether and open the door with the §1Underworld Arena key§r§0, which can be obtained from the trial spawmers.",
   "boss_checklist.summon.block_factorys_bosses_yeti": "Encounter a bone-strewn icy peak in a snowy plain.",
   "boss_checklist.summon.block_factorys_bosses_sandworm": "Look for suspicious ruins with bones in the desert.",
+  "boss_checklist.summon.block_factorys_bosses_kraken": "Find a ship in the ocean and kill the skeleton pirates.",
 
   "boss_checklist.summon.bosses_of_mass_destruction_obsidilith": "Insert §1Eye of Ender§r§0 into the Obsidian Altar atop the giant floating structure in the End.",
   "boss_checklist.summon.bosses_of_mass_destruction_gauntlet": "Find the large arena in the Nether lava pools and destroy the §1Ancient Carved Blackstone§r§0 in its center.",
@@ -600,9 +610,9 @@
   "boss_checklist.summon.monsterexpansion_leivekilth": "Sometimes appears in frozen oceans.",
 
   "boss_checklist.summon.mutantmonsters_mutant_zombie": "Sometimes appears on the surface of the overworld.",
-  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Sometimes appears on the surface of the overworld.",
+  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Sometimes appears on the surface of the overworld and in the Soul Sand Valley biome.",
   "boss_checklist.summon.mutantmonsters_mutant_creeper": "Sometimes appears on the surface of the overworld.",
-  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Sometimes appears on the End islands.",
+  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Sometimes appears on the End islands and in the Warped Forest biome.",
 
   "boss_checklist.summon.arthropocolypse_behemoth_desert_spider": "Find the boss arena in the desert.",
 
@@ -618,5 +628,11 @@
   
   "boss_checklist.summon.friendsandfoes_wildfire": "Find a large structure in the Nether called the Citadel, with a miniboss in the center.",
   
-  "boss_checklist.summon.mythsandlegends_black_charro": "Find an altar in a graveyard in a desert or badlands and use the §1Soulbinder Amulet§r§0 on it at night."
+  "boss_checklist.summon.mythsandlegends_black_charro": "Find an altar in a graveyard in a desert or badlands and use the §1Soulbinder Amulet§r§0 on it at night.",
+
+  "boss_checklist.summon.yo_trash_boss": "Find the arena with the §1Eye of Stink§r§0 and place a Shmurdyak on the Altar, which can be found in the labyrinth in front of it.",
+
+  "boss_checklist.summon.eternal_starlight_the_gatekeeper": "Find him at the ruins of the Starlight portal in the Overworld.",
+  "boss_checklist.summon.eternal_starlight_starlight_golem": "Use §1Seeking Eye§r§0 in Starlight while holding Redstone Dust in your other hand.",
+  "boss_checklist.summon.eternal_starlight_lunar_monstrosity": "Use §1Seeking Eye§r§0 in Starlight while holding Vines in your other hand."
 }

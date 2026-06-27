@@ -63,12 +63,13 @@
             "frostiful:frozen_rod"
         ],
         "id": "frostiful:frostologer",
-        "scale": 26,
-        "y_offset": 14,
+        "scale": 30,
+        "y_offset": 26,
         "broken_model": false,
         "additional_info": false,
         "position": 4,
-        "type": 2
+        "type": 2,
+        "mod_version": "3.0.1+26.1.x"
     },
     {
         "drops": [
@@ -77,11 +78,11 @@
         ],
         "id": "mowziesmobs:ferrous_wroughtnaut",
         "scale": 15,
-        "y_offset": 20,
+        "y_offset": 13,
         "broken_model": false,
         "additional_info": false,
         "position": 5,
-        "mod_version": "1.8.2"
+        "mod_version": "1.7.5"
     },
     {
         "drops": [
@@ -147,7 +148,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 10,
-        "type": 2
+        "type": 2,
+        "mod_version": "26.1.1"
     },
     {
         "drops": [
@@ -159,7 +161,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 11,
-        "type": 2
+        "type": 2,
+        "mod_version": "26.1.1"
     },
     {
         "drops": [
@@ -171,7 +174,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 12,
-        "type": 2
+        "type": 2,
+        "mod_version": "26.1.1"
     },
     {
         "drops": [
@@ -259,7 +263,7 @@
         "broken_model": true,
         "additional_info": false,
         "position": 18,
-        "mod_version": "2.0.12"
+        "mod_version": "2.1.2"
     },
     {
         "drops": [
@@ -271,7 +275,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 19,
-        "mod_version": "2.0.12"
+        "mod_version": "2.1.2"
     },
     {
         "drops": [
@@ -279,8 +283,8 @@
             "minecraft:emerald"
         ],
         "id": "illagerinvasion:invoker",
-        "scale": 26,
-        "y_offset": 19,
+        "scale": 30,
+        "y_offset": 30,
         "broken_model": false,
         "additional_info": false,
         "position": 20
@@ -338,7 +342,8 @@
         "broken_model": false,
         "additional_info": false,
         "position": 24,
-        "type": 2
+        "type": 2,
+        "mod_version": "1.5.5"
     },
     {
         "drops": [
@@ -376,7 +381,7 @@
         "additional_info": false,
         "position": 26.2,
         "type": 2,
-        "mod_version": "4.0.24"
+        "mod_version": "4.0.26"
     },
     {
         "drops": [
@@ -389,7 +394,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 27,
-        "mod_version": "1.8.2"
+        "mod_version": "1.7.5"
     },
     {
         "drops": [
@@ -424,7 +429,7 @@
         "broken_model": false,
         "additional_info": true,
         "position": 29,
-        "mod_version": "1.8.2"
+        "mod_version": "1.7.5"
     },
     {
         "drops": [
@@ -437,11 +442,11 @@
         ],
         "id": "mowziesmobs:sculptor",
         "scale": 18,
-        "y_offset": 8,
+        "y_offset": 0,
         "broken_model": false,
         "additional_info": true,
         "position": 30,
-        "mod_version": "1.8.2"
+        "mod_version": "1.7.5"
     },
     {
         "drops": [
@@ -826,7 +831,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 54,
-        "mod_version": "1.21.1-3.15.4"
+        "mod_version": "1.21.1-3.16.1"
     },
     {
         "drops": [
@@ -995,7 +1000,7 @@
         "broken_model": true,
         "additional_info": false,
         "position": 64.5,
-        "mod_version": "2.0.12"
+        "mod_version": "2.1.2"
     },
     {
         "drops": [
@@ -1007,7 +1012,7 @@
         "broken_model": true,
         "additional_info": false,
         "position": 64.6,
-        "mod_version": "2.0.12"
+        "mod_version": "2.1.2"
     },
     {
         "drops": [
@@ -1187,8 +1192,9 @@
         "y_offset": 38,
         "broken_model": false,
         "additional_info": false,
-        "position": 67,
-        "type": 2
+        "position": 63.5,
+        "type": 2,
+        "mod_version": "26.1.1"
     },
     {
         "drops": [
@@ -1675,7 +1681,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 107,
-        "mod_version": "3.27"
+        "mod_version": "3.31"
     },
     {
         "drops": [
@@ -1743,7 +1749,7 @@
         "additional_info": false,
         "position": 112,
         "type": 2,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1756,7 +1762,7 @@
         "additional_info": false,
         "position": 113,
         "type": 2,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1769,7 +1775,7 @@
         "additional_info": false,
         "position": 114,
         "type": 2,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1782,7 +1788,7 @@
         "additional_info": false,
         "position": 115,
         "type": 2,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1795,7 +1801,7 @@
         "additional_info": false,
         "position": 116,
         "type": 2,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1808,7 +1814,7 @@
         "additional_info": false,
         "position": 117,
         "type": 2,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1821,7 +1827,7 @@
         "additional_info": false,
         "position": 118,
         "type": 2,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1834,7 +1840,7 @@
         "additional_info": false,
         "position": 119,
         "type": 2,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1848,7 +1854,7 @@
         "additional_info": false,
         "position": 120,
         "type": 2,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1861,7 +1867,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 122,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1874,7 +1880,7 @@
         "additional_info": false,
         "position": 121,
         "type": 2,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1886,7 +1892,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 122.5,
-        "mod_version": "1.20.1 (v2.0.6)"
+        "mod_version": "1.21.1 (v2.1.18)"
     },
     {
         "drops": [
@@ -1926,7 +1932,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 125,
-        "mod_version": "3.27"
+        "mod_version": "3.31"
     },
     {
         "drops": [
@@ -2033,11 +2039,11 @@
         ],
         "id": "cataclysm:the_harbinger",
         "scale": 12,
-        "y_offset": 20,
+        "y_offset": 16,
         "broken_model": false,
         "additional_info": false,
         "position": 133,
-        "mod_version": "3.27"
+        "mod_version": "3.31"
     },
     {
         "drops": [
@@ -2051,11 +2057,11 @@
         ],
         "id": "cataclysm:ancient_remnant",
         "scale": 7,
-        "y_offset": 14,
+        "y_offset": 7,
         "broken_model": false,
         "additional_info": false,
         "position": 134,
-        "mod_version": "3.27"
+        "mod_version": "3.31"
     },
     {
         "drops": [
@@ -2100,7 +2106,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 137,
-        "mod_version": "3.27"
+        "mod_version": "3.31"
     },
     {
         "drops": [
@@ -2148,7 +2154,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 140,
-        "mod_version": "1.21.1-3.15.4"
+        "mod_version": "1.21.1-3.16.1"
     },
     {
         "drops": [
@@ -2163,7 +2169,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 141,
-        "mod_version": "3.27"
+        "mod_version": "3.31"
     },
     {
         "drops": [
@@ -2196,7 +2202,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 143,
-        "mod_version": "3.27"
+        "mod_version": "3.31"
     },
     {
         "drops": [
@@ -2258,7 +2264,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 146,
-        "mod_version": "3.27"
+        "mod_version": "3.31"
     },
     {
         "drops": [
@@ -2509,5 +2515,121 @@
         "broken_model": false,
         "additional_info": false,
         "position": 163
+    },
+    {
+        "id": "yo_trash:boss",
+        "drops": [
+            "yo_trash:very_stinking_trash_can#75%",
+            "yo_trash:music_disc_boss_battle#35%",
+            "yo_trash:music_disc_boss_battle_2#35%",
+            "yo_trash:super_gas_mask",
+            "yo_trash:basketball_stick",
+            "yo_relics:fire_spellbook#33%",
+            "yo_relics:nature_spellbook#33%"
+        ],
+        "scale": 24,
+        "y_offset": 34,
+        "broken_model": false,
+        "rotate_y": 0,
+        "additional_info": false,
+        "position": 106.2,
+        "mod_version": "1.0.0"
+    },
+    {
+        "id": "block_factorys_bosses:kraken",
+        "drops": [
+            "block_factorys_bosses:kraken_tooth"
+        ],
+        "scale": 3,
+        "y_offset": 0,
+        "broken_model": false,
+        "position": 19.5,
+        "mod_version": "2.1.2"
+    },
+    {
+        "id": "eternal_starlight:the_gatekeeper",
+        "drops": [
+            "eternal_starlight:book",
+            "eternal_starlight:orb_of_prophecy",
+            "eternal_starlight:glistering_sword#8%",
+            "eternal_starlight:glistering_greatsword#8%",
+            "eternal_starlight:glistering_morning_star#8%",
+            "eternal_starlight:glistering_bow#8%",
+            "eternal_starlight:music_disc_optimized_option",
+            "minecraft:coal#90%",
+            "minecraft:gold_ingot#76%",
+            "minecraft:iron_ingot#76%",
+            "eternal_starlight:seeking_eye#90%"
+        ],
+        "scale": 30,
+        "y_offset": 25,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 74.2,
+        "mod_version": "0.7.0-hotfix+1.21.1+neoforge"
+    },
+    {
+        "id": "eternal_starlight:lunar_monstrosity",
+        "drops": [
+            "eternal_starlight:moonring_bow",
+            "eternal_starlight:tenacious_petal",
+            "eternal_starlight:tenacious_vine",
+            "eternal_starlight:soul_dew",
+            "eternal_starlight:tangled_skull",
+            "eternal_starlight:wand_of_teleportation#75%",
+            "eternal_starlight:crescent_spear#75%",
+            "eternal_starlight:crescent_pendant",
+            "eternal_starlight:twining_armor_trim_smithing_template",
+            "eternal_starlight:music_disc_moonlight#50%",
+            "eternal_starlight:music_disc_fake_light#50%",
+            "eternal_starlight:starlit_painting#50%",
+            "minecraft:coal#60%",
+            "minecraft:gold_ingot#45%",
+            "minecraft:iron_ingot#45%",
+            "minecraft:arrow#45%",
+            "minecraft:spectral_arrow#45%",
+            "eternal_starlight:amaramber_arrow#30%",
+            "eternal_starlight:seeking_eye#60%",
+            "eternal_starlight:lunar_berries#60%",
+            "eternal_starlight:deepsilver_ingot#30%",
+            "eternal_starlight:thermal_springstone_ingot#30%",
+            "eternal_starlight:glacite_shard#30%",
+            "eternal_starlight:aethersent_ingot#16%"
+        ],
+        "scale": 20,
+        "y_offset": 44,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 74.3,
+        "mod_version": "0.7.0-hotfix+1.21.1+neoforge"
+    },
+    {
+        "id": "eternal_starlight:starlight_golem",
+        "drops": [
+            "eternal_starlight:oxidized_golem_steel_ingot",
+            "eternal_starlight:forge_armor_trim_smithing_template",
+            "eternal_starlight:oxidized_alloy_furnace",
+            "eternal_starlight:energy_sword#75%",
+            "eternal_starlight:music_disc_mechanical_fossil#50%",
+            "eternal_starlight:starlit_painting#50%",
+            "minecraft:coal#60%",
+            "minecraft:gold_ingot#45%",
+            "minecraft:iron_ingot#45%",
+            "minecraft:arrow#45%",
+            "minecraft:spectral_arrow#45%",
+            "eternal_starlight:amaramber_arrow#30%",
+            "eternal_starlight:seeking_eye#60%",
+            "eternal_starlight:lunar_berries#60%",
+            "eternal_starlight:deepsilver_ingot#30%",
+            "eternal_starlight:thermal_springstone_ingot#30%",
+            "eternal_starlight:glacite_shard#30%",
+            "eternal_starlight:aethersent_ingot#16%"
+        ],
+        "scale": 24,
+        "y_offset": 30,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 74.4,
+        "mod_version": "0.7.0-hotfix+1.21.1+neoforge"
     }
 ]

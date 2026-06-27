@@ -37,18 +37,6 @@ public class ClientLanguageMixin {
                                          boolean defaultRightToLeft,
                                          CallbackInfoReturnable<ClientLanguage> cir) {
 
-        /*ClientLanguage original = cir.getReturnValue();
-
-        Map<String, String> map = new HashMap<>(original.storage);
-
-        if (!OverlapManager.OVERLAP_EN_US.isEmpty()) {
-            if (!map.containsKey(OverlapManager.OVERLAP_EN_US.keySet().toArray()[0])) {
-                map.putAll(OverlapManager.OVERLAP_EN_US);
-            }
-        }
-        
-        cir.setReturnValue(new ClientLanguage(map, original.isDefaultRightToLeft()));*/
-
         ClientLanguage lang = cir.getReturnValue();
 
         Map<String, String> old = ((ClientLanguageAccessor) lang).getStorage();

@@ -156,6 +156,8 @@
   "boss_checklist.mod.mutantmore": "Mutant More",
   "boss_checklist.mod.friendsandfoes": "Friends&Foes",
   "boss_checklist.mod.mythsandlegends": "Myths & Legends",
+  "boss_checklist.mod.yo_trash": "Yori3o's Trash 'n Brainrot",
+  "boss_checklist.mod.eternal_starlight": "Eternal Starlight",
 
 
 
@@ -181,6 +183,7 @@
   "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Рыцарь преисподней Хелвар",
   "boss_checklist.boss.block_factorys_bosses_yeti": "Йети Скор",
   "boss_checklist.boss.block_factorys_bosses_sandworm": "Песчаный червь Сирок",
+  "boss_checklist.boss.block_factorys_bosses_kraken": "Кракен Неракисс",
 
   "boss_checklist.boss.bosses_of_mass_destruction_obsidilith": "Обсидилит",
   "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Перчатка Незера",
@@ -296,17 +299,17 @@
   "boss_checklist.boss.terra_entity_deerclops": "Циклоп-олень",
   "boss_checklist.boss.terra_entity_wall_of_flesh": "Стена Плоти",
 
-  "boss_checklist.boss.legendary_monsters_cloud_golem": "Cumulonimbus",
-  "boss_checklist.boss.legendary_monsters_lava_eater": "Lava Eater",
-  "boss_checklist.boss.legendary_monsters_frostbitten_golem": "Frostbitten Golem",
-  "boss_checklist.boss.legendary_monsters_shulker_mimic": "Shulker Mimic",
-  "boss_checklist.boss.legendary_monsters_dune_sentinel": "Dune Sentinel",
-  "boss_checklist.boss.legendary_monsters_ancient_guardian": "Ancient Guardian",
-  "boss_checklist.boss.legendary_monsters_overgrown_colossus": "Overgrown Colossus",
-  "boss_checklist.boss.legendary_monsters_withered_abomination": "Withered Abomination",
-  "boss_checklist.boss.legendary_monsters_skeletosaurus": "Skeletosaurus",
-  "boss_checklist.boss.legendary_monsters_endersent": "Endersent",
-  "boss_checklist.boss.legendary_monsters_posessed_paladin": "Posessed Paladin",
+  "boss_checklist.boss.legendary_monsters_cloud_golem": "Кумулонимбус, Облачный Голем",
+  "boss_checklist.boss.legendary_monsters_lava_eater": "Пожиратель Лавы",
+  "boss_checklist.boss.legendary_monsters_frostbitten_golem": "Обмороженный Голем",
+  "boss_checklist.boss.legendary_monsters_shulker_mimic": "Подражатель Шалкера",
+  "boss_checklist.boss.legendary_monsters_dune_sentinel": "Страж Дюн",
+  "boss_checklist.boss.legendary_monsters_ancient_guardian": "Древний Страж",
+  "boss_checklist.boss.legendary_monsters_overgrown_colossus": "Заросший Колосс",
+  "boss_checklist.boss.legendary_monsters_withered_abomination": "Визер-Мерзость",
+  "boss_checklist.boss.legendary_monsters_skeletosaurus": "Скелетозавр",
+  "boss_checklist.boss.legendary_monsters_endersent": "Эндер-посланник",
+  "boss_checklist.boss.legendary_monsters_posessed_paladin": "Одержимый Паладин",
   "boss_checklist.boss.legendary_monsters_the_obliterator": "The Obliterator",
 
   "boss_checklist.boss.illagerinvasion_invoker": "Вызыватель",
@@ -388,6 +391,12 @@
   
   "boss_checklist.boss.mythsandlegends_black_charro": "The Black Charro",
 
+  "boss_checklist.boss.yo_trash_boss": "Пожиратель Галактик",
+
+  "boss_checklist.boss.eternal_starlight_the_gatekeeper": "Привратник",
+  "boss_checklist.boss.eternal_starlight_starlight_golem": "Звездосветный Голем",
+  "boss_checklist.boss.eternal_starlight_lunar_monstrosity": "Лунное Чудовище",
+
 
 
 
@@ -413,6 +422,7 @@
   "boss_checklist.summon.block_factorys_bosses_underworld_knight": "Найдите арену с боссом в Незере и откройте дверь §1Underworld Arena key§r§0, который можно получить из рассадников испытаний.",
   "boss_checklist.summon.block_factorys_bosses_yeti": "Наткнитесь на усыпанный скелетами ледяной пик в заснеженной равнине и потревожьте заледеневшего босса.",
   "boss_checklist.summon.block_factorys_bosses_sandworm": "Подойдите близко к подозрительным руинам с костями в пустыне.",
+  "boss_checklist.summon.block_factorys_bosses_kraken": "Найдите в океане корабль и убейте скелетов-пиратов.",
 
   "boss_checklist.summon.bosses_of_mass_destruction_obsidilith": "Вставьте §1Око эндера§r§0 в Обсидиановый алтарь на вершине гигантского парящего сооружения в Энде.",
   "boss_checklist.summon.bosses_of_mass_destruction_gauntlet": "Найдите большую арену в озёрах лавы Незера и разрушьте §1Древний резной чернит§r§0 в её центре.",
@@ -600,9 +610,9 @@
   "boss_checklist.summon.monsterexpansion_leivekilth": "Иногда появляется в замёрзших океанах.",
 
   "boss_checklist.summon.mutantmonsters_mutant_zombie": "Иногда появляется на поверхности.",
-  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Иногда появляется на поверхности.",
+  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Иногда появляется на поверхности и в биоме Долина песка душ.",
   "boss_checklist.summon.mutantmonsters_mutant_creeper": "Иногда появляется на поверхности.",
-  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Иногда появляется на островах Энда.",
+  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Иногда появляется на островах Энда и в биоме Искажённый лес.",
 
   "boss_checklist.summon.arthropocolypse_behemoth_desert_spider": "Найдите арену с боссом в пустыне.",
 
@@ -618,5 +628,11 @@
   
   "boss_checklist.summon.friendsandfoes_wildfire": "Найдите в Незере большую структуру – Цитадель, в центре которой будет минибосс.",
   
-  "boss_checklist.summon.mythsandlegends_black_charro": "Найдите алтарь на кладбище в пустыне или бесплодных землях и используйте §1Soulbinder Amulet§r§0 на нём ночью."
+  "boss_checklist.summon.mythsandlegends_black_charro": "Найдите алтарь на кладбище в пустыне или бесплодных землях и используйте §1Soulbinder Amulet§r§0 на нём ночью.",
+
+  "boss_checklist.summon.yo_trash_boss": "Найдите арену с помощью §1Ока вони§r§0 и возложите на Алтарь Шмурдяк, который можно найти в лабиринте перед ней.",
+
+  "boss_checklist.summon.eternal_starlight_the_gatekeeper": "Найдите его у руин портала в Звездосветье в Верхнем мире.",
+  "boss_checklist.summon.eternal_starlight_starlight_golem": "Используйте §1Ищущее око§r§0 в Звездосветье, держа в другой руке редстоуновую пыль.",
+  "boss_checklist.summon.eternal_starlight_lunar_monstrosity": "Используйте §1Ищущее око§r§0 в Звездосветье, держа в другой руке лианы."
 }
