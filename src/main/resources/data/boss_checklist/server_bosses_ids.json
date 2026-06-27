@@ -65,6 +65,9 @@
 	{
 		"id": "block_factorys_bosses:infernal_dragon"
 	},
+    {
+        "id": "block_factorys_bosses:kraken"
+    },
 	{
 		"id": "minecells:concierge"
 	},
