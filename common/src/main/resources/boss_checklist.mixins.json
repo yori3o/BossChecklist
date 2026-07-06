@@ -5,9 +5,9 @@
   "minVersion": "0.8",
   "client": [
     "PauseScreenMixin",
-        "MouseMixin",
-        "ClientLanguageMixin",
-        "ClientLanguageAccessor"
+    "MouseMixin",
+    "ClientLanguageMixin",
+    "ClientLanguageAccessor"
   ],
   "mixins": [
     "DeleteWorldMixin",
