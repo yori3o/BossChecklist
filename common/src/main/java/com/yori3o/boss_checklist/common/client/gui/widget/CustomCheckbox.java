@@ -1,12 +1,18 @@
 package com.yori3o.boss_checklist.common.client.gui.widget;
 
 
+import com.yori3o.boss_checklist.common.client.boss.BossEntry;
+import com.yori3o.boss_checklist.common.client.data.BossRegistry;
+import com.yori3o.boss_checklist.common.client.gui.BossChecklistScreen;
 import com.yori3o.boss_checklist.common.client.gui.GuiConstants;
 import com.yori3o.boss_checklist.common.config.DynamicConfigHandler;
 import com.yori3o.boss_checklist.common.sound.SoundRegistry;
+import com.yori3o.boss_checklist.common.util.TooltipUtil;
 import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
@@ -22,11 +28,11 @@ public class CustomCheckbox extends AbstractWidget {
 
     
     private boolean selected;
-    private final boolean isLabelClickDoingAnything;
+    private boolean isLabelClickDoingAnything;
     private final Consumer<Boolean> onValueChange;
-    private final Runnable onLabelClick;
+    private Runnable onLabelClick;
 
-    private static final float SCALE = 0.5f;      // checkboxes scale
+    private static final float SCALE = 0.5f;
     private static final float TEXT_SCALE = 1.0f; 
     private static final int LOGICAL_BOX = 16;    
     private static final int PADDING = 4;         // between box and text
@@ -35,32 +41,46 @@ public class CustomCheckbox extends AbstractWidget {
 
     private boolean renderNotice = false;
 
-    private final int labelLen;
+    private int labelLen;
+    private int labelHeight;
 
-    public boolean avoidFocusedLogic = false; // TODO: Bring order, in particular with the rendering logic
+    public boolean avoidFocusedLogic = false;
     public boolean isAnimating = false;
     public boolean animationPlayed = true;
     public long animationStartTime = 0L;
     private static final int ANIMATION_DURATION_MS = 105;
     private static final int FRAME_COUNT = 6;
 
+    public Component tooltip;
 
-    public CustomCheckbox(int x, int y, int maxLength, Component label, boolean selected, boolean isLabelClickDoingAnything, boolean renderNotice,
-                         Consumer<Boolean> onValueChange, Runnable onLabelClick) {
 
+    public CustomCheckbox(int x, int y, Component label, int maxLength, boolean selected, Consumer<Boolean> onValueChange) {
         super(x, y,
-              (int) (LOGICAL_BOX * SCALE + Minecraft.getInstance().font.width(label) * TEXT_SCALE + PADDING * 2),
-              (int) (LOGICAL_BOX * SCALE),
-            label);
+            (int) (LOGICAL_BOX * SCALE + Minecraft.getInstance().font.width(label) * TEXT_SCALE + PADDING * 2),
+            (int) (LOGICAL_BOX * SCALE),
+            label
+        );
 
         this.selected = selected;
-        this.isLabelClickDoingAnything = isLabelClickDoingAnything;
         this.onValueChange = onValueChange;
-        this.onLabelClick = onLabelClick;
-        this.renderNotice = renderNotice;
-        this.MAX_LENGTH = maxLength;
+        MAX_LENGTH = maxLength;
 
-        labelLen = (int) (Minecraft.getInstance().font.width(this.getMessage()) * TEXT_SCALE);
+        Font font = Minecraft.getInstance().font;
+        labelLen = (int) (font.width(this.getMessage()) * TEXT_SCALE);
+        labelHeight = (int) (font.split(label, MAX_LENGTH).size() * font.lineHeight);
+    }
+
+    public void setRenderNotice(boolean renderNotice) {
+        this.renderNotice = renderNotice;
+    }
+
+    public void setOnLabelClick(Runnable onLabelClick) {
+        this.onLabelClick = onLabelClick;
+        isLabelClickDoingAnything = onLabelClick != null;
+    }
+
+    public void setTooltipOnBox(Component tooltip) {
+        this.tooltip = tooltip;
     }
 
     @Override
@@ -69,10 +89,16 @@ public class CustomCheckbox extends AbstractWidget {
         int sy = this.getY();
         int boxScreen = (int) (LOGICAL_BOX * SCALE);
 
-        boolean hoverBox = (!avoidFocusedLogic && this.isFocused() && onLabelClick == null) || (mouseX >= sx && mouseY >= sy && mouseX < sx + boxScreen && mouseY < sy + boxScreen);
+        boolean hoverBoxMouse = (mouseX >= sx && mouseY >= sy && mouseX < sx + boxScreen && mouseY < sy + boxScreen);
+        
+        boolean hoverBoxFocused = !avoidFocusedLogic && this.isFocused() && onLabelClick == null;
+
+        boolean hoverBox = hoverBoxFocused || hoverBoxMouse;
+
         int labelStart = sx + boxScreen + PADDING;
         
-        boolean hoverLabel = (!avoidFocusedLogic && this.isFocused()) || (mouseX >= labelStart && mouseY >= sy /*(lines * 16)*/ && mouseX < labelStart + labelLen && mouseY < sy + boxScreen);
+        boolean hoverLabel = (!avoidFocusedLogic && this.isFocused()) 
+                || (mouseX >= labelStart && mouseY >= sy && mouseX < labelStart + labelLen && mouseY < sy + labelHeight);
 
         // --- draw box ---
         guiGraphics.pose().pushPose();
@@ -84,18 +110,14 @@ public class CustomCheckbox extends AbstractWidget {
         if (renderNotice) {
             guiGraphics.blit(GuiConstants.NOTICE, -19, -19, 0, 0, 54, 54, 54, 54);
         }
-
         guiGraphics.blit(GuiConstants.CHECKBOX, 0, 0, 0, 0, LOGICAL_BOX, LOGICAL_BOX, LOGICAL_BOX, LOGICAL_BOX);
 
-        int box = LOGICAL_BOX;
         int inner = hoverBox ? 0x54FFFFFF : 0x00000000;
-        guiGraphics.fill(0, 0, box, box, inner);
+        guiGraphics.fill(0, 0, LOGICAL_BOX, LOGICAL_BOX, inner);
 
         // checkmark
         if (this.selected) {
             if (DynamicConfigHandler.client().animationsEnabled) {
-                RenderSystem.enableBlend();
-
                 int frameIndex = FRAME_COUNT - 1; // last frame by default
 
                 if (isAnimating && !animationPlayed) {
@@ -116,11 +138,12 @@ public class CustomCheckbox extends AbstractWidget {
                     "boss_checklist",
                     "textures/gui/checkmark/checkmark_" + frameIndex + ".png"
                 );
-
                 guiGraphics.blit(frameTexture, -2, -2, 0, 0, 20, 20, 20, 20);
             } else {
-                RenderSystem.enableBlend();
-                guiGraphics.blit(new ResourceLocation("boss_checklist", "textures/gui/checkmark/checkmark_5.png"), -2, -2, 0, 0, 20, 20, 20, 20);
+                guiGraphics.blit(
+                    new ResourceLocation("boss_checklist", "textures/gui/checkmark/checkmark_5.png"), 
+                    -2, -2, 0, 0, 20, 20, 20, 20
+                );
             }
         }
 
@@ -146,6 +169,12 @@ public class CustomCheckbox extends AbstractWidget {
         guiGraphics.drawWordWrap(Minecraft.getInstance().font, this.getMessage(), 0, 0, MAX_LENGTH, textColor);
 
         guiGraphics.pose().popPose();
+
+        if (hoverBoxMouse) {
+            TooltipUtil.renderTooltip(guiGraphics, tooltip, mouseX, mouseY);
+        } else if (hoverBoxFocused) {
+            TooltipUtil.renderTooltip(guiGraphics, tooltip, (int)(this.getX() + LOGICAL_BOX * SCALE * 0.5), (int)(this.getY() + LOGICAL_BOX * SCALE * 0.5));
+        }
     }
 
     @Override
@@ -206,19 +235,22 @@ public class CustomCheckbox extends AbstractWidget {
         }
     }
 
+    public int getLabelHeight() {
+        return labelHeight;
+    }
+
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        super.keyPressed(keyCode, scanCode, modifiers);
         if (InputConstants.KEY_RETURN == keyCode) {
             if (this.isFocused() && !avoidFocusedLogic) {
                 if (this.onLabelClick != null) {
-                    onClick(scanCode, modifiers);
+                    onClick(0, 0);
                 } else if (this.onValueChange != null) {
                     invertValue();
                 }
             }
         }
-        return false;
+        return super.keyPressed(keyCode, scanCode, modifiers);
     }
 
     public boolean isSelected() {
@@ -238,5 +270,22 @@ public class CustomCheckbox extends AbstractWidget {
     @Override
     protected void updateWidgetNarration(NarrationElementOutput output) {
         defaultButtonNarrationText(output);
+    }
+
+
+
+    private BossChecklistScreen screen;
+    private BossEntry boss;
+
+    public void setBossToMoveWithMouseScroll(BossChecklistScreen screen, BossEntry boss) {
+        this.screen = screen;
+        this.boss = boss;
+    }
+
+    public void moveBossPosition(boolean up, boolean moveCursor, long window) {
+        BossRegistry.moveBossPosition(up, boss.definition(), screen, moveCursor, window);
+        screen.invalidateNames = true;
+        screen.reloadNamesMap();
+        screen.updatePage();
     }
 }

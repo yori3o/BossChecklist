@@ -21,9 +21,12 @@ public final class ServerStorage {
     
     public static Map<String, Float> playerDamages = new HashMap<>();
 
+    public static boolean needsSaving = false;
+
 
 
     public static void markBoss(String id, String killerName, ServerBossAttempt serverBossAttempt, boolean defeated) {
+        needsSaving = true;
         if (defeated) {
             defeatedBossesAndTheirKillers.put(id, killerName);
             serverBossAttempts.put(id, serverBossAttempt);
@@ -35,6 +38,7 @@ public final class ServerStorage {
 
 
     public static void addPlayerDamageGlobal(String playerName, float damage) {
+        needsSaving = true;
         playerDamages.merge(playerName, damage, Float::sum);
     }
 

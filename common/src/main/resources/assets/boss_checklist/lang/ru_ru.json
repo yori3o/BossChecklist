@@ -22,22 +22,48 @@
   "gui.boss_checklist.no_bosses_loaded": "Нет ни одного босса! Возможно, ресурсы сломаны или пусты.",
   "gui.boss_checklist.no_bosses_finded_when_search": "Ничего не нашлось.",
   "gui.boss_checklist.search": "Поиск...",
+  "gui.boss_checklist.no_entity": "Похоже, такой сущности нет: ",
+  "gui.boss_checklist.entity_not_living": "Сущность не является живой (мобом) и не может быть отображена.",
 
   "gui.boss_checklist.settings": "Настройки",
   "gui.boss_checklist.settings.progression_mode": "Режим прогрессии",
   "gui.boss_checklist.settings.progression_mode_desc": "Скрывает всю информацию о непобежденном боссе, кроме способа призыва.",
   "gui.boss_checklist.settings.progression_mode_plus": "Режим прогрессии+",
   "gui.boss_checklist.settings.progression_mode_plus_desc": "Дополнение к предыдущему, скрывающее способ призыва и мод.",
-  "gui.boss_checklist.settings.save_boss_killer": "Сохранять убийцу босса",
-  "gui.boss_checklist.settings.save_boss_killer_desc": "Запоминать того, кто нанёс последний удар?",
   "gui.boss_checklist.settings.search_bar_enabled": "Строка поиска",
   "gui.boss_checklist.settings.search_bar_enabled_desc": "Сверху будет поиск, с помощью которого можно искать по названию и айди.",
-  "gui.boss_checklist.settings.button_enabled": "Включить кнопку",
-  "gui.boss_checklist.settings.button_enabled_desc": "В меню паузы будет кнопка, открывающая чеклист.",
+  "gui.boss_checklist.settings.button_enabled": "Показывать кнопку в меню паузы",
+  "gui.boss_checklist.settings.button_enabled_desc": "Кнопка, открывающая чеклист.",
+  "gui.boss_checklist.settings.show_editor_button": "Показывать кнопку редактора",
+  "gui.boss_checklist.settings.show_editor_button_desc": "Кнопка справа от чеклиста, открывающая редактор.",
+  "gui.boss_checklist.settings.save_boss_killer": "Запоминать убийцу босса",
+  "gui.boss_checklist.settings.save_boss_killer_desc": "Запоминать имя того, кто нанёс последний удар?",
   "gui.boss_checklist.settings.enable_statistics": "Включить статистику",
   "gui.boss_checklist.settings.enable_statistics_desc": "Запоминать время последней битвы и лучших игроков по урону?",
   "gui.boss_checklist.settings.enable_async": "Многопоточность",
   "gui.boss_checklist.settings.enable_async_desc": "Серверная логика будет происходить асинхронно.",
+  
+  "gui.boss_checklist.editor.boss_id": "Айди",
+  "gui.boss_checklist.editor.boss_name": "Имя",
+  "gui.boss_checklist.editor.boss_mod": "Название мода",
+  "gui.boss_checklist.editor.boss_spawn": "Спавн инфо",
+  "gui.boss_checklist.editor.boss_drops": "Дроп",
+  "gui.boss_checklist.editor.boss_version": "Версия мода",
+  "gui.boss_checklist.editor.boss_wiki_link": "Ссылка на вики",
+  "gui.boss_checklist.editor.boss_additional_info": "Доп. инфо",
+  "gui.boss_checklist.editor.position": "Позиция",
+  "gui.boss_checklist.editor.scale": "Размер",
+  "gui.boss_checklist.editor.y_offset": "Смещение Y",
+  "gui.boss_checklist.editor.broken_model": "Моделька сломана",
+  "gui.boss_checklist.editor.miniboss": "Минибосс",
+  "gui.boss_checklist.editor.preview": "Предпросмотр",
+  "gui.boss_checklist.editor.error_invalid_id": "Неверный формат айди!",
+  "gui.boss_checklist.editor.save": "Сохранить в файл",
+  "gui.boss_checklist.editor.guide_help": "Помощь",
+  "gui.boss_checklist.editor.guide_id_format": "Формат айди: mod:boss_id",
+  "gui.boss_checklist.editor.guide_drop_format": "Формат дропа: mod:item_id, mod:item_id ...",
+  "gui.boss_checklist.editor.guide_y_offset_inverted": "Смещение Y противоположно - увеличьте, чтобы опустить босса вниз и наоборот.",
+  "gui.boss_checklist.editor.guide_save_path": "Сохранённые боссы находятся в config/boss_checklist/overlap/",
 
   "command.boss_checklist.invalid_boss_id": "Неверный айди босса: ",
   "command.boss_checklist.boss_marked_successfully_true": "Босс \"%s\" помечен как побеждённый в этом мире.",
@@ -48,27 +74,27 @@
 
   
 
-  "gui.boss_checklist.info_mowziesmobs_frostmaw": "Пластинка выпадает, только если босс убит во время снегопада и вы забрали Ледяной кристалл из его рук.",
-  "gui.boss_checklist.info_mowziesmobs_sculptor": "Чтобы получить Перчатку, нужно пройти его испытание.",
-  "gui.boss_checklist.info_fdbosses_chesed": "Более подробное описание рекомендуется изучить на арене.",
-  "gui.boss_checklist.info_fdbosses_malkuth": "Более подробное описание рекомендуется изучить на арене.",
-  "gui.boss_checklist.info_fdbosses_geburah": "Более подробное описание рекомендуется изучить на арене.",
-  "gui.boss_checklist.info_dungeonnowloading_fairkeeper_boros": "Дроп зависит от того, какого босса вы убили последнего.",
-  "gui.boss_checklist.info_dungeonnowloading_fairkeeper_ouros": "Дроп зависит от того, какого босса вы убили последнего.",
-  "gui.boss_checklist.info_terramity_gundalf": "Имеет три фазы в виде трёх разных боссов.",
-  "gui.boss_checklist.info_hs_bosses_sand_warrior": "Может быть, §3Тотем Бессмертия§f можно найти в этой же башне..?",
-  "gui.boss_checklist.info_adventurez_void_shadow": "Для появления портала нужен мод VoidZ.",
-  "gui.boss_checklist.info_terra_entity_king_slime": "Дроп указан для режима Эксперт (нормальная сложность).",
-  "gui.boss_checklist.info_terra_entity_eye_of_cthulhu": "Дроп указан для режима Эксперт (нормальная сложность) и обоих зол.",
-  "gui.boss_checklist.info_terra_entity_eater_of_worlds": "Дроп указан для режима Эксперт (нормальная сложность).",
-  "gui.boss_checklist.info_terra_entity_brain_of_cthulhu": "Дроп указан для режима Эксперт (нормальная сложность).",
-  "gui.boss_checklist.info_terra_entity_queen_bee": "Дроп указан для режима Эксперт (нормальная сложность).",
-  "gui.boss_checklist.info_terra_entity_skeletron": "Дроп указан для режима Эксперт (нормальная сложность).",
-  "gui.boss_checklist.info_terra_entity_deerclops": "Дроп указан для режима Эксперт (нормальная сложность).",
-  "gui.boss_checklist.info_terra_entity_wall_of_flesh": "Дроп указан для режима Эксперт (нормальная сложность).",
-  "gui.boss_checklist.info_armageddon_mod_the_discord": "Это три босса, которые появляются друг за другом.",
-  "gui.boss_checklist.info_twilightforest_knight_phantom": "Их будет шестеро, и нужно победить каждого.",
-  "gui.boss_checklist.info_goety_apostle": "Часть дропа выпадает только при призыве в Незере.",
+  "boss_checklist.info.mowziesmobs_frostmaw": "Пластинка выпадает, только если босс убит во время снегопада и вы забрали Ледяной кристалл из его рук.",
+  "boss_checklist.info.mowziesmobs_sculptor": "Чтобы получить Перчатку, нужно пройти его испытание.",
+  "boss_checklist.info.fdbosses_chesed": "Более подробное описание рекомендуется изучить на арене.",
+  "boss_checklist.info.fdbosses_malkuth": "Более подробное описание рекомендуется изучить на арене.",
+  "boss_checklist.info.fdbosses_geburah": "Более подробное описание рекомендуется изучить на арене.",
+  "boss_checklist.info.dungeonnowloading_fairkeeper_boros": "Дроп зависит от того, какого босса вы убили последнего.",
+  "boss_checklist.info.dungeonnowloading_fairkeeper_ouros": "Дроп зависит от того, какого босса вы убили последнего.",
+  "boss_checklist.info.terramity_gundalf": "Имеет три фазы в виде трёх разных боссов.",
+  "boss_checklist.info.hs_bosses_sand_warrior": "Может быть, §3Тотем Бессмертия§f можно найти в этой же башне..?",
+  "boss_checklist.info.adventurez_void_shadow": "Для появления портала нужен мод VoidZ.",
+  "boss_checklist.info.terra_entity_king_slime": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "boss_checklist.info.terra_entity_eye_of_cthulhu": "Дроп указан для режима Эксперт (нормальная сложность) и обоих зол.",
+  "boss_checklist.info.terra_entity_eater_of_worlds": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "boss_checklist.info.terra_entity_brain_of_cthulhu": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "boss_checklist.info.terra_entity_queen_bee": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "boss_checklist.info.terra_entity_skeletron": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "boss_checklist.info.terra_entity_deerclops": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "boss_checklist.info.terra_entity_wall_of_flesh": "Дроп указан для режима Эксперт (нормальная сложность).",
+  "boss_checklist.info.armageddon_mod_the_discord": "Это три босса, которые появляются друг за другом.",
+  "boss_checklist.info.twilightforest_knight_phantom": "Их будет шестеро, и нужно победить каждого.",
+  "boss_checklist.info.goety_apostle": "Часть дропа выпадает только при призыве в Незере.",
 
   
   "boss_checklist.mod.minecraft": "Minecraft",
@@ -130,6 +156,8 @@
   "boss_checklist.mod.mutantmore": "Mutant More",
   "boss_checklist.mod.friendsandfoes": "Friends&Foes",
   "boss_checklist.mod.mythsandlegends": "Myths & Legends",
+  "boss_checklist.mod.yo_trash": "Yori3o's Trash 'n Brainrot",
+  "boss_checklist.mod.eternal_starlight": "Eternal Starlight",
 
 
 
@@ -155,6 +183,7 @@
   "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Рыцарь преисподней Хелвар",
   "boss_checklist.boss.block_factorys_bosses_yeti": "Йети Скор",
   "boss_checklist.boss.block_factorys_bosses_sandworm": "Песчаный червь Сирок",
+  "boss_checklist.boss.block_factorys_bosses_kraken": "Кракен Неракисс",
 
   "boss_checklist.boss.bosses_of_mass_destruction_obsidilith": "Обсидилит",
   "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Перчатка Незера",
@@ -270,17 +299,17 @@
   "boss_checklist.boss.terra_entity_deerclops": "Циклоп-олень",
   "boss_checklist.boss.terra_entity_wall_of_flesh": "Стена Плоти",
 
-  "boss_checklist.boss.legendary_monsters_cloud_golem": "Cumulonimbus",
-  "boss_checklist.boss.legendary_monsters_lava_eater": "Lava Eater",
-  "boss_checklist.boss.legendary_monsters_frostbitten_golem": "Frostbitten Golem",
-  "boss_checklist.boss.legendary_monsters_shulker_mimic": "Shulker Mimic",
-  "boss_checklist.boss.legendary_monsters_dune_sentinel": "Dune Sentinel",
-  "boss_checklist.boss.legendary_monsters_ancient_guardian": "Ancient Guardian",
-  "boss_checklist.boss.legendary_monsters_overgrown_colossus": "Overgrown Colossus",
-  "boss_checklist.boss.legendary_monsters_withered_abomination": "Withered Abomination",
-  "boss_checklist.boss.legendary_monsters_skeletosaurus": "Skeletosaurus",
-  "boss_checklist.boss.legendary_monsters_endersent": "Endersent",
-  "boss_checklist.boss.legendary_monsters_posessed_paladin": "Posessed Paladin",
+  "boss_checklist.boss.legendary_monsters_cloud_golem": "Кумулонимбус, Облачный Голем",
+  "boss_checklist.boss.legendary_monsters_lava_eater": "Пожиратель Лавы",
+  "boss_checklist.boss.legendary_monsters_frostbitten_golem": "Обмороженный Голем",
+  "boss_checklist.boss.legendary_monsters_shulker_mimic": "Подражатель Шалкера",
+  "boss_checklist.boss.legendary_monsters_dune_sentinel": "Страж Дюн",
+  "boss_checklist.boss.legendary_monsters_ancient_guardian": "Древний Страж",
+  "boss_checklist.boss.legendary_monsters_overgrown_colossus": "Заросший Колосс",
+  "boss_checklist.boss.legendary_monsters_withered_abomination": "Визер-Мерзость",
+  "boss_checklist.boss.legendary_monsters_skeletosaurus": "Скелетозавр",
+  "boss_checklist.boss.legendary_monsters_endersent": "Эндер-посланник",
+  "boss_checklist.boss.legendary_monsters_posessed_paladin": "Одержимый Паладин",
   "boss_checklist.boss.legendary_monsters_the_obliterator": "The Obliterator",
 
   "boss_checklist.boss.illagerinvasion_invoker": "Вызыватель",
@@ -362,6 +391,12 @@
   
   "boss_checklist.boss.mythsandlegends_black_charro": "The Black Charro",
 
+  "boss_checklist.boss.yo_trash_boss": "Пожиратель Галактик",
+
+  "boss_checklist.boss.eternal_starlight_the_gatekeeper": "Привратник",
+  "boss_checklist.boss.eternal_starlight_starlight_golem": "Звездосветный Голем",
+  "boss_checklist.boss.eternal_starlight_lunar_monstrosity": "Лунное Чудовище",
+
 
 
 
@@ -387,6 +422,7 @@
   "boss_checklist.summon.block_factorys_bosses_underworld_knight": "Найдите арену с боссом в Незере и откройте дверь §1Underworld Arena key§r§0, который можно получить из рассадников испытаний.",
   "boss_checklist.summon.block_factorys_bosses_yeti": "Наткнитесь на усыпанный скелетами ледяной пик в заснеженной равнине и потревожьте заледеневшего босса.",
   "boss_checklist.summon.block_factorys_bosses_sandworm": "Подойдите близко к подозрительным руинам с костями в пустыне.",
+  "boss_checklist.summon.block_factorys_bosses_kraken": "Найдите в океане корабль и убейте скелетов-пиратов.",
 
   "boss_checklist.summon.bosses_of_mass_destruction_obsidilith": "Вставьте §1Око эндера§r§0 в Обсидиановый алтарь на вершине гигантского парящего сооружения в Энде.",
   "boss_checklist.summon.bosses_of_mass_destruction_gauntlet": "Найдите большую арену в озёрах лавы Незера и разрушьте §1Древний резной чернит§r§0 в её центре.",
@@ -574,9 +610,9 @@
   "boss_checklist.summon.monsterexpansion_leivekilth": "Иногда появляется в замёрзших океанах.",
 
   "boss_checklist.summon.mutantmonsters_mutant_zombie": "Иногда появляется на поверхности.",
-  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Иногда появляется на поверхности.",
+  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Иногда появляется на поверхности и в биоме Долина песка душ.",
   "boss_checklist.summon.mutantmonsters_mutant_creeper": "Иногда появляется на поверхности.",
-  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Иногда появляется на островах Энда.",
+  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Иногда появляется на островах Энда и в биоме Искажённый лес.",
 
   "boss_checklist.summon.arthropocolypse_behemoth_desert_spider": "Найдите арену с боссом в пустыне.",
 
@@ -592,5 +628,11 @@
   
   "boss_checklist.summon.friendsandfoes_wildfire": "Найдите в Незере большую структуру – Цитадель, в центре которой будет минибосс.",
   
-  "boss_checklist.summon.mythsandlegends_black_charro": "Найдите алтарь на кладбище в пустыне или бесплодных землях и используйте §1Soulbinder Amulet§r§0 на нём ночью."
+  "boss_checklist.summon.mythsandlegends_black_charro": "Найдите алтарь на кладбище в пустыне или бесплодных землях и используйте §1Soulbinder Amulet§r§0 на нём ночью.",
+
+  "boss_checklist.summon.yo_trash_boss": "Найдите арену с помощью §1Ока вони§r§0 и возложите на Алтарь Шмурдяк, который можно найти в лабиринте перед ней.",
+
+  "boss_checklist.summon.eternal_starlight_the_gatekeeper": "Найдите его у руин портала в Звездосветье в Верхнем мире.",
+  "boss_checklist.summon.eternal_starlight_starlight_golem": "Используйте §1Ищущее око§r§0 в Звездосветье, держа в другой руке редстоуновую пыль.",
+  "boss_checklist.summon.eternal_starlight_lunar_monstrosity": "Используйте §1Ищущее око§r§0 в Звездосветье, держа в другой руке лианы."
 }

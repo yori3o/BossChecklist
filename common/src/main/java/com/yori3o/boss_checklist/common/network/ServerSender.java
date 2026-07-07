@@ -1,6 +1,5 @@
 package com.yori3o.boss_checklist.common.network;
 
-
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;

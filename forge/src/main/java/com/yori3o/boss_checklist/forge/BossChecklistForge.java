@@ -22,6 +22,8 @@ public class BossChecklistForge {
     public BossChecklistForge() {
         (new BossChecklist()).init();
 
+        //EventHandler.whenRegisterPayloads();
+
         MinecraftForge.EVENT_BUS.addListener(this::onLivingDeath);
         MinecraftForge.EVENT_BUS.addListener(this::onLivingDamage);
         MinecraftForge.EVENT_BUS.addListener(this::onPlayerJoin);

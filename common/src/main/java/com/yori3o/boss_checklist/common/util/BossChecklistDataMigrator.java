@@ -20,7 +20,12 @@ public class BossChecklistDataMigrator {
 
 
     public static void migrateIfNeeded() {
-        File gameDir = Minecraft.getInstance().gameDirectory;
+        Minecraft mc = Minecraft.getInstance();
+        if (mc == null) {
+            LoggerUtil.error("Failed to migrate data due to Minecraft.getInstance() is null.");
+            return;
+        }
+        File gameDir = mc.gameDirectory;
         
         File oldDir = new File(gameDir, OLD_FOLDER);
         File newDir = new File(gameDir, NEW_FOLDER);
@@ -37,7 +42,7 @@ public class BossChecklistDataMigrator {
             deleteFolder(oldDir);
 
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("Failed to migrate BossChecklist data folder!", e);
+            LoggerUtil.errorWithException("Failed to migrate BossChecklist data folder!", e);
         }
     }
 

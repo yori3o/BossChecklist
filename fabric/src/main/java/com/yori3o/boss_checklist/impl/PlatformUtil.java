@@ -37,6 +37,15 @@ public class PlatformUtil {
         }
         return null;
     }
+
+    public static String getModName(String modId) {
+        Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer(modId);
+
+        if (modContainer.isPresent()) {
+            return modContainer.get().getMetadata().getName();
+        }
+        return null;
+    }
     
     public static boolean isFabric() {
         return true;

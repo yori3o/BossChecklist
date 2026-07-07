@@ -41,7 +41,7 @@ public class BossDefinition {
     private Integer health;
     private Integer armor;
 
-    private Integer type;
+    private Integer type; // 1-boss, 2-miniboss
 
     @SerializedName("mod_version")
     private String modVersion;
@@ -51,6 +51,21 @@ public class BossDefinition {
 
     public BossDefinition(String id) {
         this.id = id;
+    }
+
+    public BossDefinition(String id, float position, int scale, int yOffset, boolean brokenModel, boolean miniboss, List<String> drops, 
+            String version, String wikiLink, boolean additionalInfo) {
+        this.id = id;
+        this.position = position;
+        this.scale = scale;
+        this.yOffset = yOffset;
+        this.brokenModel = brokenModel;
+        if (miniboss) this.type = 2;
+        this.drops = drops;
+        this.modVersion = version;
+        this.additionalInfo = additionalInfo;
+        this.wikiLink = wikiLink;
+        this.applyDefaults();
     }
 
     public String id() {
@@ -93,11 +108,11 @@ public class BossDefinition {
         return wikiLink;
     }
 
-    public float health() {
+    public int health() {
         return health;
     }
 
-    public float armor() {
+    public int armor() {
         return armor;
     }
 
@@ -125,11 +140,16 @@ public class BossDefinition {
         if (id.equals("minecraft:wither")) {
             if (PlatformUtil.isModLoaded("witherreincarnated")) {
                 scale -= 1;
+                position = 101.1f;
             }
         } else if (id.equals("minecraft:ender_dragon")) {
             if (PlatformUtil.isModLoaded("mr_limesplatus_ending") || PlatformUtil.isModLoaded("mr_true_ending")) {
                 health = 300;
             }
         }
+    }
+
+    public void setPosition(float position) {
+        this.position = position;
     }
 }

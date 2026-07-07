@@ -30,12 +30,11 @@ public abstract class ServerLevelMixin {
         at = @At(value = "TAIL")
     )
     private void saveBossChecklistData(ProgressListener progressListener, boolean bl, boolean bl2, CallbackInfo ci) {
-        if (!bl2) {
+        if (!bl2 && ServerStorage.needsSaving) {
+            ServerStorage.needsSaving = false;
             File worldDir = ((ServerLevel)(Object)this).getServer().getWorldPath(LevelResource.ROOT).toFile();
             if (DynamicConfigHandler.server().asyncLogic) {
-                ClassLoader cl = Thread.currentThread().getContextClassLoader();
                 CompletableFuture.runAsync(() -> {
-                    Thread.currentThread().setContextClassLoader(cl);
                     saveData(worldDir);
                 });
             } else {
@@ -53,7 +52,7 @@ public abstract class ServerLevelMixin {
                 BossChecklistJsonDataSaver.saveGlobalStatistics(worldDir, ServerStorage.playerDamages);
             }
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("Unexpected error while saving data to world folder: ", e);
+            LoggerUtil.errorWithException("Unexpected error while saving data to world folder: ", e);
         }
         
     }

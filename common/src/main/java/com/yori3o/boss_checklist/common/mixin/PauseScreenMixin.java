@@ -4,6 +4,7 @@ package com.yori3o.boss_checklist.common.mixin;
 import com.yori3o.boss_checklist.common.client.gui.BossChecklistScreen;
 import com.yori3o.boss_checklist.common.client.gui.GuiConstants;
 import com.yori3o.boss_checklist.common.client.gui.widget.CustomButton;
+import com.yori3o.boss_checklist.common.compat.Compats;
 import com.yori3o.boss_checklist.common.config.DynamicConfigHandler;
 
 import net.minecraft.client.Minecraft;
@@ -27,7 +28,6 @@ public abstract class PauseScreenMixin extends Screen {
     @Shadow
     private boolean showPauseMenu;
 
-
     protected PauseScreenMixin() {
         super(Component.literal("Pause menu"));
     }
@@ -42,6 +42,7 @@ public abstract class PauseScreenMixin extends Screen {
             
                 int x = this.width / 2 + 107;
                 int y = (this.height / 4 + 26) + DynamicConfigHandler.client().openButtonYOffset;
+                if (Compats.isCompletionistsIndexLoaded) y += 54;
 
                 CustomButton openButton = new CustomButton(
                     x, 

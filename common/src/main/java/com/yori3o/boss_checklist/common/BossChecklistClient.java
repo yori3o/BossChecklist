@@ -2,9 +2,9 @@ package com.yori3o.boss_checklist.common;
 
 
 import com.yori3o.boss_checklist.common.config.DynamicConfigHandler;
-import com.yori3o.boss_checklist.common.network.ClientReceiver;
 import com.yori3o.boss_checklist.common.util.BossChecklistDataMigrator;
 import com.yori3o.boss_checklist.impl.PlatformKeyMappingRegistry;
+import com.yori3o.boss_checklist.common.event.EventHandler;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
@@ -24,9 +24,9 @@ public class BossChecklistClient {
 
     public static void initClient() {
 
-        DynamicConfigHandler.loadClient();
+        EventHandler.whenRegisterPayloads();
 
-        ClientReceiver.register();
+        DynamicConfigHandler.loadClient();
 
         BossChecklistDataMigrator.migrateIfNeeded();
         

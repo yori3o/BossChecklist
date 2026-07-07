@@ -1,7 +1,9 @@
 package com.yori3o.boss_checklist.common.client.gui.widget;
 
 
+ 
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -21,7 +23,7 @@ public class CustomButton extends Button {
     private final int overlayWidth;
     private final int overlayHeight;
 
-    ResourceLocation tex;
+    private ResourceLocation tex;
     private boolean pressedFlag = false;
     
 
@@ -46,6 +48,8 @@ public class CustomButton extends Button {
     @Override
     public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
 
+        RenderSystem.enableBlend();
+
         if (pressedFlag) {
             tex = pressedTex;
         } else if (this.isHoveredOrFocused()) {
@@ -54,7 +58,6 @@ public class CustomButton extends Button {
             tex = normalTex;
         }
 
-        RenderSystem.enableBlend();
 
         guiGraphics.blit(tex, this.getX(), this.getY(), 0, 0, this.width, this.height, this.width, this.height);
         

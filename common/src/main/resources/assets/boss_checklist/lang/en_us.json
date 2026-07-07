@@ -22,22 +22,48 @@
   "gui.boss_checklist.no_bosses_loaded": "There are no bosses! The resources may be broken or empty.",
   "gui.boss_checklist.no_bosses_finded_when_search": "Nothing found.",
   "gui.boss_checklist.search": "Search...",
+  "gui.boss_checklist.no_entity": "It seems that such an entity does not exist: ",
+  "gui.boss_checklist.entity_not_living": "The entity is not living (mob) and cannot be displayed.",
 
   "gui.boss_checklist.settings": "Settings",
   "gui.boss_checklist.settings.progression_mode": "Progression mode",
-  "gui.boss_checklist.settings.progression_mode_desc": "Hides all information about an undefeated boss except for the spawn info.",
+  "gui.boss_checklist.settings.progression_mode_desc": "Hides all information about an undefeated boss except for the spawn info",
   "gui.boss_checklist.settings.progression_mode_plus": "Progression mode+",
-  "gui.boss_checklist.settings.progression_mode_plus_desc": "An addition to the previous one, hiding the spawn info and mod.",
+  "gui.boss_checklist.settings.progression_mode_plus_desc": "An addition to the previous one, hiding the spawn info and mod",
+  "gui.boss_checklist.settings.search_bar_enabled": "Search bar",
+  "gui.boss_checklist.settings.search_bar_enabled_desc": "There will be a search at the top, with which you can search by name and ID",
+  "gui.boss_checklist.settings.button_enabled": "Enable open button",
+  "gui.boss_checklist.settings.button_enabled_desc": "The button in the pause menu that opens the checklist",
+  "gui.boss_checklist.settings.show_editor_button": "Enable editor button",
+  "gui.boss_checklist.settings.show_editor_button_desc": "The button to the right of the checklist that opens the editor",
   "gui.boss_checklist.settings.save_boss_killer": "Save the boss killer",
   "gui.boss_checklist.settings.save_boss_killer_desc": "Preserve the name of the one who dealt the final blow?",
-  "gui.boss_checklist.settings.search_bar_enabled": "Search bar",
-  "gui.boss_checklist.settings.search_bar_enabled_desc": "There will be a search at the top, with which you can search by name and ID.",
-  "gui.boss_checklist.settings.button_enabled": "Enable button",
-  "gui.boss_checklist.settings.button_enabled_desc": "There will be a button in the pause menu that opens the checklist.",
   "gui.boss_checklist.settings.enable_statistics": "Enable statistics",
   "gui.boss_checklist.settings.enable_statistics_desc": "Remember the time of the last battle and the top players by damage?",
   "gui.boss_checklist.settings.enable_async": "Multithreading",
-  "gui.boss_checklist.settings.enable_async_desc": "Server logic will be execute asynchronously.",
+  "gui.boss_checklist.settings.enable_async_desc": "Server logic will be execute asynchronously",
+  
+  "gui.boss_checklist.editor.boss_id": "Id",
+  "gui.boss_checklist.editor.boss_name": "Name",
+  "gui.boss_checklist.editor.boss_mod": "Mod name",
+  "gui.boss_checklist.editor.boss_spawn": "Spawn info",
+  "gui.boss_checklist.editor.boss_drops": "Drops",
+  "gui.boss_checklist.editor.boss_version": "Mod version",
+  "gui.boss_checklist.editor.boss_wiki_link": "Link to wiki",
+  "gui.boss_checklist.editor.boss_additional_info": "Addtl. info",
+  "gui.boss_checklist.editor.position": "Position",
+  "gui.boss_checklist.editor.scale": "Scale",
+  "gui.boss_checklist.editor.y_offset": "Y offset",
+  "gui.boss_checklist.editor.broken_model": "Broken model",
+  "gui.boss_checklist.editor.miniboss": "Miniboss",
+  "gui.boss_checklist.editor.preview": "Preview",
+  "gui.boss_checklist.editor.error_invalid_id": "Invalid id format!",
+  "gui.boss_checklist.editor.save": "Save to file",
+  "gui.boss_checklist.editor.guide_help": "Help",
+  "gui.boss_checklist.editor.guide_id_format": "Id format: mod:boss_id",
+  "gui.boss_checklist.editor.guide_drop_format": "Drops format: mod:item_id, mod:item_id ...",
+  "gui.boss_checklist.editor.guide_y_offset_inverted": "Y offset is the opposite - increase it to move the boss down and vice versa.",
+  "gui.boss_checklist.editor.guide_save_path": "Saved bosses located in config/boss_checklist/overlap/",
 
   "command.boss_checklist.invalid_boss_id": "Invalid boss id: ",
   "command.boss_checklist.boss_marked_successfully_true": "Boss \"%s\" is marked as defeated in this world.",
@@ -48,27 +74,27 @@
 
   
 
-  "gui.boss_checklist.info_mowziesmobs_frostmaw": "The music disc only drops if the boss is killed during a snowfall and you take the Ice Crystal from his hands.",
-  "gui.boss_checklist.info_mowziesmobs_sculptor": "To obtain the Gauntlet, you must pass his test.",
-  "gui.boss_checklist.info_fdbosses_chesed": "It is recommended to study a more detailed description in the arena.",
-  "gui.boss_checklist.info_fdbosses_malkuth": "It is recommended to study a more detailed description in the arena.",
-  "gui.boss_checklist.info_fdbosses_geburah": "It is recommended to study a more detailed description in the arena.",
-  "gui.boss_checklist.info_dungeonnowloading_fairkeeper_boros": "The drop depends on which boss you killed last.",
-  "gui.boss_checklist.info_dungeonnowloading_fairkeeper_ouros": "The drop depends on which boss you killed last.",
-  "gui.boss_checklist.info_terramity_gundalf": "It has three phases in the form of three different bosses.",
-  "gui.boss_checklist.info_hs_bosses_sand_warrior": "Perhaps the §3Totem of Undying§f can be found in this same tower..?",
-  "gui.boss_checklist.info_adventurez_void_shadow": "The VoidZ mod is required for the portal to appear.",
-  "gui.boss_checklist.info_terra_entity_king_slime": "The drop is specified for Expert mode (normal difficulty).",
-  "gui.boss_checklist.info_terra_entity_eye_of_cthulhu": "The drop is indicated for Expert mode (normal difficulty) and both evils.",
-  "gui.boss_checklist.info_terra_entity_eater_of_worlds": "The drop is specified for Expert mode (normal difficulty).",
-  "gui.boss_checklist.info_terra_entity_brain_of_cthulhu": "The drop is specified for Expert mode (normal difficulty).",
-  "gui.boss_checklist.info_terra_entity_queen_bee": "The drop is specified for Expert mode (normal difficulty).",
-  "gui.boss_checklist.info_terra_entity_skeletron": "The drop is specified for Expert mode (normal difficulty).",
-  "gui.boss_checklist.info_terra_entity_deerclops": "The drop is specified for Expert mode (normal difficulty).",
-  "gui.boss_checklist.info_terra_entity_wall_of_flesh": "The drop is specified for Expert mode (normal difficulty).",
-  "gui.boss_checklist.info_armageddon_mod_the_discord": "These are three bosses that appear one after another.",
-  "gui.boss_checklist.info_twilightforest_knight_phantom": "There will be six of them, and you need to defeat each one.",
-  "gui.boss_checklist.info_goety_apostle": "Some drops only occur when summoned in the Nether.",
+  "boss_checklist.info.mowziesmobs_frostmaw": "The music disc only drops if the boss is killed during a snowfall and you take the Ice Crystal from his hands.",
+  "boss_checklist.info.mowziesmobs_sculptor": "To obtain the Gauntlet, you must pass his test.",
+  "boss_checklist.info.fdbosses_chesed": "It is recommended to study a more detailed description in the arena.",
+  "boss_checklist.info.fdbosses_malkuth": "It is recommended to study a more detailed description in the arena.",
+  "boss_checklist.info.fdbosses_geburah": "It is recommended to study a more detailed description in the arena.",
+  "boss_checklist.info.dungeonnowloading_fairkeeper_boros": "The drop depends on which boss you killed last.",
+  "boss_checklist.info.dungeonnowloading_fairkeeper_ouros": "The drop depends on which boss you killed last.",
+  "boss_checklist.info.terramity_gundalf": "It has three phases in the form of three different bosses.",
+  "boss_checklist.info.hs_bosses_sand_warrior": "Perhaps the §3Totem of Undying§f can be found in this same tower..?",
+  "boss_checklist.info.adventurez_void_shadow": "The VoidZ mod is required for the portal to appear.",
+  "boss_checklist.info.terra_entity_king_slime": "The drop is specified for Expert mode (normal difficulty).",
+  "boss_checklist.info.terra_entity_eye_of_cthulhu": "The drop is indicated for Expert mode (normal difficulty) and both evils.",
+  "boss_checklist.info.terra_entity_eater_of_worlds": "The drop is specified for Expert mode (normal difficulty).",
+  "boss_checklist.info.terra_entity_brain_of_cthulhu": "The drop is specified for Expert mode (normal difficulty).",
+  "boss_checklist.info.terra_entity_queen_bee": "The drop is specified for Expert mode (normal difficulty).",
+  "boss_checklist.info.terra_entity_skeletron": "The drop is specified for Expert mode (normal difficulty).",
+  "boss_checklist.info.terra_entity_deerclops": "The drop is specified for Expert mode (normal difficulty).",
+  "boss_checklist.info.terra_entity_wall_of_flesh": "The drop is specified for Expert mode (normal difficulty).",
+  "boss_checklist.info.armageddon_mod_the_discord": "These are three bosses that appear one after another.",
+  "boss_checklist.info.twilightforest_knight_phantom": "There will be six of them, and you need to defeat each one.",
+  "boss_checklist.info.goety_apostle": "Some drops only occur when summoned in the Nether.",
 
   
   "boss_checklist.mod.minecraft": "Minecraft",
@@ -130,6 +156,8 @@
   "boss_checklist.mod.mutantmore": "Mutant More",
   "boss_checklist.mod.friendsandfoes": "Friends&Foes",
   "boss_checklist.mod.mythsandlegends": "Myths & Legends",
+  "boss_checklist.mod.yo_trash": "Yori3o's Trash 'n Brainrot",
+  "boss_checklist.mod.eternal_starlight": "Eternal Starlight",
 
 
 
@@ -155,6 +183,7 @@
   "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Helvar, The Underworld Knight",
   "boss_checklist.boss.block_factorys_bosses_yeti": "Skor, The Yeti",
   "boss_checklist.boss.block_factorys_bosses_sandworm": "Sirok, The Sandworm",
+  "boss_checklist.boss.block_factorys_bosses_kraken": "Nerakyss, The Kraken",
 
   "boss_checklist.boss.bosses_of_mass_destruction_obsidilith": "Obsidilith",
   "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Nether Gauntlet",
@@ -279,7 +308,7 @@
   "boss_checklist.boss.legendary_monsters_overgrown_colossus": "Overgrown Colossus",
   "boss_checklist.boss.legendary_monsters_withered_abomination": "Withered Abomination",
   "boss_checklist.boss.legendary_monsters_skeletosaurus": "Skeletosaurus",
-  "boss_checklist.boss.legendary_monsters_endersent": "Endersent",
+  "boss_checklist.boss.legendary_monsters_endersent": "Chorusent",
   "boss_checklist.boss.legendary_monsters_posessed_paladin": "Posessed Paladin",
   "boss_checklist.boss.legendary_monsters_the_obliterator": "The Obliterator",
 
@@ -362,6 +391,12 @@
   
   "boss_checklist.boss.mythsandlegends_black_charro": "The Black Charro",
 
+  "boss_checklist.boss.yo_trash_boss": "The Devourer of Galaxies",
+
+  "boss_checklist.boss.eternal_starlight_the_gatekeeper": "The Gatekeeper",
+  "boss_checklist.boss.eternal_starlight_starlight_golem": "Starlight Golem",
+  "boss_checklist.boss.eternal_starlight_lunar_monstrosity": "Lunar Monstrosity",
+
 
 
 
@@ -387,6 +422,7 @@
   "boss_checklist.summon.block_factorys_bosses_underworld_knight": "Find the boss arena in the Nether and open the door with the §1Underworld Arena key§r§0, which can be obtained from the trial spawmers.",
   "boss_checklist.summon.block_factorys_bosses_yeti": "Encounter a bone-strewn icy peak in a snowy plain.",
   "boss_checklist.summon.block_factorys_bosses_sandworm": "Look for suspicious ruins with bones in the desert.",
+  "boss_checklist.summon.block_factorys_bosses_kraken": "Find a ship in the ocean and kill the skeleton pirates.",
 
   "boss_checklist.summon.bosses_of_mass_destruction_obsidilith": "Insert §1Eye of Ender§r§0 into the Obsidian Altar atop the giant floating structure in the End.",
   "boss_checklist.summon.bosses_of_mass_destruction_gauntlet": "Find the large arena in the Nether lava pools and destroy the §1Ancient Carved Blackstone§r§0 in its center.",
@@ -400,7 +436,7 @@
   "boss_checklist.summon.cataclysm_scylla": "Click the anchor at the top of the Acropolis, which can be found with the Eye of Storm in the Overworld.",
   "boss_checklist.summon.cataclysm_maledictus": "Click the Cursed Tombstone behind the Door of Seal, opened with the §1Strange Key§r§0, in the Frosted Prison, which the Eye of Curse will show you the way to.",
   "boss_checklist.summon.cataclysm_ender_guardian": "Follow the Eye of Void to the Shattered Citadel in the End.",
-  "boss_checklist.summon.cataclysm_ignis": "Find the Burnung Arena with the Eye of Flame, defeat the Flame Revenants, and right-click the Fire Altar with the §1Burning Ash§r§0.",
+  "boss_checklist.summon.cataclysm_ignis": "Find the Burning Arena with the Eye of Flame, defeat the Flame Revenants, and right-click the Fire Altar with the §1Burning Ash§r§0.",
 
   "boss_checklist.summon.fdbosses_malkuth": "Find the boss arena using the §1Eye Of Malkuth§r§0.",
   "boss_checklist.summon.fdbosses_chesed": "Find the boss arena using the §1Eye Of Chesed§r§0.",
@@ -574,9 +610,9 @@
   "boss_checklist.summon.monsterexpansion_leivekilth": "Sometimes appears in frozen oceans.",
 
   "boss_checklist.summon.mutantmonsters_mutant_zombie": "Sometimes appears on the surface of the overworld.",
-  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Sometimes appears on the surface of the overworld.",
+  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Sometimes appears on the surface of the overworld and in the Soul Sand Valley biome.",
   "boss_checklist.summon.mutantmonsters_mutant_creeper": "Sometimes appears on the surface of the overworld.",
-  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Sometimes appears on the End islands.",
+  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Sometimes appears on the End islands and in the Warped Forest biome.",
 
   "boss_checklist.summon.arthropocolypse_behemoth_desert_spider": "Find the boss arena in the desert.",
 
@@ -592,5 +628,11 @@
   
   "boss_checklist.summon.friendsandfoes_wildfire": "Find a large structure in the Nether called the Citadel, with a miniboss in the center.",
   
-  "boss_checklist.summon.mythsandlegends_black_charro": "Find an altar in a graveyard in a desert or badlands and use the §1Soulbinder Amulet§r§0 on it at night."
+  "boss_checklist.summon.mythsandlegends_black_charro": "Find an altar in a graveyard in a desert or badlands and use the §1Soulbinder Amulet§r§0 on it at night.",
+
+  "boss_checklist.summon.yo_trash_boss": "Find the arena with the §1Eye of Stink§r§0 and place a Shmurdyak on the Altar, which can be found in the labyrinth in front of it.",
+
+  "boss_checklist.summon.eternal_starlight_the_gatekeeper": "Find him at the ruins of the Starlight portal in the Overworld.",
+  "boss_checklist.summon.eternal_starlight_starlight_golem": "Use §1Seeking Eye§r§0 in Starlight while holding Redstone Dust in your other hand.",
+  "boss_checklist.summon.eternal_starlight_lunar_monstrosity": "Use §1Seeking Eye§r§0 in Starlight while holding Vines in your other hand."
 }

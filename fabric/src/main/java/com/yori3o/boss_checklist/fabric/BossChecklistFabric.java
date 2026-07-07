@@ -23,6 +23,8 @@ public class BossChecklistFabric implements ModInitializer {
     public void onInitialize() {
         (new BossChecklist()).init();
 
+        //EventHandler.whenRegisterPayloads();
+
         ServerLivingEntityEvents.AFTER_DEATH.register((livingEntity, damageSource) -> {
             EventHandler.whenEntityDeath(livingEntity, damageSource);
         });

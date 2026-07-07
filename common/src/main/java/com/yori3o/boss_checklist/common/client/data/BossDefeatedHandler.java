@@ -27,7 +27,7 @@ public class BossDefeatedHandler {
 
         BossDefinition def = BossRegistry.get(bossId);
         if (def == null) {
-            LoggerUtil.warn("Boss not registered: " + bossId);
+            LoggerUtil.warn("Information about a non-existent boss came from the server: " + bossId);
             return;
         }
 

@@ -1,6 +1,7 @@
 package com.yori3o.boss_checklist.common.server.data;
 
 
+import com.yori3o.boss_checklist.common.client.data.OverlapManager;
 import com.yori3o.boss_checklist.common.util.LoggerUtil;
 import com.yori3o.boss_checklist.impl.PlatformUtil;
 
@@ -56,13 +57,16 @@ public final class ServerBossIdsLoader {
                     else {
                         LoggerUtil.warn("Unexpected JSON type for " + JSON_RL.getPath() + " in " + res.sourcePackId());
                     }
-                } catch (Exception ex) {
-                    LoggerUtil.LOGGER.warn("Failed to read " + JSON_RL.getPath() + " from " + res.sourcePackId(), ex);
+                } catch (Exception e) {
+                    LoggerUtil.errorWithException("Failed to read " + JSON_RL.getPath() + " from " + res.sourcePackId(), e);
                 }
             }
-        } catch (Exception ex) {
-            LoggerUtil.LOGGER.error("Unexpected error loading server boss ids!", ex);
+        } catch (Exception e) {
+            LoggerUtil.errorWithException("Unexpected error loading server boss ids!", e);
         }
+
+        OverlapManager.loadServerOverlap();
+        ALL_BOSSES.addAll(OverlapManager.OVERLAP_SERVER_BOSSES_IDS);
 
         for (String bossId : ALL_BOSSES) {
             if (PlatformUtil.isModLoaded(bossId.split(":")[0])) {
@@ -79,7 +83,7 @@ public final class ServerBossIdsLoader {
         try {
             return LOADED_BOSSES.contains(bossId);
         } catch (Exception e) {
-            LoggerUtil.LOGGER.error("There was an error checking the boss ID on the server. Perhaps the list of boss IDs hasn't loaded yet?", e);
+            LoggerUtil.errorWithException("There was an error checking the boss ID on the server. Perhaps the list of boss IDs hasn't loaded yet?", e);
             return false;
         }
     }

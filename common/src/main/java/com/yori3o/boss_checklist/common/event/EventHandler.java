@@ -65,4 +65,9 @@ public class EventHandler {
     public static void whenClientTickStart() {
         ClientEvents.checkKeybindPressed();
     }
+
+    public static void whenRegisterPayloads() {
+        ServerEvents.registerPayloads();
+    }
+
 }
