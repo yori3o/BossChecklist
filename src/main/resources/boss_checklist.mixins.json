@@ -6,7 +6,9 @@
         "PauseScreenMixin",
         "MouseMixin",
         "ClientLanguageMixin",
-        "ClientLanguageAccessor"
+        "ClientLanguageAccessor",
+        "InventoryScreenMixin",
+        "CreativeModeInventoryScreenMixin"
     ],
     "mixins": [
         "DeleteWorldMixin",

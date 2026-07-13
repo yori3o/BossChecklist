@@ -52,7 +52,7 @@ public abstract class PauseScreenMixin extends Screen {
                     GuiConstants.OPEN_BUTTON_TEXTURE_hovered, 
                     null, 
                     () -> {
-                        Minecraft.getInstance().gui.setScreen(new BossChecklistScreen(true));
+                        Minecraft.getInstance().gui.setScreen(new BossChecklistScreen(this));
                     }
                 );
 
