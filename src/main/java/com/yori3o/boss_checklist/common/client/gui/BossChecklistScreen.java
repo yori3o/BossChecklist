@@ -19,7 +19,6 @@ import com.yori3o.boss_checklist.common.client.data.BossService;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.client.gui.screens.PauseScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.renderer.RenderPipelines;
@@ -56,7 +55,6 @@ public class BossChecklistScreen extends Screen {
     private boolean noBossesLoaded = false;
     private boolean noBossesFindedWhenSearch = false;
     private boolean namesMapAreLoaded = false;
-    private final boolean FROM_PAUSE_MENU;
 
     private LinkedHashMap<String, Component> bosses = BossNameCache.CACHE_TRUNCATED; // read-only 
     private LinkedHashMap<String, Component> bossesFiltered = new LinkedHashMap<>();
@@ -65,11 +63,13 @@ public class BossChecklistScreen extends Screen {
     private int totalCount = 0;
     private float percent = 0;
 
+    private final Screen parent;
 
 
-    public BossChecklistScreen(boolean fromPauseMenu) {
+
+    public BossChecklistScreen(Screen parent) {
         super(Component.literal("Boss checklist"));
-        FROM_PAUSE_MENU = fromPauseMenu;
+        this.parent = parent;
     }
 
 
@@ -463,10 +463,6 @@ public class BossChecklistScreen extends Screen {
 
     @Override
     public void onClose() {
-        if (FROM_PAUSE_MENU) {
-            this.minecraft.setScreen(new PauseScreen(true));
-        } else {
-            this.minecraft.setScreen(null);
-        }
+        this.minecraft.setScreen(parent);
     }
 }

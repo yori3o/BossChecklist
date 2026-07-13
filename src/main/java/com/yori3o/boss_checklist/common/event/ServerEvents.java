@@ -24,6 +24,7 @@ import net.minecraft.world.level.storage.LevelResource;
 import java.io.File;
 import java.time.Instant;
 import java.util.Map;
+import java.util.Map.Entry;
 
 
 
@@ -69,9 +70,10 @@ public class ServerEvents {
         File worldDir = server.getWorldPath(LevelResource.ROOT).toFile();
         try {
             Map<String, String> defeatedBossesMap = BossChecklistJsonDataSaver.loadDefeatedBosses(worldDir);
-            for (String id : defeatedBossesMap.keySet()) {
-                if (ServerBossIdsLoader.isBoss(id)) {
-                    ServerStorage.defeatedBossesAndTheirKillers.put(id, defeatedBossesMap.get(id));
+            ServerStorage.defeatedBossesAndTheirKillers.clear();
+            for (Entry<String, String> entry : defeatedBossesMap.entrySet()) {
+                if (ServerBossIdsLoader.isBoss(entry.getKey())) {
+                    ServerStorage.defeatedBossesAndTheirKillers.put(entry.getKey(), defeatedBossesMap.get(entry.getValue()));
                 }
             }
             if (DynamicConfigHandler.server().statisticsEnabled) {
