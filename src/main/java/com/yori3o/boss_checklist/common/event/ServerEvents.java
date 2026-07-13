@@ -73,7 +73,7 @@ public class ServerEvents {
             ServerStorage.defeatedBossesAndTheirKillers.clear();
             for (Entry<String, String> entry : defeatedBossesMap.entrySet()) {
                 if (ServerBossIdsLoader.isBoss(entry.getKey())) {
-                    ServerStorage.defeatedBossesAndTheirKillers.put(entry.getKey(), defeatedBossesMap.get(entry.getValue()));
+                    ServerStorage.defeatedBossesAndTheirKillers.put(entry.getKey(), entry.getValue());
                 }
             }
             if (DynamicConfigHandler.server().statisticsEnabled) {
