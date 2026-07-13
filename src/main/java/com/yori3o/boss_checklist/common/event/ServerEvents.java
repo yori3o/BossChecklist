@@ -39,7 +39,6 @@ public class ServerEvents {
 
             String killerName = ServerStorage.defeatedBossesAndTheirKillers.get(id);
 
-            // String one = lineOfInformation + "#false";
             String attemptTop3 = "#####";
             String globalTop3 = "#####";
             String startTime = "";
@@ -73,7 +72,7 @@ public class ServerEvents {
             ServerStorage.defeatedBossesAndTheirKillers.clear();
             for (Entry<String, String> entry : defeatedBossesMap.entrySet()) {
                 if (ServerBossIdsLoader.isBoss(entry.getKey())) {
-                    ServerStorage.defeatedBossesAndTheirKillers.put(entry.getKey(), defeatedBossesMap.get(entry.getValue()));
+                    ServerStorage.defeatedBossesAndTheirKillers.put(entry.getKey(), entry.getValue());
                 }
             }
             if (DynamicConfigHandler.server().statisticsEnabled) {
