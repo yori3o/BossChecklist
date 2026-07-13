@@ -21,6 +21,10 @@ public class ClientConfig extends JsonConfigManager<ClientConfig.Values> {
         public boolean showHealthAndArmor = true;
         public boolean showEditorButton = true;
         public int openButtonYOffset = 0;
+        public boolean inventoryOpenButtonEnabled = false;
+        public int inventoryOpenButtonXOffset = 98;
+        public int inventoryOpenButtonYOffset = 68;
+        public boolean alignInventoryButtonToCenter = true;
     }
 
     private static final Path CONFIG_PATH = BossChecklist.CONFIG_FOLDER.resolve("boss_checklist-client.json");

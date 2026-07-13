@@ -37,7 +37,7 @@ public class ClientEvents {
     protected static void checkKeybindPressed() {
         boolean down = BossChecklistClient.OPEN_CHECKLIST.isDown();
         if (down && !openChecklistKeyWasDown) {
-            Minecraft.getInstance().setScreen(new BossChecklistScreen(false));
+            Minecraft.getInstance().setScreen(new BossChecklistScreen(null));
             Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.BOOK_PAGE_TURN, 1.0F));
         }
 

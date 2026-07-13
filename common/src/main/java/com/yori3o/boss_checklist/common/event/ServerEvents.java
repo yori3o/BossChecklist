@@ -70,6 +70,7 @@ public class ServerEvents {
         File worldDir = server.getWorldPath(LevelResource.ROOT).toFile();
         try {
             Map<String, String> defeatedBossesMap = BossChecklistJsonDataSaver.loadDefeatedBosses(worldDir);
+            ServerStorage.defeatedBossesAndTheirKillers.clear();
             for (String id : defeatedBossesMap.keySet()) {
                 if (ServerBossIdsLoader.isBoss(id)) {
                     ServerStorage.defeatedBossesAndTheirKillers.put(id, defeatedBossesMap.get(id));
