@@ -661,7 +661,7 @@ public class BossInfoScreen extends Screen {
 
     @Override
     public boolean mouseDragged(MouseButtonEvent mouseButtonEvent, double dragX, double dragY) {
-        if (dragging && mouseButtonEvent.button() == 0) {
+        if (dragging) {
             final float MOUSE_SENSITIVITY = 0.7f;
             rotationY += (float)(dragX * MOUSE_SENSITIVITY);
             rotationX -= (float)(dragY * MOUSE_SENSITIVITY);
@@ -674,7 +674,7 @@ public class BossInfoScreen extends Screen {
 
     @Override
     public boolean mouseReleased(MouseButtonEvent mouseButtonEvent) {
-        if (mouseButtonEvent.button() == 0 && dragging) {
+        if (dragging) {
             dragging = false;
             allowRotation = true; // rotation unpaused
             return true;
