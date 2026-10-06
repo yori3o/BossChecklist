@@ -47,8 +47,8 @@ public abstract class ServerLevelMixin {
     private void saveData(File worldDir) {
         try {
             BossChecklistJsonDataSaver.saveDefeatedBosses(worldDir, ServerStorage.defeatedBossesAndTheirKillers);
+            BossChecklistJsonDataSaver.saveLatestBossBattles(worldDir, ServerStorage.serverBossAttempts);
             if (DynamicConfigHandler.server().statisticsEnabled) {
-                BossChecklistJsonDataSaver.saveLatestBossBattles(worldDir, ServerStorage.serverBossAttempts);
                 BossChecklistJsonDataSaver.saveGlobalStatistics(worldDir, ServerStorage.playerDamages);
             }
         } catch (Exception e) {
@@ -58,4 +58,3 @@ public abstract class ServerLevelMixin {
     }
 
 }
-

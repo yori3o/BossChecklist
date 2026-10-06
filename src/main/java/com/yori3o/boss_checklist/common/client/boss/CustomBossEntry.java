@@ -8,14 +8,20 @@ public class CustomBossEntry extends BossEntry {
     private String name;
     private String modName;
     private String spawnInfo;
+    private String description;
     private String additionalInfo;
 
 
     public CustomBossEntry(BossDefinition definition, BossProgress progress, String name, String modName, String spawnInfo, String addtlInfo) {
+        this(definition, progress, name, modName, spawnInfo, "", addtlInfo);
+    }
+
+    public CustomBossEntry(BossDefinition definition, BossProgress progress, String name, String modName, String spawnInfo, String description, String addtlInfo) {
         super (definition, progress);
         this.name = name;
         this.modName = modName;
         this.spawnInfo = spawnInfo;
+        this.description = description;
         additionalInfo = addtlInfo;
     }
 
@@ -29,6 +35,10 @@ public class CustomBossEntry extends BossEntry {
 
     public String spawnInfo() {
         return spawnInfo;
+    }
+
+    public String description() {
+        return description;
     }
 
     public String addtlInfo() {

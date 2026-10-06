@@ -1,7 +1,7 @@
 package com.yori3o.boss_checklist.common.server.data;
 
 
-import com.yori3o.boss_checklist.common.client.data.OverlapManager;
+import com.yori3o.boss_checklist.common.client.data.OverrideManager;
 import com.yori3o.boss_checklist.common.util.LoggerUtil;
 import com.yori3o.boss_checklist.impl.PlatformUtil;
 
@@ -65,8 +65,8 @@ public final class ServerBossIdsLoader {
             LoggerUtil.errorWithException("Unexpected error loading server boss ids!", e);
         }
 
-        OverlapManager.loadServerOverlap();
-        ALL_BOSSES.addAll(OverlapManager.OVERLAP_SERVER_BOSSES_IDS);
+        OverrideManager.loadServerOverride();
+        ALL_BOSSES.addAll(OverrideManager.OVERRIDE_SERVER_BOSSES_IDS);
 
         for (String bossId : ALL_BOSSES) {
             if (PlatformUtil.isModLoaded(bossId.split(":")[0])) {

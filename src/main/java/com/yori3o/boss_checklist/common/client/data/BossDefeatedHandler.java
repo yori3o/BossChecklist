@@ -21,6 +21,7 @@ public class BossDefeatedHandler {
             String killer,
             boolean defeated,
             boolean fresh,
+            boolean participated,
             ClientBossAttempt attempt
     ) {
         anyoneBossKilledOnce = true;
@@ -32,14 +33,17 @@ public class BossDefeatedHandler {
         }
 
         BossProgress progress = BossProgressStorage.getOrCreate(bossId);
+        boolean ignoreDefeat = DynamicConfigHandler.client().ignoreUnparticipatedDefeats && !participated;
 
         if (defeated) {
-            progress.markDefeated(killer, fresh, attempt);
+            progress.markDefeated(killer, fresh && !ignoreDefeat, attempt);
         } else {
             progress.markNotDefeated();
         }
 
-        ClientDataSaver.setDefeated(bossId.toString(), defeated, progress);
+        if (!ignoreDefeat) {
+            ClientDataSaver.setDefeated(bossId, defeated, progress);
+        }
 
         if (DynamicConfigHandler.client().progressionMode) {
             BossNameCache.invalidate();

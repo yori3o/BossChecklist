@@ -7,8 +7,10 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 
 /**
@@ -23,6 +25,7 @@ public class ServerBossAttempt {
     public String endTime = "";
 
     public Map<String, Float> damageMap = new HashMap<>();
+    public Set<String> participantUuids = new HashSet<>();
     public float latestHealth;
 
 
@@ -53,6 +56,28 @@ public class ServerBossAttempt {
 
     public void addPlayerDamage(String playerName, float damage) {
         damageMap.merge(playerName, damage, Float::sum);
+    }
+
+    public void addParticipant(String playerUuid) {
+        if (participantUuids == null) {
+            participantUuids = new HashSet<>();
+        }
+        participantUuids.add(playerUuid);
+    }
+
+    public boolean hasParticipant(String playerUuid) {
+        return participantUuids != null && participantUuids.contains(playerUuid);
+    }
+
+    public boolean hasParticipant(String playerUuid, String playerName) {
+        return hasParticipant(playerUuid) || damageMap != null && damageMap.containsKey(playerName);
+    }
+
+    public Set<String> participantUuids() {
+        if (participantUuids == null) {
+            participantUuids = new HashSet<>();
+        }
+        return participantUuids;
     }
 
 

@@ -1,7 +1,7 @@
 package com.yori3o.boss_checklist.common.mixin;
 
 
-import com.yori3o.boss_checklist.common.client.data.OverlapManager;
+import com.yori3o.boss_checklist.common.client.data.OverrideManager;
 
 import net.minecraft.client.resources.language.ClientLanguage;
 import net.minecraft.server.packs.resources.ResourceManager;
@@ -39,7 +39,7 @@ public class ClientLanguageMixin {
         Map<String, String> old = ((ClientLanguageAccessor) lang).getStorage();
 
         Map<String, String> newMap = new HashMap<>(old);
-        newMap.putAll(OverlapManager.OVERLAP_EN_US);
+        newMap.putAll(OverrideManager.OVERRIDE_EN_US);
 
         ((ClientLanguageAccessor) lang).setStorage(newMap);
     }

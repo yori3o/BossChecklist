@@ -136,12 +136,22 @@ public class ConfigScreen extends Screen {
             checked -> {DynamicConfigHandler.client().showEditorButton = checked;}
         );
         showEditorButton.setTooltipOnBox(Component.translatable("gui.boss_checklist.settings.show_editor_button_desc"));
+        y += showEditorButton.getLabelHeight() + CHECKBOXES_PADDING;
+
+        CustomCheckbox ignoreUnparticipatedDefeats = new CustomCheckbox(bookX + cbs_client_x, y,
+            Component.translatable("gui.boss_checklist.settings.ignore_unparticipated_defeats"),
+            GuiConstants.MAX_LABEL_WIDTH,
+            DynamicConfigHandler.client().ignoreUnparticipatedDefeats,
+            checked -> {DynamicConfigHandler.client().ignoreUnparticipatedDefeats = checked;}
+        );
+        ignoreUnparticipatedDefeats.setTooltipOnBox(Component.translatable("gui.boss_checklist.settings.ignore_unparticipated_defeats_desc"));
 
         addRenderableWidget(progressionMode);
         addRenderableWidget(progressionModePlus);
         addRenderableWidget(searchBar);
         addRenderableWidget(button);
         addRenderableWidget(showEditorButton);
+        addRenderableWidget(ignoreUnparticipatedDefeats);
 
 
         closeButton = new CustomButton(

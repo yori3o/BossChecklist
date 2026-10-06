@@ -23,6 +23,7 @@ import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.renderer.entity.state.EntityRenderState;
+import net.minecraft.locale.Language;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
@@ -39,6 +40,7 @@ import net.minecraft.core.Holder.Reference;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.joml.Matrix3x2fStack;
@@ -49,11 +51,16 @@ import org.joml.Vector3f;
 
 public class BossInfoScreen extends Screen {
 
+    private static final Map<String, String> SPECIAL_MOD_COMPATIBILITIES = Map.of(
+        "minecraft:wither", "witherreincarnated",
+        "minecraft:ender_dragon", "endertrigon"
+    );
 
     
     private Identifier BOSS_IMG;
     private int modNameYoffset;
     private Component summonText;
+    private Component descriptionText = Component.empty();
     private boolean dropsAreLoaded;
     private LivingEntity entity;
     private boolean isBossDefeatedInWorld;
@@ -106,188 +113,213 @@ public class BossInfoScreen extends Screen {
     
 
     public BossInfoScreen(Screen parent, String bossId) {
-        super(Component.literal("Boss Info"));
-        lastTime = System.nanoTime();
-        this.parent = parent;
-        this.boss = BossService.get(bossId);
-
-        if (boss.id().equals("minecraft:wither")) {
-            if (PlatformUtil.isModLoaded("witherreincarnated")) {
-                modName = Component.translatable("boss_checklist.mod.witherreincarnated").getString();
-            } else {
-                modName = Component.translatable("boss_checklist.mod." + boss.definition().modId()).getString();
-            }
-        } if (boss.id().equals("minecraft:ender_dragon")) {
-            if (PlatformUtil.isModLoaded("endertrigon")) {
-                modName = Component.translatable("boss_checklist.mod.endertrigon").getString();
-            } else {
-                modName = Component.translatable("boss_checklist.mod." + boss.definition().modId()).getString();
-            }
-        } else {
-            modName = Component.translatable("boss_checklist.mod." + boss.definition().modId()).getString();
-        }
-        bossName = Component.translatable("boss_checklist.boss." + boss.id().replace(":", "_")).getString();
-        summonText = Component.translatable("boss_checklist.summon." + boss.id().replace(":", "_"));
-        additionalInfoComponent = Component.translatable("boss_checklist.info." + boss.id().replace(":", "_"));
+        this(parent, BossService.get(bossId), false);
     }
 
-    public BossInfoScreen(Screen parent, CustomBossEntry boss) { // for preview in editor
+    public BossInfoScreen(Screen parent, CustomBossEntry boss) {
+        this(parent, boss, true);
+    }
+
+    private BossInfoScreen(Screen parent, BossEntry boss, boolean editorPreview) {
         super(Component.literal("Boss Info"));
         lastTime = System.nanoTime();
         this.parent = parent;
         this.boss = boss;
-        bossName = boss.name();
-        modName = boss.modName();
-        summonText = Component.literal(boss.spawnInfo());
-        additionalInfoComponent = Component.literal(boss.addtlInfo());
-        ignoreProgressionMode = true;
+
+        if (editorPreview && boss instanceof CustomBossEntry customBoss) {
+            bossName = customBoss.name();
+            modName = customBoss.modName();
+            summonText = Component.literal(customBoss.spawnInfo());
+            descriptionText = Component.literal(customBoss.description());
+            additionalInfoComponent = Component.literal(customBoss.addtlInfo());
+            ignoreProgressionMode = true;
+        } else {
+            initializeTranslatedBossText();
+        }
     }
 
+    private void initializeTranslatedBossText() {
+        modName = Component.translatable(modNameTranslationKey(boss)).getString();
 
+        bossName = Component.translatable("boss_checklist.boss." + boss.id().replace(":", "_")).getString();
+        String bossTranslationId = boss.id().replace(":", "_");
+        summonText = Component.translatable("boss_checklist.summon." + bossTranslationId);
+        String descriptionKey = "boss_checklist.desc." + bossTranslationId;
+        if (Language.getInstance().has(descriptionKey)) {
+            descriptionText = Component.translatable(descriptionKey);
+        }
+        additionalInfoComponent = Component.translatable("boss_checklist.info." + boss.id().replace(":", "_"));
+    }
 
+    static String modNameTranslationKey(BossEntry boss) {
+        String compatibleModId = SPECIAL_MOD_COMPATIBILITIES.get(boss.id());
+        String modId = compatibleModId != null && PlatformUtil.isModLoaded(compatibleModId)
+            ? compatibleModId
+            : boss.definition().modId();
+        return "boss_checklist.mod." + modId;
+    }
 
+    BossInfoScreen createRefreshedScreen() {
+        return new BossInfoScreen(parent, BossService.get(boss.id()), false);
+    }
 
     public void init() {
         super.init();
 
+        initializeBossAppearance();
+        entity = createEntityFromId(boss.id());
+        updateBossNameOffset();
+
+        if (entity != null) {
+            initializeEntityStats();
+            initializeDefeatInfo();
+            initializeAdditionalInfo();
+            applyProgressionMode();
+            initializeWikiLink();
+            initializeDrops();
+            initializeLastAttemptInfo();
+            initializeHealthTooltip();
+            initializeVersionTooltip();
+        }
+
+        createButtons();
+    }
+
+    private void initializeBossAppearance() {
         if (boss.definition().brokenModel()) {
             BOSS_IMG = Identifier.fromNamespaceAndPath("boss_checklist", "textures/gui/bosses/" + boss.id().replace(":", "_") + ".png");
         } else {
             rotationY = boss.definition().rotateY() + 180;
         }
-
-        entity = createEntityFromId(boss.id());
-
-        modNameYoffset = (font.split(Component.literal("§l" + bossName), 110).size() * font.lineHeight) + 55;
-
-        if (entity != null) {
-            if (boss.definition().health() == -1) {
-                bossHealth = (int)entity.getAttributeValue(Attributes.MAX_HEALTH);
-            } else {
-                bossHealth = boss.definition().health();
-            }
-            if (boss.definition().armor() == -1) {
-                bossArmor = (int)entity.getAttributeValue(Attributes.ARMOR);
-            } else {
-                bossArmor = boss.definition().armor();
-            }
-
-            isBossDefeatedInWorld = boss.progress().isDefeated();
-            isLocalServerOrAnyoneBossKilled = BossDefeatedHandler.anyoneBossKilledOnce || Minecraft.getInstance().isLocalServer();
-
-            if (isBossDefeatedInWorld) {
-                String killerName = boss.progress().killerName();
-
-                tooltip_defeated.clear();
-                if (killerName.equals("")) {
-                    if (boss.definition().type() == 2) {
-                        tooltip_defeated.add(Component.literal(Component.translatable("gui.boss_checklist.miniboss_defeated").getString()));
-                    } else {
-                        tooltip_defeated.add(Component.literal(Component.translatable("gui.boss_checklist.defeated").getString()));
-                    }
-                } else { 
-                    if (boss.definition().type() == 2) {
-                        tooltip_defeated.add(Component.literal(Component.translatable("gui.boss_checklist.miniboss_defeated").getString()));
-                    } else {
-                        tooltip_defeated.add(Component.literal(Component.translatable("gui.boss_checklist.defeated").getString()));
-                    }
-                    tooltip_defeated.add(Component.literal(Component.translatable("gui.boss_checklist.killer_name").getString() + killerName));
-                }  
-            } else {
-                if (boss.definition().type() == 2) {
-                    tooltip_notDefeated = Component.translatable("gui.boss_checklist.miniboss_not_defeated").getString();
-                } else {
-                    tooltip_notDefeated = Component.translatable("gui.boss_checklist.not_defeated").getString();
-                }
-            }
-
-            additionalInfo = boss.definition().additionalInfo();
-
-            if (!ignoreProgressionMode) {
-                if (DynamicConfigHandler.client().progressionMode && !isBossDefeatedInWorld) {
-                    showInfo = false;
-                    bossName = "???";
-                    if (DynamicConfigHandler.client().progressionModePlus) {
-                        showAdditionalInfo = false;
-                        modName = "???";
-                        wikiLink = "";
-                        additionalInfo = false;
-                    }
-                }
-            }
-            
-            if (!boss.definition().wikiLink().equals("")) {
-                wikiLinkEnabled = true;
-                wikiLink = boss.definition().wikiLink();
-            }
-
-            if (!dropsAreLoaded) {
-                for (String dropId : boss.definition().drops()) {
-                    if (PlatformUtil.isModLoaded(dropId.split(":")[0])) {
-                        drops.add(dropId);
-                    }
-                }
-
-                if (PlatformUtil.isModLoaded("endrem_additions") && boss.id().equals("bosses_of_mass_destruction:void_blossom")) { // it for my other mod
-                    drops.add("endrem:blossom_eye");
-                }
-                
-                dropsAreLoaded = true;
-            }
-
-            lastAttempt = boss.progress().lastAttempt();
-            if (lastAttempt != null) {
-                showLastAttempt = true;
-                tooltip_duration = Component.translatable("gui.boss_checklist.duration").getString() + "§l" + lastAttempt.duration;
-                top3names = lastAttempt.damageMap_top3.keySet().toArray(new String[lastAttempt.damageMap_top3.size()]);
-                top3damages = lastAttempt.damageMap_top3.values().toArray(new String[lastAttempt.damageMap_top3.size()]);
-                tooltip_attemptTime.clear();
-                tooltip_attemptTop3.clear();
-                tooltip_attemptTime.add(Component.literal(Component.translatable("gui.boss_checklist.last_battle").getString()));
-                tooltip_attemptTime.add(Component.literal("§l" + lastAttempt.dateAndTime));
-                if (lastAttempt.damageMap_top3.size() >= 1) {  
-                    tooltip_attemptTop3.add(Component.literal(Component.translatable("gui.boss_checklist.top_players").getString()));
-                    tooltip_attemptTop3.add(Component.literal("1. " + top3names[0] + " - §c" + top3damages[0]));
-                    if (lastAttempt.damageMap_top3.size() >= 2) {
-                        tooltip_attemptTop3.add(Component.literal("2. " + top3names[1] + " - §c" + top3damages[1]));
-                        if (lastAttempt.damageMap_top3.size() >= 3) {
-                            tooltip_attemptTop3.add(Component.literal("3. " + top3names[2] + " - §c" + top3damages[2]));
-                        }
-                    }
-                }
-            }
-        
-            tooltip_health.clear();
-            if (DynamicConfigHandler.client().showHealthAndArmor) {
-                if (showInfo) {
-                    tooltip_health.add(Component.literal(Component.translatable("gui.boss_checklist.health").getString() + bossHealth));
-                    tooltip_health.add(Component.literal(Component.translatable("gui.boss_checklist.armor").getString() + bossArmor));
-                } else {
-                    tooltip_health.add(Component.literal(Component.translatable("gui.boss_checklist.health").getString() + "?"));
-                    tooltip_health.add(Component.literal(Component.translatable("gui.boss_checklist.armor").getString() + "?"));
-                }
-            }
-            String bossVersion = boss.definition().modVersion();
-
-            if (!bossVersion.equals("")) {
-                String installed_version = PlatformUtil.getVerison(boss.definition().modId());
-
-                if (bossVersion.equals(installed_version)) {
-                    tooltip_health.add(Component.literal("§7" + Component.translatable("gui.boss_checklist.boss_version").getString() + bossVersion));
-                    tooltip_health.add(Component.literal("§7" + Component.translatable("gui.boss_checklist.mod_version").getString() + installed_version));
-                } else {
-                    tooltip_health.add(Component.literal("§7" + Component.translatable("gui.boss_checklist.boss_version").getString() + "§4" + bossVersion));
-                    tooltip_health.add(Component.literal("§7" + Component.translatable("gui.boss_checklist.mod_version").getString() + "§4" + installed_version));
-                }
-                
-            }
-        }
-        createButtons();
     }
 
+    private void updateBossNameOffset() {
+        modNameYoffset = (font.split(Component.literal("§l" + bossName), 110).size() * font.lineHeight) + 55;
+    }
 
+    private void initializeEntityStats() {
+        if (boss.definition().health() == -1) {
+            bossHealth = (int) entity.getAttributeValue(Attributes.MAX_HEALTH);
+        } else {
+            bossHealth = boss.definition().health();
+        }
+        if (boss.definition().armor() == -1) {
+            bossArmor = (int) entity.getAttributeValue(Attributes.ARMOR);
+        } else {
+            bossArmor = boss.definition().armor();
+        }
+    }
 
+    private void initializeDefeatInfo() {
+        isBossDefeatedInWorld = boss.progress().isDefeated();
+        isLocalServerOrAnyoneBossKilled = BossDefeatedHandler.anyoneBossKilledOnce || Minecraft.getInstance().isLocalServer();
 
+        if (isBossDefeatedInWorld) {
+            String killerName = boss.progress().killerName();
+            String defeatedMessage = boss.definition().type() == 2
+                ? "gui.boss_checklist.miniboss_defeated"
+                : "gui.boss_checklist.defeated";
+
+            tooltip_defeated.clear();
+            tooltip_defeated.add(Component.literal(Component.translatable(defeatedMessage).getString()));
+            if (!killerName.equals("")) {
+                tooltip_defeated.add(Component.literal(Component.translatable("gui.boss_checklist.killer_name").getString() + killerName));
+            }
+        } else if (boss.definition().type() == 2) {
+            tooltip_notDefeated = Component.translatable("gui.boss_checklist.miniboss_not_defeated").getString();
+        } else {
+            tooltip_notDefeated = Component.translatable("gui.boss_checklist.not_defeated").getString();
+        }
+    }
+
+    private void initializeAdditionalInfo() {
+        additionalInfo = boss.definition().additionalInfo();
+    }
+
+    private void applyProgressionMode() {
+        if (!ignoreProgressionMode) {
+            if (DynamicConfigHandler.client().progressionMode && !isBossDefeatedInWorld) {
+                showInfo = false;
+                bossName = "???";
+                if (DynamicConfigHandler.client().progressionModePlus) {
+                    showAdditionalInfo = false;
+                    modName = "???";
+                    wikiLink = "";
+                    additionalInfo = false;
+                }
+            }
+        }
+    }
+
+    private void initializeWikiLink() {
+        if (!boss.definition().wikiLink().equals("")) {
+            wikiLinkEnabled = true;
+            wikiLink = boss.definition().wikiLink();
+        }
+    }
+
+    private void initializeDrops() {
+        if (!dropsAreLoaded) {
+            for (String dropId : boss.definition().drops()) {
+                if (PlatformUtil.isModLoaded(dropId.split(":")[0])) {
+                    drops.add(dropId);
+                }
+            }
+
+            if (PlatformUtil.isModLoaded("endrem_additions") && boss.id().equals("bosses_of_mass_destruction:void_blossom")) {
+                drops.add("endrem:blossom_eye");
+            }
+
+            dropsAreLoaded = true;
+        }
+    }
+
+    private void initializeLastAttemptInfo() {
+        lastAttempt = boss.progress().lastAttempt();
+        if (lastAttempt != null) {
+            showLastAttempt = true;
+            tooltip_duration = Component.translatable("gui.boss_checklist.duration").getString() + "§l" + lastAttempt.duration;
+            top3names = lastAttempt.damageMap_top3.keySet().toArray(new String[lastAttempt.damageMap_top3.size()]);
+            top3damages = lastAttempt.damageMap_top3.values().toArray(new String[lastAttempt.damageMap_top3.size()]);
+            tooltip_attemptTime.clear();
+            tooltip_attemptTop3.clear();
+            tooltip_attemptTime.add(Component.literal(Component.translatable("gui.boss_checklist.last_battle").getString()));
+            tooltip_attemptTime.add(Component.literal("§l" + lastAttempt.dateAndTime));
+            if (lastAttempt.damageMap_top3.size() >= 1) {
+                tooltip_attemptTop3.add(Component.literal(Component.translatable("gui.boss_checklist.top_players").getString()));
+                tooltip_attemptTop3.add(Component.literal("1. " + top3names[0] + " - §c" + top3damages[0]));
+                if (lastAttempt.damageMap_top3.size() >= 2) {
+                    tooltip_attemptTop3.add(Component.literal("2. " + top3names[1] + " - §c" + top3damages[1]));
+                    if (lastAttempt.damageMap_top3.size() >= 3) {
+                        tooltip_attemptTop3.add(Component.literal("3. " + top3names[2] + " - §c" + top3damages[2]));
+                    }
+                }
+            }
+        }
+    }
+
+    private void initializeHealthTooltip() {
+        tooltip_health.clear();
+        if (DynamicConfigHandler.client().showHealthAndArmor) {
+            if (showInfo) {
+                tooltip_health.add(Component.literal(Component.translatable("gui.boss_checklist.health").getString() + bossHealth));
+                tooltip_health.add(Component.literal(Component.translatable("gui.boss_checklist.armor").getString() + bossArmor));
+            } else {
+                tooltip_health.add(Component.literal(Component.translatable("gui.boss_checklist.health").getString() + "?"));
+                tooltip_health.add(Component.literal(Component.translatable("gui.boss_checklist.armor").getString() + "?"));
+            }
+        }
+    }
+
+    private void initializeVersionTooltip() {
+        String bossVersion = boss.definition().modVersion();
+        if (!bossVersion.equals("")) {
+            String installedVersion = PlatformUtil.getVerison(boss.definition().modId());
+            String versionColor = bossVersion.equals(installedVersion) ? "" : "§4";
+            tooltip_health.add(Component.literal("§7" + Component.translatable("gui.boss_checklist.boss_version").getString() + versionColor + bossVersion));
+            tooltip_health.add(Component.literal("§7" + Component.translatable("gui.boss_checklist.mod_version").getString() + versionColor + installedVersion));
+        }
+    }
 
 
 
@@ -364,6 +396,23 @@ public class BossInfoScreen extends Screen {
         });
 
         addRenderableWidget(closeButton);
+        if (!ignoreProgressionMode && showInfo && DynamicConfigHandler.client().showEditorButton) {
+            CustomButton editButton = new CustomButton(
+                bookX + GuiConstants.CLOSE_BUTTON_X,
+                bookY + GuiConstants.CLOSE_BUTTON_Y + 160,
+                GuiConstants.EDITOR_BUTTON_SIZE,
+                GuiConstants.EDITOR_BUTTON_SIZE,
+                0,
+                0,
+                Component.empty(),
+                GuiConstants.EDITOR_BUTTON_TEXTURE,
+                GuiConstants.EDITOR_BUTTON_TEXTURE_hovered,
+                GuiConstants.EDITOR_BUTTON_TEXTURE_hovered,
+                null,
+                () -> minecraft.gui.setScreen(new EditorScreen(this, boss, modNameTranslationKey(boss)))
+            );
+            addRenderableWidget(editButton);
+        }
         if (entity == null) return;
         addRenderableWidget(dropButton);
         addRenderableWidget(spawnButton);
@@ -439,6 +488,8 @@ public class BossInfoScreen extends Screen {
             renderDrops(guiGraphics, mouseX, mouseY, bookX + 265, bookY + 80);
         } else if (currentTab == InfoTab.SPAWN) {
             guiGraphics.textWithWordWrap(font,  summonText,  bookX + 265,  bookY + 80, 117, 0xFF000000, false);
+        } else if (!descriptionText.getString().isEmpty()) {
+            guiGraphics.textWithWordWrap(font, descriptionText, bookX + 265, bookY + 80, 117, 0xFF000000, false);
         }
 
         if (showLastAttempt) {
@@ -532,6 +583,7 @@ public class BossInfoScreen extends Screen {
         
 
         int i = 0;
+        boolean hasInvalidItem = false;
         for (String id : drops) {
             final int PER_ROW = 5;
             final int DROP_SPACING = 22;
@@ -548,12 +600,16 @@ public class BossInfoScreen extends Screen {
             String dropChance = null;
             if (a.length > 1) dropChance = a[1];
 
-            Optional<Reference<Item>> s = BuiltInRegistries.ITEM.get(Identifier.parse(itemId));
-            if (!s.isPresent()) {
-                LoggerUtil.warn("There is no item with this ID: " + itemId);
-                return;
+            Identifier itemIdentifier = Identifier.tryParse(itemId);
+            Optional<Reference<Item>> item = itemIdentifier == null
+                ? Optional.empty()
+                : BuiltInRegistries.ITEM.get(itemIdentifier);
+            if (item.isEmpty()) {
+                hasInvalidItem = true;
+                i++;
+                continue;
             }
-            ItemStack stack = new ItemStack(s.get().value());
+            ItemStack stack = new ItemStack(item.get().value());
             
             guiGraphics.item(stack, xPos, yPos);
 
@@ -577,6 +633,18 @@ public class BossInfoScreen extends Screen {
                 }
             }
             i++;
+        }
+        if (hasInvalidItem) {
+            int renderedRows = (drops.size() + 4) / 5;
+            guiGraphics.textWithWordWrap(
+                this.font,
+                Component.translatable("gui.boss_checklist.invalid_drop_item"),
+                x,
+                y + renderedRows * 22 + 2,
+                117,
+                0xFF616161,
+                false
+            );
         }
         if (renderTooltip) {
             TooltipUtil.renderTooltip(guiGraphics, tooltip, mouseX, mouseY);

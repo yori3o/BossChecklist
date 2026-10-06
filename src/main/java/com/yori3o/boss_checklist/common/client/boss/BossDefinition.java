@@ -67,6 +67,36 @@ public class BossDefinition {
         this.applyDefaults();
     }
 
+    public BossDefinition copyForOverride(boolean additionalInfo, List<String> drops, int scale, int yOffset, String version) {
+        BossDefinition copy = copyWithEditableValues(additionalInfo, drops, scale, yOffset, version);
+        if (id.equals("minecraft:wither") && copy.scale != null && PlatformUtil.isModLoaded("witherreincarnated")) {
+            copy.scale++;
+        }
+        copy.replace = true;
+        return copy;
+    }
+
+    public BossDefinition copyForPreview(boolean additionalInfo, List<String> drops, int scale, int yOffset, String version) {
+        return copyWithEditableValues(additionalInfo, drops, scale, yOffset, version);
+    }
+
+    private BossDefinition copyWithEditableValues(boolean additionalInfo, List<String> drops, int scale, int yOffset, String version) {
+        BossDefinition copy = new BossDefinition(id);
+        copy.drops = new ArrayList<>(drops);
+        copy.scale = scale;
+        copy.yOffset = yOffset;
+        copy.brokenModel = brokenModel;
+        copy.rotateY = rotateY;
+        copy.additionalInfo = additionalInfo;
+        copy.position = position;
+        copy.wikiLink = wikiLink;
+        copy.health = health;
+        copy.armor = armor;
+        copy.type = type;
+        copy.modVersion = version;
+        return copy;
+    }
+
     public String id() {
         return id;
     }

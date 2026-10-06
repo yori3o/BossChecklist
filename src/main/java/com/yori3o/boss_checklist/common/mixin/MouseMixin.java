@@ -12,6 +12,7 @@ import com.yori3o.boss_checklist.common.client.gui.BossChecklistScreen;
 import com.yori3o.boss_checklist.common.client.gui.EditorScreen;
 import com.yori3o.boss_checklist.common.client.gui.widget.CustomCheckbox;
 import com.yori3o.boss_checklist.common.client.gui.widget.CustomNumberEditBox;
+import com.yori3o.boss_checklist.common.util.LoggerUtil;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.MouseHandler;
@@ -26,21 +27,26 @@ public class MouseMixin
 	private void onOnMouseScroll(long window, double horizontal,
 		double vertical, CallbackInfo ci)
 	{
-		if (Minecraft.getInstance().gui.screen() instanceof EditorScreen screen) {
-            if (screen.getFocused() instanceof CustomNumberEditBox box) {
-                box.onScroll(vertical);
-            }
-        }
-        if (Minecraft.getInstance().hasAltDown()) {
-            if (Minecraft.getInstance().gui.screen() instanceof BossChecklistScreen screen) {
-                if (vertical == 0) return;
-                Optional<GuiEventListener> o = screen.getChildAt(Minecraft.getInstance().mouseHandler.getScaledXPos(Minecraft.getInstance().getWindow()), Minecraft.getInstance().mouseHandler.getScaledYPos(Minecraft.getInstance().getWindow()));
-                if (o.isPresent()) {
-                    if (o.get() instanceof CustomCheckbox box) {
-                        box.moveBossPosition(vertical > 0, true, window);
-                    } 
+        try {
+            if (Minecraft.getInstance().gui.screen() instanceof EditorScreen screen) {
+                if (screen.getFocused() instanceof CustomNumberEditBox box) {
+                    box.onScroll(vertical);
                 }
             }
+            if (Minecraft.getInstance().hasAltDown()) {
+                if (Minecraft.getInstance().gui.screen() instanceof BossChecklistScreen screen) {
+                    if (vertical == 0) return;
+                    Optional<GuiEventListener> o = screen.getChildAt(
+                        Minecraft.getInstance().mouseHandler.getScaledXPos(Minecraft.getInstance().getWindow()),
+                        Minecraft.getInstance().mouseHandler.getScaledYPos(Minecraft.getInstance().getWindow())
+                    );
+                    if (o.isPresent() && o.get() instanceof CustomCheckbox box) {
+                        box.moveBossPosition(vertical > 0, true, window);
+                    }
+                }
+            }
+        } catch (RuntimeException e) {
+            LoggerUtil.errorWithException("Failed to handle mouse scroll in Boss Checklist: ", e);
         }
 	}
 }

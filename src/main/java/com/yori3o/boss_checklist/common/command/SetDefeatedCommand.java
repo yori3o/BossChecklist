@@ -12,6 +12,8 @@ import net.minecraft.commands.arguments.IdentifierArgument;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
+
+import java.util.Set;
 import net.minecraft.server.permissions.Permissions;
 
 import com.mojang.brigadier.CommandDispatcher;
@@ -64,7 +66,7 @@ public final class SetDefeatedCommand {
             ).create();
         }
 
-        ServerSender.sendDefeatedBossDataToAllPlayers(source.getLevel(), bossId, "", defeated, "", "", "#####", "#####");
+        ServerSender.sendDefeatedBossDataToAllPlayers(source.getLevel(), bossId, "", defeated, "", "", "#####", "#####", Set.of());
 
         ServerStorage.markBoss(bossId, "", null, defeated);
 
