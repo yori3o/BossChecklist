@@ -15,11 +15,9 @@ In-game checklist of every boss in your modpack: check drops, find where to meet
 
 - Built-in editor for adding and editing bosses
 - Configuration and customization options for modpacks and servers
-- Client-side compatible (the mod doesn't have to be installed on the server)*
+- Client-side compatible
 - Support over 170 bosses
 - Add-on support
-
-\* The mod must be installed on the server for automatic boss marking and player/battle statistics.
 
 ## 📅 Supported versions
 
