@@ -719,7 +719,7 @@ public class BossInfoScreen extends Screen {
         }
         if (wikiLinkEnabled) {
             if (mouseX >= bookX + 350  && mouseX <= bookX + 350 + 16 && mouseY >= bookY + 210 && mouseY <= bookY + 210 + 27) {
-                minecraft.gui.setScreen(new ConfirmLinkScreen((confirmed) -> {}, URI.create(wikiLink), true));
+                ConfirmLinkScreen.confirmLinkNow(this, URI.create(wikiLink));
                 return true;
             }
         }
