@@ -4,6 +4,7 @@
   "key.category.boss_checklist.checklist": "Boss Checklist",
   "gui.boss_checklist.drop": "Дроп",
   "gui.boss_checklist.no_drop": "Дропа нет.",
+  "gui.boss_checklist.invalid_drop_item": "Не удалось найти один или несколько предметов. Проверьте их айди.",
   "gui.boss_checklist.spawn_info": "Спавн",
   "gui.boss_checklist.health": "Здоровье: §c",
   "gui.boss_checklist.armor": "Броня: §9",
@@ -36,6 +37,8 @@
   "gui.boss_checklist.settings.button_enabled_desc": "Кнопка, открывающая чеклист.",
   "gui.boss_checklist.settings.show_editor_button": "Показывать кнопку редактора",
   "gui.boss_checklist.settings.show_editor_button_desc": "Кнопка справа от чеклиста, открывающая редактор.",
+  "gui.boss_checklist.settings.ignore_unparticipated_defeats": "Игнорировать победы без участия",
+  "gui.boss_checklist.settings.ignore_unparticipated_defeats_desc": "Не отмечать автоматически боссов, побеждённых без вашего участия",
   "gui.boss_checklist.settings.save_boss_killer": "Запоминать убийцу босса",
   "gui.boss_checklist.settings.save_boss_killer_desc": "Запоминать имя того, кто нанёс последний удар?",
   "gui.boss_checklist.settings.enable_statistics": "Включить статистику",
@@ -47,10 +50,12 @@
   "gui.boss_checklist.editor.boss_name": "Имя",
   "gui.boss_checklist.editor.boss_mod": "Название мода",
   "gui.boss_checklist.editor.boss_spawn": "Спавн инфо",
+  "gui.boss_checklist.editor.boss_description": "Описание",
   "gui.boss_checklist.editor.boss_drops": "Дроп",
   "gui.boss_checklist.editor.boss_version": "Версия мода",
   "gui.boss_checklist.editor.boss_wiki_link": "Ссылка на вики",
   "gui.boss_checklist.editor.boss_additional_info": "Доп. инфо",
+  "gui.boss_checklist.editor.additional_info_enabled": "Показывать доп. информацию",
   "gui.boss_checklist.editor.position": "Позиция",
   "gui.boss_checklist.editor.scale": "Размер",
   "gui.boss_checklist.editor.y_offset": "Смещение Y",
@@ -59,11 +64,14 @@
   "gui.boss_checklist.editor.preview": "Предпросмотр",
   "gui.boss_checklist.editor.error_invalid_id": "Неверный формат айди!",
   "gui.boss_checklist.editor.save": "Сохранить в файл",
+  "gui.boss_checklist.editor.update": "Сохранить",
+  "gui.boss_checklist.editor.error_save": "Не удалось сохранить изменения. Подробности в логе игры.",
+  "gui.boss_checklist.editor.error_reload": "Изменения сохранены, но ресурсы не удалось перезагрузить.",
   "gui.boss_checklist.editor.guide_help": "Помощь",
   "gui.boss_checklist.editor.guide_id_format": "Формат айди: mod:boss_id",
   "gui.boss_checklist.editor.guide_drop_format": "Формат дропа: mod:item_id, mod:item_id ...",
   "gui.boss_checklist.editor.guide_y_offset_inverted": "Смещение Y противоположно - увеличьте, чтобы опустить босса вниз и наоборот.",
-  "gui.boss_checklist.editor.guide_save_path": "Сохранённые боссы находятся в config/boss_checklist/overlap/",
+  "gui.boss_checklist.editor.guide_save_path": "Сохранённые боссы находятся в config/boss_checklist/override/",
 
   "command.boss_checklist.invalid_boss_id": "Неверный айди босса: ",
   "command.boss_checklist.boss_marked_successfully_true": "Босс \"%s\" помечен как побеждённый в этом мире.",
@@ -99,7 +107,7 @@
   
   "boss_checklist.mod.minecraft": "Minecraft",
   "boss_checklist.mod.bosses_of_mass_destruction": "Bosses of Mass Destruction",
-  "boss_checklist.mod.cataclysm": "L Ender's Cataclysm",
+  "boss_checklist.mod.cataclysm": "L_Ender's Cataclysm",
   "boss_checklist.mod.irons_spellbooks": "Iron's Spells 'n Spellbooks",
   "boss_checklist.mod.unusualend": "Unusual End",
   "boss_checklist.mod.block_factorys_bosses": "Bosses'Rise",
@@ -107,7 +115,7 @@
   "boss_checklist.mod.aquamirae": "Aquamirae",
   "boss_checklist.mod.born_in_chaos_v1": "Born in Chaos",
   "boss_checklist.mod.fdbosses": "Qliphoth Awakening",
-  "boss_checklist.mod.mowziesmobs": "Mowzies Mobs",
+  "boss_checklist.mod.mowziesmobs": "Mowzie's Mobs",
   "boss_checklist.mod.soulsweapons": "Marium's Soulslike Weaponry",
   "boss_checklist.mod.eeeabsmobs": "EEEAB's Mobs",
   "boss_checklist.mod.call_of_yucutan": "Call of Yucutan",
@@ -158,6 +166,7 @@
   "boss_checklist.mod.mythsandlegends": "Myths & Legends",
   "boss_checklist.mod.yo_trash": "Yori3o's Trash 'n Brainrot",
   "boss_checklist.mod.eternal_starlight": "Eternal Starlight",
+  "boss_checklist.mod.netherman": "Cult of Azazel",
 
 
 
@@ -183,7 +192,6 @@
   "boss_checklist.boss.block_factorys_bosses_underworld_knight": "Рыцарь преисподней Хелвар",
   "boss_checklist.boss.block_factorys_bosses_yeti": "Йети Скор",
   "boss_checklist.boss.block_factorys_bosses_sandworm": "Песчаный червь Сирок",
-  "boss_checklist.boss.block_factorys_bosses_kraken": "Кракен Неракисс",
 
   "boss_checklist.boss.bosses_of_mass_destruction_obsidilith": "Обсидилит",
   "boss_checklist.boss.bosses_of_mass_destruction_gauntlet": "Перчатка Незера",
@@ -198,6 +206,15 @@
   "boss_checklist.boss.cataclysm_maledictus": "Маледиктус",
   "boss_checklist.boss.cataclysm_ender_guardian": "Эндер-Хранитель",
   "boss_checklist.boss.cataclysm_ignis": "Игнис",
+  "boss_checklist.boss.cataclysm_wadjet": "Уаджит",
+  "boss_checklist.boss.cataclysm_clawdian": "Клешниан",
+  "boss_checklist.boss.cataclysm_coralssus": "Кораллус",
+  "boss_checklist.boss.cataclysm_aptrgangr": "Аптергангр",
+  "boss_checklist.boss.cataclysm_the_prowler": "Провожатый",
+  "boss_checklist.boss.cataclysm_ender_golem": "Эндер-голем",
+  "boss_checklist.boss.cataclysm_kobolediator": "Коболедатор",
+  "boss_checklist.boss.cataclysm_amethyst_crab": "Аметистовый краб",
+  "boss_checklist.boss.cataclysm_ignited_revenant": "Огненный ревенант",
 
   "boss_checklist.boss.fdbosses_malkuth": "Малхут",
   "boss_checklist.boss.fdbosses_chesed": "Хесед",
@@ -218,7 +235,9 @@
   "boss_checklist.boss.soulsweapons_moonknight": "Падший Идол",
 
   "boss_checklist.boss.eeeabsmobs_corpse_warlock": "Труп Чародея",
-  "boss_checklist.boss.eeeabsmobs_nameless_guardian": "Безымянный Страж",
+  "boss_checklist.boss.eeeabsmobs_relic_earthshaker": "Реликварный землетряс",
+  "boss_checklist.boss.eeeabsmobs_relic_annihilator": "Реликварный Аннигилятор",
+  "boss_checklist.boss.eeeabsmobs_realm_warden": "Хранитель Измерения",
 
   "boss_checklist.boss.call_of_yucutan_ah_puch": "Ах Пуч",
   "boss_checklist.boss.call_of_yucutan_kukulkan": "Кукулькан, Бог Бытия",
@@ -299,17 +318,17 @@
   "boss_checklist.boss.terra_entity_deerclops": "Циклоп-олень",
   "boss_checklist.boss.terra_entity_wall_of_flesh": "Стена Плоти",
 
-  "boss_checklist.boss.legendary_monsters_cloud_golem": "Кумулонимбус, Облачный Голем",
-  "boss_checklist.boss.legendary_monsters_lava_eater": "Пожиратель Лавы",
-  "boss_checklist.boss.legendary_monsters_frostbitten_golem": "Обмороженный Голем",
-  "boss_checklist.boss.legendary_monsters_shulker_mimic": "Подражатель Шалкера",
-  "boss_checklist.boss.legendary_monsters_dune_sentinel": "Страж Дюн",
-  "boss_checklist.boss.legendary_monsters_ancient_guardian": "Древний Страж",
-  "boss_checklist.boss.legendary_monsters_overgrown_colossus": "Заросший Колосс",
-  "boss_checklist.boss.legendary_monsters_withered_abomination": "Визер-Мерзость",
-  "boss_checklist.boss.legendary_monsters_skeletosaurus": "Скелетозавр",
-  "boss_checklist.boss.legendary_monsters_endersent": "Эндер-посланник",
-  "boss_checklist.boss.legendary_monsters_posessed_paladin": "Одержимый Паладин",
+  "boss_checklist.boss.legendary_monsters_cloud_golem": "Cumulonimbus",
+  "boss_checklist.boss.legendary_monsters_lava_eater": "Lava Eater",
+  "boss_checklist.boss.legendary_monsters_frostbitten_golem": "Frostbitten Golem",
+  "boss_checklist.boss.legendary_monsters_shulker_mimic": "Shulker Mimic",
+  "boss_checklist.boss.legendary_monsters_dune_sentinel": "Dune Sentinel",
+  "boss_checklist.boss.legendary_monsters_ancient_guardian": "Ancient Guardian",
+  "boss_checklist.boss.legendary_monsters_overgrown_colossus": "Overgrown Colossus",
+  "boss_checklist.boss.legendary_monsters_withered_abomination": "Withered Abomination",
+  "boss_checklist.boss.legendary_monsters_skeletosaurus": "Skeletosaurus",
+  "boss_checklist.boss.legendary_monsters_endersent": "Endersent",
+  "boss_checklist.boss.legendary_monsters_posessed_paladin": "Possessed Paladin",
   "boss_checklist.boss.legendary_monsters_the_obliterator": "The Obliterator",
 
   "boss_checklist.boss.illagerinvasion_invoker": "Вызыватель",
@@ -397,6 +416,9 @@
   "boss_checklist.boss.eternal_starlight_starlight_golem": "Звездосветный Голем",
   "boss_checklist.boss.eternal_starlight_lunar_monstrosity": "Лунное Чудовище",
 
+  "boss_checklist.boss.netherman_azazel": "Великая Божественная Колесница Азазель",
+  "boss_checklist.boss.netherman_azazel_human": "Истинный Азазель",
+
 
 
 
@@ -422,7 +444,6 @@
   "boss_checklist.summon.block_factorys_bosses_underworld_knight": "Найдите арену с боссом в Незере и откройте дверь §1Underworld Arena key§r§0, который можно получить из рассадников испытаний.",
   "boss_checklist.summon.block_factorys_bosses_yeti": "Наткнитесь на усыпанный скелетами ледяной пик в заснеженной равнине и потревожьте заледеневшего босса.",
   "boss_checklist.summon.block_factorys_bosses_sandworm": "Подойдите близко к подозрительным руинам с костями в пустыне.",
-  "boss_checklist.summon.block_factorys_bosses_kraken": "Найдите в океане корабль и убейте скелетов-пиратов.",
 
   "boss_checklist.summon.bosses_of_mass_destruction_obsidilith": "Вставьте §1Око эндера§r§0 в Обсидиановый алтарь на вершине гигантского парящего сооружения в Энде.",
   "boss_checklist.summon.bosses_of_mass_destruction_gauntlet": "Найдите большую арену в озёрах лавы Незера и разрушьте §1Древний резной чернит§r§0 в её центре.",
@@ -437,6 +458,15 @@
   "boss_checklist.summon.cataclysm_maledictus": "Кликните по Проклятому надгробию за Дверью Печати, открываемой §1Странным ключом§r§0, в Морозной тюрьме, путь к которой вам укажет Око проклятия.",
   "boss_checklist.summon.cataclysm_ender_guardian": "Следуйте за Оком пустоты в Разрушенную Цитадель в Энде.",
   "boss_checklist.summon.cataclysm_ignis": "Найдите Пылающую арену с помощью Ока огня, победите Огненных ревенантов и щёлкните ПКМ §1Пылающим пеплом§r§0 по Огненному алтарю.",
+  "boss_checklist.summon.cataclysm_clawdian": "Защищает водные коридоры Затонувшего города в океанах Верхнего мира.",
+  "boss_checklist.summon.cataclysm_amethyst_crab": "Естественно появляется под землёй в больших аметистовых жеодах Верхнего мира.",
+  "boss_checklist.summon.cataclysm_kobolediator": "Встречается вместе с Уаджетом в комнатах Проклятой пирамиды в пустынях Верхнего мира.",
+  "boss_checklist.summon.cataclysm_wadjet": "Охраняет внутренние залы и комнаты-ловушки Проклятой пирамиды в пустынях Верхнего мира.",
+  "boss_checklist.summon.cataclysm_coralssus": "Бродит по глубоким подводным залам и проходам Затонувшего города в океанах Верхнего мира.",
+  "boss_checklist.summon.cataclysm_ignited_revenant": "Охраняет внешние тропы и нижние уровни огромной Пылающей арены в Незере.",
+  "boss_checklist.summon.cataclysm_aptrgangr": "Находится в Морозной тюрьме на Ледяных равнинах Верхнего мира. После победы выпадает §1Странный ключ§r§0, необходимый для доступа к главному боссу.",
+  "boss_checklist.summon.cataclysm_the_prowler": "Появляется по всей Древней фабрике в Верхнем мире и бродит по её промышленным коридорам.",
+  "boss_checklist.summon.cataclysm_ender_golem": "Охраняет верхние уровни и коридоры Разрушенной цитадели в Энде. До главного босса можно встретить нескольких таких големов.",
 
   "boss_checklist.summon.fdbosses_malkuth": "Найдите арену с боссом с помощью §1Глаза Малхута§r§0.",
   "boss_checklist.summon.fdbosses_chesed": "Найдите арену с боссом с помощью §1Глаза Хеседа§r§0.",
@@ -457,7 +487,9 @@
   "boss_checklist.summon.soulsweapons_moonknight": "Используйте Эссенцию Вечера на Старом Лунном Алтаре.",
 
   "boss_checklist.summon.eeeabsmobs_corpse_warlock": "Найдите его у Кровавого Алтаря с помощью §1Ока Кровавого Алтаря§r§0 в Незере.",
-  "boss_checklist.summon.eeeabsmobs_nameless_guardian": "Найдите подземное сооружение с помощью §1Глаза Древности§r§0 и спуститесь в самый его низ, пройдя несколько испытаний.",
+  "boss_checklist.summon.eeeabsmobs_relic_earthshaker": "Находится в небольших комнатах на верхнем этаже Руин ядерной кузницы. Найти их можно с помощью §1Ока руин ядерной кузницы§r§0.",
+  "boss_checklist.summon.eeeabsmobs_relic_annihilator": "Находится в отдельной комнате на среднем этаже Руин ядерной кузницы. Найти их можно с помощью §1Ока руин ядерной кузницы§r§0.",
+  "boss_checklist.summon.eeeabsmobs_realm_warden": "Находится в отдельной комнате на нижнем этаже Руин ядерной кузницы. Найти их можно с помощью §1Ока руин ядерной кузницы§r§0.",
 
   "boss_checklist.summon.call_of_yucutan_ah_puch": "Сломайте Идол Ах Пуча в Смертельном Склепе.",
   "boss_checklist.summon.call_of_yucutan_kukulkan": "Сломайте Идол Кукультана в Заросшем Храме.",
@@ -610,9 +642,9 @@
   "boss_checklist.summon.monsterexpansion_leivekilth": "Иногда появляется в замёрзших океанах.",
 
   "boss_checklist.summon.mutantmonsters_mutant_zombie": "Иногда появляется на поверхности.",
-  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Иногда появляется на поверхности и в биоме Долина песка душ.",
+  "boss_checklist.summon.mutantmonsters_mutant_skeleton": "Иногда появляется на поверхности.",
   "boss_checklist.summon.mutantmonsters_mutant_creeper": "Иногда появляется на поверхности.",
-  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Иногда появляется на островах Энда и в биоме Искажённый лес.",
+  "boss_checklist.summon.mutantmonsters_mutant_enderman": "Иногда появляется на островах Энда.",
 
   "boss_checklist.summon.arthropocolypse_behemoth_desert_spider": "Найдите арену с боссом в пустыне.",
 
@@ -634,5 +666,8 @@
 
   "boss_checklist.summon.eternal_starlight_the_gatekeeper": "Найдите его у руин портала в Звездосветье в Верхнем мире.",
   "boss_checklist.summon.eternal_starlight_starlight_golem": "Используйте §1Ищущее око§r§0 в Звездосветье, держа в другой руке редстоуновую пыль.",
-  "boss_checklist.summon.eternal_starlight_lunar_monstrosity": "Используйте §1Ищущее око§r§0 в Звездосветье, держа в другой руке лианы."
+  "boss_checklist.summon.eternal_starlight_lunar_monstrosity": "Используйте §1Ищущее око§r§0 в Звездосветье, держа в другой руке лианы.",
+  
+  "boss_checklist.summon.netherman_azazel": "Призовите его согласно инструкции на втором этаже Незерского особняка, путь к которому вам может указать гастли.",
+  "boss_checklist.summon.netherman_azazel_human": "Найдите в Верхнем мире лабиринт, пройдите до арены и дайте Маску Азазеля спящему боссу, которую можно найти позади трона."
 }

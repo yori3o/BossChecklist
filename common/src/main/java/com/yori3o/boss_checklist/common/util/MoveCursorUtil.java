@@ -1,9 +1,9 @@
 package com.yori3o.boss_checklist.common.util;
 
 
-import org.lwjgl.glfw.GLFW;
-
 import net.minecraft.client.Minecraft;
+
+import org.lwjgl.glfw.GLFW;
 
 
 public final class MoveCursorUtil {
@@ -17,10 +17,7 @@ public final class MoveCursorUtil {
         double[] y = new double[1];
 
         GLFW.glfwGetCursorPos(window, x, y);
-
-        double mouseX = x[0];
-        double mouseY = y[0];
-        GLFW.glfwSetCursorPos(window, mouseX + deltaX, mouseY + deltaY);
+        GLFW.glfwSetCursorPos(window, x[0] + deltaX, y[0] + deltaY);
     }
 
     public static void moveCursorInChecklist(long window, int rowDelta, int pageDelta) {

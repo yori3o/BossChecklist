@@ -34,6 +34,7 @@ public class ClientReceiver {
                             payload.killer(),
                             payload.defeated(),
                             payload.fresh(),
+                            payload.participated(),
                             ca
                         );
                     }

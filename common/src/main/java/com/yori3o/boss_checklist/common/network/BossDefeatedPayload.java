@@ -9,7 +9,8 @@ import net.minecraft.resources.ResourceLocation;
 
 
 public record BossDefeatedPayload(String bossId, String killer, boolean defeated, boolean fresh,
-                    String startTime, String endTime, String attemptTop3, String globalTop3) implements CustomPacketPayload {
+                    String startTime, String endTime, String attemptTop3, String globalTop3,
+                    boolean participated) implements CustomPacketPayload {
 
     public static final Type<BossDefeatedPayload> TYPE =
             new Type<>(ResourceLocation.fromNamespaceAndPath("boss_checklist", "boss_defeated"));
@@ -25,6 +26,7 @@ public record BossDefeatedPayload(String bossId, String killer, boolean defeated
                     buf.writeUtf(payload.endTime());
                     buf.writeUtf(payload.attemptTop3());
                     buf.writeUtf(payload.globalTop3());
+                    buf.writeBoolean(payload.participated());
                 },
                 buf -> new BossDefeatedPayload(
                     buf.readUtf(),
@@ -34,7 +36,8 @@ public record BossDefeatedPayload(String bossId, String killer, boolean defeated
                     buf.readUtf(),
                     buf.readUtf(),
                     buf.readUtf(),
-                    buf.readUtf()
+                    buf.readUtf(),
+                    buf.readBoolean()
                 )
         );
 

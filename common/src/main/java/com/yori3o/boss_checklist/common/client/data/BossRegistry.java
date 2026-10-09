@@ -57,13 +57,13 @@ public class BossRegistry {
                 LoggerUtil.errorWithException("Failed to read bosses.json from " + res.sourcePackId(), e);
             }
         }
-        OverlapManager.loadOverlaps();
-        loaded.addAll(OverlapManager.OVERLAP_DEFINITIONS.values());
+        OverrideManager.loadOverrides();
+        loaded.addAll(OverrideManager.OVERRIDE_DEFINITIONS.values());
 
-        if (!OverlapManager.OVERLAP_POSITIONS.isEmpty()) {
+        if (!OverrideManager.OVERRIDE_POSITIONS.isEmpty()) {
             for (BossDefinition def : loaded) {
-                if (OverlapManager.OVERLAP_POSITIONS.containsKey(def.id())) {
-                    def.setPosition(OverlapManager.OVERLAP_POSITIONS.get(def.id()));
+                if (OverrideManager.OVERRIDE_POSITIONS.containsKey(def.id())) {
+                    def.setPosition(OverrideManager.OVERRIDE_POSITIONS.get(def.id()));
                 }
             }
         }
@@ -181,11 +181,11 @@ public class BossRegistry {
 
         float posOfBoss = list.get(newIndex).position();
         float posOfSwappedBoss = list.get(index).position();
-        OverlapManager.addPositionOverlap(list.get(index).id(), posOfBoss);
-        OverlapManager.addPositionOverlap(boss.id(), posOfSwappedBoss);
+        OverrideManager.addPositionOverride(list.get(index).id(), posOfBoss);
+        OverrideManager.addPositionOverride(boss.id(), posOfSwappedBoss);
         list.get(index).setPosition(posOfBoss);
         boss.setPosition(posOfSwappedBoss);
-        OverlapManager.savePositionOverlap(OverlapManager.OVERLAP_POSITIONS);
+        OverrideManager.savePositionOverride(OverrideManager.OVERRIDE_POSITIONS);
 
         if (moveCursor) {
             // старые координаты

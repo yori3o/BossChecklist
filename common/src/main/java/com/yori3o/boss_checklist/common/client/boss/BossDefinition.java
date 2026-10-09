@@ -53,8 +53,7 @@ public class BossDefinition {
         this.id = id;
     }
 
-    public BossDefinition(String id, float position, int scale, int yOffset, boolean brokenModel, boolean miniboss, List<String> drops, 
-            String version, String wikiLink, boolean additionalInfo) {
+    public BossDefinition(String id, float position, int scale, int yOffset, boolean brokenModel, boolean miniboss, List<String> drops, String version, String wikiLink, boolean additionalInfo) {
         this.id = id;
         this.position = position;
         this.scale = scale;
@@ -66,6 +65,36 @@ public class BossDefinition {
         this.additionalInfo = additionalInfo;
         this.wikiLink = wikiLink;
         this.applyDefaults();
+    }
+
+    public BossDefinition copyForOverride(boolean additionalInfo, List<String> drops, int scale, int yOffset, String version) {
+        BossDefinition copy = copyWithEditableValues(additionalInfo, drops, scale, yOffset, version);
+        if (id.equals("minecraft:wither") && copy.scale != null && PlatformUtil.isModLoaded("witherreincarnated")) {
+            copy.scale++;
+        }
+        copy.replace = true;
+        return copy;
+    }
+
+    public BossDefinition copyForPreview(boolean additionalInfo, List<String> drops, int scale, int yOffset, String version) {
+        return copyWithEditableValues(additionalInfo, drops, scale, yOffset, version);
+    }
+
+    private BossDefinition copyWithEditableValues(boolean additionalInfo, List<String> drops, int scale, int yOffset, String version) {
+        BossDefinition copy = new BossDefinition(id);
+        copy.drops = new ArrayList<>(drops);
+        copy.scale = scale;
+        copy.yOffset = yOffset;
+        copy.brokenModel = brokenModel;
+        copy.rotateY = rotateY;
+        copy.additionalInfo = additionalInfo;
+        copy.position = position;
+        copy.wikiLink = wikiLink;
+        copy.health = health;
+        copy.armor = armor;
+        copy.type = type;
+        copy.modVersion = version;
+        return copy;
     }
 
     public String id() {
@@ -140,7 +169,6 @@ public class BossDefinition {
         if (id.equals("minecraft:wither")) {
             if (PlatformUtil.isModLoaded("witherreincarnated")) {
                 scale -= 1;
-                position = 101.1f;
             }
         } else if (id.equals("minecraft:ender_dragon")) {
             if (PlatformUtil.isModLoaded("mr_limesplatus_ending") || PlatformUtil.isModLoaded("mr_true_ending")) {

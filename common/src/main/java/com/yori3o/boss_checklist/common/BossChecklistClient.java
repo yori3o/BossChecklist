@@ -14,10 +14,10 @@ public class BossChecklistClient {
 
 
     public static final KeyMapping OPEN_CHECKLIST = new KeyMapping(
-        "key.boss_checklist.open_checklist", // The translation key of the name shown in the Controls screen
-        InputConstants.Type.KEYSYM, // This key mapping is for Keyboards by default
-        InputConstants.UNKNOWN.getValue(), // The default keycode
-        "category.boss_checklist" // The category translation key used to categorize in the Controls screen 
+        "key.boss_checklist.open_checklist",
+        InputConstants.Type.KEYSYM,
+        InputConstants.UNKNOWN.getValue(),
+        "category.boss_checklist"
     );
     
 

@@ -32,7 +32,7 @@ public class CustomNumberEditBox extends EditBox {
     }
 
     @Override
-    public boolean charTyped(char c, int i) {
+    public boolean charTyped(char c, int modifiers) {
         if (!this.canConsumeInput()) return false;
 
         if (isAllowedChar(c)) {

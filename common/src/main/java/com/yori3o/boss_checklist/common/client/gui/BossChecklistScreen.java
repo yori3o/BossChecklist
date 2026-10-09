@@ -342,15 +342,16 @@ public class BossChecklistScreen extends Screen {
         int bookY = (this.height - 256) / 2;
 
 
-        // FOR 1.21.4+ - add RenderPipelines.GUI_TEXTURED, as first argument and delete all  
-        //guiGraphics.blit( GuiConstants.BOOK, bookX, bookY, 0, 0, 512, 256, 512, 256);
+        // FOR 1.21.4+ - add as first argument and delete all
+        //guiGraphics.blit(GuiConstants.BOOK, bookX, bookY, 0, 0, 512, 256, 512, 256);
 
+    
         super.render(guiGraphics, mouseX, mouseY, partialTick);
 
         if (DynamicConfigHandler.client().progressBarEnabled) {
-            guiGraphics.blit( GuiConstants.PROGRESS_BAR_BACKGROUND, (this.width / 2) - (GuiConstants.BAR_WIDTH / 2), bookY + 27, 0, 0, 
+            guiGraphics.blit(GuiConstants.PROGRESS_BAR_BACKGROUND, (this.width / 2) - (GuiConstants.BAR_WIDTH / 2), bookY + 27, 0, 0,
                 GuiConstants.BAR_WIDTH, GuiConstants.BAR_HEIGHT, GuiConstants.BAR_WIDTH, GuiConstants.BAR_HEIGHT);
-            guiGraphics.blit( GuiConstants.PROGRESS_BAR_FILL, (this.width / 2) - (GuiConstants.BAR_WIDTH / 2), bookY + 27, 0, 0, 
+            guiGraphics.blit(GuiConstants.PROGRESS_BAR_FILL, (this.width / 2) - (GuiConstants.BAR_WIDTH / 2), bookY + 27, 0, 0,
                 (int) (percent * GuiConstants.BAR_WIDTH), GuiConstants.BAR_HEIGHT, GuiConstants.BAR_WIDTH, GuiConstants.BAR_HEIGHT);
             guiGraphics.drawCenteredString(this.font, defeatedCount + " / " + totalCount, (this.width / 2), bookY + 20, 0xFFFFFFFF);
         }
@@ -358,12 +359,12 @@ public class BossChecklistScreen extends Screen {
         // --- rendering statistics ---
         if (showStatisticsTab) {
             RenderSystem.enableBlend();
-            guiGraphics.blit( GuiConstants.STATS_INFO_BACK, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_HEIGHT, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_HEIGHT);
-            guiGraphics.blit( GuiConstants.TOP_1, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 24, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
+            guiGraphics.blit(GuiConstants.STATS_INFO_BACK, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_HEIGHT, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_HEIGHT);
+            guiGraphics.blit(GuiConstants.TOP_1, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 24, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
             if (ClientGlobalStatistics.top2 != null) {
-                guiGraphics.blit( GuiConstants.TOP_2, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 38, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
+                guiGraphics.blit(GuiConstants.TOP_2, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 38, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
                 if (ClientGlobalStatistics.top3 != null) {
-                    guiGraphics.blit( GuiConstants.TOP_3, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 52, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
+                    guiGraphics.blit(GuiConstants.TOP_3, bookX + GuiConstants.STATS_TAB_X + 4, bookY + GuiConstants.STATS_TAB_Y + 52, 0, 0, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE, GuiConstants.ICONS_SIZE);
                 }
             }
             RenderSystem.disableBlend();
@@ -379,18 +380,15 @@ public class BossChecklistScreen extends Screen {
             guiGraphics.drawString(font, String.valueOf(rightPage), bookX + 320, bookY + 195, 0xFF45443F, false); 
         }
 
-    
-        
-
         renderTooltips(guiGraphics, mouseX, mouseY, partialTick, bookX, bookY);
 
         // --- rendering the arrow icon in the statistics tab ---
         if (statisticsTabEnabled) {
             RenderSystem.enableBlend();
             if (showStatisticsTab) {
-                guiGraphics.blit( GuiConstants.ARROW_UP, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH);
+                guiGraphics.blit(GuiConstants.ARROW_UP, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH);
             } else {
-                guiGraphics.blit( GuiConstants.ARROW_DOWN, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH);
+                guiGraphics.blit(GuiConstants.ARROW_DOWN, bookX + GuiConstants.STATS_TAB_X, bookY + GuiConstants.STATS_TAB_Y, 0, 0, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH, GuiConstants.STATS_TAB_WIDTH);
             }
             RenderSystem.disableBlend();
         }
@@ -438,7 +436,7 @@ public class BossChecklistScreen extends Screen {
         int bookX = (this.width - 512) / 2;
         int bookY = (this.height - 256) / 2;
 
-        guiGraphics.blit( GuiConstants.BOOK, bookX, bookY, 0, 0, 512, 256, 512, 256);
+        guiGraphics.blit(GuiConstants.BOOK, bookX, bookY, 0, 0, 512, 256, 512, 256);
     }
 
 

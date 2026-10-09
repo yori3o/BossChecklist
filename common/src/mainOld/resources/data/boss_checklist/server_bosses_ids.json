@@ -1,0 +1,530 @@
+[
+	{
+		"id": "minecraft:wither"
+	},
+	{
+		"id": "minecraft:ender_dragon"
+	},
+	{
+		"id": "minecraft:elder_guardian"
+	},
+	{
+		"id": "bosses_of_mass_destruction:void_blossom"
+	},
+	{
+		"id": "bosses_of_mass_destruction:lich"
+	},
+	{
+		"id": "bosses_of_mass_destruction:obsidilith"
+	},
+	{
+		"id": "bosses_of_mass_destruction:gauntlet"
+	},
+	{
+		"id": "cataclysm:ignis"
+	},
+	{
+		"id": "cataclysm:ancient_remnant"
+	},
+	{
+		"id": "cataclysm:netherite_monstrosity"
+	},
+	{
+		"id": "cataclysm:the_harbinger"
+	},
+	{
+		"id": "cataclysm:the_leviathan"
+	},
+	{
+		"id": "cataclysm:scylla"
+	},
+	{
+		"id": "cataclysm:maledictus"
+	},
+	{
+		"id": "cataclysm:ender_guardian"
+	},
+	{
+		"id": "irons_spellbooks:dead_king"
+	},
+	{
+		"id": "irons_spellbooks:fire_boss"
+	},
+	{
+		"id": "unusualend:endstone_golem"
+	},
+	{
+		"id": "block_factorys_bosses:sandworm"
+	},
+	{
+		"id": "block_factorys_bosses:yeti"
+	},
+	{
+		"id": "block_factorys_bosses:underworld_knight"
+	},
+	{
+		"id": "block_factorys_bosses:infernal_dragon"
+	},
+    {
+        "id": "block_factorys_bosses:kraken"
+    },
+	{
+		"id": "minecells:concierge"
+	},
+	{
+		"id": "minecells:conjunctivius"
+	},
+	{
+		"id": "aquamirae:captain_cornelia"
+	},
+	{
+		"id": "aquamirae:eel"
+	},
+	{
+		"id": "born_in_chaos_v1:lord_pumpkinhead"
+	},
+	{
+		"id": "fdbosses:malkuth"
+	},
+	{
+		"id": "fdbosses:chesed"
+	},
+	{
+		"id": "fdbosses:geburah"
+	},
+	{
+		"id": "mowziesmobs:frostmaw"
+	},
+	{
+		"id": "mowziesmobs:umvuthi"
+	},
+	{
+		"id": "mowziesmobs:ferrous_wroughtnaut"
+	},
+	{
+		"id": "mowziesmobs:sculptor"
+	},
+	{
+		"id": "soulsweapons:draugr_boss"
+	},
+	{
+		"id": "soulsweapons:night_shade"
+	},
+	{
+		"id": "soulsweapons:returning_knight"
+	},
+	{
+		"id": "soulsweapons:accursed_lord_boss"
+	},
+	{
+		"id": "soulsweapons:day_stalker"
+	},
+	{
+		"id": "soulsweapons:night_prowler"
+	},
+	{
+		"id": "soulsweapons:chaos_monarch"
+	},
+	{
+		"id": "soulsweapons:moonknight"
+	},
+	{
+		"id": "eeeabsmobs:corpse_warlock"
+	},
+	{
+		"id": "eeeabsmobs:nameless_guardian"
+	},
+	{
+		"id": "call_of_yucutan:ah_puch"
+	},
+	{
+		"id": "call_of_yucutan:kukulkan"
+	},
+	{
+		"id": "alexsmobs:void_worm"
+	},
+	{
+		"id": "alexsmobs:warped_mosco"
+	},
+	{
+		"id": "alexscaves:luxtructosaurus"
+	},
+	{
+		"id": "witherstormmod:wither_storm"
+	},
+	{
+		"id": "witherstormmod:withered_symbiont"
+	},
+	{
+		"id": "dungeonnowloading:chaos_spawner"
+	},
+	{
+		"id": "dungeonnowloading:fairkeeper_boros"
+	},
+	{
+		"id": "dungeonnowloading:fairkeeper_ouros"
+	},
+	{
+		"id": "aether:slider"
+	},
+	{
+		"id": "aether:valkyrie_queen"
+	},
+	{
+		"id": "aether:sun_spirit"
+	},
+	{
+		"id": "lost_aether_content:aerwhale_king"
+	},
+	{
+		"id": "deep_aether:eots_controller"
+	},
+	{
+		"id": "terramity:gob"
+	},
+	{
+		"id": "terramity:super_sniffer"
+	},
+	{
+		"id": "terramity:trial_guardian"
+	},
+	{
+		"id": "terramity:virtue"
+	},
+	{
+		"id": "terramity:gundalf"
+	},
+	{
+		"id": "terramity:ultra_sniffer"
+	},
+	{
+		"id": "hs_bosses:sand_warrior"
+	},
+	{
+		"id": "wraithon:wraithon"
+	},
+	{
+		"id": "goety:apostle"
+	},
+	{
+		"id": "goety:vizier"
+	},
+	{
+		"id": "goety:ender_keeper"
+	},
+	{
+		"id": "goety:hostile_redstone_monstrosity"
+	},
+	{
+		"id": "adventurez:blackstone_golem"
+	},
+	{
+		"id": "adventurez:the_eye"
+	},
+	{
+		"id": "adventurez:void_shadow"
+	},
+	{
+		"id": "twilightforest:naga"
+	},
+	{
+		"id": "twilightforest:lich"
+	},
+	{
+		"id": "twilightforest:minoshroom"
+	},
+	{
+		"id": "twilightforest:hydra"
+	},
+	{
+		"id": "twilightforest:knight_phantom"
+	},
+	{
+		"id": "twilightforest:ur_ghast"
+	},
+	{
+		"id": "twilightforest:alpha_yeti"
+	},
+	{
+		"id": "twilightforest:snow_queen"
+	},
+	{
+		"id": "callfromthedepth_:agonysoul"
+	},
+	{
+		"id": "callfromthedepth_:injured_ancient_guard"
+	},
+	{
+		"id": "callfromthedepth_:deepdarkestspawn"
+	},
+	{
+		"id": "ars_nouveau:wilden_boss"
+	},
+	{
+		"id": "traveloptics:the_nightwarden"
+	},
+	{
+		"id": "darkdoppelganger:dark_doppelganger"
+	},
+	{
+		"id": "terra_entity:king_slime"
+	},
+	{
+		"id": "terra_entity:eye_of_cthulhu"
+	},
+	{
+		"id": "terra_entity:eater_of_worlds"
+	},
+	{
+		"id": "terra_entity:brain_of_cthulhu"
+	},
+	{
+		"id": "terra_entity:queen_bee"
+	},
+	{
+		"id": "terra_entity:skeletron"
+	},
+    {
+        "id": "terra_entity:deerclops"
+    },
+    {
+        "id": "terra_entity:wall_of_flesh"
+    },
+	{
+		"id": "legendary_monsters:cloud_golem"
+	},
+	{
+		"id": "legendary_monsters:lava_eater"
+	},
+	{
+		"id": "legendary_monsters:frostbitten_golem"
+	},
+	{
+		"id": "legendary_monsters:shulker_mimic"
+	},
+	{
+		"id": "legendary_monsters:dune_sentinel"
+	},
+	{
+		"id": "legendary_monsters:ancient_guardian"
+	},
+	{
+		"id": "legendary_monsters:overgrown_colossus"
+	},
+	{
+		"id": "legendary_monsters:withered_abomination"
+	},
+	{
+		"id": "legendary_monsters:posessed_paladin"
+	},
+	{
+		"id": "legendary_monsters:skeletosaurus"
+	},
+	{
+		"id": "legendary_monsters:endersent"
+	},
+    {
+        "id": "legendary_monsters:the_obliterator"
+    },
+	{
+		"id": "illagerinvasion:invoker"
+	},
+	{
+		"id": "graveyard:lich"
+	},
+	{
+		"id": "mofus_better_end_:endermite_queen"
+	},
+	{
+		"id": "mofus_better_end_:eye_guardian"
+	},
+	{
+		"id": "mofus_better_end_:forgotten_litch"
+	},
+	{
+		"id": "mofus_better_end_:reborn_litch"
+	},
+	{
+		"id": "dungeons_and_combat:sunleia"
+	},
+	{
+		"id": "dungeons_and_combat:kamath"
+	},
+	{
+		"id": "rediscovered:red_dragon"
+	},
+	{
+		"id": "deeperdarker:stalker"
+	},
+	{
+		"id": "armageddon_mod:the_iron_colossus"
+	},
+	{
+		"id": "armageddon_mod:the_gobelin_lord"
+	},
+	{
+		"id": "armageddon_mod:arion_tyrantofthe_emerald_wrath_ravager"
+	},
+	{
+		"id": "armageddon_mod:eldoraththe_ancient_builder"
+	},
+	{
+		"id": "armageddon_mod:zoranththe_forgotten_one"
+	},
+	{
+		"id": "armageddon_mod:elvenite_paladin"
+	},
+	{
+		"id": "armageddon_mod:vaedricthe_fallen_wanderer"
+	},
+	{
+		"id": "armageddon_mod:bringer_of_doom"
+	},
+	{
+		"id": "armageddon_mod:the_discord"
+	},
+	{
+		"id": "armageddon_mod:sanghor_lord_of_blood"
+	},
+	{
+		"id": "armageddon_mod:zoranth_newborn_of_the_zenith"
+	},
+	{
+		"id": "armageddon_mod:nyxaris_the_veil_of_oblivion"
+	},
+	{
+		"id": "illageandspillage:magispeller"
+	},
+	{
+		"id": "illageandspillage:spiritcaller"
+	},
+	{
+		"id": "illageandspillage:freakager"
+	},
+	{
+		"id": "blue_skies:summoner"
+	},
+	{
+		"id": "blue_skies:alchemist"
+	},
+	{
+		"id": "blue_skies:starlit_crusher"
+	},
+	{
+		"id": "blue_skies:arachnarch"
+	},
+	{
+		"id": "remnant_bosses:ossukage"
+	},
+	{
+		"id": "ancient_elements:ancient_elemental"
+	},
+	{
+		"id": "conjurer_illager:conjurer"
+	},
+	{
+		"id": "sleepy_hollows:horseman"
+	},
+	{
+		"id": "galosphere:berserker"
+	},
+	{
+		"id": "knightquest:netherman"
+	},
+	{
+		"id": "companions:sacred_pontiff"
+	},
+	{
+		"id": "wetlands:elder_gear_golem"
+	},
+	{
+		"id": "goety:crone"
+	},
+	{
+		"id": "goety:endersent"
+	},
+	{
+		"id": "goety:brood_mother"
+	},
+	{
+		"id": "goety:hostile_redstone_golem"
+	},
+	{
+		"id": "goety:wither_necromancer"
+	},
+	{
+		"id": "goety:minister"
+	},
+	{
+		"id": "goety:wight"
+	},
+	{
+		"id": "goety:skull_lord"
+	},
+	{
+		"id": "monsterexpansion:rhyza"
+	},
+	{
+		"id": "monsterexpansion:skrythe"
+	},
+	{
+		"id": "monsterexpansion:leivekilth"
+	},
+	{
+		"id": "mutantmonsters:mutant_zombie"
+	},
+	{
+		"id": "mutantmonsters:mutant_skeleton"
+	},
+	{
+		"id": "mutantmonsters:mutant_creeper"
+	},
+	{
+		"id": "mutantmonsters:mutant_enderman"
+	},
+	{
+		"id": "arthropocolypse:behemoth_desert_spider"
+	},
+	{
+		"id": "frostiful:frostologer"
+	},
+	{
+		"id": "mutantmore:mutant_jungle_zombie"
+	},
+	{
+		"id": "mutantmore:mutant_frozen_zombie"
+	},
+	{
+		"id": "mutantmore:mutant_hoglin"
+	},
+	{
+		"id": "mutantmore:mutant_husk"
+	},
+	{
+		"id": "mutantmore:mutant_wither_skeleton"
+	},
+	{
+		"id": "mutantmore:mutant_blaze"
+	},
+	{
+		"id": "mutantmore:mutant_shulker"
+	},
+	{
+		"id": "friendsandfoes:wildfire"
+	},
+	{
+		"id": "mythsandlegends:black_charro"
+	},
+    {
+        "id": "yo_trash:boss"
+    },
+	{
+		"id": "eternal_starlight:the_gatekeeper"
+	},
+    {
+        "id": "eternal_starlight:lunar_monstrosity"
+    },
+    {
+        "id": "eternal_starlight:starlight_golem"
+    }
+]

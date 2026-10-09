@@ -40,6 +40,11 @@ public class BossNameCache {
         for (BossEntry entry : BossService.all()) {
             String id = entry.id();
 
+            // Filter by boss type according to client config
+            int type = entry.definition().type(); // 1 - boss, 2 - miniboss
+            if (type == 1 && !DynamicConfigHandler.client().showBosses) continue;
+            if (type == 2 && !DynamicConfigHandler.client().showMinibosses) continue;
+
             if (DynamicConfigHandler.client().progressionMode && !entry.progress().isDefeated()) {
                 CACHE.put(id, Component.literal("???"));
                 CACHE_TRUNCATED.put(id, Component.literal("???"));

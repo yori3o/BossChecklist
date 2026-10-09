@@ -379,7 +379,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 28,
-        "mod_version": "1.20.1-0.97"
+        "mod_version": "1.0.2"
     },
     {
         "drops": [
@@ -1201,7 +1201,7 @@
         ],
         "id": "minecraft:ender_dragon",
         "scale": 7,
-        "y_offset": -10,
+        "y_offset": 0,
         "rotate_y": 180,
         "broken_model": false,
         "additional_info": false,
@@ -1797,7 +1797,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 119,
-        "mod_version": "3.31"
+        "mod_version": "3.33"
     },
     {
         "drops": [
@@ -1865,7 +1865,7 @@
         "additional_info": false,
         "position": 124,
         "type": 2,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -1878,7 +1878,7 @@
         "additional_info": false,
         "position": 125,
         "type": 2,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -1891,7 +1891,7 @@
         "additional_info": false,
         "position": 126,
         "type": 2,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -1904,7 +1904,7 @@
         "additional_info": false,
         "position": 127,
         "type": 2,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -1917,7 +1917,7 @@
         "additional_info": false,
         "position": 128,
         "type": 2,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -1930,7 +1930,7 @@
         "additional_info": false,
         "position": 129,
         "type": 2,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -1943,7 +1943,7 @@
         "additional_info": false,
         "position": 130,
         "type": 2,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -1956,7 +1956,7 @@
         "additional_info": false,
         "position": 131,
         "type": 2,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -1970,7 +1970,7 @@
         "additional_info": false,
         "position": 132,
         "type": 2,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -1978,12 +1978,12 @@
         ],
         "id": "legendary_monsters:posessed_paladin",
         "scale": 16,
-        "y_offset": 6,
+        "y_offset": 20,
         "broken_model": false,
         "additional_info": false,
         "position": 133,
         "type": 2,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -1996,7 +1996,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 134,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -2004,11 +2004,11 @@
         ],
         "id": "legendary_monsters:the_obliterator",
         "scale": 14,
-        "y_offset": 21,
+        "y_offset": 32,
         "broken_model": false,
         "additional_info": false,
         "position": 135,
-        "mod_version": "1.21.1 (v2.1.18)"
+        "mod_version": "1.21.1 (v2.2.3)"
     },
     {
         "drops": [
@@ -2048,7 +2048,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 138,
-        "mod_version": "3.31"
+        "mod_version": "3.33"
     },
     {
         "drops": [
@@ -2110,20 +2110,6 @@
     },
     {
         "drops": [
-            "eeeabsmobs:guardian_axe",
-            "eeeabsmobs:guardian_core",
-            "eeeabsmobs:guardians_music_disc#50%"
-        ],
-        "id": "eeeabsmobs:nameless_guardian",
-        "scale": 13,
-        "y_offset": 15,
-        "broken_model": false,
-        "additional_info": false,
-        "position": 143,
-        "mod_version": "1.20.1-0.97"
-    },
-    {
-        "drops": [
             "alexscaves:tectonic_shard",
             "traveloptics:gauntlet_of_extinction#45%"
         ],
@@ -2159,7 +2145,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 146,
-        "mod_version": "3.31"
+        "mod_version": "3.33"
     },
     {
         "drops": [
@@ -2177,7 +2163,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 147,
-        "mod_version": "3.31"
+        "mod_version": "3.33"
     },
     {
         "drops": [
@@ -2222,7 +2208,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 150,
-        "mod_version": "3.31"
+        "mod_version": "3.33"
     },
     {
         "drops": [
@@ -2285,7 +2271,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 154,
-        "mod_version": "3.31"
+        "mod_version": "3.33"
     },
     {
         "drops": [
@@ -2318,7 +2304,7 @@
         "broken_model": false,
         "additional_info": false,
         "position": 156,
-        "mod_version": "3.31"
+        "mod_version": "3.33"
     },
     {
         "drops": [
@@ -2376,11 +2362,11 @@
         ],
         "id": "cataclysm:ignis",
         "scale": 15,
-        "y_offset": 10,
+        "y_offset": 20,
         "broken_model": false,
         "additional_info": false,
         "position": 159,
-        "mod_version": "3.31"
+        "mod_version": "3.33"
     },
     {
         "drops": [
@@ -2631,5 +2617,224 @@
         "broken_model": false,
         "additional_info": false,
         "position": 176
+    },
+    {
+        "drops": [
+            "netherman:manipulator_stick",
+            "netherman:music_disc_azazel",
+            "netherman:music_disc_boss",
+            "netherman:chance_totem",
+            "minecraft:totem_of_undying",
+            "netherman:note",
+            "netherman:azazel_trophy",
+            "minecraft:diamond",
+            "minecraft:netherite_scrap",
+            "minecraft:enchanted_golden_apple",
+            "netherman:nether_spawner"
+        ],
+        "id": "netherman:azazel",
+        "scale": 6,
+        "y_offset": 9,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 145.5,
+        "mod_version": "1.1.4.12"
+    },
+    {
+        "id": "netherman:azazel_human",
+        "drops": [
+            "netherman:azazel_spear",
+            "netherman:music_disc_quar",
+            "netherman:music_disc_sacred",
+            "netherman:music_disc_maze",
+            "netherman:chance_totem",
+            "netherman:azazel_shield",
+            "netherman:azazel_chestplate",
+            "netherman:azazel_helmet",
+            "netherman:azazel_leggings",
+            "netherman:azazel_boots",
+            "netherman:azazel_trophy",
+            "minecraft:diamond",
+            "minecraft:milk_bucket",
+            "minecraft:netherite_scrap",
+            "minecraft:enchanted_golden_apple"
+        ],
+        "scale": 7,
+        "y_offset": 50,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 145.6,
+        "mod_version": "1.1.4.12"
+    },
+    {
+        "id": "cataclysm:amethyst_crab",
+        "drops": [
+          "cataclysm:amethyst_crab_meat",
+          "cataclysm:amethyst_crab_shell"
+        ],
+        "scale": 15,
+        "y_offset": 0,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 54.5,
+        "type": 2,
+        "mod_version": "3.33"
+    },
+    {
+        "id": "cataclysm:coralssus",
+        "drops": [
+          "cataclysm:coral_chunk"
+        ],
+        "scale": 15,
+        "y_offset": 12,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 149.8,
+        "type": 2,
+        "mod_version": "3.33"
+    },
+    {
+        "id": "cataclysm:ender_golem",
+        "drops": [
+          "cataclysm:void_core"
+        ],
+        "scale": 16,
+        "y_offset": 20,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 137.9,
+        "type": 2,
+        "mod_version": "3.33"
+    },
+    {
+        "id": "cataclysm:wadjet",
+        "drops": [
+          "cataclysm:ancient_metal_ingot"
+        ],
+        "scale": 16,
+        "y_offset": 14,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 146.8,
+        "type": 2,
+        "mod_version": "3.33"
+    },
+    {
+        "id": "cataclysm:ignited_revenant",
+        "drops": [
+          "cataclysm:burning_ashes"
+        ],
+        "scale": 22,
+        "y_offset": 30,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 158.9,
+        "type": 2,
+        "mod_version": "3.33"
+    },
+    {
+        "id": "cataclysm:clawdian",
+        "drops": [
+          "cataclysm:chitin_claw",
+          "cataclysm:lacrima"
+        ],
+        "scale": 14,
+        "y_offset": 34,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 149.9,
+        "type": 2,
+        "mod_version": "3.33"
+    },
+    {
+        "id": "cataclysm:the_prowler",
+        "drops": [
+          "minecraft:redstone",
+          "minecraft:iron_ingot"
+        ],
+        "scale": 20,
+        "y_offset": 20,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 145.8,
+        "type": 2,
+        "mod_version": "3.33"
+    },
+    {
+        "id": "cataclysm:aptrgangr",
+        "drops": [
+          "minecraft:bone",
+          "cataclysm:strange_key",
+          "minecraft:rotten_flesh",
+          "cataclysm:black_steel_nugget",
+          "cataclysm:black_steel_ingot"
+        ],
+        "scale": 14,
+        "y_offset": 28,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 155.9,
+        "type": 2,
+        "mod_version": "3.33"
+    },
+    {
+        "id": "cataclysm:kobolediator",
+        "drops": [
+          "cataclysm:kobolediator_skull",
+          "cataclysm:koboleton_bone",
+          "cataclysm:ancient_metal_ingot"
+        ],
+        "scale": 12,
+        "y_offset": 16,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 146.9,
+        "type": 2,
+        "mod_version": "3.33"
+    },
+    {
+        "id": "eeeabsmobs:relic_earthshaker",
+        "drops": [
+          "eeeabsmobs:ancient_drive_crystal",
+          "eeeabsmobs:boundary_brick"
+        ],
+        "scale": 16,
+        "y_offset": 26,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 120.1,
+        "type": 2,
+        "mod_version": "1.0.2"
+    },
+    {
+        "id": "eeeabsmobs:relic_annihilator",
+        "drops": [
+          "eeeabsmobs:ancient_drive_crystal",
+          "eeeabsmobs:boundary_brick",
+          "eeeabsmobs:relicron_upgrade_smithing_template#2.5%",
+          "eeeabsmobs:chain_gear"
+        ],
+        "scale": 18,
+        "y_offset": 34,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 120.2,
+        "mod_version": "1.0.2"
+    },
+    {
+        "id": "eeeabsmobs:realm_warden",
+        "drops": [
+          "eeeabsmobs:ancient_drive_crystal",
+          "eeeabsmobs:boundary_brick",
+          "eeeabsmobs:relicron_upgrade_smithing_template#2.5%",
+          "eeeabsmobs:guardian_cube",
+          "eeeabsmobs:realm_warden_theme_music_disc#50%"
+        ],
+        "scale": 14,
+        "y_offset": 26,
+        "broken_model": false,
+        "additional_info": false,
+        "position": 120.3,
+        "mod_version": "1.0.2"
     }
 ]

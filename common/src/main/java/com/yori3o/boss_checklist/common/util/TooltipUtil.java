@@ -6,7 +6,6 @@ import java.util.List;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.network.chat.Component;
 
 
@@ -17,36 +16,27 @@ public final class TooltipUtil {
 
 
     // main method
-    private static final void renderTooltipMain(GuiGraphics guiGraphics, List<Component> list, int mouseX, int mouseY) {
-        guiGraphics.renderComponentTooltip(
-            Minecraft.getInstance().font,
-            list,
-            mouseX, mouseY
-        );
+    private static void renderTooltipMain(GuiGraphics guiGraphics, List<Component> list, int mouseX, int mouseY) {
+        guiGraphics.renderComponentTooltip(Minecraft.getInstance().font, list, mouseX, mouseY);
     }
 
     /**
      * supports String and any Component
      */
-    @SuppressWarnings("unchecked")
     public static void renderTooltip(GuiGraphics guiGraphics, List<? extends Object> list, int mouseX, int mouseY) {
         if (list.isEmpty()) return;
-        if (list.get(0) instanceof ClientTooltipComponent) {
-            renderTooltipMain(guiGraphics, (List<Component>)list, mouseX, mouseY);
-        } else if (list.get(0) instanceof String) {
-            List<Component> componentList = new ArrayList<>();
-            for (String string : (List<String>)list) {
-                componentList.add(Component.literal(string));
-            }
-            renderTooltipMain(guiGraphics, componentList, mouseX, mouseY);
-        } else if (list.get(0) instanceof Component) {
-            renderTooltipMain(guiGraphics, (List<Component>)list, mouseX, mouseY);
-        }
-    }
 
-    public static void renderTooltip(GuiGraphics guiGraphics, ClientTooltipComponent tooltip, int mouseX, int mouseY) {
-        if (tooltip == null) return;
-        renderTooltipMain(guiGraphics, List.of((Component)tooltip), mouseX, mouseY);
+        List<Component> components = new ArrayList<>(list.size());
+        for (Object entry : list) {
+            if (entry instanceof String string) {
+                components.add(Component.literal(string));
+            } else if (entry instanceof Component component) {
+                components.add(component);
+            } else {
+                throw new IllegalArgumentException("Unsupported tooltip element: " + entry.getClass().getName());
+            }
+        }
+        renderTooltipMain(guiGraphics, components, mouseX, mouseY);
     }
 
     public static void renderTooltip(GuiGraphics guiGraphics, Component tooltip, int mouseX, int mouseY) {

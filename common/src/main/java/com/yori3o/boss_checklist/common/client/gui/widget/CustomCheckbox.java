@@ -103,7 +103,7 @@ public class CustomCheckbox extends AbstractWidget {
         // --- draw box ---
         guiGraphics.pose().pushPose();
         guiGraphics.pose().translate(sx, sy, 0);
-        guiGraphics.pose().scale(SCALE, SCALE, 1f);
+        guiGraphics.pose().scale(SCALE, SCALE, 1);
 
         RenderSystem.enableBlend();
 
@@ -153,7 +153,7 @@ public class CustomCheckbox extends AbstractWidget {
         // ==== draw text ====
         guiGraphics.pose().pushPose();
         guiGraphics.pose().translate(labelStart, sy, 0);
-        guiGraphics.pose().scale(TEXT_SCALE, TEXT_SCALE, 1f);
+        guiGraphics.pose().scale(TEXT_SCALE, TEXT_SCALE, 1);
 
         int textColor;
         if (isLabelClickDoingAnything) {

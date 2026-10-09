@@ -12,6 +12,7 @@ public class ClientConfig extends JsonConfigManager<ClientConfig.Values> {
     public static class Values {
         public boolean progressionMode = false;
         public boolean progressionModePlus = false;
+        public boolean ignoreUnparticipatedDefeats = false;
         public boolean animationsEnabled = true;
         public boolean showConfigScreen = true;
         public boolean openButtonEnabled = true;
@@ -25,6 +26,8 @@ public class ClientConfig extends JsonConfigManager<ClientConfig.Values> {
         public int inventoryOpenButtonXOffset = 98;
         public int inventoryOpenButtonYOffset = 68;
         public boolean alignInventoryButtonToCenter = true;
+        public boolean showBosses = true;
+        public boolean showMinibosses = true;
     }
 
     private static final Path CONFIG_PATH = BossChecklist.CONFIG_FOLDER.resolve("boss_checklist-client.json");

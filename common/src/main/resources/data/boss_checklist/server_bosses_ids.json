@@ -65,9 +65,6 @@
 	{
 		"id": "block_factorys_bosses:infernal_dragon"
 	},
-    {
-        "id": "block_factorys_bosses:kraken"
-    },
 	{
 		"id": "minecells:concierge"
 	},
@@ -131,9 +128,15 @@
 	{
 		"id": "eeeabsmobs:corpse_warlock"
 	},
-	{
-		"id": "eeeabsmobs:nameless_guardian"
-	},
+    {
+        "id": "eeeabsmobs:relic_earthshaker"
+    },
+    {
+        "id": "eeeabsmobs:relic_annihilator"
+    },
+    {
+        "id": "eeeabsmobs:realm_warden"
+    },
 	{
 		"id": "call_of_yucutan:ah_puch"
 	},
@@ -284,12 +287,12 @@
 	{
 		"id": "terra_entity:skeletron"
 	},
-    {
-        "id": "terra_entity:deerclops"
-    },
-    {
-        "id": "terra_entity:wall_of_flesh"
-    },
+	{
+		"id": "terra_entity:deerclops"
+	},
+	{
+		"id": "terra_entity:wall_of_flesh"
+	},
 	{
 		"id": "legendary_monsters:cloud_golem"
 	},
@@ -323,9 +326,9 @@
 	{
 		"id": "legendary_monsters:endersent"
 	},
-    {
-        "id": "legendary_monsters:the_obliterator"
-    },
+	{
+		"id": "legendary_monsters:the_obliterator"
+	},
 	{
 		"id": "illagerinvasion:invoker"
 	},
@@ -515,16 +518,49 @@
 	{
 		"id": "mythsandlegends:black_charro"
 	},
-    {
-        "id": "yo_trash:boss"
-    },
+	{
+		"id": "yo_trash:boss"
+	},
 	{
 		"id": "eternal_starlight:the_gatekeeper"
 	},
-    {
-        "id": "eternal_starlight:lunar_monstrosity"
-    },
-    {
-        "id": "eternal_starlight:starlight_golem"
-    }
+	{
+		"id": "eternal_starlight:lunar_monstrosity"
+	},
+	{
+		"id": "eternal_starlight:starlight_golem"
+	},
+	{
+		"id": "netherman:azazel"
+	},
+	{
+		"id": "netherman:azazel_human"
+	},
+	{
+		"id": "cataclysm:amethyst_crab"
+	},
+	{
+		"id": "cataclysm:coralssus"
+	},
+	{
+		"id": "cataclysm:ender_golem"
+	},
+	{
+		"id": "cataclysm:wadjet"
+	},
+	{
+		"id": "cataclysm:ignited_revenant"
+	},
+	{
+		"id": "cataclysm:clawdian"
+	},
+	{
+		"id": "cataclysm:the_prowler"
+	},
+	{
+		"id": "cataclysm:aptrgangr"
+	},
+	{
+		"id": "cataclysm:kobolediator"
+	}
 ]

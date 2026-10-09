@@ -1,27 +1,31 @@
 package com.yori3o.boss_checklist.common.client.gui;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.yori3o.boss_checklist.common.BossChecklistClient;
+import com.yori3o.boss_checklist.common.client.boss.BossEntry;
 import com.yori3o.boss_checklist.common.client.boss.BossDefinition;
 import com.yori3o.boss_checklist.common.client.boss.BossProgress;
 import com.yori3o.boss_checklist.common.client.boss.CustomBossEntry;
-import com.yori3o.boss_checklist.common.client.data.OverlapManager;
+import com.yori3o.boss_checklist.common.client.data.OverrideManager;
 import com.yori3o.boss_checklist.common.client.gui.widget.CustomButton;
 import com.yori3o.boss_checklist.common.client.gui.widget.CustomCheckbox;
 import com.yori3o.boss_checklist.common.client.gui.widget.CustomNumberEditBox;
+import com.yori3o.boss_checklist.common.util.LoggerUtil;
 import com.yori3o.boss_checklist.common.util.TooltipUtil;
 import com.yori3o.boss_checklist.impl.PlatformUtil;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 
@@ -31,14 +35,17 @@ public class EditorScreen extends Screen {
     private final Screen parent;
     private CustomButton closeButton, previewButton, saveButton;
     
-    private EditBox idTextBox, nameTextBox, modTextBox, spawnTextBox, dropsTextBox, versionTextBox, wikiTextBox, addInfoTextBox;
+    private EditBox idTextBox, nameTextBox, modTextBox, spawnTextBox, dropsTextBox, versionTextBox, wikiTextBox, addInfoTextBox, descriptionTextBox;
     private CustomNumberEditBox scaleNumberBox, yOffsetNumberBox, positionNumberBox;
-    private CustomCheckbox brokenModelCheckbox, minibossCheckbox;
+    private CustomCheckbox brokenModelCheckbox, minibossCheckbox, additionalInfoCheckbox;
 
-    private String id, name, mod, spawn, drops, version, wikiLink, addtlInfo;
+    private String id, name, mod, spawn, drops, version, wikiLink, description, addtlInfo;
     private Integer scale, yOffset;
     private Float position;
     private boolean brokenModel, miniboss, additionalInfo;
+
+    private final BossEntry bossToEdit;
+    private final String modTranslationKey;
     
     private static final int TEXTBOX_X = 134;
     private static final int TEXTBOX_X_RIGHT_PAGE = 270;
@@ -50,10 +57,11 @@ public class EditorScreen extends Screen {
 
     private static final int ADDITIONAL_X = 0;
     private static final int TB_VERSION_Y = 55;
-    private static final int CB_BROKEN_MODEL_Y = 85;
-    private static final int CB_MINIBOSS_Y = 105;
+    private static final int CB_BROKEN_MODEL_Y = 82;
+    private static final int CB_MINIBOSS_Y = 98;
     private static final int TB_WIKI_Y = 145;
     private static final int TB_ADDINFO_Y = 175;
+    private static final int TB_DESCRIPTION_Y = TB_MOD_Y;
 
 
     private String errorText;
@@ -65,8 +73,40 @@ public class EditorScreen extends Screen {
 
 
     public EditorScreen(Screen parent) {
+        this(parent, null, null);
+    }
+
+    EditorScreen(Screen parent, BossEntry bossToEdit, String modTranslationKey) {
         super(Component.literal("Editor"));
         this.parent = parent;
+        this.bossToEdit = bossToEdit;
+        this.modTranslationKey = modTranslationKey;
+
+        if (bossToEdit != null) {
+            initializeEditValues();
+        }
+    }
+
+    private void initializeEditValues() {
+        String bossTranslationId = bossToEdit.id().replace(":", "_");
+        id = bossToEdit.id();
+        name = Language.getInstance().getOrDefault("boss_checklist.boss." + bossTranslationId);
+        mod = Language.getInstance().getOrDefault(modTranslationKey);
+        spawn = Language.getInstance().getOrDefault("boss_checklist.summon." + bossTranslationId);
+        String descriptionKey = "boss_checklist.desc." + bossTranslationId;
+        description = Language.getInstance().has(descriptionKey)
+            ? Language.getInstance().getOrDefault(descriptionKey)
+            : "";
+        String additionalInfoKey = "boss_checklist.info." + bossTranslationId;
+        addtlInfo = Language.getInstance().has(additionalInfoKey)
+            ? Language.getInstance().getOrDefault(additionalInfoKey)
+            : "";
+        BossDefinition definition = bossToEdit.definition();
+        drops = String.join(", ", definition.drops());
+        scale = definition.scale();
+        yOffset = definition.yOffset();
+        version = definition.modVersion();
+        additionalInfo = definition.additionalInfo();
     }
 
 
@@ -87,7 +127,7 @@ public class EditorScreen extends Screen {
         previewButton = new CustomButton(
             bookX + TEXTBOX_X_RIGHT_PAGE, bookY + GuiConstants.DROP_BUTTON_Y, GuiConstants.BIG_BUTTONS_WIDTH, GuiConstants.BIG_BUTTONS_HEIGHT, 
             GuiConstants.BIG_BUTTONS_OVERLAY_WIDTH, GuiConstants.BIG_BUTTONS_OVERLAY_HEIGHT, 
-            Component.translatable("gui.boss_checklist.editor.preview"), 
+            Component.translatable("gui.boss_checklist.editor.preview"),
             GuiConstants.BIG_BUTTON_TEXTURE, GuiConstants.BIG_BUTTON_TEXTURE_hovered, GuiConstants.BIG_BUTTON_TEXTURE_pressed, GuiConstants.BIG_BUTTON_TEXTURE_overlay, 
             () -> {
                 openPreviewBossInfo();
@@ -98,7 +138,7 @@ public class EditorScreen extends Screen {
         saveButton = new CustomButton(
             bookX + TEXTBOX_X_RIGHT_PAGE, bookY + GuiConstants.DROP_BUTTON_Y + 30, GuiConstants.BIG_BUTTONS_WIDTH, GuiConstants.BIG_BUTTONS_HEIGHT, 
             GuiConstants.BIG_BUTTONS_OVERLAY_WIDTH, GuiConstants.BIG_BUTTONS_OVERLAY_HEIGHT, 
-            Component.translatable("gui.boss_checklist.editor.save"), 
+            Component.translatable(bossToEdit == null ? "gui.boss_checklist.editor.save" : "gui.boss_checklist.editor.update"),
             GuiConstants.BIG_BUTTON_TEXTURE, GuiConstants.BIG_BUTTON_TEXTURE_hovered, GuiConstants.BIG_BUTTON_TEXTURE_pressed, GuiConstants.BIG_BUTTON_TEXTURE_overlay, 
             () -> {
                 save();
@@ -116,7 +156,10 @@ public class EditorScreen extends Screen {
         );
         addRenderableWidget(closeButton);
 
-
+        if (bossToEdit != null) {
+            createEditWidgets(bookX, bookY);
+            return;
+        }
 
         /// --- CHECKBOXES: BROKEN MODEL, MINIBOSS ---
         brokenModelCheckbox = new CustomCheckbox(bookX + ADDITIONAL_X, bookY + CB_BROKEN_MODEL_Y,
@@ -250,6 +293,20 @@ public class EditorScreen extends Screen {
         if (addtlInfo != null) addInfoTextBox.setValue(addtlInfo);
         addRenderableWidget(addInfoTextBox);
 
+        descriptionTextBox = new EditBox(
+            this.font,
+            bookX + ADDITIONAL_X,
+            bookY + TB_DESCRIPTION_Y,
+            105,
+            20,
+            Component.translatable("gui.boss_checklist.editor.boss_description")
+        );
+        descriptionTextBox.setHint(Component.translatable("gui.boss_checklist.editor.boss_description"));
+        descriptionTextBox.setMaxLength(300);
+        descriptionTextBox.setResponder(this::updateDescriptionText);
+        if (description != null) descriptionTextBox.setValue(description);
+        addRenderableWidget(descriptionTextBox);
+
 
 
 
@@ -283,8 +340,59 @@ public class EditorScreen extends Screen {
 
     }
 
+    private void createEditWidgets(int bookX, int bookY) {
+        idTextBox = new EditBox(this.font, bookX + TEXTBOX_X, bookY + TB_ID_Y, 105, 20,
+            Component.translatable("gui.boss_checklist.editor.boss_id"));
+        idTextBox.setHint(Component.translatable("gui.boss_checklist.editor.boss_id"));
+        idTextBox.setValue(id);
+        idTextBox.setEditable(false);
+        addRenderableWidget(idTextBox);
 
+        nameTextBox = createEditTextBox(bookX + TEXTBOX_X, bookY + TB_NAME_Y, "gui.boss_checklist.editor.boss_name", 100, this::updateNameText, name);
+        modTextBox = createEditTextBox(bookX + TEXTBOX_X, bookY + TB_MOD_Y, "gui.boss_checklist.editor.boss_mod", 50, this::updateModText, mod);
+        spawnTextBox = createEditTextBox(bookX + TEXTBOX_X, bookY + TB_SPAWN_Y, "gui.boss_checklist.editor.boss_spawn", 300, this::updateSpawnText, spawn);
+        descriptionTextBox = createEditTextBox(bookX + TEXTBOX_X, bookY + TB_DROPS_Y, "gui.boss_checklist.editor.boss_description", 300, this::updateDescriptionText, description);
+        addInfoTextBox = createEditTextBox(bookX + TEXTBOX_X_RIGHT_PAGE, bookY + TB_ID_Y, "gui.boss_checklist.editor.boss_additional_info", 300, this::updateAddtlText, addtlInfo);
+        dropsTextBox = createEditTextBox(bookX + ADDITIONAL_X, bookY + CB_BROKEN_MODEL_Y + 30 - 2, "gui.boss_checklist.editor.boss_drops", 300, this::updateDropsText, drops);
+        versionTextBox = createEditTextBox(bookX + ADDITIONAL_X, bookY + TB_VERSION_Y + 30 - 5, "gui.boss_checklist.editor.boss_version", 300, this::updateVersionText, version);
 
+        scaleNumberBox = new CustomNumberEditBox(this.font, bookX + ADDITIONAL_X, bookY + 140, 80, 20,
+            Component.translatable("gui.boss_checklist.editor.scale"), false, false);
+        scaleNumberBox.setHint(Component.translatable("gui.boss_checklist.editor.scale"));
+        scaleNumberBox.setMaxLength(2);
+        scaleNumberBox.setResponder(this::updateScaleValue);
+        scaleNumberBox.setIntValue(scale);
+        addRenderableWidget(scaleNumberBox);
+
+        yOffsetNumberBox = new CustomNumberEditBox(this.font, bookX + ADDITIONAL_X, bookY + 170, 80, 20,
+            Component.translatable("gui.boss_checklist.editor.y_offset"), true, false);
+        yOffsetNumberBox.setHint(Component.translatable("gui.boss_checklist.editor.y_offset"));
+        yOffsetNumberBox.setMaxLength(3);
+        yOffsetNumberBox.setResponder(this::updateYOffsetValue);
+        yOffsetNumberBox.setIntValue(yOffset);
+        addRenderableWidget(yOffsetNumberBox);
+
+        additionalInfoCheckbox = new CustomCheckbox(bookX + TEXTBOX_X_RIGHT_PAGE, bookY + TB_NAME_Y,
+            Component.translatable("gui.boss_checklist.editor.additional_info_enabled"),
+            GuiConstants.MAX_LABEL_WIDTH,
+            additionalInfo,
+            checked -> additionalInfo = checked
+        );
+        addRenderableWidget(additionalInfoCheckbox);
+
+        previewButton.setY(bookY + 115);
+        saveButton.setY(bookY + 145);
+    }
+
+    private EditBox createEditTextBox(int x, int y, String labelKey, int maxLength, java.util.function.Consumer<String> responder, String value) {
+        EditBox textBox = new EditBox(this.font, x, y, 105, 20, Component.translatable(labelKey));
+        textBox.setHint(Component.translatable(labelKey));
+        textBox.setMaxLength(maxLength);
+        textBox.setResponder(responder);
+        textBox.setValue(value == null ? "" : value);
+        addRenderableWidget(textBox);
+        return textBox;
+    }
 
     private void updateIdText(String text) {
         id = text;
@@ -300,6 +408,9 @@ public class EditorScreen extends Screen {
     }
     private void updateSpawnText(String text) {
         spawn = text;
+    }
+    private void updateDescriptionText(String text) {
+        description = text;
     }
     private void updateDropsText(String text) {
         drops = text;
@@ -330,9 +441,11 @@ public class EditorScreen extends Screen {
         if (!checkFields()) {
             return;
         }
-        BossDefinition definition = new BossDefinition(id, position, scale, yOffset, brokenModel, miniboss, parseDrops(drops), version, wikiLink, additionalInfo);
+        BossDefinition definition = bossToEdit == null
+            ? new BossDefinition(id, position, scale, yOffset, brokenModel, miniboss, parseDrops(drops), version, wikiLink, additionalInfo)
+            : bossToEdit.definition().copyForPreview(additionalInfo, parseDrops(drops), scale, yOffset, version);
         BossProgress progress = new BossProgress();
-        CustomBossEntry customBossEntry = new CustomBossEntry(definition, progress, name, mod, spawn, addtlInfo);
+        CustomBossEntry customBossEntry = new CustomBossEntry(definition, progress, name, mod, spawn, description, addtlInfo);
         Minecraft.getInstance().setScreen(new BossInfoScreen(this, customBossEntry));
     }
 
@@ -365,14 +478,30 @@ public class EditorScreen extends Screen {
             guiGraphics.drawCenteredString(font, errorText, centerX, centerY - 108, 0xFFB30202);
         }
 
+        if (bossToEdit != null) {
+            renderEditLabels(guiGraphics, bookX, bookY);
+        }
         renderDesc(guiGraphics, mouseX, mouseY, bookX, bookY);
+    }
+
+    private void renderEditLabels(GuiGraphics guiGraphics, int bookX, int bookY) {
+        guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.editor.boss_id"), bookX + TEXTBOX_X, bookY + 45 + 2, 0xFF000000, false);
+        guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.editor.boss_name"), bookX + TEXTBOX_X, bookY + 75 + 2, 0xFF000000, false);
+        guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.editor.boss_mod"), bookX + TEXTBOX_X, bookY + 105 + 2, 0xFF000000, false);
+        guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.editor.boss_spawn"), bookX + TEXTBOX_X, bookY + 135 + 2, 0xFF000000, false);
+        guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.editor.boss_description"), bookX + TEXTBOX_X, bookY + 165 + 2, 0xFF000000, false);
+        guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.editor.boss_additional_info"), bookX + TEXTBOX_X_RIGHT_PAGE, bookY + 45 + 2, 0xFF000000, false);
+        guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.editor.boss_version"), bookX + ADDITIONAL_X, bookY + TB_VERSION_Y - 8 + 30 - 5, 0xFF000000, false);
+        guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.editor.boss_drops"), bookX + ADDITIONAL_X, bookY + CB_BROKEN_MODEL_Y - 8 + 30 - 2, 0xFF000000, false);
+        guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.editor.scale"), bookX + ADDITIONAL_X, bookY + 102 + 30, 0xFF000000, false);
+        guiGraphics.drawString(font, Component.translatable("gui.boss_checklist.editor.y_offset"), bookX + ADDITIONAL_X, bookY + 132 + 30, 0xFF000000, false);
     }
 
     public void renderDesc(GuiGraphics guiGraphics, int mouseX, int mouseY, int bookX, int bookY) {
 
         if (mouseX >= bookX + 199 && mouseX < bookX + 199 + 16 && mouseY >= bookY + 210 && mouseY < bookY + 210 + 27) {
-            TooltipUtil.renderTooltip(
-                guiGraphics,
+            renderTooltip(
+                guiGraphics, Minecraft.getInstance().font,
                 List.of(
                     Component.translatable("gui.boss_checklist.editor.guide_help"),
                     Component.translatable("gui.boss_checklist.editor.guide_id_format"),
@@ -383,6 +512,10 @@ public class EditorScreen extends Screen {
                 mouseX, mouseY
             );
         }
+    }
+
+    public static void renderTooltip(GuiGraphics guiGraphics, Font font, List<? extends Component> list, int mouseX, int mouseY) {
+        TooltipUtil.renderTooltip(guiGraphics, list, mouseX, mouseY);
     }
 
 
@@ -426,11 +559,12 @@ public class EditorScreen extends Screen {
 
 
     private List<String> parseDrops(String drops) {
-        String[] dropsArray = drops.split(",");
         List<String> dropsList = new ArrayList<>();
-        for (String drop : dropsArray) {
-            drop = drop.replace("\"", "").replace(" ", "");
-            dropsList.add(drop);
+        for (String drop : drops.split(",")) {
+            String normalizedDrop = drop.replace("\"", "").trim();
+            if (!normalizedDrop.isEmpty()) {
+                dropsList.add(normalizedDrop);
+            }
         }
         return dropsList;
     }
@@ -447,9 +581,11 @@ public class EditorScreen extends Screen {
         if (mod == null) mod = "*mod name*";
         if (spawn == null) spawn = "*spawn info*";
         if (drops == null) drops = "";
+        if (description == null) description = "";
         if (addtlInfo == null) addtlInfo = "";
-        additionalInfo = false;
-        if (!addtlInfo.isEmpty()) additionalInfo = true;
+        if (bossToEdit == null) {
+            additionalInfo = !addtlInfo.isEmpty();
+        }
         return true;
     }
 
@@ -457,9 +593,45 @@ public class EditorScreen extends Screen {
         if (!checkFields()) {
             return;
         }
-        BossDefinition def = new BossDefinition(id, position, scale, yOffset, brokenModel, miniboss, parseDrops(drops), version, wikiLink, additionalInfo);
-        OverlapManager.saveAndAdd(def, name, mod, spawn, addtlInfo);
-        reloadRequired = true;
+        if (bossToEdit == null) {
+            BossDefinition definition = new BossDefinition(id, position, scale, yOffset, brokenModel, miniboss, parseDrops(drops), version, wikiLink, additionalInfo);
+            OverrideManager.saveAndAdd(definition, name, mod, spawn, description, addtlInfo);
+            reloadRequired = true;
+            return;
+        }
+
+        BossDefinition override = bossToEdit.definition().copyForOverride(
+            additionalInfo,
+            parseDrops(drops),
+            scale,
+            yOffset,
+            version
+        );
+        if (!OverrideManager.saveEditedBoss(override, name, modTranslationKey, mod, spawn, description, addtlInfo)) {
+            errorText = Component.translatable("gui.boss_checklist.editor.error_save").getString();
+            return;
+        }
+        reloadEditedBoss();
+    }
+
+    private void reloadEditedBoss() {
+        Minecraft minecraft = Minecraft.getInstance();
+        minecraft.reloadResourcePacks().whenComplete((unused, error) -> {
+            if (error != null) {
+                Exception reloadException = error instanceof Exception exception ? exception : new Exception(error);
+                LoggerUtil.errorWithException("Failed to reload resources after editing a boss: ", reloadException);
+                minecraft.execute(() -> errorText = Component.translatable("gui.boss_checklist.editor.error_reload").getString());
+                return;
+            }
+
+            minecraft.execute(() -> {
+                if (parent instanceof BossInfoScreen bossInfoScreen) {
+                    minecraft.setScreen(bossInfoScreen.createRefreshedScreen());
+                } else {
+                    minecraft.setScreen(parent);
+                }
+            });
+        });
     }
 
     private void suggetName() {

@@ -82,7 +82,7 @@ public class CustomButton extends Button {
 
     @Override
     public void onPress() {
-        super.onPress(); 
+        super.onPress();
     }
 
     @Override
@@ -91,7 +91,6 @@ public class CustomButton extends Button {
         this.onPress();
     }
 
-    // on 1.20 it run only if cursor on button
     @Override
     public void onRelease(double mouseX, double mouseY) {
         pressedFlag = false;

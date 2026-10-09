@@ -13,6 +13,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 
+
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 import com.mojang.brigadier.context.CommandContext;
@@ -21,6 +22,7 @@ import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.Set;
 
 
 
@@ -63,7 +65,7 @@ public final class SetDefeatedCommand {
             ).create();
         }
 
-        ServerSender.sendDefeatedBossDataToAllPlayers(source.getLevel(), bossId, "", defeated, "", "", "#####", "#####");
+        ServerSender.sendDefeatedBossDataToAllPlayers(source.getLevel(), bossId, "", defeated, "", "", "#####", "#####", Set.of());
 
         ServerStorage.markBoss(bossId, "", null, defeated);
 
